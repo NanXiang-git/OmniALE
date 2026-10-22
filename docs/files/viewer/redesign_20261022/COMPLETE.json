@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "version": "A2-case-pages-20261022",
+  "commit": "39f1dfab15e77817d3fd7d14be24f1c92f2ca68a",
+  "url": "https://nanxiang-git.github.io/OmniALE/",
+  "case_urls": {
+    "sign": "https://nanxiang-git.github.io/OmniALE/sign/",
+    "piano": "https://nanxiang-git.github.io/OmniALE/piano/"
+  },
+  "trace_urls": {
+    "sign": "https://nanxiang-git.github.io/OmniALE/sign/traces.html",
+    "piano": "https://nanxiang-git.github.io/OmniALE/piano/traces.html"
+  },
+  "classification": "Both cases are A2; original archive IDs retained",
+  "scores_unchanged": true,
+  "source_results_sha256": "90d69eec6e6e36d9c22d1a216aa2c03b360d416dac46c9cac3ccd6b69d308a7d",
+  "original_submission_files_unchanged": 44,
+  "online_links_checked": 180,
+  "all_http_200": true,
+  "desktop_mobile_and_trace_interaction_checks_passed": true,
+  "release": "https://github.com/NanXiang-git/OmniALE/releases/tag/a2-case-pages-20261022",
+  "archive_sha256": "60c0f8fb2ac565f863120c43e3dae497429dfe65d9605fd6a9be8f4ac0dab888",
+  "archive_bytes": 1504541694,
+  "archive_files": 2470,
+  "archive_public_download_verified": true,
+  "archive_server_digest_matches": true,
+  "completed_utc": "2026-10-22T07:00:49.321838+00:00"
+}

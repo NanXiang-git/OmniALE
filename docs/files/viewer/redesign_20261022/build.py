@@ -8,7 +8,7 @@ import json, re, shutil, hashlib
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 OUT=ROOT/'deliverables/A4_A6_research_20261021'
-TAG='a2-case-pages-20261022'
+TAG='a2-dependencies-20261022'
 RELEASE='https://github.com/NanXiang-git/OmniALE/releases/tag/'+TAG
 DOWNLOAD='https://github.com/NanXiang-git/OmniALE/releases/download/'+TAG+'/A4_A6_research_20261021.zip'
 ROWS=json.loads((OUT/'RESULTS.json').read_text(encoding='utf-8'))
@@ -19,6 +19,7 @@ CASES={slug:sorted([next(r for r in ROWS if r['id']==i) for i in ids],key=lambda
 TITLES={'sign':'中国手语视频 → 中英文字幕','piano':'钢琴演奏视频 → 乐谱与 MIDI'}
 TOOLS={'command_execution','file_change','mcp_tool_call','tool_call','web_search'}
 ASSETS=set()
+DEPENDENCIES=json.loads((HERE/'DEPENDENCIES.json').read_text(encoding='utf-8'))['rows']
 
 def obj(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def put(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding='utf-8')
@@ -79,11 +80,12 @@ def trace(row):
   if kind=='command_execution':safe['output']=i.get('aggregated_output','');safe['output_truncated']=False
   observable.append(safe)
  counts=Counter(e['kind'] for e in events)
- assert not installs, 'Review detected installation commands before displaying dependency statistics'
+ deps=DEPENDENCIES[row['id']]
+ assert deps['source_log_sha256']==sha(p), 'Re-audit dependency evidence if source log changes'
  dest=OUT/'traces'/f"{row['id']}.jsonl";dest.parent.mkdir(exist_ok=True)
  dest.write_text(''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in observable),encoding='utf-8')
  ASSETS.add(dest.relative_to(OUT).as_posix())
- return {'id':row['id'],'model':row['model'],'stats':{'events':len(events),'raw_jsonl_lines':len(raw),'tools':sum(counts[k] for k in TOOLS),'reasoning':counts['reasoning'],'kinds':dict(counts),'dependency_installs':installs},'events':events,'observable_url':'../traces/'+dest.name,'run_url':ensure(row['runpath']),'source_sha256':sha(p)}
+ return {'id':row['id'],'model':row['model'],'stats':{'events':len(events),'raw_jsonl_lines':len(raw),'tools':sum(counts[k] for k in TOOLS),'reasoning':counts['reasoning'],'kinds':dict(counts),'dependency_installs':installs,'used_dependencies':deps},'events':events,'observable_url':'../traces/'+dest.name,'run_url':ensure(row['runpath']),'source_sha256':sha(p)}
 
 def sign_metrics(r):
  s=r['score_detail'];a=s.get('native_aggregate')
@@ -194,12 +196,13 @@ def trace_section(traces):
  out='<section id="trajectory"><h2>三、运行轨迹</h2><p>完整操作放在独立页面，可按模型和事件类型查看。这里给出同一口径的统计。</p>'
  rr=[]
  for t in traces:
-  s=t['stats'];rr.append(['<a href="traces.html#model='+t['id']+'">'+esc(t['model'])+'</a>',s['events'],s['tools'],str(s['reasoning']) if s['reasoning'] else '0（日志未记录）','无成功安装记录'])
- out+=table(['模型','事件数','工具调用','可见推理步¹','自行安装的依赖'],rr)
- return out+'<p><a href="traces.html">打开运行轨迹浏览器 →</a></p><p class="muted">事件数按去重后的操作、对外说明、显式推理事件和运行提示统计；一次工具操作的开始与结束不重复计数。工具调用含命令执行和文件修改。¹ 仅统计日志显式记录的 reasoning 事件，不代表模型真实思考次数；未记录不等于没有思考。内部推理正文不公开。环境预装包不计为自行安装，导入依赖也不计为安装。</p></section>'
+  s=t['stats'];d=s['used_dependencies'];deptext='Python：'+esc('、'.join(d['python_packages']))+'（'+str(len(d['python_packages']))+' 个）<br><span class="muted">工具：'+esc('；'.join(d['system_tools']))+'</span>'
+  rr.append(['<a href="traces.html#model='+t['id']+'">'+esc(t['model'])+'</a>',s['events'],s['tools'],str(s['reasoning']) if s['reasoning'] else '0（日志未记录）',deptext])
+ out+=table(['模型','事件数','工具调用','可见推理步¹','使用的依赖'],rr)
+ return out+'<p><a href="traces.html">打开运行轨迹浏览器 →</a></p><p class="muted">事件数按去重后的操作、对外说明、显式推理事件和运行提示统计；一次工具操作的开始与结束不重复计数。工具调用含命令执行和文件修改。¹ 仅统计日志显式记录的 reasoning 事件，不代表模型真实思考次数；未记录不等于没有思考。内部推理正文不公开。依赖列统计本轮实际使用的第三方 Python 包（包括预装包），并另列媒体工具；不含标准库、仅检查是否存在的包或导入失败的包。</p></section>'
 
 def trace_page(slug,traces):
- text=header(TITLES[slug]+' · 运行轨迹',slug)+'<p><a href="index.html#trajectory">← 返回案例页</a></p><p>查看模型实际执行的命令、返回结果、文件修改与对外说明。事件按日志顺序排列；显式推理事件仅保留计数与位置。</p><details><summary>统计口径与日志限制</summary><p>开始和结束按同一事件 ID 合并；没有结束记录的调用保留为未结束。工具调用包含命令、文件修改及日志中其他显式工具事件。CLI 事件流可能不记录部分原生看图等操作，因此统计是日志可见下限。没有安装命令和成功结果时显示“无成功安装记录”，不推定环境没有依赖。不同日志未暴露的推理步骤不作估计。</p><p>为方便浏览，超过 16,000 字符的命令输出显示首尾；可观察日志下载保留完整输出。临时脚本若只记录文件修改路径而没有补丁，就不能从这里恢复其完整源码。</p></details><div class="controls"><label>模型<select id="model"></select></label><label>事件类型<select id="kind"><option value="all">全部事件</option><option value="tools">工具操作</option><option value="agent_message">对外说明</option><option value="reasoning">推理事件计数</option><option value="error">运行提示</option></select></label><label>跳到事件<input type="number" id="event-number" min="1" value="1"></label><button id="jump">跳转</button></div><p id="stats" aria-live="polite"></p><p class="links"><a id="raw" href="'+traces[0]['observable_url']+'">下载完整可观察日志</a><a id="run" href="'+traces[0]['run_url']+'">运行配置记录</a></p><div id="events"></div>'
+ text=header(TITLES[slug]+' · 运行轨迹',slug)+'<p><a href="index.html#trajectory">← 返回案例页</a></p><p>查看模型实际执行的命令、返回结果、文件修改与对外说明。事件按日志顺序排列；显式推理事件仅保留计数与位置。</p><details><summary>统计口径与日志限制</summary><p>开始和结束按同一事件 ID 合并；没有结束记录的调用保留为未结束。工具调用包含命令、文件修改及日志中其他显式工具事件。CLI 事件流可能不记录部分原生看图等操作，因此统计是日志可见下限。“使用的依赖”包括分析、制作、自检及工具探索中实际调用的第三方包，无论预装还是现场安装；不将仅探测可用性或导入失败算成使用。不同日志未暴露的推理步骤不作估计。</p><p>为方便浏览，超过 16,000 字符的命令输出显示首尾；可观察日志下载保留完整输出。临时脚本若只记录文件修改路径而没有补丁，就不能从这里恢复其完整源码。</p></details><div class="controls"><label>模型<select id="model"></select></label><label>事件类型<select id="kind"><option value="all">全部事件</option><option value="tools">工具操作</option><option value="agent_message">对外说明</option><option value="reasoning">推理事件计数</option><option value="error">运行提示</option></select></label><label>跳到事件<input type="number" id="event-number" min="1" value="1"></label><button id="jump">跳转</button></div><p id="stats" aria-live="polite"></p><div id="dependencies" class="note"></div><p class="links"><a id="raw" href="'+traces[0]['observable_url']+'">下载完整可观察日志</a><a id="run" href="'+traces[0]['run_url']+'">运行配置记录</a></p><div id="events"></div>'
  payload=json.dumps(traces,ensure_ascii=False).replace('<','\\u003c').replace('&','\\u0026')
  return text+'<script id="trace-data" type="application/json">'+payload+'</script><script src="../assets/traces.js"></script>'+footer()
 
@@ -207,7 +210,7 @@ def main():
  (OUT/'assets').mkdir(exist_ok=True)
  for name in ('style.css','traces.js'):shutil.copy2(HERE/name,OUT/'assets'/name);ASSETS.add('assets/'+name)
  before={r['id']:{p:sha(ROOT/p) for p in r['files']} for rows in CASES.values() for r in rows}
- manifest={'version':'A2-case-pages-20261022','classification':{'A1':'音视频内容制作与编排','A2':'本地化与使用方式适配','A3':'素材整理、检索与证据构建'},'cases':{},'source_results_sha256':sha(OUT/'RESULTS.json')}
+ manifest={'version':'A2-dependencies-20261022','classification':{'A1':'音视频内容制作与编排','A2':'本地化与使用方式适配','A3':'素材整理、检索与证据构建'},'cases':{},'source_results_sha256':sha(OUT/'RESULTS.json')}
  for slug,rows in CASES.items():
   traces=[trace(r) for r in rows];(OUT/slug).mkdir(exist_ok=True)
   body=header(TITLES[slug],slug)+'<p class="lead">'+('把手语表达准确地交给不懂手语的观众。' if slug=='sign' else '把这一次真实演奏变成可以照着弹的乐谱。')+'</p><p class="links"><a href="#task">任务定义</a><a href="#results">运行结果</a><a href="#trajectory">运行轨迹</a><a href="#analysis">失败分析</a><a href="#submissions">模型交付</a></p>'
@@ -223,7 +226,7 @@ def main():
  # Keep links sent before the redesign working, including model anchors.
  landing+='<script>(()=>{const h=decodeURIComponent(location.hash.slice(1));const p=h.startsWith("A4")?"sign":h.startsWith("A6")?"piano":null;if(p)location.replace(p+"/index.html"+(h.length>2?"#"+encodeURIComponent(h):""));})();</script>'+footer()
  (OUT/'index.html').write_text(landing,encoding='utf-8');ASSETS.add('index.html')
- readme='# OmniALE · A2 本地化与使用方式适配\n\n[案例首页](https://nanxiang-git.github.io/OmniALE/) · [手语字幕](https://nanxiang-git.github.io/OmniALE/sign/) · [钢琴转谱](https://nanxiang-git.github.io/OmniALE/piano/)\n\n两题已拆为独立案例页，运行轨迹各自放在 traces.html。当前成绩按得分倒序排列。分类依据项目原始 A1/A2/A3 定义，两题均属于 A2；归档文件中的旧编号保留。\n\n页面与失败分析更新，不重新运行模型或改分。手语 GLM 为已确认小计，12 分时间对齐待核验；钢琴使用交付导向 v2 事后复评。\n\n轨迹事件合并开始与结束，推理事件只计数，不发布内部推理正文。预装环境不算模型自行安装依赖。\n\n离线使用：在本目录运行 `python -m http.server 8000`，打开 http://localhost:8000/ 。\n\n[完整研究包]('+DOWNLOAD+') · [发布记录]('+RELEASE+')\n'
+ readme='# OmniALE · A2 本地化与使用方式适配\n\n[案例首页](https://nanxiang-git.github.io/OmniALE/) · [手语字幕](https://nanxiang-git.github.io/OmniALE/sign/) · [钢琴转谱](https://nanxiang-git.github.io/OmniALE/piano/)\n\n两题已拆为独立案例页，运行轨迹各自放在 traces.html。当前成绩按得分倒序排列。分类依据项目原始 A1/A2/A3 定义，两题均属于 A2；归档文件中的旧编号保留。\n\n页面与失败分析更新，不重新运行模型或改分。手语 GLM 为已确认小计，12 分时间对齐待核验；钢琴使用交付导向 v2 事后复评。\n\n轨迹事件合并开始与结束，推理事件只计数，不发布内部推理正文。依赖按本轮实际使用统计，包括预装包；Python 包与系统媒体工具分别列出。\n\n离线使用：在本目录运行 `python -m http.server 8000`，打开 http://localhost:8000/ 。\n\n[完整研究包]('+DOWNLOAD+') · [发布记录]('+RELEASE+')\n'
  (OUT/'README.md').write_text(readme,encoding='utf-8')
  for name in ('benchmark_report.html','benchmark_viewer.html'):
   target='deliverables/A4_A6_research_20261021/index.html';(ROOT/name).write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OmniALE · 案例首页</title><p><a href="'+target+'">打开 A2 案例首页</a></p><script>location.replace('+json.dumps(target)+'+location.hash);</script></html>',encoding='utf-8')

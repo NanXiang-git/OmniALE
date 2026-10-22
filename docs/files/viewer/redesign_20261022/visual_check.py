@@ -27,7 +27,7 @@ try:
   for slug in ('','sign/','piano/','sign/traces.html','piano/traces.html'):
    call('Page.navigate',{'url':'http://127.0.0.1:8772/'+slug});time.sleep(1)
    name=('mobile-' if mobile else 'desktop-')+(slug.replace('/','-').replace('.html','') or 'home')
-   if slug in ('sign/','piano/'):ev("document.getElementById('results').scrollIntoView()")
+   if slug in ('sign/','piano/'):ev("document.documentElement.style.scrollBehavior='auto';document.getElementById('results').scrollIntoView({behavior:'instant'})")
    info=ev("({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,title:document.title,events:document.querySelectorAll('article.event').length,videos:[...document.querySelectorAll('video')].map(v=>({error:v.error?.code||null})),images:[...document.querySelectorAll('img')].filter(i=>i.complete&&i.naturalWidth===0).length})")
    assert info['scrollWidth']<=info['width']+2,(slug,info)
    assert not any(v['error'] for v in info['videos']),(slug,info)
@@ -37,6 +37,7 @@ try:
     for m in counts:
      ev("document.getElementById('model').value="+json.dumps(m['id'])+";document.getElementById('model').dispatchEvent(new Event('change'))")
      assert ev("document.querySelectorAll('article.event').length")==m['n']
+     assert '使用的 Python 包' in ev("document.getElementById('dependencies').textContent")
      ev("document.getElementById('kind').value='tools';document.getElementById('kind').dispatchEvent(new Event('change'))")
      assert ev("document.querySelectorAll('article.event').length")==m['tools']
      ev("document.getElementById('kind').value='all';document.getElementById('kind').dispatchEvent(new Event('change'))")

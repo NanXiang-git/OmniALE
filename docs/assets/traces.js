@@ -6,6 +6,9 @@ for(const m of data){const o=el('option',m.model);o.value=m.id;model.append(o)}
 function selected(){return data.find(m=>m.id===model.value)||data[0]}
 function render(){const m=selected();events.replaceChildren();const visible=m.events.filter(e=>kind.value==='all'||(kind.value==='tools'?['command_execution','file_change','mcp_tool_call','tool_call','web_search'].includes(e.kind):e.kind===kind.value));stats.textContent=`${m.model} · ${m.stats.events} 个事件 · ${m.stats.tools} 次工具操作 · 推理事件 ${m.stats.reasoning} 条（仅计数） · 当前显示 ${visible.length} 个事件`;
 document.getElementById('raw').href=m.observable_url;document.getElementById('run').href=m.run_url;
+const deps=m.stats.used_dependencies,depbox=document.getElementById('dependencies');depbox.replaceChildren();
+depbox.append(el('div','使用的 Python 包：'+deps.python_packages.join('、')+'（'+deps.python_packages.length+' 个）'),el('div','媒体工具：'+deps.system_tools.join('；')));
+const de=el('details');de.append(el('summary','依赖使用依据'));for(const d of deps.evidence)de.append(el('div',d.name+'：事件 #'+d.event+'，日志 '+d.item_id));for(const n of deps.notes)de.append(el('p',n));depbox.append(de);
 for(const e of visible){const a=el('article',undefined,'event');a.id='event-'+e.seq;a.append(el('h3',`#${e.seq} · ${labels[e.kind]||e.kind}`));const mt=[e.item_id?'日志 ID '+e.item_id:'',e.status?'记录状态 '+e.status:'',e.exit_code!==undefined&&e.exit_code!==null?'退出码 '+e.exit_code:''].filter(Boolean).join(' · ');if(mt)a.append(el('div',mt,'meta'));
 if(e.kind==='reasoning')a.append(el('p','日志记录了一个推理事件。本页仅保留事件位置和计数，不展示内部推理正文。','muted'));
 if(e.command){const d=el('details');d.open=true;d.append(el('summary','执行命令'),el('pre',e.command));a.append(d)}
