@@ -1,0 +1,8 @@
+{
+  "model": "k3",
+  "status": "infrastructure_blocked",
+  "reason": "API preflight HTTP 503; no solver attempt started; no automatic retry",
+  "reasoning_effort": "high",
+  "budget_seconds": 2400,
+  "solver_attempt_started": false
+}

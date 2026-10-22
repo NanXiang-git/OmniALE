@@ -1,0 +1,19 @@
+{
+  "case": "A6",
+  "model": "glm-5.3-flash",
+  "reasoning_effort": "high",
+  "harness": "Codex CLI",
+  "budget_seconds": 2400,
+  "start_epoch": 1792560341.801974,
+  "status": "process_failed",
+  "pid": 45199,
+  "request_max_retries": 2,
+  "stream_max_retries": 2,
+  "full_solver_restarts": 0,
+  "exit_code": null,
+  "elapsed_seconds": null,
+  "wall_elapsed_seconds": null,
+  "controller_recovery": true,
+  "recovery_note": "WSL controller disappeared; no authoritative process exit or duration observed. Frozen available artifacts retained; no solver restart. Previous inferred budget_timeout/2400s values withdrawn.",
+  "failure_kind": "infrastructure_interrupted"
+}

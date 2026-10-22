@@ -1,0 +1,884 @@
+{
+  "id": "L01",
+  "case": "A4",
+  "model": "gpt-6-sol",
+  "version": "original",
+  "judge_model": "gpt-6-astra",
+  "base_points": 16.56423188405797,
+  "existing_cap": 39,
+  "status": "scored",
+  "final_score": 28.042493,
+  "score_type": "single_judge_LLM_final",
+  "original_formal_total": null,
+  "attempts": [
+    {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "provider": "nju",
+      "status": "completed",
+      "budget_seconds": 1800,
+      "start_epoch": 1792577660.252601,
+      "automatic_retries": 0,
+      "pid": 133581,
+      "exit_code": 0,
+      "elapsed_seconds": 540.188935320999,
+      "wall_elapsed_seconds": 564.3878433704376,
+      "clock_divergence_seconds": 24.198908049438614,
+      "clock_anomaly": true,
+      "end_epoch": 1792578224.640447,
+      "usage_events": [
+        {
+          "input_tokens": 1100614,
+          "cached_input_tokens": 1008256,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 11010,
+          "reasoning_output_tokens": 2399
+        }
+      ]
+    }
+  ],
+  "validation_error": null,
+  "submission_unchanged": true,
+  "reviewer_count": 1,
+  "reasoning_effort": "high",
+  "budget_seconds": 1800,
+  "pending_awarded": 11.478260869565217,
+  "uncapped_total": 28.042492753623186,
+  "applied_cap": 39,
+  "judgment": {
+    "items": [
+      {
+        "id": "timing",
+        "earned_points": 11.478260869565217,
+        "rationale": "按single-judge-final-v1进行单一LLM终评。直接查看覆盖全片的481张有序4 fps采样帧，并补看117张带原始PTS的边界帧；结合两套冻结SRT与MKV字幕包时间判定同步。23段均在对应镜头内显示，定位比例均为100%，无极短闪现。S21出点在收势后约1.8秒仍持续显示，S22入点晚于开头胸前动作，分别评0.5；其余21段评1。alignment合计22，earned_points=12/23×22=11.478260869565217。没有因字幕含“无法确认”重复扣时间分，也没有把整句参考窗当作专家手势边界。",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "artifact": "/work/packet.json",
+            "locator": "pending_units；evidence.aggregation",
+            "observation": "唯一待评项timing，权重12，要求23段0/0.5/1宏平均。",
+            "method": "读取JSON"
+          },
+          {
+            "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+            "locator": "流程第7条；100分算法对齐12",
+            "observation": "1为按表达单位同步；0.5为局部错位但可理解；0为错段、整段遗漏、闪现或明显不随表达。最终与自动定位取较小值。",
+            "method": "读取原规则"
+          },
+          {
+            "artifact": "/work/submission/zh-CN.srt",
+            "locator": "字幕1—23",
+            "observation": "逐条读取实际出入点，时长1.6—4.4秒，全部包含在各自片段窗内。",
+            "method": "解析UTF-8 SRT并计算与truth片段窗的交集比例"
+          },
+          {
+            "artifact": "/work/submission/en.srt",
+            "locator": "字幕1—23",
+            "observation": "英文与中文各段出入点完全一致，因此共用同一逐段alignment判定。",
+            "method": "解析SRT并逐条比较时间"
+          },
+          {
+            "artifact": "/work/submission/subtitled.mkv",
+            "locator": "字幕流1、2全部46个包的pts_time/duration_time",
+            "observation": "内嵌两轨起止时间与提交SRT一致；没有因封装产生额外字幕时间偏移。",
+            "method": "ffprobe读取全部字幕包时间"
+          },
+          {
+            "artifact": "/work/case/candidate/input/source.mp4",
+            "locator": "全片0—120.199秒；另见detail边界图",
+            "observation": "有序静态帧直接呈现动作姿态变化；表达边界属于基于时序图像的代理判断，不声称原生连续播放。",
+            "method": "4 fps接触表逐格查看；7段另用PyAV源PTS加密提帧"
+          }
+        ],
+        "detail": [
+          {
+            "id": "S01",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              1
+            ],
+            "en_cues": [
+              1
+            ],
+            "subtitle_start_seconds": 0.7,
+            "subtitle_end_seconds": 4.1,
+            "clip_start_seconds": 0,
+            "clip_end_seconds": 5.066016,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "0.50秒双手仍在下方，0.75秒已抬手指向；3.25—3.50秒为末尾手型，3.75—4.00秒已放下。0.700秒入点贴近起手，4.100秒出点在短暂收势后；覆盖整个动作序列，无明显错位。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_000.jpg",
+                "locator": "S01；图上约0.00—5.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S02",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              2
+            ],
+            "en_cues": [
+              2
+            ],
+            "subtitle_start_seconds": 5.9,
+            "subtitle_end_seconds": 8.0,
+            "clip_start_seconds": 5.566016,
+            "clip_end_seconds": 8.466016,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "原帧5.699秒手在下方，5.799秒起手，5.899—6.299秒胸前横移；7.799秒仍在口旁，7.899—8.099秒下落。5.900秒入点覆盖首个成形动作，8.000秒出点处于收手过程，没有漏掉后续表达单位。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_000.jpg",
+                "locator": "S02；图上约0.00—5.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_001.jpg",
+                "locator": "S02；图上约6.00—11.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/results/inspection/boundary_S02.jpg",
+                "locator": "S02；图内PTS及cue ON/OFF",
+                "observation": "直接观察带源视频PTS的边界帧；字幕开关标记由冻结SRT时间计算，并非播放器截图。",
+                "method": "PyAV解码原视频，按0.1秒或0.2秒目标选最近源帧，Pillow拼图后实际view_image查看"
+              }
+            ]
+          },
+          {
+            "id": "S03",
+            "alignment": 1,
+            "confidence": "low",
+            "zh_cues": [
+              3
+            ],
+            "en_cues": [
+              3
+            ],
+            "subtitle_start_seconds": 9.3,
+            "subtitle_end_seconds": 12.2,
+            "clip_start_seconds": 8.966016,
+            "clip_end_seconds": 12.866016,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "9.00秒尚未起手，9.25—9.50秒双手向胸前抬起，9.300秒入点与起手接近。原帧12.099秒最后手型已形成，12.299—12.399秒是同一手型停持，12.499—12.599秒开始放下。12.200秒出点略早于停持结束，但末尾动作已显示，未见可证实的新表达被截断，按最有依据判定给1；此边界判断置信度较低。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_001.jpg",
+                "locator": "S03；图上约6.00—11.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_002.jpg",
+                "locator": "S03；图上约12.00—17.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/results/inspection/boundary_S03.jpg",
+                "locator": "S03；图内PTS及cue ON/OFF",
+                "observation": "直接观察带源视频PTS的边界帧；字幕开关标记由冻结SRT时间计算，并非播放器截图。",
+                "method": "PyAV解码原视频，按0.1秒或0.2秒目标选最近源帧，Pillow拼图后实际view_image查看"
+              }
+            ]
+          },
+          {
+            "id": "S04",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              4
+            ],
+            "en_cues": [
+              4
+            ],
+            "subtitle_start_seconds": 14.5,
+            "subtitle_end_seconds": 17.9,
+            "clip_start_seconds": 13.366016,
+            "clip_end_seconds": 18.432683,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "14.50秒仍双手放低，14.75秒开始向头侧抬手；16.50—16.75秒双手末尾持型，17.00秒下降，17.25秒恢复静止。14.500—17.900秒包含动作及短暂前后留时；未因未覆盖整个13.366—18.433秒镜头而扣分。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_002.jpg",
+                "locator": "S04；图上约12.00—17.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_003.jpg",
+                "locator": "S04；图上约18.00—23.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S05",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              5
+            ],
+            "en_cues": [
+              5
+            ],
+            "subtitle_start_seconds": 19.8,
+            "subtitle_end_seconds": 23.5,
+            "clip_start_seconds": 18.932683,
+            "clip_end_seconds": 24.632683,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "19.75秒尚静止，20.00—20.25秒起手并横移，22.25—22.50秒末尾单手持型，22.75—23.00秒放下。19.800秒在起手前不久进入，23.500秒在收势后退出，短暂阅读留时可接受。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_003.jpg",
+                "locator": "S05；图上约18.00—23.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_004.jpg",
+                "locator": "S05；图上约24.00—29.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S06",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              6
+            ],
+            "en_cues": [
+              6
+            ],
+            "subtitle_start_seconds": 25.6,
+            "subtitle_end_seconds": 28.0,
+            "clip_start_seconds": 25.132683,
+            "clip_end_seconds": 28.49935,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "原帧25.499秒手刚开始抬起，25.599—25.699秒到胸前，25.600秒入点未漏首个成形动作；27.599—27.999秒末尾竖指持续，28.099秒开始下降，28.299秒已放下。28.000秒出点贴近末尾持型结束；没有按镜头边界硬扣分。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_004.jpg",
+                "locator": "S06；图上约24.00—29.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/results/inspection/boundary_S06.jpg",
+                "locator": "S06；图内PTS及cue ON/OFF",
+                "observation": "直接观察带源视频PTS的边界帧；字幕开关标记由冻结SRT时间计算，并非播放器截图。",
+                "method": "PyAV解码原视频，按0.1秒或0.2秒目标选最近源帧，Pillow拼图后实际view_image查看"
+              }
+            ]
+          },
+          {
+            "id": "S07",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              7
+            ],
+            "en_cues": [
+              7
+            ],
+            "subtitle_start_seconds": 29.4,
+            "subtitle_end_seconds": 32.7,
+            "clip_start_seconds": 28.99935,
+            "clip_end_seconds": 33.232683,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "29.25秒手在下方，29.50秒开始胸前横移；32.00—32.25秒双手末尾接触动作，32.50秒开始收手，32.75秒静止。29.400—32.700秒覆盖主要动作序列并在收势附近退出。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_004.jpg",
+                "locator": "S07；图上约24.00—29.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_005.jpg",
+                "locator": "S07；图上约30.00—35.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S08",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              8
+            ],
+            "en_cues": [
+              8
+            ],
+            "subtitle_start_seconds": 35.0,
+            "subtitle_end_seconds": 38.3,
+            "clip_start_seconds": 33.732683,
+            "clip_end_seconds": 39.032683,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "35.00秒手仍低，35.25秒抬起并成形，36.00—37.00秒连续手型变化，37.25秒下落，37.50秒已放下。35.000秒入点适当，38.300秒出点保留不足约一秒静止尾部，仍属本表达的阅读留时，无明显错段或延后到另一表达。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_005.jpg",
+                "locator": "S08；图上约30.00—35.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_006.jpg",
+                "locator": "S08；图上约36.00—41.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S09",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              9
+            ],
+            "en_cues": [
+              9
+            ],
+            "subtitle_start_seconds": 40.0,
+            "subtitle_end_seconds": 43.2,
+            "clip_start_seconds": 39.532683,
+            "clip_end_seconds": 43.832683,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "39.75秒静止，40.00秒起手，40.25秒指向，40.75—41.25秒手在耳旁；42.50—42.75秒末尾张手，43.00—43.25秒收手。40.000—43.200秒与完整活动时段相随，不因字幕只保留“电话”而在时间项重复扣语义分。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_006.jpg",
+                "locator": "S09；图上约36.00—41.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_007.jpg",
+                "locator": "S09；图上约42.00—47.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S10",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              10
+            ],
+            "en_cues": [
+              10
+            ],
+            "subtitle_start_seconds": 44.7,
+            "subtitle_end_seconds": 47.3,
+            "clip_start_seconds": 44.332683,
+            "clip_end_seconds": 47.866016,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "44.25秒手低，44.50秒开始上抬，44.75秒胸前横移；46.75秒双手在头旁，47.00秒下降，47.25秒已放下。44.700秒入点仍在首个动作内，47.300秒出点在收势附近，无明显局部错位。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_007.jpg",
+                "locator": "S10；图上约42.00—47.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S11",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              11
+            ],
+            "en_cues": [
+              11
+            ],
+            "subtitle_start_seconds": 49.0,
+            "subtitle_end_seconds": 52.7,
+            "clip_start_seconds": 48.366016,
+            "clip_end_seconds": 53.366016,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "49.00秒开始准备起手，49.25秒指向；51.25—51.50秒双手成形，52.00秒末尾单手持型，52.25—52.50秒放下。49.000—52.700秒覆盖动作并短暂保留收势，未见闪现。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_008.jpg",
+                "locator": "S11；图上约48.00—53.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S12",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              12
+            ],
+            "en_cues": [
+              12
+            ],
+            "subtitle_start_seconds": 55.5,
+            "subtitle_end_seconds": 57.1,
+            "clip_start_seconds": 53.866016,
+            "clip_end_seconds": 57.899349,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "55.50秒双手仍低，55.75秒开始抬单手，56.00秒手到肩旁，56.25秒向外下方运动，56.50—56.75秒收手。55.500—57.100秒长度1.600秒，贴合短表达，末尾为合理短暂留时，不能把镜头前面长静止段误当漏字幕。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_008.jpg",
+                "locator": "S12；图上约48.00—53.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_009.jpg",
+                "locator": "S12；图上约54.00—59.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S13",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              13
+            ],
+            "en_cues": [
+              13
+            ],
+            "subtitle_start_seconds": 59.3,
+            "subtitle_end_seconds": 63.6,
+            "clip_start_seconds": 58.399349,
+            "clip_end_seconds": 64.232682,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "59.00秒静止，59.25秒双手开始升起，59.50秒已张开；62.75—63.00秒双手末尾动作，63.25秒放下。59.300秒进入起手阶段，63.600秒在收势后不久退出，覆盖完整连续动作。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_009.jpg",
+                "locator": "S13；图上约54.00—59.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_010.jpg",
+                "locator": "S13；图上约60.00—65.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S14",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              14
+            ],
+            "en_cues": [
+              14
+            ],
+            "subtitle_start_seconds": 65.0,
+            "subtitle_end_seconds": 68.1,
+            "clip_start_seconds": 64.732682,
+            "clip_end_seconds": 68.666015,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "原帧64.799秒手低，64.899秒起手，64.999—65.099秒指向，65.199—65.299秒继续横移；66.799秒手到口旁，66.999—67.199秒下降，67.399秒静止。65.000秒入点覆盖首个成形动作；68.100秒出点比完全落手晚约0.7—0.9秒，仍为短暂阅读留时，不构成明显滞后。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_010.jpg",
+                "locator": "S14；图上约60.00—65.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_011.jpg",
+                "locator": "S14；图上约66.00—71.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/results/inspection/boundary_S14.jpg",
+                "locator": "S14；图内PTS及cue ON/OFF",
+                "observation": "直接观察带源视频PTS的边界帧；字幕开关标记由冻结SRT时间计算，并非播放器截图。",
+                "method": "PyAV解码原视频，按0.1秒或0.2秒目标选最近源帧，Pillow拼图后实际view_image查看"
+              }
+            ]
+          },
+          {
+            "id": "S15",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              15
+            ],
+            "en_cues": [
+              15
+            ],
+            "subtitle_start_seconds": 69.5,
+            "subtitle_end_seconds": 72.4,
+            "clip_start_seconds": 69.166015,
+            "clip_end_seconds": 72.899348,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "69.25秒手低，69.50秒开始胸前动作，70.50—70.75秒双手张合，71.00—72.00秒维持框形手势，72.25秒放下。69.500—72.400秒包含整段动作，首尾相随。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_011.jpg",
+                "locator": "S15；图上约66.00—71.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_012.jpg",
+                "locator": "S15；图上约72.00—77.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S16",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              16
+            ],
+            "en_cues": [
+              16
+            ],
+            "subtitle_start_seconds": 73.8,
+            "subtitle_end_seconds": 77.4,
+            "clip_start_seconds": 73.399348,
+            "clip_end_seconds": 78.232681,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "原帧73.399秒双手低，73.499—73.599秒起手，73.699—74.099秒首个竖指手型持续，73.800秒入点仍在该动作初段；76.999—77.099秒末尾双手持型，77.199—77.399秒下降，77.499秒已放低。77.400秒出点贴近收势；起点的短差异未漏掉完整手势单位。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_012.jpg",
+                "locator": "S16；图上约72.00—77.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_013.jpg",
+                "locator": "S16；图上约78.00—83.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/results/inspection/boundary_S16.jpg",
+                "locator": "S16；图内PTS及cue ON/OFF",
+                "observation": "直接观察带源视频PTS的边界帧；字幕开关标记由冻结SRT时间计算，并非播放器截图。",
+                "method": "PyAV解码原视频，按0.1秒或0.2秒目标选最近源帧，Pillow拼图后实际view_image查看"
+              }
+            ]
+          },
+          {
+            "id": "S17",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              17
+            ],
+            "en_cues": [
+              17
+            ],
+            "subtitle_start_seconds": 80.0,
+            "subtitle_end_seconds": 83.2,
+            "clip_start_seconds": 78.732681,
+            "clip_end_seconds": 83.866014,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "79.75秒尚静止，80.00秒开始抬双手，80.25—80.75秒交叉动作；81.75—82.00秒末尾手势，82.25—82.50秒放下。80.000秒入点匹配起手，83.200秒出点含短暂尾部留时，仍明确属于本表达。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_013.jpg",
+                "locator": "S17；图上约78.00—83.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S18",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              18
+            ],
+            "en_cues": [
+              18
+            ],
+            "subtitle_start_seconds": 84.8,
+            "subtitle_end_seconds": 87.9,
+            "clip_start_seconds": 84.366014,
+            "clip_end_seconds": 88.432681,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "84.50秒静止，84.75秒起手，85.00—85.75秒手在下颌附近，86.75—87.50秒手向胸腹移动，87.75—88.00秒收手。84.800—87.900秒覆盖主要活动和收势，不因“我”的语义正确与否重复处罚时间项。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_014.jpg",
+                "locator": "S18；图上约84.00—89.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S19",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              19
+            ],
+            "en_cues": [
+              19
+            ],
+            "subtitle_start_seconds": 89.3,
+            "subtitle_end_seconds": 92.8,
+            "clip_start_seconds": 88.932681,
+            "clip_end_seconds": 93.199348,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "89.00秒手低，89.25秒胸前起手，89.50—89.75秒横移；92.25—92.50秒竖拇指末尾动作，92.75秒下降，93.00秒静止。89.300秒入点仍在首个动作，92.800秒退出贴近收势，没有跨到S20。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_014.jpg",
+                "locator": "S19；图上约84.00—89.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_015.jpg",
+                "locator": "S19；图上约90.00—95.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S20",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              20
+            ],
+            "en_cues": [
+              20
+            ],
+            "subtitle_start_seconds": 96.0,
+            "subtitle_end_seconds": 98.9,
+            "clip_start_seconds": 93.699348,
+            "clip_end_seconds": 99.432356,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "95.75秒双手静止，96.00秒开始抬手，96.25—97.75秒为连续口前、手臂及指形动作；98.00秒手下降，98.25秒已放下。96.000—98.900秒覆盖完整动作并留下短暂阅读时间；没有将93.699秒的镜头起点错当表达起点。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_015.jpg",
+                "locator": "S20；图上约90.00—95.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_016.jpg",
+                "locator": "S20；图上约96.00—101.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          },
+          {
+            "id": "S21",
+            "alignment": 0.5,
+            "confidence": "medium",
+            "zh_cues": [
+              21
+            ],
+            "en_cues": [
+              21
+            ],
+            "subtitle_start_seconds": 102.7,
+            "subtitle_end_seconds": 107.1,
+            "clip_start_seconds": 99.932356,
+            "clip_end_seconds": 107.599023,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "原帧102.499秒仍静止，102.599—102.799秒抬手靠头，102.700秒入点合适。104.899秒仍竖指，105.099秒下降，105.299秒双手已落下；105.499—107.099秒连续帧均保持静止，而字幕到107.100秒才消失。约1.8秒静止尾部仍显示该短字幕，明显长于此处收势，判出点局部滞后；主要表达仍完整覆盖，可理解，因此0.5而非0。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_016.jpg",
+                "locator": "S21；图上约96.00—101.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_017.jpg",
+                "locator": "S21；图上约102.00—107.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/results/inspection/boundary_S21.jpg",
+                "locator": "S21；图内PTS及cue ON/OFF",
+                "observation": "直接观察带源视频PTS的边界帧；字幕开关标记由冻结SRT时间计算，并非播放器截图。",
+                "method": "PyAV解码原视频，按0.1秒或0.2秒目标选最近源帧，Pillow拼图后实际view_image查看"
+              }
+            ]
+          },
+          {
+            "id": "S22",
+            "alignment": 0.5,
+            "confidence": "medium",
+            "zh_cues": [
+              22
+            ],
+            "en_cues": [
+              22
+            ],
+            "subtitle_start_seconds": 110.5,
+            "subtitle_end_seconds": 113.5,
+            "clip_start_seconds": 108.099023,
+            "clip_end_seconds": 114.032356,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "原帧109.899秒仍静止，109.999秒开始抬手，110.099—110.399秒手已在胸前，110.499秒离开胸前，110.599秒转到头侧；字幕110.500秒才出现，首个胸前动作基本已完成。112.299秒为末尾动作，112.499秒收拢，112.699秒已静止，字幕留到113.500秒。起点漏盖一个明显的开头动作，属于局部错位；后续序列仍被覆盖，给0.5。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_018.jpg",
+                "locator": "S22；图上约108.00—113.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/results/inspection/boundary_S22.jpg",
+                "locator": "S22；图内PTS及cue ON/OFF",
+                "observation": "直接观察带源视频PTS的边界帧；字幕开关标记由冻结SRT时间计算，并非播放器截图。",
+                "method": "PyAV解码原视频，按0.1秒或0.2秒目标选最近源帧，Pillow拼图后实际view_image查看"
+              }
+            ]
+          },
+          {
+            "id": "S23",
+            "alignment": 1,
+            "confidence": "medium",
+            "zh_cues": [
+              23
+            ],
+            "en_cues": [
+              23
+            ],
+            "subtitle_start_seconds": 115.8,
+            "subtitle_end_seconds": 119.5,
+            "clip_start_seconds": 114.532356,
+            "clip_end_seconds": 120.199023,
+            "correct_clip_display_ratio": 1.0,
+            "automatic_localization": 1,
+            "rationale": "115.75秒双手仍低，116.00秒开始抬起，116.25秒合掌、116.50秒打开；118.25—118.75秒末尾单手持型，119.00秒下降，119.25秒已放下。115.800秒稍早于起手，119.500秒在收势后退出，覆盖本段动作，无闪现或跨段。",
+            "evidence": [
+              {
+                "artifact": "/work/evidence/image_019.jpg",
+                "locator": "S23；图上约114.00—119.75秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              },
+              {
+                "artifact": "/work/evidence/image_020.jpg",
+                "locator": "S23；图上约120.00—120.00秒有序采样",
+                "observation": "直接查看该时段的起手、连续动作、停持及收势；具体观察见本段rationale。",
+                "method": "view_image逐格查看4 fps有序接触表；图上时间为近似采样标记，不作毫秒金标"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cap": {
+      "maximum_total": 39,
+      "rationale": "原REVIEW_PROTOCOL.md“语义覆盖率不足50%封顶39”，rubric.json caps.semantic_coverage_below_half=39；grade.py以23段语义正确率宏平均实施。冻结中英文字幕有17段仅为[无法确认]/[unclear]，按原题“全写无法确认不获得内容分”；即使其余6段全部获得语义满分，覆盖率也至多6/23=26.09%，必低于50%。因此明确适用39分总分上限。此为由答卷实际文字建立的保守上界，未重算或更改已确认语义分；没有将遗漏当严重翻转，也未因未原生播放或未听音追加封顶。39是总分上限，不是本轮重新计算的总分。",
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+          "locator": "100分算法，封顶段落",
+          "observation": "语义覆盖率不足50%封顶39；多规则取最低上限。",
+          "method": "直接读取"
+        },
+        {
+          "artifact": "/work/case/evaluator/rubric.json",
+          "locator": "caps.semantic_coverage_below_half",
+          "observation": "该项上限为39。",
+          "method": "读取JSON"
+        },
+        {
+          "artifact": "/work/case/evaluator/grade.py",
+          "locator": "aggregate：semantic宏平均及avg(semantic)<.5分支",
+          "observation": "语义采用23段宏平均，低于0.5时加入39封顶。",
+          "method": "读取代码，未执行重评已确认项目"
+        },
+        {
+          "artifact": "/work/case/candidate/TASK.md",
+          "locator": "要求第4条",
+          "observation": "题目明确全写“无法确认”不获得内容分。",
+          "method": "直接读取"
+        },
+        {
+          "artifact": "/work/submission/zh-CN.srt",
+          "locator": "字幕1,2,5,6,7,8,10,11,12,13,14,15,16,17,19,20,23",
+          "observation": "这17条仅含[无法确认]，没有可计为正确翻译的内容。",
+          "method": "逐条读取文本"
+        },
+        {
+          "artifact": "/work/submission/en.srt",
+          "locator": "字幕1,2,5,6,7,8,10,11,12,13,14,15,16,17,19,20,23",
+          "observation": "对应17条仅含[unclear]；其余仅6段，即使全正确也不足50%。",
+          "method": "逐条读取文本并做覆盖率上界计算"
+        }
+      ]
+    },
+    "inspection_limits": [
+      "本结果是single-judge-final-v1下单一LLM评审，只补pending_units；不是原协议双评结果，也不冒充中国手语真人专家核验。",
+      "未使用原生连续视频输入或正常速度连续播放；实际视觉输入是全片481张4 fps有序采样帧及117张加密边界帧。动作同步由这些直接可见姿态与时间序列推断，可能遗漏采样间的细微手势或非手控语法变化。",
+      "原有接触表标签是近似采样时刻，不能当作源帧精确PTS；关键边界另从原视频解码并标注真实PTS，仍没有专家逐手势起止金标。",
+      "没有直接听音。ffprobe确认本题源视频只有视频流、没有音轨；本项评的是视觉表达与字幕同步。",
+      "cue ON/OFF是根据冻结SRT计算的可复核标记，不是实际播放器烧录画面；已用ffprobe核对MKV两条字幕流的全部包时间与SRT相符。",
+      "未重做或修改非待评的语义、双语、可读性、交付、校准分；封顶只利用17段纯未知占位文字建立无需重新赋分的语义覆盖率上界。"
+    ]
+  }
+}

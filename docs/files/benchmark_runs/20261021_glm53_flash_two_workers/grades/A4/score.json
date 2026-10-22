@@ -1,0 +1,1184 @@
+{
+  "id": "A4",
+  "case": "A4",
+  "model": "glm-5.3-flash",
+  "review_model": null,
+  "reasoning_effort": "high",
+  "formal_total": null,
+  "solver_status": "completed",
+  "review_status": "skipped_empty_submission",
+  "score_type": "hard_constraints_only_empty_submission",
+  "confirmed_proxy_points": 0,
+  "pending_weight": 90.0,
+  "uncapped_proxy_interval": [
+    0,
+    90.0
+  ],
+  "units": [
+    {
+      "id": "S01.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S01.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S01.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S01.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S02.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S02.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S02.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S02.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S03.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S03.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S03.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S03.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S04.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S04.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S04.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S04.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S05.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S05.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S05.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S05.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S06.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S06.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S06.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S06.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S07.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S07.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S07.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S07.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S08.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S08.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S08.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S08.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S09.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S09.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S09.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S09.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S10.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S10.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S10.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S10.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S11.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S11.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S11.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S11.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S12.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S12.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S12.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S12.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S13.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S13.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S13.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S13.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S14.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S14.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S14.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S14.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S15.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S15.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S15.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S15.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S16.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S16.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S16.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S16.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S17.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S17.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S17.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S17.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S18.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S18.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S18.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S18.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S19.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S19.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S19.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S19.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S20.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S20.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S20.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S20.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S21.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S21.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S21.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S21.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S22.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S22.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S22.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S22.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S23.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S23.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S23.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S23.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "readability",
+      "weight": 5,
+      "points": 0,
+      "evidence": "technical.json"
+    },
+    {
+      "id": "delivery",
+      "weight": 5,
+      "points": 0,
+      "evidence": "technical.json"
+    }
+  ],
+  "cap_candidates": [],
+  "caps_applied": [],
+  "errors": [
+    "Review not completed; any draft ratings excluded."
+  ],
+  "inspection_limits": [],
+  "limitations": [
+    "Proxy interval is unknown-item bookkeeping, not a formal score or confidence interval.",
+    "Original formal prerequisites and caps preserved; unverified caps are not silently cleared.",
+    "No direct listening or continuous video certification.",
+    "答题会话未提交任何文件；仅按原生硬约束记录交付失败，没有调用LLM judge，未把该情况自动归为API故障。",
+    "本轮仅两个作答会话并行；每题开始执行后计时40分钟，尚未启动的排队题不计时。网络重试和推理等待计入该题预算；超时不单独证明模型能力不足。",
+    "保守分只累计已确认得分，未知项不代表已证实错误；不满足正式评审前提。"
+  ],
+  "submission_unchanged": true,
+  "delivery_failed": true,
+  "conservative_total": 0,
+  "checklist": [
+    {
+      "id": "S01.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S01.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S01.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S01.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S02.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S02.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S02.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S02.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S03.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S03.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S03.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S03.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S04.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S04.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S04.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S04.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S05.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S05.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S05.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S05.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S06.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S06.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S06.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S06.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S07.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S07.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S07.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S07.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S08.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S08.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S08.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S08.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S09.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S09.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S09.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S09.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S10.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S10.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S10.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S10.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S11.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S11.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S11.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S11.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S12.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S12.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S12.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S12.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S13.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S13.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S13.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S13.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S14.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S14.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S14.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S14.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S15.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S15.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S15.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S15.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S16.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S16.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S16.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S16.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S17.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S17.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S17.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S17.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S18.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S18.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S18.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S18.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S19.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S19.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S19.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S19.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S20.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S20.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S20.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S20.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S21.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S21.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S21.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S21.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S22.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S22.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S22.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S22.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S23.meaning",
+      "weight": 2.8260869565217392,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S23.bilingual",
+      "weight": 0.34782608695652173,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "S23.timing",
+      "weight": 0.5217391304347826,
+      "points": null,
+      "evidence": "Continuous CSL alignment not verified."
+    },
+    {
+      "id": "S23.calibration",
+      "weight": 0.21739130434782608,
+      "points": null,
+      "evidence": {}
+    },
+    {
+      "id": "readability",
+      "weight": 5,
+      "points": 0,
+      "evidence": "technical.json"
+    },
+    {
+      "id": "delivery",
+      "weight": 5,
+      "points": 0,
+      "evidence": "technical.json"
+    }
+  ],
+  "findings": [
+    {
+      "id": "readability",
+      "lost_points": 5,
+      "reason": "technical.json"
+    },
+    {
+      "id": "delivery",
+      "lost_points": 5,
+      "reason": "technical.json"
+    }
+  ],
+  "major_issues": [],
+  "minor_issues": [
+    "readability: technical.json",
+    "delivery: technical.json"
+  ],
+  "issue_count_policy": "Major means proven native critical rule; minor lists other observed deductions. Unknown checks are not errors."
+}

@@ -1,0 +1,24 @@
+{
+  "model": "gpt-6-sol",
+  "provider": "nju",
+  "reasoning_effort": "medium",
+  "status": "completed",
+  "budget_seconds": 900,
+  "start_utc": "2026-10-20T06:09:28.619334+00:00",
+  "deadline_epoch": 1792477468.6193287,
+  "observed_clock_gaps": [],
+  "automatic_retries": 0,
+  "pid": 23996,
+  "exit_code": 0,
+  "elapsed_seconds": 580.5,
+  "end_utc": "2026-10-20T06:19:09.120484+00:00",
+  "usage_events": [
+    {
+      "input_tokens": 1366160,
+      "cached_input_tokens": 1300864,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9834,
+      "reasoning_output_tokens": 4371
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "viewport_checks": [
+    {
+      "page": "",
+      "mobile": false,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "title": "真实媒体的创作与适配 · OmniALE",
+      "events": 0,
+      "videos": [],
+      "images": 0
+    },
+    {
+      "page": "sign/",
+      "mobile": false,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "title": "中国手语视频 → 中英文字幕 · OmniALE",
+      "events": 0,
+      "videos": [
+        {
+          "error": null
+        },
+        {
+          "error": null
+        },
+        {
+          "error": null
+        },
+        {
+          "error": null
+        },
+        {
+          "error": null
+        },
+        {
+          "error": null
+        }
+      ],
+      "images": 0
+    },
+    {
+      "page": "piano/",
+      "mobile": false,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "title": "钢琴演奏视频 → 乐谱与 MIDI · OmniALE",
+      "events": 0,
+      "videos": [
+        {
+          "error": null
+        }
+      ],
+      "images": 0
+    },
+    {
+      "page": "sign/traces.html",
+      "mobile": false,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "title": "中国手语视频 → 中英文字幕 · 运行轨迹 · OmniALE",
+      "events": 27,
+      "videos": [],
+      "images": 0
+    },
+    {
+      "page": "piano/traces.html",
+      "mobile": false,
+      "width": 1440,
+      "scrollWidth": 1425,
+      "title": "钢琴演奏视频 → 乐谱与 MIDI · 运行轨迹 · OmniALE",
+      "events": 83,
+      "videos": [],
+      "images": 0
+    },
+    {
+      "page": "",
+      "mobile": true,
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "真实媒体的创作与适配 · OmniALE",
+      "events": 0,
+      "videos": [],
+      "images": 0
+    },
+    {
+      "page": "sign/",
+      "mobile": true,
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "中国手语视频 → 中英文字幕 · OmniALE",
+      "events": 0,
+      "videos": [
+        {
+          "error": null
+        },
+        {
+          "error": null
+        },
+        {
+          "error": null
+        },
+        {
+          "error": null
+        },
+        {
+          "error": null
+        },
+        {
+          "error": null
+        }
+      ],
+      "images": 0
+    },
+    {
+      "page": "piano/",
+      "mobile": true,
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "钢琴演奏视频 → 乐谱与 MIDI · OmniALE",
+      "events": 0,
+      "videos": [
+        {
+          "error": null
+        }
+      ],
+      "images": 0
+    },
+    {
+      "page": "sign/traces.html",
+      "mobile": true,
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "中国手语视频 → 中英文字幕 · 运行轨迹 · OmniALE",
+      "events": 27,
+      "videos": [],
+      "images": 0
+    },
+    {
+      "page": "piano/traces.html",
+      "mobile": true,
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "钢琴演奏视频 → 乐谱与 MIDI · 运行轨迹 · OmniALE",
+      "events": 83,
+      "videos": [],
+      "images": 0
+    }
+  ],
+  "all_model_switches_passed": true,
+  "filter_counts_match": true,
+  "event_jump_passed": true,
+  "legacy_hash_redirect_passed": true,
+  "deep_link_opens_submission": true,
+  "subtitle_tracks_present": true
+}

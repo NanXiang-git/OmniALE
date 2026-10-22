@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "source_results_unchanged": true,
+  "original_submissions_unchanged": true,
+  "pages": [
+    "index.html",
+    "sign/index.html",
+    "sign/traces.html",
+    "piano/index.html",
+    "piano/traces.html"
+  ],
+  "trace_stats": {
+    "sign": [
+      {
+        "model": "gpt-6-astra",
+        "events": 27,
+        "raw_jsonl_lines": 48,
+        "tools": 18,
+        "reasoning": 0,
+        "kinds": {
+          "error": 1,
+          "agent_message": 8,
+          "command_execution": 18
+        },
+        "dependency_installs": []
+      },
+      {
+        "model": "gpt-6-sol",
+        "events": 68,
+        "raw_jsonl_lines": 125,
+        "tools": 55,
+        "reasoning": 0,
+        "kinds": {
+          "error": 1,
+          "agent_message": 12,
+          "command_execution": 49,
+          "file_change": 6
+        },
+        "dependency_installs": []
+      },
+      {
+        "model": "k3",
+        "events": 49,
+        "raw_jsonl_lines": 60,
+        "tools": 9,
+        "reasoning": 21,
+        "kinds": {
+          "error": 2,
+          "reasoning": 21,
+          "agent_message": 17,
+          "command_execution": 9
+        },
+        "dependency_installs": []
+      },
+      {
+        "model": "gpt-6-luna",
+        "events": 14,
+        "raw_jsonl_lines": 25,
+        "tools": 8,
+        "reasoning": 0,
+        "kinds": {
+          "error": 1,
+          "agent_message": 5,
+          "command_execution": 8
+        },
+        "dependency_installs": []
+      },
+      {
+        "model": "glm-5.3-flash",
+        "events": 85,
+        "raw_jsonl_lines": 108,
+        "tools": 20,
+        "reasoning": 46,
+        "kinds": {
+          "error": 2,
+          "reasoning": 46,
+          "agent_message": 17,
+          "command_execution": 19,
+          "file_change": 1
+        },
+        "dependency_installs": []
+      }
+    ],
+    "piano": [
+      {
+        "model": "gpt-6-sol",
+        "events": 83,
+        "raw_jsonl_lines": 156,
+        "tools": 70,
+        "reasoning": 0,
+        "kinds": {
+          "error": 1,
+          "agent_message": 12,
+          "command_execution": 56,
+          "file_change": 14
+        },
+        "dependency_installs": []
+      },
+      {
+        "model": "gpt-6-astra",
+        "events": 44,
+        "raw_jsonl_lines": 83,
+        "tools": 37,
+        "reasoning": 0,
+        "kinds": {
+          "error": 3,
+          "agent_message": 4,
+          "command_execution": 37
+        },
+        "dependency_installs": []
+      },
+      {
+        "model": "k3",
+        "events": 157,
+        "raw_jsonl_lines": 218,
+        "tools": 59,
+        "reasoning": 69,
+        "kinds": {
+          "error": 2,
+          "reasoning": 69,
+          "agent_message": 27,
+          "command_execution": 59
+        },
+        "dependency_installs": []
+      },
+      {
+        "model": "glm-5.3-flash",
+        "events": 186,
+        "raw_jsonl_lines": 266,
+        "tools": 77,
+        "reasoning": 91,
+        "kinds": {
+          "error": 2,
+          "reasoning": 91,
+          "agent_message": 16,
+          "command_execution": 77
+        },
+        "dependency_installs": []
+      },
+      {
+        "model": "gpt-6-luna",
+        "events": 45,
+        "raw_jsonl_lines": 83,
+        "tools": 35,
+        "reasoning": 0,
+        "kinds": {
+          "error": 1,
+          "agent_message": 9,
+          "command_execution": 23,
+          "file_change": 12
+        },
+        "dependency_installs": []
+      }
+    ]
+  }
+}

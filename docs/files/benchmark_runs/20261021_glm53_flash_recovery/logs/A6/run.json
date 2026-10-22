@@ -1,0 +1,18 @@
+{
+  "case": "A6",
+  "model": "glm-5.3-flash",
+  "reasoning_effort": "high",
+  "harness": "Codex CLI",
+  "budget_seconds": 2400,
+  "start_epoch": 1792570827.796649,
+  "status": "budget_timeout",
+  "pid": 46570,
+  "request_max_retries": 2,
+  "stream_max_retries": 2,
+  "full_solver_restarts": 0,
+  "exit_code": -9,
+  "elapsed_seconds": 2291.781,
+  "wall_elapsed_seconds": 2400.085,
+  "usage_events": [],
+  "candidate_unchanged": true
+}

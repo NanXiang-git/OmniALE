@@ -1,0 +1,19 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "provider": "nju",
+  "status": "process_failed",
+  "budget_seconds": 2400,
+  "start_epoch": 1792568337.2867997,
+  "automatic_retries": 0,
+  "pid": 955,
+  "exit_code": 1,
+  "elapsed_seconds": 45.034371784000015,
+  "wall_elapsed_seconds": 46.651827573776245,
+  "clock_divergence_seconds": 1.6174557897762298,
+  "clock_anomaly": false,
+  "end_epoch": 1792568383.938635,
+  "usage_events": [],
+  "removed_submission_symlinks": [],
+  "candidate_unchanged": true
+}

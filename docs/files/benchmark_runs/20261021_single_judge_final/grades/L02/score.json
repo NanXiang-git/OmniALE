@@ -1,0 +1,300 @@
+{
+  "id": "L02",
+  "case": "A4",
+  "model": "gpt-6-astra",
+  "version": "original",
+  "judge_model": "gpt-6-sol",
+  "base_points": 28.371,
+  "existing_cap": 39,
+  "status": "scored",
+  "final_score": 39,
+  "score_type": "single_judge_LLM_final",
+  "original_formal_total": null,
+  "attempts": [
+    {
+      "model": "gpt-6-sol",
+      "reasoning_effort": "high",
+      "provider": "nju",
+      "status": "completed",
+      "budget_seconds": 1800,
+      "start_epoch": 1792578248.8540761,
+      "automatic_retries": 0,
+      "pid": 134130,
+      "exit_code": 0,
+      "elapsed_seconds": 335.4515177760004,
+      "wall_elapsed_seconds": 350.8318877220154,
+      "clock_divergence_seconds": 15.38036994601498,
+      "clock_anomaly": true,
+      "end_epoch": 1792578599.6859655,
+      "usage_events": [
+        {
+          "input_tokens": 745448,
+          "cached_input_tokens": 670592,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 9085,
+          "reasoning_output_tokens": 2896
+        }
+      ]
+    }
+  ],
+  "validation_error": null,
+  "submission_unchanged": true,
+  "reviewer_count": 1,
+  "reasoning_effort": "high",
+  "budget_seconds": 1800,
+  "pending_awarded": 12,
+  "uncapped_total": 40.370999999999995,
+  "applied_cap": 39,
+  "judgment": {
+    "items": [
+      {
+        "id": "timing",
+        "earned_points": 12,
+        "rationale": "中英23条字幕时间完全相同。逐段对照SRT与源视频每0.25秒有序帧，字幕均覆盖该段主要手势表达，前后空白或静止阶段未被误当成必须显示的表达；未见错段、漏整段、明显提前/滞后或极短闪现。23段alignment均为1，按12/23×23计12分。整句参考窗并非逐手势金标，未按毫秒差机械扣分；译文是否正确另属语义项。",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "artifact": "/work/submission/zh-CN.srt",
+            "locator": "第1至23条",
+            "observation": "各字幕起止时间用于逐段比对，且与英文轨相同。",
+            "method": "读取SRT时间码"
+          },
+          {
+            "artifact": "/work/submission/en.srt",
+            "locator": "第1至23条",
+            "observation": "中英字幕时间窗一致。",
+            "method": "读取SRT时间码"
+          },
+          {
+            "artifact": "/work/evidence/image_000.jpg",
+            "locator": "0.000至5.750秒，每0.25秒一帧",
+            "observation": "S01手势在约0.75至3.5秒，字幕0.78至3.85秒；前后有静止和换段。",
+            "method": "实际查看有序源视频帧"
+          },
+          {
+            "artifact": "/work/evidence/image_009.jpg",
+            "locator": "54.000至59.750秒，每0.25秒一帧",
+            "observation": "S12短动作约55.75至56.75秒，与1秒字幕窗相交并基本同步。",
+            "method": "实际查看有序源视频帧"
+          },
+          {
+            "artifact": "/work/evidence/image_017.jpg",
+            "locator": "102.000至107.750秒，每0.25秒一帧",
+            "observation": "S21主体动作约102.5至105.25秒，与102.6至105.35秒字幕同步；整片段前后长静止无需持续显示字幕。",
+            "method": "实际查看有序源视频帧"
+          },
+          {
+            "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+            "locator": "流程第7项、100分算法-对齐12",
+            "observation": "alignment允许0、0.5、1；人工对齐分与自动正确片段定位分取较小值，整句参考不是逐手势毫秒金标。",
+            "method": "读取原评分规则"
+          }
+        ],
+        "detail": [
+          {
+            "id": "S01",
+            "alignment": 1,
+            "subtitle_window": "0.78-3.85秒",
+            "boundary_evidence": "image_000：0.50秒双手静止，0.75秒起手，3.50秒仍在收尾，3.75秒已静止；字幕覆盖动作。",
+            "artifact": "/work/evidence/image_000.jpg"
+          },
+          {
+            "id": "S02",
+            "alignment": 1,
+            "subtitle_window": "5.85-7.95秒",
+            "boundary_evidence": "image_000/001：5.50秒换人后静止，5.75-7.75秒连续手势，8.00秒收手；字幕同步。",
+            "artifact": "/work/evidence/image_001.jpg"
+          },
+          {
+            "id": "S03",
+            "alignment": 1,
+            "subtitle_window": "9.25-12.50秒",
+            "boundary_evidence": "image_001/002：9.00秒新片段静止，9.25秒双手起势，12.25秒仍有手势，12.50秒落手；字幕覆盖。",
+            "artifact": "/work/evidence/image_001.jpg"
+          },
+          {
+            "id": "S04",
+            "alignment": 1,
+            "subtitle_window": "14.78-17.15秒",
+            "boundary_evidence": "image_002：14.50秒静止，14.75秒起手，17.00秒末尾动作，17.25秒双手落下；边界贴合。",
+            "artifact": "/work/evidence/image_002.jpg"
+          },
+          {
+            "id": "S05",
+            "alignment": 1,
+            "subtitle_window": "20.18-22.80秒",
+            "boundary_evidence": "image_003：20.00秒静止，20.25秒开始手势，22.50秒仍举掌，22.75秒回到静止；字幕同步。",
+            "artifact": "/work/evidence/image_003.jpg"
+          },
+          {
+            "id": "S06",
+            "alignment": 1,
+            "subtitle_window": "25.62-28.13秒",
+            "boundary_evidence": "image_004：25.50秒起手，27.75-28.00秒仍在手势，28.25秒收尾；字幕覆盖主体。",
+            "artifact": "/work/evidence/image_004.jpg"
+          },
+          {
+            "id": "S07",
+            "alignment": 1,
+            "subtitle_window": "29.40-32.65秒",
+            "boundary_evidence": "image_004/005：29.25秒后起势，30.75-32.25秒连续双手动作，32.50秒落手；字幕无明显错位。",
+            "artifact": "/work/evidence/image_005.jpg"
+          },
+          {
+            "id": "S08",
+            "alignment": 1,
+            "subtitle_window": "35.18-37.55秒",
+            "boundary_evidence": "image_005/006：35.00秒静止，35.25秒开始指示动作，37.25秒末手势，37.50秒收手；字幕同步。",
+            "artifact": "/work/evidence/image_006.jpg"
+          },
+          {
+            "id": "S09",
+            "alignment": 1,
+            "subtitle_window": "40.18-43.20秒",
+            "boundary_evidence": "image_006/007：40.00秒起手，40.25-43.00秒持续动作，43.25秒落手；起始略迟于首帧但未明显漏表达。",
+            "artifact": "/work/evidence/image_007.jpg"
+          },
+          {
+            "id": "S10",
+            "alignment": 1,
+            "subtitle_window": "44.65-47.20秒",
+            "boundary_evidence": "image_007：44.50秒准备起手，44.75-47.00秒持续动作，47.25秒已收手；字幕覆盖主要动作。",
+            "artifact": "/work/evidence/image_007.jpg"
+          },
+          {
+            "id": "S11",
+            "alignment": 1,
+            "subtitle_window": "49.20-52.40秒",
+            "boundary_evidence": "image_008：49.00秒起手，49.25-52.25秒连续表达，52.50秒双手落下；字幕同步。",
+            "artifact": "/work/evidence/image_008.jpg"
+          },
+          {
+            "id": "S12",
+            "alignment": 1,
+            "subtitle_window": "55.75-56.75秒",
+            "boundary_evidence": "image_009：55.50秒静止，55.75秒起手，56.00-56.50秒短手势，56.75秒收尾；1秒窗口覆盖短表达，并非闪现。",
+            "artifact": "/work/evidence/image_009.jpg"
+          },
+          {
+            "id": "S13",
+            "alignment": 1,
+            "subtitle_window": "59.40-63.25秒",
+            "boundary_evidence": "image_009/010：59.25秒准备，59.50-63.00秒连续双手动作，63.25秒收手；字幕基本全程同步。",
+            "artifact": "/work/evidence/image_010.jpg"
+          },
+          {
+            "id": "S14",
+            "alignment": 1,
+            "subtitle_window": "64.85-67.20秒",
+            "boundary_evidence": "image_010/011：64.75秒起势，65.00-67.00秒持续动作，67.25秒回静止；字幕贴合表达。",
+            "artifact": "/work/evidence/image_011.jpg"
+          },
+          {
+            "id": "S15",
+            "alignment": 1,
+            "subtitle_window": "69.60-72.25秒",
+            "boundary_evidence": "image_011/012：69.50秒起手，69.75-72.00秒连续动作，72.25秒收手；字幕覆盖。",
+            "artifact": "/work/evidence/image_011.jpg"
+          },
+          {
+            "id": "S16",
+            "alignment": 1,
+            "subtitle_window": "73.55-77.30秒",
+            "boundary_evidence": "image_012：73.50秒起手，74.00-77.00秒连续动作，77.25秒双手回落；字幕同步。",
+            "artifact": "/work/evidence/image_012.jpg"
+          },
+          {
+            "id": "S17",
+            "alignment": 1,
+            "subtitle_window": "80.15-82.40秒",
+            "boundary_evidence": "image_013：80.00秒准备，80.25-82.25秒连续动作，82.50秒静止；字幕同步。",
+            "artifact": "/work/evidence/image_013.jpg"
+          },
+          {
+            "id": "S18",
+            "alignment": 1,
+            "subtitle_window": "84.90-87.70秒",
+            "boundary_evidence": "image_014：84.75秒起手，85.00-87.50秒动作持续，87.75秒落手；字幕覆盖主体。",
+            "artifact": "/work/evidence/image_014.jpg"
+          },
+          {
+            "id": "S19",
+            "alignment": 1,
+            "subtitle_window": "89.20-92.80秒",
+            "boundary_evidence": "image_014/015：89.25秒起手，90.00-92.75秒持续手势，93.00秒收手；字幕同步。",
+            "artifact": "/work/evidence/image_015.jpg"
+          },
+          {
+            "id": "S20",
+            "alignment": 1,
+            "subtitle_window": "96.05-98.30秒",
+            "boundary_evidence": "image_016：96.00秒起势，96.25-98.25秒连续动作，98.50秒静止；字幕同步。",
+            "artifact": "/work/evidence/image_016.jpg"
+          },
+          {
+            "id": "S21",
+            "alignment": 1,
+            "subtitle_window": "102.60-105.35秒",
+            "boundary_evidence": "image_017：102.50秒前静止，102.75-105.00秒连续动作，105.25秒落手；字幕与动作同步，长片段空白不构成漏显。",
+            "artifact": "/work/evidence/image_017.jpg"
+          },
+          {
+            "id": "S22",
+            "alignment": 1,
+            "subtitle_window": "110.02-112.60秒",
+            "boundary_evidence": "image_018：109.75秒前静止，110.00-112.50秒连续动作，112.75秒静止；字幕贴合表达。",
+            "artifact": "/work/evidence/image_018.jpg"
+          },
+          {
+            "id": "S23",
+            "alignment": 1,
+            "subtitle_window": "116.10-119.05秒",
+            "boundary_evidence": "image_019：116.00秒起手，116.25-118.75秒持续动作，119.00秒回静止；字幕覆盖。",
+            "artifact": "/work/evidence/image_019.jpg"
+          }
+        ]
+      }
+    ],
+    "cap": {
+      "maximum_total": 39,
+      "rationale": "原规则规定23段语义正确率按各段slot权重、中英取较低值后宏平均；低于50%时总分封顶39。冻结答卷的S03、S08、S13、S16等整段仅写无法确认，其他多数段也缺失核心动作、对象或问句信息，只有S21较完整；据此语义覆盖显著不足一半，触发39分上限。该裁决不重算已确认分，也不因未直接连续观看而额外封顶。严重错误和交付条件即使另行触发也不会低于此上限。",
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+          "locator": "100分算法-语义65及封顶规则",
+          "observation": "语义按23段宏平均，语义覆盖率不足50%封顶39；多封顶取最低。",
+          "method": "读取原规则"
+        },
+        {
+          "artifact": "/work/case/evaluator/grade.py",
+          "locator": "第160-182行",
+          "observation": "程序以avg(semantic)<.5触发semantic_coverage_below_half的39分封顶。",
+          "method": "读取实现"
+        },
+        {
+          "artifact": "/work/submission/zh-CN.srt",
+          "locator": "第1-23条，尤其第3、8、13、16条",
+          "observation": "四段仅有无法确认，其余多数段也有核心信息未译。",
+          "method": "与truth.json各段slot对照"
+        },
+        {
+          "artifact": "/work/submission/en.srt",
+          "locator": "第1-23条，尤其第3、8、13、16条",
+          "observation": "英文同样多处为unclear，不能通过另一语言补足语义。",
+          "method": "与truth.json各段slot对照"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "units S01-S23 slots",
+          "observation": "逐段含时间、对象、动作、语气等加权槽位；冻结字幕中大多数核心槽位无对应信息。",
+          "method": "读取真值语义槽位"
+        }
+      ]
+    },
+    "inspection_limits": [
+      "本轮仅能实际查看每0.25秒一帧的有序源视频图像，未获得原生连续视频输入；手势起止为抽帧估计，不能声称逐帧精确或完整正常速度观看。",
+      "未直接听音；源视频仅含视频轨，时间对齐判定基于图像和字幕时间码。",
+      "评审为单一LLM模型辅助判断，不冒充中国手语专家或原版双人真人核验；本项仅判字幕显示与手势表达时序，不复评已确认语义分。"
+    ]
+  }
+}

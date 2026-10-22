@@ -1,0 +1,19 @@
+{
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "provider": "nju",
+  "status": "process_failed",
+  "budget_seconds": 2400,
+  "start_epoch": 1792553169.5331702,
+  "automatic_retries": 0,
+  "pid": 532,
+  "exit_code": 1,
+  "elapsed_seconds": 92.31252108600006,
+  "wall_elapsed_seconds": 94.75884294509888,
+  "clock_divergence_seconds": 2.4463218590988163,
+  "clock_anomaly": false,
+  "end_epoch": 1792553264.2920191,
+  "usage_events": [],
+  "removed_submission_symlinks": [],
+  "candidate_unchanged": true
+}

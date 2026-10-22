@@ -1,0 +1,16 @@
+{
+  "model": "gpt-6-astra",
+  "provider": "nju",
+  "reasoning_effort": "medium",
+  "status": "budget_timeout",
+  "budget_seconds": 900,
+  "start_utc": "2026-10-20T07:12:06.043988+00:00",
+  "deadline_epoch": 1792481226.0439847,
+  "observed_clock_gaps": [],
+  "automatic_retries": 0,
+  "pid": 46780,
+  "exit_code": 1,
+  "elapsed_seconds": 900.46,
+  "end_utc": "2026-10-20T07:27:06.499957+00:00",
+  "usage_events": []
+}

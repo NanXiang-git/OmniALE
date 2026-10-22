@@ -1,0 +1,450 @@
+{
+  "version": "A2-case-pages-20261022",
+  "classification": {
+    "A1": "音视频内容制作与编排",
+    "A2": "本地化与使用方式适配",
+    "A3": "素材整理、检索与证据构建"
+  },
+  "cases": {
+    "sign": {
+      "category": "A2",
+      "title": "中国手语视频 → 中英文字幕",
+      "rows": [
+        {
+          "id": "A4_gpt-6-astra_high40_rerun",
+          "model": "gpt-6-astra",
+          "score": 39,
+          "scorepath": "benchmark_runs/20261021_a4astra_high40/grades/A4_gpt-6-astra/score.json",
+          "trace": {
+            "events": 27,
+            "raw_jsonl_lines": 48,
+            "tools": 18,
+            "reasoning": 0,
+            "kinds": {
+              "error": 1,
+              "agent_message": 8,
+              "command_execution": 18
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "ca7e529dc4ef01e2c65f876dcec7cd5c94a5c445df5578dea0c79013eb56488b"
+        },
+        {
+          "id": "A4_gpt-6-sol_20261022_k3a6_60_sola4_40_serial",
+          "model": "gpt-6-sol",
+          "score": 35.565,
+          "scorepath": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/grades/A4_gpt-6-sol/score.json",
+          "trace": {
+            "events": 68,
+            "raw_jsonl_lines": 125,
+            "tools": 55,
+            "reasoning": 0,
+            "kinds": {
+              "error": 1,
+              "agent_message": 12,
+              "command_execution": 49,
+              "file_change": 6
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "13ceadb1f7500f39dcc99754b394d548f09eb0852f32704a87d74ea517b73953"
+        },
+        {
+          "id": "A4_k3_20261021_k3_a4_a6_isolated",
+          "model": "k3",
+          "score": 29.726,
+          "scorepath": "benchmark_runs/20261021_k3_a4_a6_isolated/grades/A4_k3/score.json",
+          "trace": {
+            "events": 49,
+            "raw_jsonl_lines": 60,
+            "tools": 9,
+            "reasoning": 21,
+            "kinds": {
+              "error": 2,
+              "reasoning": 21,
+              "agent_message": 17,
+              "command_execution": 9
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "200ce6b295f80a8858e401703e48418995928d9c8671fd36dc39331987edaf83"
+        },
+        {
+          "id": "A4_gpt-6-luna_new_20261021",
+          "model": "gpt-6-luna",
+          "score": 26.988,
+          "scorepath": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A4_gpt-6-luna/score.json",
+          "trace": {
+            "events": 14,
+            "raw_jsonl_lines": 25,
+            "tools": 8,
+            "reasoning": 0,
+            "kinds": {
+              "error": 1,
+              "agent_message": 5,
+              "command_execution": 8
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "af9fceb72679e5ffad6ae1ad5319f0f29fcf78f28c346bc139c8f847b8f97678"
+        },
+        {
+          "id": "A4_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min",
+          "model": "glm-5.3-flash",
+          "score": 21.566233597062013,
+          "scorepath": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A4/score.json",
+          "trace": {
+            "events": 85,
+            "raw_jsonl_lines": 108,
+            "tools": 20,
+            "reasoning": 46,
+            "kinds": {
+              "error": 2,
+              "reasoning": 46,
+              "agent_message": 17,
+              "command_execution": 19,
+              "file_change": 1
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "fcfdffc2daa82e7a5cb002bfab21bc952be82ac31741d707c4ee2a61570c9c30"
+        }
+      ]
+    },
+    "piano": {
+      "category": "A2",
+      "title": "钢琴演奏视频 → 乐谱与 MIDI",
+      "rows": [
+        {
+          "id": "A6_gpt-6-sol_new_20261021",
+          "model": "gpt-6-sol",
+          "score": 33.0109,
+          "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/score.json",
+          "trace": {
+            "events": 83,
+            "raw_jsonl_lines": 156,
+            "tools": 70,
+            "reasoning": 0,
+            "kinds": {
+              "error": 1,
+              "agent_message": 12,
+              "command_execution": 56,
+              "file_change": 14
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "b70343fbde580038dde632b010dfde3b80b7752286b67b0a0e32c3b32ee54fb6"
+        },
+        {
+          "id": "A6_gpt-6-astra_missing8",
+          "model": "gpt-6-astra",
+          "score": 14.01854,
+          "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/score.json",
+          "trace": {
+            "events": 44,
+            "raw_jsonl_lines": 83,
+            "tools": 37,
+            "reasoning": 0,
+            "kinds": {
+              "error": 3,
+              "agent_message": 4,
+              "command_execution": 37
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "4fff5613eddf5bd1cd3a9dca76fd750df503ef5c40d84e04de845e802b78a039"
+        },
+        {
+          "id": "A6_k3_20261022_k3_a6_60_clean",
+          "model": "k3",
+          "score": 6.25,
+          "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/score.json",
+          "trace": {
+            "events": 157,
+            "raw_jsonl_lines": 218,
+            "tools": 59,
+            "reasoning": 69,
+            "kinds": {
+              "error": 2,
+              "reasoning": 69,
+              "agent_message": 27,
+              "command_execution": 59
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "2bb9c806cd573899b9439a359076c5a01f2e00ca3f0b2852f7c1048994d34e1e"
+        },
+        {
+          "id": "A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min",
+          "model": "glm-5.3-flash",
+          "score": 5.591698,
+          "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/score.json",
+          "trace": {
+            "events": 186,
+            "raw_jsonl_lines": 266,
+            "tools": 77,
+            "reasoning": 91,
+            "kinds": {
+              "error": 2,
+              "reasoning": 91,
+              "agent_message": 16,
+              "command_execution": 77
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "ca325658c5526ffe0189a6d555fa09d6257635f4c8c999fae5834a6672855528"
+        },
+        {
+          "id": "A6_gpt-6-luna_missing8",
+          "model": "gpt-6-luna",
+          "score": 2.191014,
+          "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/score.json",
+          "trace": {
+            "events": 45,
+            "raw_jsonl_lines": 83,
+            "tools": 35,
+            "reasoning": 0,
+            "kinds": {
+              "error": 1,
+              "agent_message": 9,
+              "command_execution": 23,
+              "file_change": 12
+            },
+            "dependency_installs": []
+          },
+          "source_log_sha256": "9be7f79a1aaded9c82663b7b7c88a4d7b843340405852244c02e3c8c2c0cf773"
+        }
+      ]
+    }
+  },
+  "source_results_sha256": "90d69eec6e6e36d9c22d1a216aa2c03b360d416dac46c9cac3ccd6b69d308a7d",
+  "submission_hashes": {
+    "A4_gpt-6-astra_high40_rerun": {
+      "benchmark_runs/20261021_a4astra_high40/submissions/A4_gpt-6-astra/en.srt": "94fa887e1c3c69a4bf7b3e1c24ae7321f55669f3a72e11f2b2edc873ebb5592f",
+      "benchmark_runs/20261021_a4astra_high40/submissions/A4_gpt-6-astra/segments.json": "7fa754b50dd2275d0eafcc88cce17168e0f6d6d3c37dc94d7f800a0a18c488c7",
+      "benchmark_runs/20261021_a4astra_high40/submissions/A4_gpt-6-astra/subtitled.mkv": "e5a8403cb034ad888b8e39aae201db8f2c52c65a5725176db9474c6d43bd1992",
+      "benchmark_runs/20261021_a4astra_high40/submissions/A4_gpt-6-astra/zh-CN.srt": "7676e884be9ac49deb6ac46dc2d7edc20bd377f3abfd63d0d2855ed927809c13"
+    },
+    "A4_gpt-6-sol_20261022_k3a6_60_sola4_40_serial": {
+      "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A4_gpt-6-sol/en.srt": "e0b57e8ccc6c7b122daf4a389ff8dbeb56b827deffc67b31189dc714d8e8b7f4",
+      "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A4_gpt-6-sol/segments.json": "10d6e32988e461cbfdc0c6c1a500a2d1e1943a5104cc9c6ee0afc11fef8c4cd5",
+      "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A4_gpt-6-sol/subtitled.mkv": "c63cbf5275726f54f24b81031bc189c571e6828cc6ba85ab40f97fc210117cee",
+      "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A4_gpt-6-sol/zh-CN.srt": "2e0a65beda14f3648a270e1fb15b165d344dc8e014e8f00be79e749b15d83079"
+    },
+    "A4_k3_20261021_k3_a4_a6_isolated": {
+      "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A4_k3/en.srt": "4717b0540d1159c67e9a41974c9ad32c2955b87b48fa0bb310922a8180f07b1a",
+      "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A4_k3/segments.json": "8af361406dedc5ffd1c2018febb0366efed40474118916192981b2ff64abaca5",
+      "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A4_k3/subtitled.mkv": "12bcd409a022736379f21fcbcb365aeba8b26d36041946f7c00f5563f8ec1174",
+      "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A4_k3/zh-CN.srt": "86a118ed30b376f4dadc00c3f8d2a2b1417dda36b9853ec32b4eba5b97488cdd"
+    },
+    "A4_gpt-6-luna_new_20261021": {
+      "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A4_gpt-6-luna/en.srt": "7ef33744413b9f6fc450b3f392fbbf71d8cba9eca3e940d2a75c4f7ef0a6106a",
+      "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A4_gpt-6-luna/segments.json": "4bceee11f5812cac5b1c1fa683698b607d8774e95c2cad5f9f50cef2348840df",
+      "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A4_gpt-6-luna/subtitled.mkv": "4795c53b9e0d461be7f403e45e9ab8efae0a45de4e3a53d093a17a3bb4d59440",
+      "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A4_gpt-6-luna/zh-CN.srt": "75415a2fe8fbab908617ad9574dfd05d9122f0f9475cb2a57adf4d1245490894"
+    },
+    "A4_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min": {
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/en.srt": "be7475c52cf79d33169ec99b23f57525c79eaa3a0e619c988b5a2b8723a5e33c",
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/segments.json": "7fb88aafa2d93b21f105f507107634da5058683412f56fd6994f5906c81c8045",
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/subtitled.mkv": "163c52bb5873d40e67fcf1a1d1194ae23c8faebc104b2c31bb75efe674b0bffd",
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/zh-CN.srt": "46205923532de1752afd3094ea33306e99e9193734c695c5af795c52d34356f2"
+    },
+    "A6_gpt-6-sol_new_20261021": {
+      "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol/notes.md": "59e0d12c4f3b6b0e35caa3aa8b715437247eab6b1ad4c6e9eab8bfc7f88e18b0",
+      "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol/score.mid": "f3ba232131bbcc41e21be3900f5ce4b940132722ec06d56dbc81cffcfc499ff7",
+      "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol/score.musicxml": "0799642f2a6bc8053fd2bead56a0963a94eed440d7a532a87df9a07fdefca459",
+      "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol/score.pdf": "76de7b01a655eb14f9435efbf8cd670be5953bbd7d5ff674b80ff385b3eff006"
+    },
+    "A6_gpt-6-astra_missing8": {
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/alignment.json": "2626de523cb45145f90d4466578cd900f9f13c38d96dbf4066492dbcccf9dd86",
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/notes.md": "9ab675505a1f6558e7fb66c064055f4b1ee66a413708798995d2208a298af048",
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/score.mid": "adaa2cf63d13c61d4e4f47844ee5a780b1800fd717e32392c2aeab61961f5cfb",
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/score.musicxml": "fb9f59baffc46bb687c26388b55f01c0318804111fd3342a9d85c57d6f7a0d0b",
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/score.pdf": "e87467326e86832c8e285181ebec4456f0e2a1c64285ef415d540e014d441206"
+    },
+    "A6_k3_20261022_k3_a6_60_clean": {
+      "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/alignment.json": "c0608ab798df42f3fc83eff133f487d0571d06b23196bf3f808e7d2cc43c72f6",
+      "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/notes.md": "68145940405e21d04263fa04a6288f85bb08c2586a6557de41bdcd6de5e478ea",
+      "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/score.mid": "8392a3ca4b9e073064ccec64549853057926cf310c4511b0b2aeb7e0c0ed7acf",
+      "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/score.musicxml": "7bc13cd48705cc1bba47d45915d481505bb9efe35148e1862fd44d67047e1f1f",
+      "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/score.pdf": "9409389b1c0f35b6250d865340b84216c1eb559c4f499a42f32fa66d865026ff"
+    },
+    "A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min": {
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/alignment.json": "031a9d3f8005ca91bae6fa5106b8cbd9385bb457e0ba9d504ba4ffcd696fbd50",
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/notes.md": "950b28b6c07527ba890d86889b91f394b3431af7762c7fd9535a51472159ee2a",
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/score.mid": "5bdc73e759ebb6cbac5be41a277c9bd02420cf8de1169f976a139652382814db",
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/score.musicxml": "453263689347b84a27eb2169faf8ce608cfbd2675f688be839d33e83d0124e7a",
+      "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/score.pdf": "e6093cf526b8c14bb1dba14ecc4ea3d014bb50e6b4567c214543ab38e243ddc9"
+    },
+    "A6_gpt-6-luna_missing8": {
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/alignment.json": "ef97bd6eaacb589fcd26f09ac1b82fca401c9a2508d2755e22f78a3f85ba4f05",
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/notes.md": "923aae4f537d26abfaa2bd28426504a39fbb5db672140c4a46d8d7de56524d86",
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/score.mid": "ec416fb0e175d49c71522fa53aef4f4c28caa1b3106eb51a825dd7fd915cea11",
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/score.musicxml": "6394d1d0817d814f30c1e0fd4cc23cceb7118499cdb42b27a789fc1a670be166",
+      "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/score.pdf": "73d3433c5b374497e9a8c5e5d0d2ff624cf1d005c13fbba1e25de5176ee27e14"
+    }
+  },
+  "assets": [
+    "assets/evidence-gpt-6-astra.png",
+    "assets/evidence-gpt-6-sol.png",
+    "assets/style.css",
+    "assets/traces.js",
+    "files/A4_sign_bilingual/candidate/TASK.md",
+    "files/A4_sign_bilingual/candidate/input/source.mp4",
+    "files/A4_sign_bilingual/evaluator/REVIEW_PROTOCOL.md",
+    "files/A4_sign_bilingual/evaluator/rubric.json",
+    "files/A4_sign_bilingual/evaluator/truth.json",
+    "files/A6_piano_transcription/candidate/TASK.md",
+    "files/A6_piano_transcription/candidate/input/performance.mp4",
+    "files/benchmark_runs/20261020_a4_sign_astra/logs/solver/run.json",
+    "files/benchmark_runs/20261020_a4_sign_sol/logs/solver/run.json",
+    "files/benchmark_runs/20261020_a6_piano_sol/logs/solver/run.json",
+    "files/benchmark_runs/20261020_k3_a4_a5_20m/logs/solver_A4/run.json",
+    "files/benchmark_runs/20261021_a4a5_stable_rerun/grades/A4_gpt-6-astra/score.json",
+    "files/benchmark_runs/20261021_a4a5_stable_rerun/logs/A4_gpt-6-astra/run.json",
+    "files/benchmark_runs/20261021_a4astra_high40/grades/A4_gpt-6-astra/score.json",
+    "files/benchmark_runs/20261021_a4astra_high40/logs/A4_gpt-6-astra/run.json",
+    "files/benchmark_runs/20261021_a4astra_high40/submissions/A4_gpt-6-astra/en.srt",
+    "files/benchmark_runs/20261021_a4astra_high40/submissions/A4_gpt-6-astra/segments.json",
+    "files/benchmark_runs/20261021_a4astra_high40/submissions/A4_gpt-6-astra/subtitled.mkv",
+    "files/benchmark_runs/20261021_a4astra_high40/submissions/A4_gpt-6-astra/zh-CN.srt",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/grades/A4_gpt-6-luna/score.json",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/logs/A4_gpt-6-luna/run.json",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/logs/A6_gpt-6-sol/run.json",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A4_gpt-6-luna/en.srt",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A4_gpt-6-luna/segments.json",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A4_gpt-6-luna/subtitled.mkv",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A4_gpt-6-luna/zh-CN.srt",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol/notes.md",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol/score.mid",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol/score.musicxml",
+    "files/benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol/score.pdf",
+    "files/benchmark_runs/20261021_glm53_flash_a1_a7/grades/A4/score.json",
+    "files/benchmark_runs/20261021_glm53_flash_a1_a7/logs/A4/run.json",
+    "files/benchmark_runs/20261021_glm53_flash_a1_a7/logs/A6/run.json",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A4/score.json",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/logs/A4/run.json",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/logs/A6/run.json",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/en.srt",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/segments.json",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/subtitled.mkv",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/zh-CN.srt",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/alignment.json",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/notes.md",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/score.mid",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/score.musicxml",
+    "files/benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6/score.pdf",
+    "files/benchmark_runs/20261021_glm53_flash_recovery/logs/A6/run.json",
+    "files/benchmark_runs/20261021_glm53_flash_two_workers/grades/A4/score.json",
+    "files/benchmark_runs/20261021_glm53_flash_two_workers/logs/A4/run.json",
+    "files/benchmark_runs/20261021_glm53_flash_two_workers/logs/A6/run.json",
+    "files/benchmark_runs/20261021_k3_a4_a6_isolated/grades/A4_k3/score.json",
+    "files/benchmark_runs/20261021_k3_a4_a6_isolated/logs/A4_k3/run.json",
+    "files/benchmark_runs/20261021_k3_a4_a6_isolated/logs/A6_k3/run.json",
+    "files/benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A4_k3/en.srt",
+    "files/benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A4_k3/segments.json",
+    "files/benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A4_k3/subtitled.mkv",
+    "files/benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A4_k3/zh-CN.srt",
+    "files/benchmark_runs/20261021_missing8_high40/grades/A4_gpt-6-luna/score.json",
+    "files/benchmark_runs/20261021_missing8_high40/logs/A4_gpt-6-luna/run.json",
+    "files/benchmark_runs/20261021_missing8_high40/logs/A6_gpt-6-astra/run.json",
+    "files/benchmark_runs/20261021_missing8_high40/logs/A6_gpt-6-luna/run.json",
+    "files/benchmark_runs/20261021_missing8_high40/logs/A6_k3/run.json",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/alignment.json",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/notes.md",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/score.mid",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/score.musicxml",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra/score.pdf",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/alignment.json",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/notes.md",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/score.mid",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/score.musicxml",
+    "files/benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna/score.pdf",
+    "files/benchmark_runs/20261021_single_judge_final/grades/L01/score.json",
+    "files/benchmark_runs/20261021_single_judge_final/grades/L02/score.json",
+    "files/benchmark_runs/20261022_k3_a6_60_clean/logs/A6_k3/run.json",
+    "files/benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/alignment.json",
+    "files/benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/notes.md",
+    "files/benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/score.mid",
+    "files/benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/score.musicxml",
+    "files/benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/score.pdf",
+    "files/benchmark_runs/20261022_k3a6_60_sola4_40_serial/grades/A4_gpt-6-sol/score.json",
+    "files/benchmark_runs/20261022_k3a6_60_sola4_40_serial/logs/A4_gpt-6-sol/run.json",
+    "files/benchmark_runs/20261022_k3a6_60_sola4_40_serial/logs/A6_k3/run.json",
+    "files/benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A4_gpt-6-sol/en.srt",
+    "files/benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A4_gpt-6-sol/segments.json",
+    "files/benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A4_gpt-6-sol/subtitled.mkv",
+    "files/benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A4_gpt-6-sol/zh-CN.srt",
+    "files/evaluation_versions/20261022_a6_delivery_v2/REPORT.html",
+    "files/evaluation_versions/20261022_a6_delivery_v2/RUBRIC.md",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a1_a7/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-1.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-2.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-3.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_recovery/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_two_workers/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-1.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-2.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-3.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-4.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-5.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-6.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-01.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-02.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-03.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-04.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-05.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-06.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-07.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-08.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-09.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-10.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-1.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-2.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-1.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-2.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-3.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-4.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-5.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-6.png",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/score.json",
+    "files/evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_missing8/score.json",
+    "index.html",
+    "piano/index.html",
+    "piano/traces.html",
+    "previews/A4_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/en.vtt",
+    "previews/A4_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/video.mp4",
+    "previews/A4_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/zh.vtt",
+    "previews/A4_gpt-6-astra_high40_rerun/en.vtt",
+    "previews/A4_gpt-6-astra_high40_rerun/video.mp4",
+    "previews/A4_gpt-6-astra_high40_rerun/zh.vtt",
+    "previews/A4_gpt-6-luna_new_20261021/en.vtt",
+    "previews/A4_gpt-6-luna_new_20261021/video.mp4",
+    "previews/A4_gpt-6-luna_new_20261021/zh.vtt",
+    "previews/A4_gpt-6-sol_20261022_k3a6_60_sola4_40_serial/en.vtt",
+    "previews/A4_gpt-6-sol_20261022_k3a6_60_sola4_40_serial/video.mp4",
+    "previews/A4_gpt-6-sol_20261022_k3a6_60_sola4_40_serial/zh.vtt",
+    "previews/A4_k3_20261021_k3_a4_a6_isolated/en.vtt",
+    "previews/A4_k3_20261021_k3_a4_a6_isolated/video.mp4",
+    "previews/A4_k3_20261021_k3_a4_a6_isolated/zh.vtt",
+    "sign/index.html",
+    "sign/traces.html",
+    "traces/A4_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min.jsonl",
+    "traces/A4_gpt-6-astra_high40_rerun.jsonl",
+    "traces/A4_gpt-6-luna_new_20261021.jsonl",
+    "traces/A4_gpt-6-sol_20261022_k3a6_60_sola4_40_serial.jsonl",
+    "traces/A4_k3_20261021_k3_a4_a6_isolated.jsonl",
+    "traces/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min.jsonl",
+    "traces/A6_gpt-6-astra_missing8.jsonl",
+    "traces/A6_gpt-6-luna_missing8.jsonl",
+    "traces/A6_gpt-6-sol_new_20261021.jsonl",
+    "traces/A6_k3_20261022_k3_a6_60_clean.jsonl"
+  ]
+}

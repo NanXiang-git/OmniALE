@@ -1,0 +1,17 @@
+{
+  "model": "k3",
+  "provider": "nju",
+  "reasoning_effort": "medium",
+  "status": "budget_timeout",
+  "budget_seconds": 1200,
+  "start_utc": "2026-10-20T11:03:48.045124+00:00",
+  "deadline_epoch": 1792495428.0451248,
+  "observed_clock_gaps": [],
+  "automatic_retries": 0,
+  "pid": 54848,
+  "exit_code": 1,
+  "elapsed_seconds": 1200.68,
+  "end_utc": "2026-10-20T11:23:48.727940+00:00",
+  "usage_events": [],
+  "monitor_adopted": true
+}

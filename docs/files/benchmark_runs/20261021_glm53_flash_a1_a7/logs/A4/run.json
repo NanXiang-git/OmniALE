@@ -1,0 +1,19 @@
+{
+  "case": "A4",
+  "model": "glm-5.3-flash",
+  "reasoning_effort": "high",
+  "harness": "Codex CLI",
+  "budget_seconds": 2368,
+  "start_epoch": 1792554317.478587,
+  "status": "process_failed",
+  "pid": 25699,
+  "automatic_retries": 0,
+  "exit_code": 1,
+  "elapsed_seconds": 701.471,
+  "wall_elapsed_seconds": 735.203,
+  "usage_events": [],
+  "candidate_unchanged": true,
+  "infrastructure_recovery": true,
+  "initial_attempt_log": "infrastructure_attempts/A4/logs/run.json",
+  "original_total_budget_seconds": 2400
+}
