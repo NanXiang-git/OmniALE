@@ -1,0 +1,170 @@
+{
+  "id": "A6_gpt-6-astra",
+  "case": "A6",
+  "model": "gpt-6-astra",
+  "version": "original",
+  "judge_model": "gpt-6-sol",
+  "base_points": 64.75822050268313,
+  "existing_cap": 100,
+  "status": "scored",
+  "final_score": 66.258221,
+  "score_type": "single_judge_LLM_final",
+  "original_formal_total": null,
+  "attempts": [
+    {
+      "model": "gpt-6-sol",
+      "reasoning_effort": "high",
+      "provider": "nju",
+      "status": "completed",
+      "budget_seconds": 1800,
+      "start_epoch": 1792570304.1533246,
+      "automatic_retries": 0,
+      "pid": 26525,
+      "exit_code": 0,
+      "elapsed_seconds": 390.780128463,
+      "wall_elapsed_seconds": 407.7771167755127,
+      "clock_divergence_seconds": 16.996988312512713,
+      "clock_anomaly": true,
+      "end_epoch": 1792570711.9304485,
+      "usage_events": [
+        {
+          "input_tokens": 2724391,
+          "cached_input_tokens": 2616704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 12491,
+          "reasoning_output_tokens": 4568
+        }
+      ]
+    }
+  ],
+  "validation_error": null,
+  "submission_unchanged": true,
+  "reviewer_count": 1,
+  "reasoning_effort": "high",
+  "budget_seconds": 1800,
+  "pending_awarded": 1.5,
+  "uncapped_total": 66.25822050268313,
+  "applied_cap": 100,
+  "judgment": {
+    "items": [
+      {
+        "id": "layout_points",
+        "earned_points": 0,
+        "rationale": "逐页实际查看提交PDF六页。第1页第1至3小节、第3页第19至23小节和第6页第35至38小节均大面积缺失谱号、音符头及变音记号，音高无法从PDF辨认；第1页标题另有裁切。该问题贯穿全谱，达到原规则所述根本不可读的0分档。此项只评价PDF可读性，不重复扣自动音高分。",
+        "confidence": "high",
+        "evidence": [
+          {
+            "artifact": "/work/submission/score.pdf",
+            "locator": "第1至6页；第1页小节1至11，第2页12至18，第3页19至23，第4页24至30，第5页31至34，第6页35至38",
+            "observation": "六页都有谱线、符干和符杠，但谱号、音符头和变音记号普遍不可见；第一页标题左端被截断。",
+            "method": "pdftoppm逐页渲染为PNG，再用view_image实际查看全部六页"
+          },
+          {
+            "artifact": "/work/submission/score.musicxml",
+            "locator": "第1、19、36小节及两谱表；独立渲染SVG第1、3、6页",
+            "observation": "独立渲染可见PDF所缺的谱号、音符头和变音记号，确认不是原XML没有这些符号。",
+            "method": "Verovio独立渲染MusicXML为SVG，librsvg栅格化后用view_image查看"
+          }
+        ],
+        "detail": [
+          {
+            "pages": "1-2",
+            "measures": "1-18",
+            "finding": "双谱表及节奏线条可见，主要记谱字形缺失；第一页标题裁切。"
+          },
+          {
+            "pages": "3-4",
+            "measures": "19-30",
+            "finding": "双谱表继续存在，但音符头和变音记号仍缺失，无法辨认密集段音高。"
+          },
+          {
+            "pages": "5-6",
+            "measures": "31-38",
+            "finding": "末段同样缺失主要字形；末页虽有终止小节线，仍不可按PDF演奏。"
+          }
+        ]
+      },
+      {
+        "id": "notation_usability_points",
+        "earned_points": 1.5,
+        "rationale": "以独立渲染的MusicXML检查记谱语义：双谱表、4/4拍、休止、连音线和两声部持续关系均存在，首中尾都有连续小节，结构可恢复。第15至18、25至34小节的高密度短时值、频繁变音及部分跨音区分配使钢琴演奏阅读需要大量编辑，符合原规则1.5分档。PDF字形丢失已在排版和忠实度项处理，此项不因音高自动评分中的错音再扣分。",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "artifact": "/work/submission/score.musicxml",
+            "locator": "第1、15-18、19-23、25-34、36-38小节；上下两个谱表",
+            "observation": "独立SVG渲染显示拍号、各声部休止和连音线；中后段存在连续的密集细分节奏及大量临时变音，谱面结构仍可追踪。",
+            "method": "Verovio独立渲染六页SVG，librsvg转PNG后用view_image查看首、中、尾及上下谱表"
+          },
+          {
+            "artifact": "/work/submission/notes.md",
+            "locator": "节拍与时值说明",
+            "observation": "提交者说明采用4/4、四分音符约120及编辑性声部长度；这是记谱取舍说明，不替代谱面观察。",
+            "method": "直接阅读提交说明"
+          }
+        ],
+        "detail": [
+          {
+            "aspect": "结构",
+            "finding": "XML中的两谱表、拍号、休止、连音线和小节顺序可辨。"
+          },
+          {
+            "aspect": "演奏阅读",
+            "finding": "密集的短音群、临时变音及部分大跳造成大量后期编辑需求；未据此重扣音高错误。"
+          }
+        ]
+      },
+      {
+        "id": "pdf_xml_fidelity_points",
+        "earned_points": 0,
+        "rationale": "独立渲染的XML在第1、19、36至38小节均有完整音符头、谱号和变音记号，提交PDF对应小节却普遍漏掉这些决定音高与记谱含义的字形。虽然小节顺序、谱线、符干和符杠大体对应，缺失遍及上下谱表及全部六页，属于原规则的实质性不同谱面，按0分档。独立渲染与提交PDF的第35小节分页不同只是排版差异，不作为扣分原因。",
+        "confidence": "high",
+        "evidence": [
+          {
+            "artifact": "/work/submission/score.pdf",
+            "locator": "第1页小节1-3、第3页小节19-23、第6页小节35-38；上下谱表",
+            "observation": "对应XML音符位置保留了符干与符杠，却缺失音符头、谱号和变音记号；全六页均有同样现象。",
+            "method": "pdftoppm渲染并逐页用view_image核对"
+          },
+          {
+            "artifact": "/work/submission/score.musicxml",
+            "locator": "独立SVG第1、3、5、6页；小节1-3、19-23、35-38；两谱表",
+            "observation": "Verovio独立SVG及其栅格图包含PDF中缺失的主要记谱字形；第35小节跨页位置差异仅为分页。",
+            "method": "独立Verovio渲染MusicXML，并用librsvg转PNG后实际查看、与提交PDF比较"
+          }
+        ],
+        "detail": [
+          {
+            "location": "开头",
+            "finding": "小节1-3的XML双谱表有谱号、音符头和变音记号，PDF对应位置缺失。"
+          },
+          {
+            "location": "中段",
+            "finding": "小节19-23的上下谱表在PDF继续大面积缺失同类字形。"
+          },
+          {
+            "location": "结尾",
+            "finding": "小节36-38的XML谱面完整，PDF仅可见部分线条与终止小节线。"
+          }
+        ]
+      }
+    ],
+    "cap": {
+      "maximum_total": 100,
+      "rationale": "原rubric.json的missing_files条款明确写明“No score caps”；本题只有既定100分权重，没有适用的额外总分封顶。PDF问题按其对应人工分项判定，不另设封顶。",
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/rubric.json",
+          "locator": "missing_files、automatic_points、manual_points字段",
+          "observation": "规则规定自动90分、人工10分，且明确无总分封顶。",
+          "method": "直接读取原评分JSON"
+        }
+      ]
+    },
+    "inspection_limits": [
+      "本轮没有原生连续听音；没有声称直接听过音频。A6判分依据提交PDF、MusicXML独立渲染及记谱说明的可视内容。",
+      "独立Verovio渲染与提交PDF在后段分页略有差异；按小节及双谱表内容比较，不把分页差异本身计为错误。",
+      "仅处理packet.json中的三个pending_units；原自动64.75822050268313/90分未重算或更改。本结果是单评LLM总评，非原版真人核验。"
+    ]
+  }
+}

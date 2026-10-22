@@ -1,0 +1,280 @@
+{
+  "segments": [
+    {
+      "id": "S01",
+      "zh_cues": [
+        1
+      ],
+      "en_cues": [
+        1
+      ],
+      "confidence_zh": 0.08,
+      "confidence_en": 0.08,
+      "uncertainty": "已辨出面向对方的指代；双手交替动作、嘴边动作及句末交叉手指的词义待确认。"
+    },
+    {
+      "id": "S02",
+      "zh_cues": [
+        2
+      ],
+      "en_cues": [
+        2
+      ],
+      "confidence_zh": 0.48,
+      "confidence_en": 0.48,
+      "uncertainty": "胸前自指和横向划动读为我们；侧向移动暂读为去，嘴前平掌暂读为吃饭。是否为提议语气仍不十分确定。"
+    },
+    {
+      "id": "S03",
+      "zh_cues": [
+        3
+      ],
+      "en_cues": [
+        3
+      ],
+      "confidence_zh": 0.1,
+      "confidence_en": 0.1,
+      "uncertainty": "胸前拉衣动作较清楚；后续双拇指、面部双指及掌上动作未能连成可靠完整译文。"
+    },
+    {
+      "id": "S04",
+      "zh_cues": [
+        4
+      ],
+      "en_cues": [
+        4
+      ],
+      "confidence_zh": 0.12,
+      "confidence_en": 0.12,
+      "uncertainty": "额侧食指暂读为想；随后双手相对转动与收指动作的含义未确认，主语未补。"
+    },
+    {
+      "id": "S05",
+      "zh_cues": [
+        5
+      ],
+      "en_cues": [
+        5
+      ],
+      "confidence_zh": 0.12,
+      "confidence_en": 0.12,
+      "uncertainty": "复数第二人称较明确；中段平掌下移、双手展开收拢的具体谓语尚未确认；保留句末疑问语气。"
+    },
+    {
+      "id": "S06",
+      "zh_cues": [
+        6
+      ],
+      "en_cues": [
+        6
+      ],
+      "confidence_zh": 0.08,
+      "confidence_en": 0.08,
+      "uncertainty": "自指较清楚；后续拇食指弯曲、两指配合另一手及末尾单指是否构成年龄或数量，未确认。"
+    },
+    {
+      "id": "S07",
+      "zh_cues": [
+        7
+      ],
+      "en_cues": [
+        7
+      ],
+      "confidence_zh": 0.18,
+      "confidence_en": 0.18,
+      "uncertainty": "开头复数自指及侧向移动暂读为我们去；双手上举与末尾掌上动作表示的目的活动未确认。"
+    },
+    {
+      "id": "S08",
+      "zh_cues": [
+        8
+      ],
+      "en_cues": [
+        8
+      ],
+      "confidence_zh": 0.18,
+      "confidence_en": 0.18,
+      "uncertainty": "保留第二人称及句末左右指向的地点疑问；中间动作的去来方向与具体活动不确定。"
+    },
+    {
+      "id": "S09",
+      "zh_cues": [
+        9
+      ],
+      "en_cues": [
+        9
+      ],
+      "confidence_zh": 0.68,
+      "confidence_en": 0.68,
+      "uncertainty": "电话手势较明确；嘴边立掌与随后五指展开暂读为号码、多少，未将其处理成正在通话的事实。"
+    },
+    {
+      "id": "S10",
+      "zh_cues": [
+        10
+      ],
+      "en_cues": [
+        10
+      ],
+      "confidence_zh": 0.3,
+      "confidence_en": 0.3,
+      "uncertainty": "复数自指与结尾房屋形动作较清楚；中段的情态、时间和回返动作仍有不确定性。"
+    },
+    {
+      "id": "S11",
+      "zh_cues": [
+        11
+      ],
+      "en_cues": [
+        11
+      ],
+      "confidence_zh": 0.45,
+      "confidence_en": 0.45,
+      "uncertainty": "复数第二人称、入口动作和双手圆弧暂读为你们吃面包；是否带情态或完成标记仍有疑点。"
+    },
+    {
+      "id": "S12",
+      "zh_cues": [
+        12
+      ],
+      "en_cues": [
+        12
+      ],
+      "confidence_zh": 0.5,
+      "confidence_en": 0.5,
+      "uncertainty": "圈形手势后展开平掌暂读为否定的没有；否定对象未明确，英文不补具体对象。"
+    },
+    {
+      "id": "S13",
+      "zh_cues": [
+        13
+      ],
+      "en_cues": [
+        13
+      ],
+      "confidence_zh": 0.12,
+      "confidence_en": 0.12,
+      "uncertainty": "开头双手聚拢暂读为大家，眼部双指暂读为看；中间指代与观看对象以及末尾双手动作未确认。"
+    },
+    {
+      "id": "S14",
+      "zh_cues": [
+        14
+      ],
+      "en_cues": [
+        14
+      ],
+      "confidence_zh": 0.25,
+      "confidence_en": 0.25,
+      "uncertainty": "复数第二人称及饮用动作较明确；开容器手势所指的具体饮品无法确认，不指定水、酒或品牌；是否为邀请亦有疑点。"
+    },
+    {
+      "id": "S15",
+      "zh_cues": [
+        15
+      ],
+      "en_cues": [
+        15
+      ],
+      "confidence_zh": 0.22,
+      "confidence_en": 0.22,
+      "uncertainty": "复数自指和双手合拢暂读为我们一起；末尾双手直角形的活动词义未确认。"
+    },
+    {
+      "id": "S16",
+      "zh_cues": [
+        16
+      ],
+      "en_cues": [
+        16
+      ],
+      "confidence_zh": 0.1,
+      "confidence_en": 0.1,
+      "uncertainty": "开头双指与掌上动作的时间或事件词义未确认；中间暂读为去；末尾双手分开所指活动不确定，未指定玩耍。"
+    },
+    {
+      "id": "S17",
+      "zh_cues": [
+        17
+      ],
+      "en_cues": [
+        17
+      ],
+      "confidence_zh": 0.02,
+      "confidence_en": 0.02,
+      "uncertainty": "交叉手腕伸拇指及交替举拇指动作的词义无法可靠确认；未根据服装背景补写活动或人物关系。"
+    },
+    {
+      "id": "S18",
+      "zh_cues": [
+        18
+      ],
+      "en_cues": [
+        18
+      ],
+      "confidence_zh": 0.15,
+      "confidence_en": 0.15,
+      "uncertainty": "末尾拉上衣动作读为衣服；下颌拳形与双指动作的词义和修饰范围未确认，不补颜色、新旧或所属人物。"
+    },
+    {
+      "id": "S19",
+      "zh_cues": [
+        19
+      ],
+      "en_cues": [
+        19
+      ],
+      "confidence_zh": 0.18,
+      "confidence_en": 0.18,
+      "uncertainty": "复数自指及侧向移动暂读为我们去；上方单指、双手展开及末尾拇指的词义未确认，不补目的地、时间或人物关系。"
+    },
+    {
+      "id": "S20",
+      "zh_cues": [
+        20
+      ],
+      "en_cues": [
+        20
+      ],
+      "confidence_zh": 0.48,
+      "confidence_en": 0.48,
+      "uncertainty": "开头双指转向暂读为来，腕部时间动作及弯曲食指暂读为多久；来去方向和时长疑问的判读仍有疑点。"
+    },
+    {
+      "id": "S21",
+      "zh_cues": [
+        21
+      ],
+      "en_cues": [
+        21
+      ],
+      "confidence_zh": 0.45,
+      "confidence_en": 0.45,
+      "uncertainty": "睡眠与屋顶动作读为住宿场所，末尾左右指向读为哪里；无法确定具体是宿舍、旅馆或其他住宿处，未指定类型。"
+    },
+    {
+      "id": "S22",
+      "zh_cues": [
+        22
+      ],
+      "en_cues": [
+        22
+      ],
+      "confidence_zh": 0.25,
+      "confidence_en": 0.25,
+      "uncertainty": "自指与额侧食指暂读为我想；下压手掌与掌上拇食指组合的具体活动未确认。"
+    },
+    {
+      "id": "S23",
+      "zh_cues": [
+        23
+      ],
+      "en_cues": [
+        23
+      ],
+      "confidence_zh": 0.48,
+      "confidence_en": 0.48,
+      "uncertainty": "书与看较明确；掌上拇食指动作暂读为完，句末圈形暂读为了；对完成状态的判读仍不十分确定，未补阅读者身份。"
+    }
+  ]
+}

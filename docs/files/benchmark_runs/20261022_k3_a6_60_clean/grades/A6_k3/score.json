@@ -1,0 +1,79 @@
+{
+  "id": "A6_k3",
+  "case": "A6",
+  "model": "k3",
+  "judge": "gpt-6-sol",
+  "case_root": "A6_piano_transcription",
+  "budget_seconds": 3600,
+  "status": "scored",
+  "final_score": 8.5,
+  "solver_status": "budget_timeout",
+  "judge_status": "completed",
+  "score_type": "single_judge_LLM_final",
+  "reviewers": 1,
+  "effort": "high",
+  "automatic_score": 5.0,
+  "manual_score": 3.5,
+  "components": {
+    "layout_points": 2.0,
+    "notation_usability_points": 1.5,
+    "pdf_xml_fidelity_points": 0.0,
+    "evidence": [
+      {
+        "artifact": "submission/score.pdf",
+        "locator": "第1-6页，尤其第1页第1-3小节、第3页第17-20小节、第4页第22-25小节、第5页第29-32小节、第6页第33-38小节",
+        "observation": "六页均有连续的钢琴双谱表，未见空白或截断页；但大量32/64分音符、密集临时记号及多条加线挤在单行小节内，局部辨读需明显放大。",
+        "method": "pdftoppm逐页渲染，并用view_image查看全部六页；对第1、3、6页另以220 dpi放大检查。"
+      },
+      {
+        "artifact": "submission/score.pdf + submission/score.musicxml",
+        "locator": "第1页第1小节；MusicXML第1小节attributes",
+        "observation": "PDF上谱表开头无谱号；XML仅给第2谱表标记F谱号，没有第1谱表显式谱号。PDF仍有4/4、双谱表、休止和连音线，但这种缺省增加了读谱歧义。",
+        "method": "放大PDF首行，读取XML结构，并独立用Verovio渲染核对。"
+      },
+      {
+        "artifact": "submission/score.musicxml",
+        "locator": "全38小节；第17、23、30-33小节等密集段",
+        "observation": "XML有38小节、单个Piano part、两谱表；1638个书写音头中755个标为32分、376个标为64分，第33小节有77个书写音头。机械细分与频繁附点使4/4拍的可演奏节奏层次难以辨认。",
+        "method": "解析MusicXML的measure、staff、pitch和type元素；结合PDF页面视觉检查。"
+      },
+      {
+        "artifact": "submission/score.pdf vs submission/score.musicxml",
+        "locator": "PDF第3页第17小节；XML独立渲染第3页第17小节",
+        "observation": "PDF该小节以上谱表单个降B高音的延长为开端，低谱表随即连续运动；XML同号小节从B6、降B6及随后多音高音群开始，两谱表的音群和节奏分布显著不同。",
+        "method": "分别放大提交PDF与从原始MusicXML独立生成的Verovio页面，再读取XML第17小节起始pitch元素。"
+      },
+      {
+        "artifact": "submission/score.pdf vs submission/score.musicxml",
+        "locator": "PDF第6页最后一行第37-38小节；XML独立渲染第7页第37-38小节",
+        "observation": "PDF第38小节上谱表先休止、仅短暂双音后大段休止；XML第38小节上谱表从G4起连续写有多个击键。结尾并非同一组音符。",
+        "method": "放大对照PDF末行与独立XML渲染末页，并核查XML第38小节音符元素。"
+      },
+      {
+        "artifact": "case/candidate/input/performance.mp4",
+        "locator": "视频约00:05、00:36、01:12",
+        "observation": "抽帧显示演奏者双手活动及不同音区跨度；这些静帧不足以验证精确起音或节奏。",
+        "method": "ffmpeg按时码抽帧后用view_image检查。"
+      }
+    ],
+    "confidence": {
+      "layout_points": "high",
+      "notation_usability_points": "medium",
+      "pdf_xml_fidelity_points": "high"
+    },
+    "inspection_limits": [
+      "未直接听审音频，也未以正常速度连续观看完整视频；只查看约00:05、00:36、01:12的静帧。记谱可用性依据谱面、XML时值统计和静帧判断，不将静帧推断当作听审。",
+      "PDF/XML音符内容以首、中、尾及各页双谱表的视觉抽样对照，未对PDF图形做逐音机器逆向识别。独立XML渲染的七页与提交PDF六页采用不同分页。"
+    ],
+    "reasons": {
+      "layout_points": "2.0/4：六页完整且谱线、休止、音头大体可辨，但第1页第1-3小节、第4页第22-25小节及第5页第29-32小节的密集短时值、临时记号和加线造成明显拥挤，符合可用但有显著排版问题的档位。",
+      "notation_usability_points": "1.5/3：4/4、双谱表、休止与连音线提供可恢复的结构；然而上谱表缺显式谱号，多数音符写成32/64分时值，密集段的声部和拍内层次很难供钢琴演奏者直接使用，需大量人工整理。此项不因自动部分已计分的音高错误再次扣分。",
+      "pdf_xml_fidelity_points": "0.0/3：PDF不是当前XML的忠实谱面。第17小节两谱表起始音群及节奏分布明显不同；结尾第38小节PDF上谱表主要为休止和短暂双音，XML却连续写出多个音符。中段与结尾均有显著差异，属实质不同内容，按原0分档。"
+    }
+  },
+  "inspection_limits": [
+    "未直接听审音频，也未以正常速度连续观看完整视频；只查看约00:05、00:36、01:12的静帧。记谱可用性依据谱面、XML时值统计和静帧判断，不将静帧推断当作听审。",
+    "PDF/XML音符内容以首、中、尾及各页双谱表的视觉抽样对照，未对PDF图形做逐音机器逆向识别。独立XML渲染的七页与提交PDF六页采用不同分页。"
+  ],
+  "submission_unchanged": true
+}

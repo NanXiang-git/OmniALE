@@ -1,0 +1,27 @@
+{
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "provider": "nju",
+  "status": "completed",
+  "budget_seconds": 2400,
+  "start_epoch": 1792553282.5345078,
+  "automatic_retries": 0,
+  "pid": 1743,
+  "exit_code": 0,
+  "elapsed_seconds": 353.0016422670001,
+  "wall_elapsed_seconds": 367.73011469841003,
+  "clock_divergence_seconds": 14.728472431409955,
+  "clock_anomaly": true,
+  "end_epoch": 1792553650.2652345,
+  "usage_events": [
+    {
+      "input_tokens": 1471742,
+      "cached_input_tokens": 1395584,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 18625,
+      "reasoning_output_tokens": 7672
+    }
+  ],
+  "removed_submission_symlinks": [],
+  "candidate_unchanged": true
+}

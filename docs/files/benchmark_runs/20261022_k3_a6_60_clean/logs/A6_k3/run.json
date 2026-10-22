@@ -1,0 +1,21 @@
+{
+  "agent": "Codex CLI 0.163.0 Linux",
+  "model": "k3",
+  "reasoning_effort": "high",
+  "provider": "nju",
+  "status": "budget_timeout",
+  "budget_seconds": 3600,
+  "start_epoch": 1792635673.5611815,
+  "automatic_retries": 0,
+  "pid": 454,
+  "max_loop_gap_seconds": 0.6590870149998409,
+  "exit_code": -9,
+  "elapsed_seconds": 3473.245622894,
+  "wall_elapsed_seconds": 3600.0843436717987,
+  "clock_divergence_seconds": 126.8387207777987,
+  "clock_anomaly": true,
+  "end_epoch": 1792639273.645663,
+  "usage_events": [],
+  "removed_submission_symlinks": [],
+  "candidate_unchanged": true
+}

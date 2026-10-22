@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "type": "hybrid_evidence_bound_dual_review",
+  "total": 100,
+  "dimensions": {
+    "meaning": 65,
+    "bilingual": 8,
+    "timing": 12,
+    "readability": 5,
+    "delivery": 5,
+    "calibration": 5
+  },
+  "pass": {
+    "total_min": 90,
+    "meaning_min": 61.75,
+    "bilingual_min": 7.6,
+    "timing_min": 10.8,
+    "delivery_required": 5,
+    "critical_errors_allowed": 0
+  },
+  "caps": {
+    "one_critical_segment": 59,
+    "two_or_more_critical_segments": 39,
+    "semantic_coverage_below_half": 39,
+    "two_high_confidence_wrong_segment_language_pairs": 49,
+    "delivery_incomplete": 79
+  },
+  "review_policy": {
+    "independent_reviewers": 2,
+    "all_discrete_disagreements": "third_independent_adjudicator_required",
+    "missing_semantic_review": "no_total_score",
+    "missing_expert_timing_gold": "do_not_invent_millisecond_tolerance",
+    "equivalent_translations": "accepted",
+    "exact_string_semantic_scoring": false,
+    "model_review_must_be_labelled": true
+  },
+  "implementation": "grade.py",
+  "instructions": "REVIEW_PROTOCOL.md"
+}

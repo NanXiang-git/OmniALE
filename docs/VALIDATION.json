@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "source": "deliverables/A4_A6_research_20261021",
+  "current_k3_a6_score": 8.5,
+  "evidence_files_identical": true,
+  "local_links_checked": 279,
+  "missing_links": [],
+  "credential_scan_passed": true,
+  "javascript_syntax_passed": true,
+  "full_archive_url": "https://github.com/NanXiang-git/OmniALE/releases/download/a4-a6-20261022/A4_A6_research_20261021.zip",
+  "site_bytes": 419574025,
+  "source_archive_sha256": "899a917730a91273dad197c3ac65602ec4261ccd20bdee4eec6d28c474ea5701"
+}

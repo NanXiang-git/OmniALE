@@ -1,0 +1,27 @@
+{
+  "segments": [
+    {"id":"S01","zh_cues":[1],"en_cues":[1],"confidence_zh":0.78,"confidence_en":0.76,"uncertainty":"疑问和否定认知动作可辨认，但地区语序与主语归属存在差异。"},
+    {"id":"S02","zh_cues":[2],"en_cues":[2],"confidence_zh":0.88,"confidence_en":0.88,"uncertainty":""},
+    {"id":"S03","zh_cues":[3],"en_cues":[3],"confidence_zh":0.72,"confidence_en":0.70,"uncertainty":"“家”和“想念”的手势可辨认，完成态不能完全确认。"},
+    {"id":"S04","zh_cues":[4],"en_cues":[4],"confidence_zh":0.72,"confidence_en":0.70,"uncertainty":"动作支持“想家”；主语省略，未见明确时间词。"},
+    {"id":"S05","zh_cues":[5],"en_cues":[5],"confidence_zh":0.80,"confidence_en":0.80,"uncertainty":"“等一下”的持续时长按整段手势覆盖显示。"},
+    {"id":"S06","zh_cues":[6],"en_cues":[6],"confidence_zh":0.82,"confidence_en":0.82,"uncertainty":""},
+    {"id":"S07","zh_cues":[7],"en_cues":[7],"confidence_zh":0.86,"confidence_en":0.86,"uncertainty":""},
+    {"id":"S08","zh_cues":[8],"en_cues":[8],"confidence_zh":0.87,"confidence_en":0.87,"uncertainty":"视频未指定询价对象，译文保留问句而不补商品。"},
+    {"id":"S09","zh_cues":[9],"en_cues":[9],"confidence_zh":0.88,"confidence_en":0.88,"uncertainty":""},
+    {"id":"S10","zh_cues":[10],"en_cues":[10],"confidence_zh":0.78,"confidence_en":0.78,"uncertainty":"见面与高兴的动作可辨认；主语和敬语省略属自然表达。"},
+    {"id":"S11","zh_cues":[11],"en_cues":[11],"confidence_zh":0.82,"confidence_en":0.82,"uncertainty":"儿童身份仅来自手势，不从背景商品补充其他信息。"},
+    {"id":"S12","zh_cues":[12],"en_cues":[12],"confidence_zh":0.62,"confidence_en":0.60,"uncertainty":"短手势可表示“没什么/没事”，具体回应语境不能确认。"},
+    {"id":"S13","zh_cues":[13],"en_cues":[13],"confidence_zh":0.80,"confidence_en":0.80,"uncertainty":""},
+    {"id":"S14","zh_cues":[14],"en_cues":[14],"confidence_zh":0.86,"confidence_en":0.86,"uncertainty":""},
+    {"id":"S15","zh_cues":[15],"en_cues":[15],"confidence_zh":0.74,"confidence_en":0.74,"uncertainty":"“想/要”的细微差异不能完全确认，译文取自然意愿表达。"},
+    {"id":"S16","zh_cues":[16],"en_cues":[16],"confidence_zh":0.65,"confidence_en":0.64,"uncertainty":"“为什么”和否定认知动作可辨认，前后语序有地区差异。"},
+    {"id":"S17","zh_cues":[17],"en_cues":[17],"confidence_zh":0.68,"confidence_en":0.66,"uncertainty":"拍球动作支持篮球，评价词的具体强度不能完全确认。"},
+    {"id":"S18","zh_cues":[18],"en_cues":[18],"confidence_zh":0.58,"confidence_en":0.56,"uncertainty":"亲属手势和指示对象可辨认，但指称与陈述顺序不完全确定。"},
+    {"id":"S19","zh_cues":[19],"en_cues":[19],"confidence_zh":0.80,"confidence_en":0.80,"uncertainty":""},
+    {"id":"S20","zh_cues":[20],"en_cues":[20],"confidence_zh":0.88,"confidence_en":0.88,"uncertainty":"视频未指定询价对象，译文保留问句而不补商品。"},
+    {"id":"S21","zh_cues":[21],"en_cues":[21],"confidence_zh":0.64,"confidence_en":0.62,"uncertainty":"见面动作可辨认，对象指向和意愿强度不能完全确认。"},
+    {"id":"S22","zh_cues":[22],"en_cues":[22],"confidence_zh":0.60,"confidence_en":0.58,"uncertainty":"可确认想了解的意愿，但具体主题没有在画面中出现。"},
+    {"id":"S23","zh_cues":[23],"en_cues":[23],"confidence_zh":0.62,"confidence_en":0.60,"uncertainty":"“说”和少量动作可辨认，语言词的确切指称不能完全确认。"}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "strict_wall_budget_valid": true,
+  "host_suspension_detected": false,
+  "solver_sessions": 1,
+  "judge_sessions": 1,
+  "all_high": true,
+  "solver_budget_seconds": 3600,
+  "judge_budget_seconds": 1800,
+  "concurrency_peak": 1,
+  "frozen_candidates_scoring_and_submissions_unchanged": true,
+  "upstream_requests": 131,
+  "http_retries": 0,
+  "stream_errors": 0,
+  "clock_anomalies": [
+    {
+      "model": "k3",
+      "wall": 3600.0843436717987,
+      "monotonic": 3473.245622894,
+      "difference": 126.8387207777987
+    },
+    {
+      "model": "gpt-6-sol",
+      "wall": 718.394588470459,
+      "monotonic": 696.3544522729999,
+      "difference": 22.040136197459105
+    }
+  ],
+  "results": [
+    {
+      "case": "A6",
+      "model": "k3",
+      "final_score": 8.5
+    }
+  ],
+  "validated_utc": "2026-10-22T03:33:48.455414+00:00"
+}

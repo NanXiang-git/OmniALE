@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "case": "A6",
+      "model": "k3",
+      "final_score": 8.5
+    }
+  ],
+  "unrelated_records_unchanged": true,
+  "old_k3_a6_attempts_hidden": true,
+  "strict_wall_budget_valid": true,
+  "source_submissions_and_scores_match": true,
+  "html_links_checked": 132,
+  "javascript_syntax_passed": true,
+  "browser_visual_check": "not performed"
+}

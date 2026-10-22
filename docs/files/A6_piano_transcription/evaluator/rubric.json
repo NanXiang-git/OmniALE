@@ -1,0 +1,24 @@
+﻿{
+  "version": "1.0",
+  "frozen_before_solver": true,
+  "automatic_points": 90,
+  "manual_points": 10,
+  "criteria": {
+    "pitch_global_f1": 30,
+    "pitch_time_macro_f1": 15,
+    "pitch_register_macro_f1": 15,
+    "rhythm_strict_f1": 25,
+    "xml_valid_nonempty": 1,
+    "midi_xml_consistency": 3,
+    "notes_present": 1,
+    "notation_review": 10
+  },
+  "pitch_onset_tolerance_seconds": 0.20,
+  "rhythm_onset_tolerance_seconds": 0.08,
+  "time_bins": 6,
+  "register_edges_midi": [0,60,78,128],
+  "consistency_onset_tolerance_quarter_notes": 0.010416666666666666,
+  "consistency_duration_tolerance": "max(1/32 quarter, 20% of XML tied duration)",
+  "missing_files": "Only their published points are lost. Missing/unparseable MusicXML supplies zero notes; missing/invalid MIDI without alignment.json also prevents wall-clock mapping. Missing/invalid PDF gives notation_review=0. No score caps.",
+  "manual_review": "One independent reviewer; unreviewed existing PDF => null, pending 10. Layout and notation semantics must be examined, never inferred from existence. No final score until resolved."
+}

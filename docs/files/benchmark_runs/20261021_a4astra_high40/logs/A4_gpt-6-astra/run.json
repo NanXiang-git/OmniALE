@@ -1,0 +1,27 @@
+{
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "provider": "nju",
+  "status": "completed",
+  "budget_seconds": 2400,
+  "start_epoch": 1792598296.767631,
+  "automatic_retries": 0,
+  "pid": 1459,
+  "exit_code": 0,
+  "elapsed_seconds": 2290.288024151,
+  "wall_elapsed_seconds": 2295.481082201004,
+  "clock_divergence_seconds": 5.193058050003856,
+  "clock_anomaly": true,
+  "end_epoch": 1792600592.249425,
+  "usage_events": [
+    {
+      "input_tokens": 2861770,
+      "cached_input_tokens": 2692096,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 26298,
+      "reasoning_output_tokens": 17851
+    }
+  ],
+  "removed_submission_symlinks": [],
+  "candidate_unchanged": true
+}

@@ -1,0 +1,143 @@
+{
+  "id": "A6_gpt-6-luna",
+  "case": "A6",
+  "model": "gpt-6-luna",
+  "version": "original",
+  "judge_model": "gpt-6-sol",
+  "base_points": 9.424112039304944,
+  "existing_cap": 100,
+  "status": "scored",
+  "final_score": 11.424112,
+  "score_type": "single_judge_LLM_final",
+  "original_formal_total": null,
+  "attempts": [
+    {
+      "model": "gpt-6-sol",
+      "reasoning_effort": "high",
+      "provider": "nju",
+      "status": "completed",
+      "budget_seconds": 1800,
+      "start_epoch": 1792573697.7455654,
+      "automatic_retries": 0,
+      "pid": 119246,
+      "exit_code": 0,
+      "elapsed_seconds": 409.90907213800074,
+      "wall_elapsed_seconds": 426.85387921333313,
+      "clock_divergence_seconds": 16.944807075332392,
+      "clock_anomaly": true,
+      "end_epoch": 1792574124.5994782,
+      "usage_events": [
+        {
+          "input_tokens": 2191554,
+          "cached_input_tokens": 2096384,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 11685,
+          "reasoning_output_tokens": 3786
+        }
+      ]
+    }
+  ],
+  "validation_error": null,
+  "submission_unchanged": true,
+  "reviewer_count": 1,
+  "reasoning_effort": "high",
+  "budget_seconds": 1800,
+  "pending_awarded": 2.0,
+  "uncapped_total": 11.424112039304944,
+  "applied_cap": 100,
+  "judgment": {
+    "items": [
+      {
+        "id": "layout_points",
+        "earned_points": 0.5,
+        "rationale": "10页均能看到五线谱和音头，稀疏页尚可辨认部分位置，故给最低限度排版分。全篇没有实际谱号、拍号和临时升降记号，只有G/F字母；第8页第29至32小节及第9页第33小节多层音头和符尾拥挤重叠，高低音区的加线过多，不能作为可直接阅读的完整钢琴谱。未按音高转写错误再次扣分。",
+        "confidence": "high",
+        "evidence": [
+          {
+            "artifact": "/work/submission/score.pdf",
+            "locator": "第1至10页，特别是第1、3、8、9、10页",
+            "observation": "逐页渲染并查看：全部非空；仅用G/F字母标示谱表，无标准谱号、拍号或临时升降记号；第8、9页密集处严重堆叠，第3页大片空白。",
+            "method": "pdftoppm 110 dpi渲染全部10页，view_image逐页目视"
+          },
+          {
+            "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+            "locator": "One independent later reviewer，第1项",
+            "observation": "排版项0至4分，半分步长；可读性涵盖谱号、临时记号和间距。",
+            "method": "读取原评分协议"
+          }
+        ],
+        "detail": []
+      },
+      {
+        "id": "notation_usability_points",
+        "earned_points": 0,
+        "rationale": "乐谱结构属于机械散点：XML有1125个音符、888个forward跳位、最多15个声部编号，但没有一个显式休止符、连音线、连结线或连桁。第21、29至33小节尤为密集，连续独立符尾和无休止的跳位无法让钢琴演奏者辨认连贯拍位、声部与时值；PDF又不显示拍号、谱号和变音。此项仅评记谱语义与演奏可用性，不重评自动音高准确率。",
+        "confidence": "high",
+        "evidence": [
+          {
+            "artifact": "/work/submission/score.musicxml",
+            "locator": "P1/P2第1、21、29至33、37小节；全文件note/forward/voice字段",
+            "observation": "两声部均设4/4及谱号，但大量forward跳位代替休止；1125个note、888个forward，voice值1至15；无rest、tie、beam、chord元素。末尾第38小节两声部均无音符。",
+            "method": "lxml结构解析，verovio 6.3独立排版后查看首、中、尾和左右手"
+          },
+          {
+            "artifact": "/work/submission/score.pdf",
+            "locator": "第6页第21小节、第8页第29至32小节、第9页第33小节",
+            "observation": "密集和弦周围出现大量独立短符尾且音头彼此重叠，未标休止，拍位与声部走向不可可靠跟读。",
+            "method": "PDF逐页目视，与MusicXML独立渲染对照"
+          },
+          {
+            "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+            "locator": "One independent later reviewer，第2项",
+            "observation": "机械散点或语义不可用的记谱对应0分；不要求精确还原原拍号或离键时长。",
+            "method": "读取原评分协议"
+          }
+        ],
+        "detail": []
+      },
+      {
+        "id": "pdf_xml_fidelity_points",
+        "earned_points": 1.5,
+        "rationale": "PDF十页覆盖第1至37小节，两行谱表和首、中、尾音群大体对应XML的左右手；XML第38小节为空白，故PDF止于37不构成有声内容遗漏。但XML内的高低音谱号、4/4拍号及476处alter音高变化在PDF中没有相应的标准记号，音符位置虽在，PDF不能完整传达XML的可读谱面内容。属于有限但重要的内容不一致，给1.5分。",
+        "confidence": "medium",
+        "evidence": [
+          {
+            "artifact": "/work/submission/score.pdf",
+            "locator": "第1页第1至4小节、第5页第17至20小节、第8至9页第29至36小节、第10页第37小节",
+            "observation": "首、中、尾均有左右手音头，页眉连续覆盖至第37小节；第10页末没有有声内容截断。缺少实际谱号、拍号及临时升降记号。",
+            "method": "pdftoppm渲染全10页并目视，与XML独立排版逐段对照"
+          },
+          {
+            "artifact": "/work/submission/score.musicxml",
+            "locator": "P1/P2第1、17至20、29至33、37至38小节；attributes、pitch/alter",
+            "observation": "两part均有38个小节，P1共627音、P2共498音；第38小节双手均0音。文件明示G/F谱号与4/4拍号，476个pitch/alter字段；独立渲染可见首中尾双手音群。",
+            "method": "lxml解析并由verovio 6.3独立渲染，查看其4页排版图"
+          },
+          {
+            "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+            "locator": "One independent later reviewer，第3项",
+            "observation": "PDF/XML一致性0至3分，有限遗漏或不符的中间档为1.5分。",
+            "method": "读取原评分协议"
+          }
+        ],
+        "detail": []
+      }
+    ],
+    "cap": {
+      "maximum_total": 100,
+      "rationale": "原rubric.json的missing_files规则明示No score caps；本答卷PDF存在且可检查，没有适用的额外总分封顶。",
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/rubric.json",
+          "locator": "missing_files、manual_review字段",
+          "observation": "规则写明No score caps；人工复核为10分独立项目。",
+          "method": "读取原评分规则"
+        }
+      ]
+    },
+    "inspection_limits": [
+      "未直接听取原始音频；本轮仅评待定的A6谱面10分，未据音频重判自动90分。",
+      "PDF与MusicXML通过逐页、首中尾及双手视觉比对和结构解析核对，未对1125个音符做逐个图形一一计数；PDF/XML一致性置信度因此为medium。"
+    ]
+  }
+}

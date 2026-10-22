@@ -1,0 +1,20 @@
+{
+  "agent": "Codex CLI 0.163.0 Linux",
+  "model": "gpt-6-sol",
+  "reasoning_effort": "high",
+  "provider": "nju",
+  "status": "budget_timeout",
+  "budget_seconds": 2400,
+  "start_epoch": 1792612761.705012,
+  "automatic_retries": 0,
+  "pid": 468,
+  "exit_code": -9,
+  "elapsed_seconds": 2349.901018681,
+  "wall_elapsed_seconds": 2400.0145251750946,
+  "clock_divergence_seconds": 50.11350649409451,
+  "clock_anomaly": true,
+  "end_epoch": 1792615161.7195427,
+  "usage_events": [],
+  "removed_submission_symlinks": [],
+  "candidate_unchanged": true
+}

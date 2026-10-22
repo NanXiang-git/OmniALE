@@ -1,0 +1,280 @@
+{
+  "segments": [
+    {
+      "id": "S01",
+      "zh_cues": [
+        1
+      ],
+      "en_cues": [
+        1
+      ],
+      "confidence_zh": 0.68,
+      "confidence_en": 0.68,
+      "uncertainty": "“苹果”的手形及句末疑问标记辨认不够稳定。"
+    },
+    {
+      "id": "S02",
+      "zh_cues": [
+        2
+      ],
+      "en_cues": [
+        2
+      ],
+      "confidence_zh": 0.86,
+      "confidence_en": 0.86,
+      "uncertainty": "“唱歌”的口部动作较清楚，未见其他明确宾语。"
+    },
+    {
+      "id": "S03",
+      "zh_cues": [
+        3
+      ],
+      "en_cues": [
+        3
+      ],
+      "confidence_zh": 0.25,
+      "confidence_en": 0.25,
+      "uncertainty": "只能确认进食动作；食物以及前后的人物成分无法确认。"
+    },
+    {
+      "id": "S04",
+      "zh_cues": [
+        4
+      ],
+      "en_cues": [
+        4
+      ],
+      "confidence_zh": 0.4,
+      "confidence_en": 0.4,
+      "uncertainty": "额侧动作辨为“想”，其后的具体意愿或对象无法确认。"
+    },
+    {
+      "id": "S05",
+      "zh_cues": [
+        5
+      ],
+      "en_cues": [
+        5
+      ],
+      "confidence_zh": 0.5,
+      "confidence_en": 0.5,
+      "uncertainty": "“十、五”手形较清楚；年龄语境由前后手形推断，可能涉及其他数量含义。"
+    },
+    {
+      "id": "S06",
+      "zh_cues": [
+        6
+      ],
+      "en_cues": [
+        6
+      ],
+      "confidence_zh": 0.52,
+      "confidence_en": 0.52,
+      "uncertainty": "“十、一”手形较清楚；年龄语境由前后手形推断，可能涉及日期。"
+    },
+    {
+      "id": "S07",
+      "zh_cues": [
+        7
+      ],
+      "en_cues": [
+        7
+      ],
+      "confidence_zh": 0.68,
+      "confidence_en": 0.68,
+      "uncertainty": "“写字”较清楚；球类动作辨为篮球，连接成分略有歧义。"
+    },
+    {
+      "id": "S08",
+      "zh_cues": [
+        8
+      ],
+      "en_cues": [
+        8
+      ],
+      "confidence_zh": 0.78,
+      "confidence_en": 0.78,
+      "uncertainty": "句末疑问标记较短，但“你、爱、我”的动作顺序较清楚。"
+    },
+    {
+      "id": "S09",
+      "zh_cues": [
+        9
+      ],
+      "en_cues": [
+        9
+      ],
+      "confidence_zh": 0.45,
+      "confidence_en": 0.45,
+      "uncertainty": "耳边动作可能表示“听”，也可能是打电话；句末按疑问表情处理。"
+    },
+    {
+      "id": "S10",
+      "zh_cues": [
+        10
+      ],
+      "en_cues": [
+        10
+      ],
+      "confidence_zh": 0.66,
+      "confidence_en": 0.66,
+      "uncertainty": "划水动作辨为“游泳”，脸侧框形动作辨为“照相”；连接成分略有歧义。"
+    },
+    {
+      "id": "S11",
+      "zh_cues": [
+        11
+      ],
+      "en_cues": [
+        11
+      ],
+      "confidence_zh": 0.68,
+      "confidence_en": 0.68,
+      "uncertainty": "“爱、吃”较清楚；双手包捏动作辨为“饺子”，食物仍有少量歧义。"
+    },
+    {
+      "id": "S12",
+      "zh_cues": [
+        12
+      ],
+      "en_cues": [
+        12
+      ],
+      "confidence_zh": 0.5,
+      "confidence_en": 0.5,
+      "uncertainty": "单个掌心向下的挥动动作辨为礼貌回应，可能与其他简短礼貌用语混淆。"
+    },
+    {
+      "id": "S13",
+      "zh_cues": [
+        13
+      ],
+      "en_cues": [
+        13
+      ],
+      "confidence_zh": 0.4,
+      "confidence_en": 0.4,
+      "uncertainty": "“爱”和屋顶形“家”可辨；前方是否包含“我的”及其他成分不确定。"
+    },
+    {
+      "id": "S14",
+      "zh_cues": [
+        14
+      ],
+      "en_cues": [
+        14
+      ],
+      "confidence_zh": 0.8,
+      "confidence_en": 0.8,
+      "uncertainty": "“爱”和举杯喝水动作较清楚，中间按“水”理解。"
+    },
+    {
+      "id": "S15",
+      "zh_cues": [
+        15
+      ],
+      "en_cues": [
+        15
+      ],
+      "confidence_zh": 0.88,
+      "confidence_en": 0.88,
+      "uncertainty": "“爱”及“中、国”的手形顺序较清楚。"
+    },
+    {
+      "id": "S16",
+      "zh_cues": [
+        16
+      ],
+      "en_cues": [
+        16
+      ],
+      "confidence_zh": 0.55,
+      "confidence_en": 0.55,
+      "uncertainty": "额侧“想”和嘴部“吃”可辨，具体食物无法确认。"
+    },
+    {
+      "id": "S17",
+      "zh_cues": [
+        17
+      ],
+      "en_cues": [
+        17
+      ],
+      "confidence_zh": 0.45,
+      "confidence_en": 0.45,
+      "uncertainty": "“爱”可辨；其后可能为亲属或动物，具体对象无法确认。"
+    },
+    {
+      "id": "S18",
+      "zh_cues": [
+        18
+      ],
+      "en_cues": [
+        18
+      ],
+      "confidence_zh": 0.35,
+      "confidence_en": 0.35,
+      "uncertainty": "托颌动作辨为“想”，随后有“一”和指向自身；末尾动作无法确认。"
+    },
+    {
+      "id": "S19",
+      "zh_cues": [
+        19
+      ],
+      "en_cues": [
+        19
+      ],
+      "confidence_zh": 0.45,
+      "confidence_en": 0.45,
+      "uncertainty": "“爱”可辨；后续活动及末尾评价的具体内容无法确认。"
+    },
+    {
+      "id": "S20",
+      "zh_cues": [
+        20
+      ],
+      "en_cues": [
+        20
+      ],
+      "confidence_zh": 0.85,
+      "confidence_en": 0.85,
+      "uncertainty": "“衣服、钱”和疑问表情较清楚；“这件”的指示范围按近身衣物理解。"
+    },
+    {
+      "id": "S21",
+      "zh_cues": [
+        21
+      ],
+      "en_cues": [
+        21
+      ],
+      "confidence_zh": 0.4,
+      "confidence_en": 0.4,
+      "uncertainty": "“睡觉”和屋顶形“家”可辨；末尾可能含数量或时间，无法确认。"
+    },
+    {
+      "id": "S22",
+      "zh_cues": [
+        22
+      ],
+      "en_cues": [
+        22
+      ],
+      "confidence_zh": 0.68,
+      "confidence_en": 0.68,
+      "uncertainty": "“我、想、学”较清楚；末尾学习内容辨为“手语”，仍可能与其他语言混淆。"
+    },
+    {
+      "id": "S23",
+      "zh_cues": [
+        23
+      ],
+      "en_cues": [
+        23
+      ],
+      "confidence_zh": 0.5,
+      "confidence_en": 0.5,
+      "uncertainty": "合掌祝福动作和愉快表情可辨；中间按“生日”理解，可能为其他祝福。"
+    }
+  ]
+}

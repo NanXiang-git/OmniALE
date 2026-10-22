@@ -1,0 +1,280 @@
+{
+  "segments": [
+    {
+      "id": "S01",
+      "zh_cues": [
+        1
+      ],
+      "en_cues": [
+        1
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S02",
+      "zh_cues": [
+        2
+      ],
+      "en_cues": [
+        2
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S03",
+      "zh_cues": [
+        3
+      ],
+      "en_cues": [
+        3
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S04",
+      "zh_cues": [
+        4
+      ],
+      "en_cues": [
+        4
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S05",
+      "zh_cues": [
+        5
+      ],
+      "en_cues": [
+        5
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S06",
+      "zh_cues": [
+        6
+      ],
+      "en_cues": [
+        6
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S07",
+      "zh_cues": [
+        7
+      ],
+      "en_cues": [
+        7
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S08",
+      "zh_cues": [
+        8
+      ],
+      "en_cues": [
+        8
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S09",
+      "zh_cues": [
+        9
+      ],
+      "en_cues": [
+        9
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S10",
+      "zh_cues": [
+        10
+      ],
+      "en_cues": [
+        10
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S11",
+      "zh_cues": [
+        11
+      ],
+      "en_cues": [
+        11
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S12",
+      "zh_cues": [
+        12
+      ],
+      "en_cues": [
+        12
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S13",
+      "zh_cues": [
+        13
+      ],
+      "en_cues": [
+        13
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S14",
+      "zh_cues": [
+        14
+      ],
+      "en_cues": [
+        14
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S15",
+      "zh_cues": [
+        15
+      ],
+      "en_cues": [
+        15
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S16",
+      "zh_cues": [
+        16
+      ],
+      "en_cues": [
+        16
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S17",
+      "zh_cues": [
+        17
+      ],
+      "en_cues": [
+        17
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S18",
+      "zh_cues": [
+        18
+      ],
+      "en_cues": [
+        18
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S19",
+      "zh_cues": [
+        19
+      ],
+      "en_cues": [
+        19
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S20",
+      "zh_cues": [
+        20
+      ],
+      "en_cues": [
+        20
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S21",
+      "zh_cues": [
+        21
+      ],
+      "en_cues": [
+        21
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S22",
+      "zh_cues": [
+        22
+      ],
+      "en_cues": [
+        22
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    },
+    {
+      "id": "S23",
+      "zh_cues": [
+        23
+      ],
+      "en_cues": [
+        23
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "无法可靠辨认本段手语的具体词义；整段标为无法确认。 / The sign meaning in this segment could not be reliably identified; the full cue is marked unclear."
+    }
+  ]
+}

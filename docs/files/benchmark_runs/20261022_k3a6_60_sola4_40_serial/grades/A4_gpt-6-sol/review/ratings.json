@@ -1,0 +1,1134 @@
+{
+  "reviewer_id": "single-independent",
+  "reviewer_kind": "model_assisted",
+  "video_watched_in_full": false,
+  "source_annotations_checked": true,
+  "truth_sha256": "b090df0a66014c19212e52f34c061443515d157fb94385c22bcea74327912e74",
+  "submission_sha256": {
+    "zh-CN.srt": "2e0a65beda14f3648a270e1fb15b165d344dc8e014e8f00be79e749b15d83079",
+    "en.srt": "e0b57e8ccc6c7b122daf4a389ff8dbeb56b827deffc67b31189dc714d8e8b7f4",
+    "segments.json": "10d6e32988e461cbfdc0c6c1a500a2d1e1943a5104cc9c6ee0afc11fef8c4cd5",
+    "subtitled.mkv": "c63cbf5275726f54f24b81031bc189c571e6828cc6ba85ab40f97fc210117cee"
+  },
+  "units": [
+    {
+      "id": "S01",
+      "zh": [
+        1,
+        0,
+        0,
+        0.5
+      ],
+      "en": [
+        1,
+        0,
+        0,
+        0.5
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频0.000–5.066秒；字幕0.450–3.650秒：“你要喝两个[无法确认]吗？” / “Would you like two [unclear] to drink?”。annotation-relative：addressee：“你/you”保留；time遗漏今天；negation没有表达未喝酒，不能把“喝”单字当作否定信息；force仍为问句，但“要…吗/Would you like”变为意愿询问，仅半分。数量“两个/two”是标注未支持的确定新增，不是占位符内的不确定内容，记invented_fact；没有断言已经喝酒，故不记polarity_flip。时序观察：约0.75–1.00秒向前指，1.25–1.50秒双手在胸前，2.00–2.75秒手到嘴边，3.00–3.50秒手形变化，3.75秒已回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "你要喝两个[无法确认]吗？",
+      "en_quote": "Would you like two [unclear] to drink?",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S01.jpg",
+          "locator": "S01，全页从左到右、从上到下；视频0.000–5.066秒",
+          "observation": "约0.75–1.00秒向前指，1.25–1.50秒双手在胸前，2.00–2.75秒手到嘴边，3.00–3.50秒手形变化，3.75秒已回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/0/slots；S01；addressee,time,negation,force",
+          "observation": "作者中文：你今天没喝酒吧。；gloss：你/今天/喝酒/没有2/是/。。addressee：“你/you”保留；time遗漏今天；negation没有表达未喝酒，不能把“喝”单字当作否定信息；force仍为问句，但“要…吗/Would you like”变为意愿询问，仅半分。数量“两个/two”是标注未支持的确定新增，不是占位符内的不确定内容，记invented_fact；没有断言已经喝酒，故不记polarity_flip。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S01/zh 与 /S01/en；SRT cue 1，0.450–3.650秒",
+          "observation": "中文原文：你要喝两个[无法确认]吗？；英文原文：Would you like two [unclear] to drink?。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S01；结合 /work/submission/zh-CN.srt 和 en.srt cue 1",
+          "observation": "可信定位=1；实际字幕0.450–3.650秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频5.566–8.466秒；字幕5.820–7.920秒：“给[无法确认]打电话说一声。” / “Call [unclear] and let them know.”。annotation-relative：group未表达包含说话者的“我们”；action把“去吃饭”替换为“打电话说一声/Call … and let them know”；force是吩咐打电话而非共同吃饭提议，均0。电话与通知是占位符之外明确新增的动作，记invented_fact，不把缺少“我们”单独贴翻转标签。时序观察：约5.82–6.32秒单手胸前扫动，6.57–6.82秒手向侧方移动，7.07–7.57秒手到嘴前，7.82秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "给[无法确认]打电话说一声。",
+      "en_quote": "Call [unclear] and let them know.",
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S02.jpg",
+          "locator": "S02，全页从左到右、从上到下；视频5.566–8.466秒",
+          "observation": "约5.82–6.32秒单手胸前扫动，6.57–6.82秒手向侧方移动，7.07–7.57秒手到嘴前，7.82秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/1/slots；S02；group,action,force",
+          "observation": "作者中文：我们去吃饭吧。；gloss：我们/去/吃饭/。。group未表达包含说话者的“我们”；action把“去吃饭”替换为“打电话说一声/Call … and let them know”；force是吩咐打电话而非共同吃饭提议，均0。电话与通知是占位符之外明确新增的动作，记invented_fact，不把缺少“我们”单独贴翻转标签。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S02/zh 与 /S02/en；SRT cue 2，5.820–7.920秒",
+          "observation": "中文原文：给[无法确认]打电话说一声。；英文原文：Call [unclear] and let them know.。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S02；结合 /work/submission/zh-CN.srt 和 en.srt cue 2",
+          "observation": "可信定位=1；实际字幕5.820–7.920秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person"
+      ],
+      "note": "视频8.966–12.866秒；字幕9.270–12.560秒：“我们俩[无法确认]。” / “The two of us [unclear].”。annotation-relative：person将标注“你”明确写成“我们俩/The two of us”，记wrong_person；ability没有“能否独自来”；force没有确认询问，均0。画面胸前动作不能仅凭外观解释成第一人称双数，此结论是annotation-relative。时序观察：约9.22–9.97秒双手在胸前及拇指上举，10.22–10.72秒手在脸旁，10.97–12.22秒双手动作连续，12.47秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "我们俩[无法确认]。",
+      "en_quote": "The two of us [unclear].",
+      "confidence": 0.91,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S03.jpg",
+          "locator": "S03，全页从左到右、从上到下；视频8.966–12.866秒",
+          "observation": "约9.22–9.97秒双手在胸前及拇指上举，10.22–10.72秒手在脸旁，10.97–12.22秒双手动作连续，12.47秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/2/slots；S03；person,ability,force",
+          "observation": "作者中文：你真的能自己来吗？；gloss：你/自己/来/真2/？。person将标注“你”明确写成“我们俩/The two of us”，记wrong_person；ability没有“能否独自来”；force没有确认询问，均0。画面胸前动作不能仅凭外观解释成第一人称双数，此结论是annotation-relative。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S03/zh 与 /S03/en；SRT cue 3，9.270–12.560秒",
+          "observation": "中文原文：我们俩[无法确认]。；英文原文：The two of us [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S03；结合 /work/submission/zh-CN.srt 和 en.srt cue 3",
+          "observation": "可信定位=1；实际字幕9.270–12.560秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "zh": [
+        0,
+        1,
+        0
+      ],
+      "en": [
+        0,
+        1,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频13.366–18.433秒；字幕14.680–16.920秒：“我想[无法确认]。” / “I am thinking about [unclear].”。annotation-relative：time“明年”和event“毕业”均被“想[无法确认]/thinking about [unclear]”遗漏，0；person“我/I”明确保留，1。“想”可自然对应thinking，不以词面差异扣双语分；未明确另一个年份，不记wrong_time。时序观察：约14.62秒抬手，14.87–15.37秒手指在头侧，15.62–16.87秒双手胸前动作，17.12秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。密集帧复核：16.650–16.850秒双手保持上举；16.950–17.150秒开始回落。字幕16.920秒结束，接近手形保持结束，未见明显遗漏后续独立动作；alignment仍1。",
+      "zh_quote": "我想[无法确认]。",
+      "en_quote": "I am thinking about [unclear].",
+      "confidence": 0.91,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S04.jpg",
+          "locator": "S04，全页从左到右、从上到下；视频13.366–18.433秒",
+          "observation": "约14.62秒抬手，14.87–15.37秒手指在头侧，15.62–16.87秒双手胸前动作，17.12秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/3/slots；S04；time,person,event",
+          "observation": "作者中文：明年我就毕业了。；gloss：明年/毕业/。。time“明年”和event“毕业”均被“想[无法确认]/thinking about [unclear]”遗漏，0；person“我/I”明确保留，1。“想”可自然对应thinking，不以词面差异扣双语分；未明确另一个年份，不记wrong_time。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S04/zh 与 /S04/en；SRT cue 4，14.680–16.920秒",
+          "observation": "中文原文：我想[无法确认]。；英文原文：I am thinking about [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S04；结合 /work/submission/zh-CN.srt 和 en.srt cue 4",
+          "observation": "可信定位=1；实际字幕14.680–16.920秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        },
+        {
+          "artifact": "/work/results/evidence/S04_dense.jpg",
+          "locator": "16.650–17.250秒；全页从左到右、从上到下",
+          "observation": "16.650–16.850秒双手保持上举；16.950–17.150秒开始回落。字幕16.920秒结束，接近手形保持结束，未见明显遗漏后续独立动作；alignment仍1。",
+          "method": "view_image直接检查ffmpeg以0.1秒间隔seek提取的实际帧，并与冻结SRT起止比较；seek时码约有一个源视频帧的不确定性"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "zh": [
+        0.5,
+        0,
+        0
+      ],
+      "en": [
+        1,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频18.933–24.633秒；字幕19.920–22.720秒：“你[无法确认]，不[无法确认]。” / “You [unclear], not [unclear].”。annotation-relative：plural中文“你”仅保留受话者而丢复数，0.5；英文“You”按协议允许自然兼指复数，1。action没有安静；force“不[无法确认]/not [unclear]”未保留礼貌请求，均0。否定的谓语与范围没有译出，不能据“不/not”断言polarity_flip或request_as_fact。时序观察：约20.18秒指向前方，20.43–20.93秒平手移动，21.18–21.68秒双手抬起，21.93–22.43秒立掌，22.68秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "你[无法确认]，不[无法确认]。",
+      "en_quote": "You [unclear], not [unclear].",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S05.jpg",
+          "locator": "S05，全页从左到右、从上到下；视频18.933–24.633秒",
+          "observation": "约20.18秒指向前方，20.43–20.93秒平手移动，21.18–21.68秒双手抬起，21.93–22.43秒立掌，22.68秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/4/slots；S05；plural,action,force",
+          "observation": "作者中文：你们可以安静一下吗？；gloss：你们/安静/可以/？。plural中文“你”仅保留受话者而丢复数，0.5；英文“You”按协议允许自然兼指复数，1。action没有安静；force“不[无法确认]/not [unclear]”未保留礼貌请求，均0。否定的谓语与范围没有译出，不能据“不/not”断言polarity_flip或request_as_fact。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S05/zh 与 /S05/en；SRT cue 5，19.920–22.720秒",
+          "observation": "中文原文：你[无法确认]，不[无法确认]。；英文原文：You [unclear], not [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S05；结合 /work/submission/zh-CN.srt 和 en.srt cue 5",
+          "observation": "可信定位=1；实际字幕19.920–22.720秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "zh": [
+        0.5,
+        0,
+        0
+      ],
+      "en": [
+        0.5,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频25.133–28.499秒；字幕25.470–27.940秒：“我[无法确认]。” / “I [unclear].”。annotation-relative：owner“我/I”保留所有者人称，但没有“有/拥有”，0.5；object宠物狗与quantity一只均缺失，0。不能从画面的单指替答卷补写“一只”，也不因遗漏动物贴wrong_object。时序观察：约25.63秒手到胸前，25.88–26.38秒单手变形，26.63–27.13秒双手交叠，27.38–27.88秒保持单指，28.13秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "我[无法确认]。",
+      "en_quote": "I [unclear].",
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S06.jpg",
+          "locator": "S06，全页从左到右、从上到下；视频25.133–28.499秒",
+          "observation": "约25.63秒手到胸前，25.88–26.38秒单手变形，26.63–27.13秒双手交叠，27.38–27.88秒保持单指，28.13秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/5/slots；S06；owner,object,quantity",
+          "observation": "作者中文：我有一只宠物狗。；gloss：我/有/狗1/一/。。owner“我/I”保留所有者人称，但没有“有/拥有”，0.5；object宠物狗与quantity一只均缺失，0。不能从画面的单指替答卷补写“一只”，也不因遗漏动物贴wrong_object。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S06/zh 与 /S06/en；SRT cue 6，25.470–27.940秒",
+          "observation": "中文原文：我[无法确认]。；英文原文：I [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S06；结合 /work/submission/zh-CN.srt 和 en.srt cue 6",
+          "observation": "可信定位=1；实际字幕25.470–27.940秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频28.999–33.233秒；字幕29.330–32.520秒：“[无法确认]。” / “[unclear].”。annotation-relative：group、event、question全部只有“[无法确认]/[unclear]”，没有我们、篮球或何时，均0。两语占位范围等价，bilingual可为1但原aggregate会受本段语义0限制；整句回避不是严重翻转。时序观察：约29.50–30.25秒单手胸前及侧方动作，30.75–31.25秒双手抬到头部高度，31.50–32.25秒双手前方变化，32.50秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "[无法确认]。",
+      "en_quote": "[unclear].",
+      "confidence": 0.99,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S07.jpg",
+          "locator": "S07，全页从左到右、从上到下；视频28.999–33.233秒",
+          "observation": "约29.50–30.25秒单手胸前及侧方动作，30.75–31.25秒双手抬到头部高度，31.50–32.25秒双手前方变化，32.50秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/6/slots；S07；group,event,question",
+          "observation": "作者中文：我们什么时候去打篮球？；gloss：我们/去/篮球/时间/什么/？。group、event、question全部只有“[无法确认]/[unclear]”，没有我们、篮球或何时，均0。两语占位范围等价，bilingual可为1但原aggregate会受本段语义0限制；整句回避不是严重翻转。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S07/zh 与 /S07/en；SRT cue 7，29.330–32.520秒",
+          "observation": "中文原文：[无法确认]。；英文原文：[unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S07；结合 /work/submission/zh-CN.srt 和 en.srt cue 7",
+          "observation": "可信定位=1；实际字幕29.330–32.520秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "zh": [
+        0.5,
+        0,
+        0
+      ],
+      "en": [
+        1,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频33.733–39.033秒；字幕35.050–37.360秒：“打电话[无法确认]。” / “Call [unclear].”。annotation-relative：person：两语祈使残句可自然省略受话者，不能因英语没有you就机械判0；英文隐含you可兼指复数，1，中文只恢复一般受话者而未保留“你们”的复数，0.5。question未表达“去干嘛”；aspect未保留已去做过，两项0。“打电话/Call”明确补出原标注未给的活动，记invented_fact。只有电话命令片段，不能补读成“你们去打电话了吗”，也不额外贴aspect_flip。时序观察：约35.23–35.73秒单手前方及胸前，35.98–36.48秒拇指形及双手动作，36.73–37.23秒手保持在胸前，37.48秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "打电话[无法确认]。",
+      "en_quote": "Call [unclear].",
+      "confidence": 0.86,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S08.jpg",
+          "locator": "S08，全页从左到右、从上到下；视频33.733–39.033秒",
+          "observation": "约35.23–35.73秒单手前方及胸前，35.98–36.48秒拇指形及双手动作，36.73–37.23秒手保持在胸前，37.48秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/7/slots；S08；person,question,aspect",
+          "observation": "作者中文：你们去干嘛了？；gloss：你们/去/做/什么/？。person：两语祈使残句可自然省略受话者，不能因英语没有you就机械判0；英文隐含you可兼指复数，1，中文只恢复一般受话者而未保留“你们”的复数，0.5。question未表达“去干嘛”；aspect未保留已去做过，两项0。“打电话/Call”明确补出原标注未给的活动，记invented_fact。只有电话命令片段，不能补读成“你们去打电话了吗”，也不额外贴aspect_flip。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S08/zh 与 /S08/en；SRT cue 8，35.050–37.360秒",
+          "observation": "中文原文：打电话[无法确认]。；英文原文：Call [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S08；结合 /work/submission/zh-CN.srt 和 en.srt cue 8",
+          "observation": "可信定位=1；实际字幕35.050–37.360秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "zh": [
+        0.5,
+        0.5,
+        0
+      ],
+      "en": [
+        0.5,
+        0.5,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频39.533–43.833秒；字幕39.810–43.120秒：“你打电话[无法确认]。” / “You call [unclear].”。annotation-relative：owner“你/You”保留人物但未表达号码属于你，0.5；object“打电话/call”仅保留电话领域，遗漏号码对象，0.5；question未询问号码是多少，0。中英文都可能是残缺祈使片段，不将无问号本身认定为question_as_fact，按语义弱化处理。时序观察：约40.28秒向前指，40.53–41.28秒手在耳旁，41.53–42.78秒手掌在面前变化，43.03秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "你打电话[无法确认]。",
+      "en_quote": "You call [unclear].",
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S09.jpg",
+          "locator": "S09，全页从左到右、从上到下；视频39.533–43.833秒",
+          "observation": "约40.28秒向前指，40.53–41.28秒手在耳旁，41.53–42.78秒手掌在面前变化，43.03秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/8/slots；S09；owner,object,question",
+          "observation": "作者中文：你的电话号码是多少？；gloss：你/电话/号码/多少/？。owner“你/You”保留人物但未表达号码属于你，0.5；object“打电话/call”仅保留电话领域，遗漏号码对象，0.5；question未询问号码是多少，0。中英文都可能是残缺祈使片段，不将无问号本身认定为question_as_fact，按语义弱化处理。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S09/zh 与 /S09/en；SRT cue 9，39.810–43.120秒",
+          "observation": "中文原文：你打电话[无法确认]。；英文原文：You call [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S09；结合 /work/submission/zh-CN.srt 和 en.srt cue 9",
+          "observation": "可信定位=1；实际字幕39.810–43.120秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频44.333–47.866秒；字幕44.680–47.200秒：“[无法确认]很大。” / “[unclear] is large.”。annotation-relative：group没有我们；again没有重新开始；force没有共同提议，均0。“很大/is large”肯定了某物的大小，原标注是重新开始而无大小命题，记invented_fact；其余省略不再追加标签。时序观察：约44.58–45.08秒胸前扫手，45.33–46.33秒单双手变换，46.58–46.83秒双手展开，47.08秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "[无法确认]很大。",
+      "en_quote": "[unclear] is large.",
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S10.jpg",
+          "locator": "S10，全页从左到右、从上到下；视频44.333–47.866秒",
+          "observation": "约44.58–45.08秒胸前扫手，45.33–46.33秒单双手变换，46.58–46.83秒双手展开，47.08秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/9/slots；S10；group,again,force",
+          "observation": "作者中文：我们重新开始吧。；gloss：我们/再/新/开始/。。group没有我们；again没有重新开始；force没有共同提议，均0。“很大/is large”肯定了某物的大小，原标注是重新开始而无大小命题，记invented_fact；其余省略不再追加标签。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S10/zh 与 /S10/en；SRT cue 10，44.680–47.200秒",
+          "observation": "中文原文：[无法确认]很大。；英文原文：[unclear] is large.。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S10；结合 /work/submission/zh-CN.srt 和 en.srt cue 10",
+          "observation": "可信定位=1；实际字幕44.680–47.200秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "zh": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "en": [
+        1,
+        0.5,
+        0.5
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频48.366–53.366秒；字幕49.040–52.170秒：“你吃[无法确认]吗？” / “Are you eating [unclear]?”。annotation-relative：person中文“你”丢复数保留受话者，0.5；英文you允许复数，1。food“吃/eating”保留用餐行为但没有面包，0.5；force“吗/Are you …?”保留询问，但未保留是否要吃的意愿，0.5。中文无明确时态，本轮接受英语进行式作为该残句的自然读法，不额外扣双语分。时序观察：约49.12–49.62秒向前及平手动作，49.87–50.62秒手在嘴前，51.12–51.36秒双手展开，51.61–52.11秒双手前方变化，52.36秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "你吃[无法确认]吗？",
+      "en_quote": "Are you eating [unclear]?",
+      "confidence": 0.88,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S11.jpg",
+          "locator": "S11，全页从左到右、从上到下；视频48.366–53.366秒",
+          "observation": "约49.12–49.62秒向前及平手动作，49.87–50.62秒手在嘴前，51.12–51.36秒双手展开，51.61–52.11秒双手前方变化，52.36秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/10/slots；S11；person,food,force",
+          "observation": "作者中文：你们吃饭要吃面包吗？；gloss：你们/吃饭/面包/要/？。person中文“你”丢复数保留受话者，0.5；英文you允许复数，1。food“吃/eating”保留用餐行为但没有面包，0.5；force“吗/Are you …?”保留询问，但未保留是否要吃的意愿，0.5。中文无明确时态，本轮接受英语进行式作为该残句的自然读法，不额外扣双语分。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S11/zh 与 /S11/en；SRT cue 11，49.040–52.170秒",
+          "observation": "中文原文：你吃[无法确认]吗？；英文原文：Are you eating [unclear]?。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S11；结合 /work/submission/zh-CN.srt 和 en.srt cue 11",
+          "observation": "可信定位=1；实际字幕49.040–52.170秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "zh": [
+        0,
+        0,
+        1
+      ],
+      "en": [
+        0,
+        0,
+        1
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频53.866–57.899秒；字幕55.640–56.640秒：“再见。” / “Goodbye.”。annotation-relative：action“再见/Goodbye”将扔掉替成告别，0；aspect未表达已经扔掉，0，不等于明确翻成未完成。underspecified按独立slot字面判1：两语均没有新增具体人物或被扔物品；这不是认定告别正确。告别是明确的新言语行为而非“[无法确认]”，记invented_fact。时序观察：约55.62秒开始抬单手，55.87秒手在胸前，56.12–56.37秒掌向前下方展开，56.62秒回落；字幕1秒时窗包住该短动作。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。密集帧复核：55.500–55.600秒尚静止，55.700–56.100秒抬手、手形变化，56.200–56.300秒掌向前展开，56.400–56.700秒回落。55.640–56.640秒字幕包住主要短动作；1秒显示不属于极短闪现，alignment仍1。不能仅凭单次甩手外观把“扔”独立认证为“再见”。",
+      "zh_quote": "再见。",
+      "en_quote": "Goodbye.",
+      "confidence": 0.88,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S12.jpg",
+          "locator": "S12，全页从左到右、从上到下；视频53.866–57.899秒",
+          "observation": "约55.62秒开始抬单手，55.87秒手在胸前，56.12–56.37秒掌向前下方展开，56.62秒回落；字幕1秒时窗包住该短动作。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/11/slots；S12；action,aspect,underspecified",
+          "observation": "作者中文：扔掉了。；gloss：扔/。。action“再见/Goodbye”将扔掉替成告别，0；aspect未表达已经扔掉，0，不等于明确翻成未完成。underspecified按独立slot字面判1：两语均没有新增具体人物或被扔物品；这不是认定告别正确。告别是明确的新言语行为而非“[无法确认]”，记invented_fact。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S12/zh 与 /S12/en；SRT cue 12，55.640–56.640秒",
+          "observation": "中文原文：再见。；英文原文：Goodbye.。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S12；结合 /work/submission/zh-CN.srt 和 en.srt cue 12",
+          "observation": "可信定位=1；实际字幕55.640–56.640秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        },
+        {
+          "artifact": "/work/results/evidence/S12_dense.jpg",
+          "locator": "55.500–56.800秒；全页从左到右、从上到下",
+          "observation": "55.500–55.600秒尚静止，55.700–56.100秒抬手、手形变化，56.200–56.300秒掌向前展开，56.400–56.700秒回落。55.640–56.640秒字幕包住主要短动作；1秒显示不属于极短闪现，alignment仍1。不能仅凭单次甩手外观把“扔”独立认证为“再见”。",
+          "method": "view_image直接检查ffmpeg以0.1秒间隔seek提取的实际帧，并与冻结SRT起止比较；seek时码约有一个源视频帧的不确定性"
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频58.399–64.233秒；字幕59.250–63.180秒：“打电话给[无法确认]。” / “Call [unclear].”。annotation-relative：relation没有与你共同度过；time没有美好的晚上；aspect未表达已经度过，均0。“打电话给/Call”是原标注没有的具体活动，记invented_fact。既未写“明晚”也未写“还没度过”，不把时间及完成信息遗漏另贴wrong_time/aspect_flip。时序观察：约59.40–60.15秒双手靠近并前指，60.40–61.90秒双手及面前手形变化，62.15–62.90秒展开并合拢，63.15秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "打电话给[无法确认]。",
+      "en_quote": "Call [unclear].",
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S13.jpg",
+          "locator": "S13，全页从左到右、从上到下；视频58.399–64.233秒",
+          "observation": "约59.40–60.15秒双手靠近并前指，60.40–61.90秒双手及面前手形变化，62.15–62.90秒展开并合拢，63.15秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/12/slots；S13；relation,time,aspect",
+          "observation": "作者中文：和你度过了一个美好的晚上。；gloss：和/你/过/一/美好/晚/。。relation没有与你共同度过；time没有美好的晚上；aspect未表达已经度过，均0。“打电话给/Call”是原标注没有的具体活动，记invented_fact。既未写“明晚”也未写“还没度过”，不把时间及完成信息遗漏另贴wrong_time/aspect_flip。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S13/zh 与 /S13/en；SRT cue 13，59.250–63.180秒",
+          "observation": "中文原文：打电话给[无法确认]。；英文原文：Call [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S13；结合 /work/submission/zh-CN.srt 和 en.srt cue 13",
+          "observation": "可信定位=1；实际字幕59.250–63.180秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "zh": [
+        0.5,
+        0,
+        0
+      ],
+      "en": [
+        1,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频64.733–68.666秒；字幕64.970–67.090秒：“喝[无法确认]。” / “Drink [unclear].”。annotation-relative：person：“喝[无法确认]/Drink [unclear]”可自然理解为面向对方的祈使残句，英语隐含you不因省略主语或未明示复数扣分，1；中文保留一般受话者但未保留复数，0.5。drink的评分目标是啤酒而非泛化饮用，“喝/Drink”不足以保留啤酒，0；question没有询问形式，0。残缺动作语句不确定是命令还是省略成分，未证实问句变成既定事实，不记question_as_fact。时序观察：约64.98–65.48秒向前及平手移动，65.73–66.23秒双手胸前动作，66.48–66.73秒手到嘴边，66.98秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "喝[无法确认]。",
+      "en_quote": "Drink [unclear].",
+      "confidence": 0.86,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S14.jpg",
+          "locator": "S14，全页从左到右、从上到下；视频64.733–68.666秒",
+          "observation": "约64.98–65.48秒向前及平手移动，65.73–66.23秒双手胸前动作，66.48–66.73秒手到嘴边，66.98秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/13/slots；S14；person,drink,question",
+          "observation": "作者中文：你们喝啤酒吗？；gloss：你们/啤酒/喝/？。person：“喝[无法确认]/Drink [unclear]”可自然理解为面向对方的祈使残句，英语隐含you不因省略主语或未明示复数扣分，1；中文保留一般受话者但未保留复数，0.5。drink的评分目标是啤酒而非泛化饮用，“喝/Drink”不足以保留啤酒，0；question没有询问形式，0。残缺动作语句不确定是命令还是省略成分，未证实问句变成既定事实，不记question_as_fact。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S14/zh 与 /S14/en；SRT cue 14，64.970–67.090秒",
+          "observation": "中文原文：喝[无法确认]。；英文原文：Drink [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S14；结合 /work/submission/zh-CN.srt 和 en.srt cue 14",
+          "observation": "可信定位=1；实际字幕64.970–67.090秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频69.166–72.899秒；字幕69.430–72.200秒：“[无法确认]很大。” / “[unclear] is large.”。annotation-relative：group没有我们一起；action没有拍照；force没有提议，均0。“很大/is large”是占位符外明确增加的大小判断，与照张相的标注不同，记invented_fact；并非仅仅未识别拍照。时序观察：约69.67–70.17秒单手胸前及向前，70.42–70.92秒双手展开合拢，71.17–71.92秒双手框形，72.17秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "[无法确认]很大。",
+      "en_quote": "[unclear] is large.",
+      "confidence": 0.96,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S15.jpg",
+          "locator": "S15，全页从左到右、从上到下；视频69.166–72.899秒",
+          "observation": "约69.67–70.17秒单手胸前及向前，70.42–70.92秒双手展开合拢，71.17–71.92秒双手框形，72.17秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/14/slots；S15；group,action,force",
+          "observation": "作者中文：我们一起照张相吧。；gloss：我们/一起/拍照/。。group没有我们一起；action没有拍照；force没有提议，均0。“很大/is large”是占位符外明确增加的大小判断，与照张相的标注不同，记invented_fact；并非仅仅未识别拍照。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S15/zh 与 /S15/en；SRT cue 15，69.430–72.200秒",
+          "observation": "中文原文：[无法确认]很大。；英文原文：[unclear] is large.。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S15；结合 /work/submission/zh-CN.srt 和 en.srt cue 15",
+          "observation": "可信定位=1；实际字幕69.430–72.200秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频73.399–78.233秒；字幕73.650–77.150秒：“看[无法确认]。” / “Look at [unclear].”。annotation-relative：context、duration、scope均没有由“看[无法确认]/Look at [unclear]”表达：既无上课，也无很长或剩余时间，均0。此处不必选择“距上课”或“剩余课时”的争议解释，两种合理解释都未译出；不据此贴wrong_time。时序观察：约73.65–74.15秒两指在脸旁，74.65–75.15秒双手前方，75.40–76.15秒单手变化，76.40–76.90秒双手向两侧分开，77.15秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "看[无法确认]。",
+      "en_quote": "Look at [unclear].",
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S16.jpg",
+          "locator": "S16，全页从左到右、从上到下；视频73.399–78.233秒",
+          "observation": "约73.65–74.15秒两指在脸旁，74.65–75.15秒双手前方，75.40–76.15秒单手变化，76.40–76.90秒双手向两侧分开，77.15秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/15/slots；S16；context,duration,scope",
+          "observation": "作者中文：上课的时间还很长。；gloss：上课/时间/还/长/。。context、duration、scope均没有由“看[无法确认]/Look at [unclear]”表达：既无上课，也无很长或剩余时间，均0。此处不必选择“距上课”或“剩余课时”的争议解释，两种合理解释都未译出；不据此贴wrong_time。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S16/zh 与 /S16/en；SRT cue 16，73.650–77.150秒",
+          "observation": "中文原文：看[无法确认]。；英文原文：Look at [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S16；结合 /work/submission/zh-CN.srt 和 en.srt cue 16",
+          "observation": "可信定位=1；实际字幕73.650–77.150秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频78.733–83.866秒；字幕80.000–82.230秒：“不，[无法确认]。” / “No, [unclear].”。annotation-relative：winner、scope、aspect在“不，[无法确认]/No, [unclear]”中均未明确表达：没有你赢、这局游戏、已经，均0。“不/No”后的命题未知，不能替答卷补成“你没赢”后贴polarity_flip；按覆盖缺失判定。时序观察：约80.23–80.73秒双臂胸前交叉，80.98秒向前指，81.23–81.98秒双手上下运动及拇指形，82.23秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "不，[无法确认]。",
+      "en_quote": "No, [unclear].",
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S17.jpg",
+          "locator": "S17，全页从左到右、从上到下；视频78.733–83.866秒",
+          "observation": "约80.23–80.73秒双臂胸前交叉，80.98秒向前指，81.23–81.98秒双手上下运动及拇指形，82.23秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/16/slots；S17；winner,scope,aspect",
+          "observation": "作者中文：这把游戏你赢了。；gloss：游戏/你/赢2/。。winner、scope、aspect在“不，[无法确认]/No, [unclear]”中均未明确表达：没有你赢、这局游戏、已经，均0。“不/No”后的命题未知，不能替答卷补成“你没赢”后贴polarity_flip；按覆盖缺失判定。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S17/zh 与 /S17/en；SRT cue 17，80.000–82.230秒",
+          "observation": "中文原文：不，[无法确认]。；英文原文：No, [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S17；结合 /work/submission/zh-CN.srt 和 en.srt cue 17",
+          "observation": "可信定位=1；实际字幕80.000–82.230秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 0.5,
+      "errors": [
+        "wrong_person"
+      ],
+      "note": "视频84.366–88.433秒；字幕84.670–87.340秒：“我[无法确认]一个[无法确认]。” / “I [unclear] one [unclear].”。annotation-relative：person“我/I”明确替换标注“你”，记wrong_person；object“一个[无法确认]/one [unclear]”没有正在穿的鞋；question没有询问什么鞋，均0。没有具体品牌或颜色，不加wrong_object；不把未译出的问句直接当既定事实。时序观察：约84.87–85.87秒单手在上胸/下颏前移动，86.12–86.62秒手指形变化，86.87–87.12秒手到胸前，87.37–87.62秒向下回落。两语残句及不确定范围可自然等价，bilingual=1；字幕位于正确片段，但退出早于末尾衣前下拉/停留动作结束，alignment=0.5（密集抽帧判断，非正常速度连续观看）。密集帧复核：87.100–87.200秒手在胸前；87.300秒开始向下，87.400–87.600秒手停留在衣前下方，87.700–87.900秒才彻底放下。字幕87.340秒已消失，尚有下拉/停留动作未覆盖；最佳判断为局部提前结束但仍可理解，alignment=0.5。无法以手语专家身份断定这一尾部动作的词汇归属，边界判断置信度0.72；不把素材结束88.433秒直接当表达结束。",
+      "zh_quote": "我[无法确认]一个[无法确认]。",
+      "en_quote": "I [unclear] one [unclear].",
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S18.jpg",
+          "locator": "S18，全页从左到右、从上到下；视频84.366–88.433秒",
+          "observation": "约84.87–85.87秒单手在上胸/下颏前移动，86.12–86.62秒手指形变化，86.87–87.12秒手到胸前，87.37–87.62秒向下回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/17/slots；S18；person,object,question",
+          "observation": "作者中文：你穿的是什么鞋子？；gloss：你/穿/鞋/什么/？。person“我/I”明确替换标注“你”，记wrong_person；object“一个[无法确认]/one [unclear]”没有正在穿的鞋；question没有询问什么鞋，均0。没有具体品牌或颜色，不加wrong_object；不把未译出的问句直接当既定事实。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S18/zh 与 /S18/en；SRT cue 18，84.670–87.340秒",
+          "observation": "中文原文：我[无法确认]一个[无法确认]。；英文原文：I [unclear] one [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S18；结合 /work/submission/zh-CN.srt 和 en.srt cue 18",
+          "observation": "可信片段定位=1；实际字幕84.670–87.340秒，但87.400–87.600秒仍有衣前下方手部停留。故人工对齐0.5，不将自动定位1直接当人工同步1。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        },
+        {
+          "artifact": "/work/results/evidence/S18_dense.jpg",
+          "locator": "87.100–87.900秒；全页从左到右、从上到下",
+          "observation": "87.100–87.200秒手在胸前；87.300秒开始向下，87.400–87.600秒手停留在衣前下方，87.700–87.900秒才彻底放下。字幕87.340秒已消失，尚有下拉/停留动作未覆盖；最佳判断为局部提前结束但仍可理解，alignment=0.5。无法以手语专家身份断定这一尾部动作的词汇归属，边界判断置信度0.72；不把素材结束88.433秒直接当表达结束。",
+          "method": "view_image直接检查ffmpeg以0.1秒间隔seek提取的实际帧，并与冻结SRT起止比较；seek时码约有一个源视频帧的不确定性"
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频88.933–93.199秒；字幕89.250–92.580秒：“那个[无法确认]很好。” / “That [unclear] is good.”。annotation-relative：group“那个/That”不是我们；direction未译出上去；modality“很好/is good”是对未知对象的性质评价，没有“上去即可”的充分条件义，均0。仅共享“好/good”不足给情态分；按协议不强制过去反事实，也不贴wrong_time或aspect_flip。时序观察：约89.18–89.68秒胸前扫手，89.93–91.43秒手向上指并保持，91.68–92.43秒双手变化后竖拇指，92.68秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "那个[无法确认]很好。",
+      "en_quote": "That [unclear] is good.",
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S19.jpg",
+          "locator": "S19，全页从左到右、从上到下；视频88.933–93.199秒",
+          "observation": "约89.18–89.68秒胸前扫手，89.93–91.43秒手向上指并保持，91.68–92.43秒双手变化后竖拇指，92.68秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/18/slots；S19；group,direction,modality",
+          "observation": "作者中文：我们上去就好了。；gloss：我们/上/去/好/。。group“那个/That”不是我们；direction未译出上去；modality“很好/is good”是对未知对象的性质评价，没有“上去即可”的充分条件义，均0。仅共享“好/good”不足给情态分；按协议不强制过去反事实，也不贴wrong_time或aspect_flip。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S19/zh 与 /S19/en；SRT cue 19，89.250–92.580秒",
+          "observation": "中文原文：那个[无法确认]很好。；英文原文：That [unclear] is good.。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S19；结合 /work/submission/zh-CN.srt 和 en.srt cue 19",
+          "observation": "可信定位=1；实际字幕89.250–92.580秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "zh": [
+        0,
+        0,
+        1
+      ],
+      "en": [
+        0,
+        0,
+        1
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频93.699–99.432秒；字幕95.710–98.020秒：“什么时候[无法确认]？” / “When [unclear]?”。annotation-relative：pair、relation没有被“什么时候/When”保留：未译你俩及有缘，均0；restraint独立判1，因为两语确实没有断言结婚、恋爱或血缘。此分只对应不强加具体关系的限制，不表示时间问句译对。没有给出错误日期，不记wrong_time。时序观察：约95.95秒抬手，96.20–96.45秒手指向前并扫动，96.70–97.20秒另一手在腕侧附近，97.45–97.95秒单手展开，98.20秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "什么时候[无法确认]？",
+      "en_quote": "When [unclear]?",
+      "confidence": 0.91,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S20.jpg",
+          "locator": "S20，全页从左到右、从上到下；视频93.699–99.432秒",
+          "observation": "约95.95秒抬手，96.20–96.45秒手指向前并扫动，96.70–97.20秒另一手在腕侧附近，97.45–97.95秒单手展开，98.20秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/19/slots；S20；pair,relation,restraint",
+          "observation": "作者中文：你俩真有缘分。；gloss：你俩/缘分/有/。。pair、relation没有被“什么时候/When”保留：未译你俩及有缘，均0；restraint独立判1，因为两语确实没有断言结婚、恋爱或血缘。此分只对应不强加具体关系的限制，不表示时间问句译对。没有给出错误日期，不记wrong_time。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S20/zh 与 /S20/en；SRT cue 20，95.710–98.020秒",
+          "observation": "中文原文：什么时候[无法确认]？；英文原文：When [unclear]?。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S20；结合 /work/submission/zh-CN.srt 和 en.srt cue 20",
+          "observation": "可信定位=1；实际字幕95.710–98.020秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频99.932–107.599秒；字幕102.490–105.140秒：“睡觉[无法确认]。” / “Sleep [unclear].”。annotation-relative：politeness没有请问；place“睡觉/Sleep”只有活动，没有卧室地点；question没有在哪里，均0。不以睡觉与卧室相关就给地点分，也不把它认定成“洗手间”或凭空指路，errors为空。时序观察：约102.68–103.18秒侧头、手贴脸侧，103.43秒双手屋顶状合拢，103.68–103.93秒一手在另一手上方，104.18–104.93秒向前手指变化，105.18秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。",
+      "zh_quote": "睡觉[无法确认]。",
+      "en_quote": "Sleep [unclear].",
+      "confidence": 0.91,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S21.jpg",
+          "locator": "S21，全页从左到右、从上到下；视频99.932–107.599秒",
+          "observation": "约102.68–103.18秒侧头、手贴脸侧，103.43秒双手屋顶状合拢，103.68–103.93秒一手在另一手上方，104.18–104.93秒向前手指变化，105.18秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/20/slots；S21；politeness,place,question",
+          "observation": "作者中文：请问卧室在哪里？；gloss：卧室/在/哪/？。politeness没有请问；place“睡觉/Sleep”只有活动，没有卧室地点；question没有在哪里，均0。不以睡觉与卧室相关就给地点分，也不把它认定成“洗手间”或凭空指路，errors为空。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S21/zh 与 /S21/en；SRT cue 21，102.490–105.140秒",
+          "observation": "中文原文：睡觉[无法确认]。；英文原文：Sleep [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S21；结合 /work/submission/zh-CN.srt 和 en.srt cue 21",
+          "observation": "可信定位=1；实际字幕102.490–105.140秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频108.099–114.032秒；字幕109.540–112.210秒：“说[无法确认]。” / “Say [unclear].”。annotation-relative：person、memory、time均没有被“说[无法确认]/Say [unclear]”保留：无我、回忆、童年，均0。缺失的回忆内容不可由占位符脑补；没有把童年写成某年或几个小时，故不记wrong_time；残缺“说”不额外认定完整新增事实。时序观察：约110.10秒手到胸前，110.60–110.85秒触头侧，111.10–111.35秒平手向下，111.60–112.10秒双手前方变化，112.35秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。密集帧复核：109.400–109.900秒双手处于静止准备；110.000–110.200秒抬手到胸前。字幕109.540秒出现，约提前0.46秒，属短引入。112.000–112.200秒仍保持双手手形，112.300–112.600秒回落；字幕112.210秒退出接近保持结束，无明显局部语义单元漏显，alignment仍1。",
+      "zh_quote": "说[无法确认]。",
+      "en_quote": "Say [unclear].",
+      "confidence": 0.94,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S22.jpg",
+          "locator": "S22，全页从左到右、从上到下；视频108.099–114.032秒",
+          "observation": "约110.10秒手到胸前，110.60–110.85秒触头侧，111.10–111.35秒平手向下，111.60–112.10秒双手前方变化，112.35秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/21/slots；S22；person,memory,time",
+          "observation": "作者中文：我回忆起了小时候。；gloss：我/想/小孩/时候/。。person、memory、time均没有被“说[无法确认]/Say [unclear]”保留：无我、回忆、童年，均0。缺失的回忆内容不可由占位符脑补；没有把童年写成某年或几个小时，故不记wrong_time；残缺“说”不额外认定完整新增事实。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S22/zh 与 /S22/en；SRT cue 22，109.540–112.210秒",
+          "observation": "中文原文：说[无法确认]。；英文原文：Say [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S22；结合 /work/submission/zh-CN.srt 和 en.srt cue 22",
+          "observation": "可信定位=1；实际字幕109.540–112.210秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        },
+        {
+          "artifact": "/work/results/evidence/S22_dense.jpg",
+          "locator": "109.400–110.200秒; 112.000–112.600秒；全页从左到右、从上到下",
+          "observation": "109.400–109.900秒双手处于静止准备；110.000–110.200秒抬手到胸前。字幕109.540秒出现，约提前0.46秒，属短引入。112.000–112.200秒仍保持双手手形，112.300–112.600秒回落；字幕112.210秒退出接近保持结束，无明显局部语义单元漏显，alignment仍1。",
+          "method": "view_image直接检查ffmpeg以0.1秒间隔seek提取的实际帧，并与冻结SRT起止比较；seek时码约有一个源视频帧的不确定性"
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "zh": [
+        0.5,
+        0,
+        1
+      ],
+      "en": [
+        0.5,
+        0,
+        1
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [],
+      "note": "视频114.532–120.199秒；字幕115.910–118.890秒：“这本书[无法确认]。” / “This book [unclear].”。annotation-relative：activity“这本书/This book”保留书的对象但没有阅读行为，0.5；scarcity没有时间不足或剩余很少，0。force按协议的明确歧义豁免判1：不因句号或未用问号扣分；该分不表示缺失的阅读时间命题完整。不将遗漏否定贴polarity_flip。时序观察：约116.03–116.53秒双掌合拢后打开，116.78–117.28秒手在眼前与掌前，117.53–118.03秒一手在另一掌面前，118.28–118.78秒单手在嘴边，119.03秒回落。两语残句及不确定范围可自然等价，bilingual=1；字幕覆盖本表达主要动作、无错段或短闪，alignment=1（抽帧判断，非正常速度连续观看）。密集帧复核：118.500–118.700秒手形仍在面旁，118.800–119.100秒向下回落；字幕118.890秒退出，覆盖最后保持及初始回落，无明显独立动作被截去，alignment仍1。",
+      "zh_quote": "这本书[无法确认]。",
+      "en_quote": "This book [unclear].",
+      "confidence": 0.93,
+      "evidence": [
+        {
+          "artifact": "/work/results/evidence/S23.jpg",
+          "locator": "S23，全页从左到右、从上到下；视频114.532–120.199秒",
+          "observation": "约116.03–116.53秒双掌合拢后打开，116.78–117.28秒手在眼前与掌前，117.53–118.03秒一手在另一掌面前，118.28–118.78秒单手在嘴边，119.03秒回落。",
+          "method": "view_image直接检查ffmpeg 4fps有序实际视频帧；只描述可见动作，不声称独立解码手语"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "/units/22/slots；S23；activity,scarcity,force",
+          "observation": "作者中文：没多少时间看书了？；gloss：书/看1/时间/没有/？。activity“这本书/This book”保留书的对象但没有阅读行为，0.5；scarcity没有时间不足或剩余很少，0。force按协议的明确歧义豁免判1：不因句号或未用问号扣分；该分不表示缺失的阅读时间命题完整。不将遗漏否定贴polarity_flip。",
+          "method": "读取作者标注与原slot进行annotation-relative逐项比较，接受自然意译及协议特例"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "/S23/zh 与 /S23/en；SRT cue 23，115.910–118.890秒",
+          "observation": "中文原文：这本书[无法确认]。；英文原文：This book [unclear].。两语映射均存在。",
+          "method": "逐字采用可信映射，并核对冻结SRT与segments.json"
+        },
+        {
+          "artifact": "/work/technical.json",
+          "locator": "/localization/S23；结合 /work/submission/zh-CN.srt 和 en.srt cue 23",
+          "observation": "可信定位=1；实际字幕115.910–118.890秒覆盖上述主要动作时段；静止准备与结束部分无须填满。",
+          "method": "可信自动定位结果 + SRT时窗 + 实际有序画面，判断表达单位粗对齐，非仅对参考整句边界"
+        },
+        {
+          "artifact": "/work/results/evidence/S23_dense.jpg",
+          "locator": "118.500–119.200秒；全页从左到右、从上到下",
+          "observation": "118.500–118.700秒手形仍在面旁，118.800–119.100秒向下回落；字幕118.890秒退出，覆盖最后保持及初始回落，无明显独立动作被截去，alignment仍1。",
+          "method": "view_image直接检查ffmpeg以0.1秒间隔seek提取的实际帧，并与冻结SRT起止比较；seek时码约有一个源视频帧的不确定性"
+        }
+      ]
+    }
+  ],
+  "inspection_limits": [
+    "仅由本独立单LLM完成；用户已授权单评，不调用其他模型，不生成第二份评审。",
+    "video_watched_in_full=false：实际以view_image检查全部23段4fps有序联系表；未在正常速度连续观看，不声称达到原协议人工连续观看条件。",
+    "模型不具备经认证的中国手语专家身份；语义与严重错误判断均为annotation-relative，主要对照CE-CSL作者中文/gloss及本题slot，画面仅直接证明所述可见动作与粗时间关系。",
+    "源片经ffprobe确认只有视频流，无音轨；没有听审，也没有ASR证据。",
+    "联系表时码为ffmpeg采样近似值，4fps图像约有0.25秒采样不确定性；字幕显示起止取SRT精确值，不把素材边界当作手语专家起止金标。",
+    "对齐1是用户授权替代检查方式下，根据整段有序帧、动作窗口及SRT时窗得到的最佳判断，不能解释成正常速度观看认证；所有字幕在各自片段内由可信technical.json另行确认。",
+    "未发现本模型能独立证实的作者标注与画面冲突；此表述不是确认作者标注无误，也不是新的专家认证。",
+    "S04、S12、S18、S22、S23另以0.1秒间隔补密集帧并实际view_image检查；S18对齐0.5，其他22段对齐1。S18尾部词汇归属未获专家确认。",
+    "各段confidence表示在给定作者标注、已检视画面及上述能力限制条件下对综合判定的主观置信度；不是对中国手语专家级理解的认证，也不是答卷自报置信度。"
+  ]
+}

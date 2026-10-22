@@ -1,0 +1,280 @@
+{
+  "segments": [
+    {
+      "id": "S01",
+      "zh_cues": [
+        1
+      ],
+      "en_cues": [
+        1
+      ],
+      "confidence_zh": 0.24,
+      "confidence_en": 0.24,
+      "uncertainty": "指向镜头、近嘴饮用动作和双数手形可见；物品及问句语气不确定。"
+    },
+    {
+      "id": "S02",
+      "zh_cues": [
+        2
+      ],
+      "en_cues": [
+        2
+      ],
+      "confidence_zh": 0.3,
+      "confidence_en": 0.3,
+      "uncertainty": "电话手势较清楚；通话对象和具体内容不确定。"
+    },
+    {
+      "id": "S03",
+      "zh_cues": [
+        3
+      ],
+      "en_cues": [
+        3
+      ],
+      "confidence_zh": 0.24,
+      "confidence_en": 0.24,
+      "uncertainty": "双手指向自身后有双数手形；后续动作无法辨认。"
+    },
+    {
+      "id": "S04",
+      "zh_cues": [
+        4
+      ],
+      "en_cues": [
+        4
+      ],
+      "confidence_zh": 0.21,
+      "confidence_en": 0.21,
+      "uncertainty": "指向头部的动作可见，所想内容和后续动作不确定。"
+    },
+    {
+      "id": "S05",
+      "zh_cues": [
+        5
+      ],
+      "en_cues": [
+        5
+      ],
+      "confidence_zh": 0.16,
+      "confidence_en": 0.16,
+      "uncertainty": "起首指向镜头；后段似否定，但具体动作和否定范围不确定。"
+    },
+    {
+      "id": "S06",
+      "zh_cues": [
+        6
+      ],
+      "en_cues": [
+        6
+      ],
+      "confidence_zh": 0.13,
+      "confidence_en": 0.13,
+      "uncertainty": "起首自指可见；后续交叉手形及一指的含义无法辨认。"
+    },
+    {
+      "id": "S07",
+      "zh_cues": [
+        7
+      ],
+      "en_cues": [
+        7
+      ],
+      "confidence_zh": 0.05,
+      "confidence_en": 0.05,
+      "uncertainty": "平手从胸前划过后双手向上展开；整段语义无法可靠确认。"
+    },
+    {
+      "id": "S08",
+      "zh_cues": [
+        8
+      ],
+      "en_cues": [
+        8
+      ],
+      "confidence_zh": 0.22,
+      "confidence_en": 0.22,
+      "uncertainty": "电话形手势可见；其余手势和句式不确定。"
+    },
+    {
+      "id": "S09",
+      "zh_cues": [
+        9
+      ],
+      "en_cues": [
+        9
+      ],
+      "confidence_zh": 0.31,
+      "confidence_en": 0.31,
+      "uncertainty": "指向镜头后有电话形手势；受话者及后续信息无法确认。"
+    },
+    {
+      "id": "S10",
+      "zh_cues": [
+        10
+      ],
+      "en_cues": [
+        10
+      ],
+      "confidence_zh": 0.1,
+      "confidence_en": 0.1,
+      "uncertainty": "两手向两侧展开似表示大小；所指对象与此前手势不确定。"
+    },
+    {
+      "id": "S11",
+      "zh_cues": [
+        11
+      ],
+      "en_cues": [
+        11
+      ],
+      "confidence_zh": 0.18,
+      "confidence_en": 0.18,
+      "uncertainty": "指向镜头及近嘴动作可见；所指食物和问句语气不确定。"
+    },
+    {
+      "id": "S12",
+      "zh_cues": [
+        12
+      ],
+      "en_cues": [
+        12
+      ],
+      "confidence_zh": 0.48,
+      "confidence_en": 0.48,
+      "uncertainty": "只出现一次挥手；也可能是问候。"
+    },
+    {
+      "id": "S13",
+      "zh_cues": [
+        13
+      ],
+      "en_cues": [
+        13
+      ],
+      "confidence_zh": 0.17,
+      "confidence_en": 0.17,
+      "uncertainty": "近脸的电话形手势可见；发话者、受话者和其余内容不确定。"
+    },
+    {
+      "id": "S14",
+      "zh_cues": [
+        14
+      ],
+      "en_cues": [
+        14
+      ],
+      "confidence_zh": 0.35,
+      "confidence_en": 0.35,
+      "uncertainty": "末尾持杯到嘴边的动作较清楚；饮品及前置动作不确定。"
+    },
+    {
+      "id": "S15",
+      "zh_cues": [
+        15
+      ],
+      "en_cues": [
+        15
+      ],
+      "confidence_zh": 0.12,
+      "confidence_en": 0.12,
+      "uncertainty": "两手向两侧展开似表示大小；框形手势所指对象不确定。"
+    },
+    {
+      "id": "S16",
+      "zh_cues": [
+        16
+      ],
+      "en_cues": [
+        16
+      ],
+      "confidence_zh": 0.12,
+      "confidence_en": 0.12,
+      "uncertainty": "两指靠近眼睛似“看”；后续手势和对象不确定。"
+    },
+    {
+      "id": "S17",
+      "zh_cues": [
+        17
+      ],
+      "en_cues": [
+        17
+      ],
+      "confidence_zh": 0.21,
+      "confidence_en": 0.21,
+      "uncertainty": "交叉双臂和皱眉可能表否定；被否定内容不确定。"
+    },
+    {
+      "id": "S18",
+      "zh_cues": [
+        18
+      ],
+      "en_cues": [
+        18
+      ],
+      "confidence_zh": 0.15,
+      "confidence_en": 0.15,
+      "uncertainty": "指向自己及一指手形可见；数量对象和动作不确定。"
+    },
+    {
+      "id": "S19",
+      "zh_cues": [
+        19
+      ],
+      "en_cues": [
+        19
+      ],
+      "confidence_zh": 0.12,
+      "confidence_en": 0.12,
+      "uncertainty": "向上指示及末尾竖拇指可见；所指对象和中间动作不确定。"
+    },
+    {
+      "id": "S20",
+      "zh_cues": [
+        20
+      ],
+      "en_cues": [
+        20
+      ],
+      "confidence_zh": 0.25,
+      "confidence_en": 0.25,
+      "uncertainty": "中段指向手腕似表示时间；首尾手势及问句语气不确定。"
+    },
+    {
+      "id": "S21",
+      "zh_cues": [
+        21
+      ],
+      "en_cues": [
+        21
+      ],
+      "confidence_zh": 0.21,
+      "confidence_en": 0.21,
+      "uncertainty": "侧头枕手动作似睡觉；后续动作及时间关系不确定。"
+    },
+    {
+      "id": "S22",
+      "zh_cues": [
+        22
+      ],
+      "en_cues": [
+        22
+      ],
+      "confidence_zh": 0.12,
+      "confidence_en": 0.12,
+      "uncertainty": "指向口部似表示说话；随后触头、平手及双手动作无法辨认，否定范围不明。"
+    },
+    {
+      "id": "S23",
+      "zh_cues": [
+        23
+      ],
+      "en_cues": [
+        23
+      ],
+      "confidence_zh": 0.21,
+      "confidence_en": 0.21,
+      "uncertainty": "双掌似书页；随后指向眼部、掌面和嘴边，具体动作与句式不确定。"
+    }
+  ]
+}

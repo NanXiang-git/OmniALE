@@ -1,0 +1,74 @@
+{
+  "id": "A4_gpt-6-luna",
+  "case": "A4",
+  "model": "gpt-6-luna",
+  "judge": "gpt-6-sol",
+  "case_root": "A4_sign_bilingual",
+  "status": "scored",
+  "final_score": 26.988,
+  "solver_status": "completed",
+  "judge_status": "completed",
+  "score_type": "single_judge_LLM_final",
+  "reviewers": 1,
+  "effort": "high",
+  "native_aggregate": {
+    "score": 26.988,
+    "raw_score": 26.988,
+    "passed": false,
+    "components": {
+      "meaning": 0.0,
+      "bilingual": 0.0,
+      "timing": 12.0,
+      "readability": 5.0,
+      "delivery": 5,
+      "calibration": 4.988
+    },
+    "caps": [
+      [
+        39,
+        "semantic_coverage_below_half"
+      ]
+    ],
+    "critical_errors": [],
+    "high_confidence_errors": [],
+    "unit_semantic_scores": {
+      "S01": 0.0,
+      "S02": 0.0,
+      "S03": 0.0,
+      "S04": 0.0,
+      "S05": 0.0,
+      "S06": 0.0,
+      "S07": 0.0,
+      "S08": 0.0,
+      "S09": 0.0,
+      "S10": 0.0,
+      "S11": 0.0,
+      "S12": 0.0,
+      "S13": 0.0,
+      "S14": 0.0,
+      "S15": 0.0,
+      "S16": 0.0,
+      "S17": 0.0,
+      "S18": 0.0,
+      "S19": 0.0,
+      "S20": 0.0,
+      "S21": 0.0,
+      "S22": 0.0,
+      "S23": 0.0
+    }
+  },
+  "components": {
+    "meaning": 0.0,
+    "bilingual": 0.0,
+    "timing": 12.0,
+    "readability": 5.0,
+    "delivery": 5,
+    "calibration": 4.988
+  },
+  "inspection_limits": [
+    "本轮用每段三张有序抽帧与SRT时窗核对，未以正常速度连续观看全片，也未直接听音；原视频无音轨。",
+    "语义参照CE-CSL作者中文/gloss标注作annotation-relative判断，非中国手语专家独立认证。",
+    "抽帧可证实有手语动作和片段覆盖，不能提供逐手势起止金标；对齐结论限于片段级。"
+  ],
+  "submission_unchanged": true
+}

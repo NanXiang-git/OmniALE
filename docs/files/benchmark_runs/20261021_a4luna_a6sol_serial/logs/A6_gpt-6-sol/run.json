@@ -1,0 +1,27 @@
+{
+  "model": "gpt-6-sol",
+  "reasoning_effort": "high",
+  "provider": "nju",
+  "status": "completed",
+  "budget_seconds": 2400,
+  "start_epoch": 1792584555.6782,
+  "automatic_retries": 0,
+  "pid": 12100,
+  "exit_code": 0,
+  "elapsed_seconds": 2390.9392849040005,
+  "wall_elapsed_seconds": 2390.9392869472504,
+  "clock_divergence_seconds": 2.04324987862492e-06,
+  "clock_anomaly": false,
+  "end_epoch": 1792586946.6175902,
+  "usage_events": [
+    {
+      "input_tokens": 4240643,
+      "cached_input_tokens": 4135168,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 27494,
+      "reasoning_output_tokens": 14905
+    }
+  ],
+  "removed_submission_symlinks": [],
+  "candidate_unchanged": true
+}

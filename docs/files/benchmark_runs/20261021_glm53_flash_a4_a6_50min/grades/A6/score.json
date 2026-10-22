@@ -1,0 +1,519 @@
+{
+  "id": "A6",
+  "case": "A6",
+  "model": "glm-5.3-flash",
+  "review_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "formal_total": null,
+  "solver_status": "completed",
+  "review_status": "completed",
+  "score_type": "single_model_evidence_bound_proxy",
+  "confirmed_proxy_points": 18.57040220112151,
+  "pending_weight": 3,
+  "uncapped_proxy_interval": [
+    18.57040220112151,
+    21.57040220112151
+  ],
+  "units": [
+    {
+      "id": "automatic",
+      "weight": 90,
+      "points": 18.57040220112151,
+      "evidence": "technical.json"
+    },
+    {
+      "id": "layout_points",
+      "weight": 4,
+      "points": 0,
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+          "locator": "One independent later reviewer；三个人工项目及 null 规则",
+          "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
+          "method": "全文阅读；保持原定义、部分分政策和自动分不变"
+        },
+        {
+          "artifact": "/work/submission/score.pdf",
+          "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
+          "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
+          "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
+        },
+        {
+          "artifact": "/work/submission/score.musicxml",
+          "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
+          "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
+          "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
+          "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
+          "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
+          "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
+          "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
+          "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
+          "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
+          "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
+        },
+        {
+          "artifact": "/work/submission/notes.md",
+          "locator": "处理方法，最后一条",
+          "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
+          "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
+        },
+        {
+          "artifact": "/work/case/candidate/input/performance.mp4",
+          "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
+          "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
+          "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
+        },
+        {
+          "artifact": "/work/results/technical.json + /work/results/technical_run.json",
+          "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
+          "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
+          "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
+        },
+        {
+          "artifact": "/work/results/inspection/inspection_manifest.json",
+          "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
+          "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
+          "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
+        }
+      ]
+    },
+    {
+      "id": "notation_usability_points",
+      "weight": 3,
+      "points": null,
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+          "locator": "One independent later reviewer；三个人工项目及 null 规则",
+          "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
+          "method": "全文阅读；保持原定义、部分分政策和自动分不变"
+        },
+        {
+          "artifact": "/work/submission/score.pdf",
+          "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
+          "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
+          "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
+        },
+        {
+          "artifact": "/work/submission/score.musicxml",
+          "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
+          "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
+          "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
+          "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
+          "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
+          "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
+          "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
+          "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
+          "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
+          "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
+        },
+        {
+          "artifact": "/work/submission/notes.md",
+          "locator": "处理方法，最后一条",
+          "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
+          "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
+        },
+        {
+          "artifact": "/work/case/candidate/input/performance.mp4",
+          "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
+          "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
+          "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
+        },
+        {
+          "artifact": "/work/results/technical.json + /work/results/technical_run.json",
+          "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
+          "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
+          "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
+        },
+        {
+          "artifact": "/work/results/inspection/inspection_manifest.json",
+          "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
+          "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
+          "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
+        }
+      ]
+    },
+    {
+      "id": "pdf_xml_fidelity_points",
+      "weight": 3,
+      "points": 0,
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+          "locator": "One independent later reviewer；三个人工项目及 null 规则",
+          "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
+          "method": "全文阅读；保持原定义、部分分政策和自动分不变"
+        },
+        {
+          "artifact": "/work/submission/score.pdf",
+          "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
+          "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
+          "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
+        },
+        {
+          "artifact": "/work/submission/score.musicxml",
+          "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
+          "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
+          "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
+          "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
+          "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
+          "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
+          "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
+          "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
+          "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
+          "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
+        },
+        {
+          "artifact": "/work/submission/notes.md",
+          "locator": "处理方法，最后一条",
+          "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
+          "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
+        },
+        {
+          "artifact": "/work/case/candidate/input/performance.mp4",
+          "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
+          "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
+          "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
+        },
+        {
+          "artifact": "/work/results/technical.json + /work/results/technical_run.json",
+          "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
+          "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
+          "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
+        },
+        {
+          "artifact": "/work/results/inspection/inspection_manifest.json",
+          "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
+          "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
+          "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
+        }
+      ]
+    }
+  ],
+  "cap_candidates": [
+    {
+      "candidate": "额外总分上限",
+      "status": "not_applicable",
+      "evidence": "rubric.json missing_files 原文：\"No score caps.\" 本次不引入任何总分 cap。"
+    },
+    {
+      "candidate": "缺失或损坏 PDF 导致三项全零",
+      "status": "not_triggered",
+      "evidence": "提交 PDF 存在；宿主 pdfinfo_exit=0、render_exit=0，成功提供 3 页。本次不是以缺失/损坏规则自动归零；layout 与 fidelity 分别按已观察到的缺陷判定。"
+    },
+    {
+      "candidate": "未完成组件时不得生成最终总分",
+      "status": "active",
+      "evidence": "REVIEW_PROTOCOL.md：\"Until then, no final score exists.\" notation_usability_points 因媒体检查不足为 null，因此人工合计和最终总分不生成；这不是分数上限。"
+    }
+  ],
+  "caps_applied": [],
+  "errors": [],
+  "inspection_limits": [
+    {
+      "status": "unavailable",
+      "component": "notation_usability_points",
+      "evidence": "REVIEW_PROTOCOL.md 要求 \"Listen/view relevant sections when judging notation usability.\" 本次只有 t=1.500、36.500、74.800 秒静帧，没有直接聆听或足够的连续音视频检查；综合节拍、声部与时值是否符合可理解的演奏结构尚未建立。此项保留 null；不以音符自动分或作者说明填补。"
+    },
+    {
+      "status": "completed",
+      "component": "layout_points",
+      "evidence": "宿主三张完整 PDF 页面全部直接查看，并放大第 1、29、41 小节；裁切及大范围叠压为可直接观察的失败，足以判 0，无需听觉推断。"
+    },
+    {
+      "status": "completed_with_limits",
+      "component": "pdf_xml_fidelity_points",
+      "evidence": "原 XML 全 41 小节解析、15 小节详细核对，覆盖三页和低中高音区；不声称对全部 524 音逐一完成视觉配对。开头/中段/末尾反复出现的休止缺失、十六分时值及双梁未保留，足以认定系统性内容失真，判 0；无需判断源演奏的正确音高。"
+    },
+    {
+      "status": "workaround_applied",
+      "component": "review_infrastructure",
+      "evidence": "Verovio voice=0 导入警告、svglib CSS/viewBox 兼容问题和 Rsvg namespace 不可用均属本地评审渲染限制。显示副本只重命名声部标签，原提交散列未变；辅助图的字体/标题问题不扣分。"
+    },
+    {
+      "status": "not_performed",
+      "component": "direct_audio_and_continuous_video",
+      "evidence": "没有实际聆听，没有 ASR，也没有连续观看整段视频。三张帧图不能证明全段声学或动作理解。"
+    },
+    {
+      "status": "preserved",
+      "component": "automatic_grading",
+      "evidence": "技术报告成功退出，自动分 18.57040220112151/90 未改变；技术运行的 matplotlib 可选依赖提示未造成宿主运行失败。不将评审工具失败转作 solver error。"
+    }
+  ],
+  "limitations": [
+    "Proxy interval is unknown-item bookkeeping, not a formal score or confidence interval.",
+    "Original formal prerequisites and caps preserved; unverified caps are not silently cleared.",
+    "No direct listening or continuous video certification.",
+    "本轮仅两个作答会话并行；每题开始执行后计时50分钟，尚未启动的排队题不计时。网络重试和推理等待计入该题预算；超时不单独证明模型能力不足。",
+    "保守分只累计已确认得分，未知项不代表已证实错误；不满足正式评审前提。"
+  ],
+  "submission_unchanged": true,
+  "conservative_total": 18.57040220112151,
+  "checklist": [
+    {
+      "id": "automatic",
+      "weight": 90,
+      "points": 18.57040220112151,
+      "evidence": "technical.json"
+    },
+    {
+      "id": "layout_points",
+      "weight": 4,
+      "points": 0,
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+          "locator": "One independent later reviewer；三个人工项目及 null 规则",
+          "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
+          "method": "全文阅读；保持原定义、部分分政策和自动分不变"
+        },
+        {
+          "artifact": "/work/submission/score.pdf",
+          "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
+          "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
+          "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
+        },
+        {
+          "artifact": "/work/submission/score.musicxml",
+          "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
+          "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
+          "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
+          "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
+          "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
+          "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
+          "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
+          "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
+          "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
+          "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
+        },
+        {
+          "artifact": "/work/submission/notes.md",
+          "locator": "处理方法，最后一条",
+          "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
+          "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
+        },
+        {
+          "artifact": "/work/case/candidate/input/performance.mp4",
+          "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
+          "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
+          "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
+        },
+        {
+          "artifact": "/work/results/technical.json + /work/results/technical_run.json",
+          "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
+          "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
+          "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
+        },
+        {
+          "artifact": "/work/results/inspection/inspection_manifest.json",
+          "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
+          "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
+          "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
+        }
+      ]
+    },
+    {
+      "id": "notation_usability_points",
+      "weight": 3,
+      "points": null,
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+          "locator": "One independent later reviewer；三个人工项目及 null 规则",
+          "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
+          "method": "全文阅读；保持原定义、部分分政策和自动分不变"
+        },
+        {
+          "artifact": "/work/submission/score.pdf",
+          "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
+          "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
+          "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
+        },
+        {
+          "artifact": "/work/submission/score.musicxml",
+          "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
+          "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
+          "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
+          "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
+          "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
+          "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
+          "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
+          "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
+          "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
+          "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
+        },
+        {
+          "artifact": "/work/submission/notes.md",
+          "locator": "处理方法，最后一条",
+          "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
+          "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
+        },
+        {
+          "artifact": "/work/case/candidate/input/performance.mp4",
+          "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
+          "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
+          "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
+        },
+        {
+          "artifact": "/work/results/technical.json + /work/results/technical_run.json",
+          "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
+          "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
+          "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
+        },
+        {
+          "artifact": "/work/results/inspection/inspection_manifest.json",
+          "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
+          "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
+          "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
+        }
+      ]
+    },
+    {
+      "id": "pdf_xml_fidelity_points",
+      "weight": 3,
+      "points": 0,
+      "evidence": [
+        {
+          "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
+          "locator": "One independent later reviewer；三个人工项目及 null 规则",
+          "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
+          "method": "全文阅读；保持原定义、部分分政策和自动分不变"
+        },
+        {
+          "artifact": "/work/submission/score.pdf",
+          "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
+          "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
+          "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
+        },
+        {
+          "artifact": "/work/submission/score.musicxml",
+          "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
+          "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
+          "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
+          "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
+          "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
+          "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
+          "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
+          "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
+        },
+        {
+          "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
+          "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
+          "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
+          "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
+        },
+        {
+          "artifact": "/work/submission/notes.md",
+          "locator": "处理方法，最后一条",
+          "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
+          "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
+        },
+        {
+          "artifact": "/work/case/candidate/input/performance.mp4",
+          "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
+          "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
+          "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
+        },
+        {
+          "artifact": "/work/results/technical.json + /work/results/technical_run.json",
+          "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
+          "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
+          "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
+        },
+        {
+          "artifact": "/work/results/inspection/inspection_manifest.json",
+          "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
+          "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
+          "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "automatic",
+      "lost_points": 71.42959779887849,
+      "reason": "technical.json"
+    },
+    {
+      "id": "layout_points",
+      "lost_points": 4,
+      "reason": "[{'artifact': '/work/case/evaluator/REVIEW_PROTOCOL.md', 'locator': 'One independent later reviewer；三个人工项目及 null 规则', 'observation': '完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"', 'method': '全文阅读；保持原定义、部分分政策和自动分不变'}, {'artifact': '/work/submission/score.pdf', 'locator': '全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png', 'observation': '逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。', 'method': '直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查'}, {'artifact': '/work/submission/score.musicxml', 'locator': '全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节', 'observation': '原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。', 'method': '离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml', 'locator': 'PDF 第 1 页第 1 小节；XML 第 1 小节', 'observation': 'XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。', 'method': '原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒', 'observation': 'XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。', 'method': '原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒', 'observation': 'XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。', 'method': '原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值'}, {'artifact': '/work/submission/notes.md', 'locator': '处理方法，最后一条', 'observation': '作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。', 'method': '原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令'}, {'artifact': '/work/case/candidate/input/performance.mp4', 'locator': '视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png', 'observation': 'ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。', 'method': '本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解'}, {'artifact': '/work/results/technical.json + /work/results/technical_run.json', 'locator': 'automatic_score、automatic_max、status、metrics、submission_sha256、exit_code', 'observation': '宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。', 'method': '读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分'}, {'artifact': '/work/results/inspection/inspection_manifest.json', 'locator': 'display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png', 'observation': '已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。', 'method': '离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改'}]"
+    },
+    {
+      "id": "pdf_xml_fidelity_points",
+      "lost_points": 3,
+      "reason": "[{'artifact': '/work/case/evaluator/REVIEW_PROTOCOL.md', 'locator': 'One independent later reviewer；三个人工项目及 null 规则', 'observation': '完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"', 'method': '全文阅读；保持原定义、部分分政策和自动分不变'}, {'artifact': '/work/submission/score.pdf', 'locator': '全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png', 'observation': '逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。', 'method': '直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查'}, {'artifact': '/work/submission/score.musicxml', 'locator': '全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节', 'observation': '原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。', 'method': '离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml', 'locator': 'PDF 第 1 页第 1 小节；XML 第 1 小节', 'observation': 'XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。', 'method': '原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒', 'observation': 'XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。', 'method': '原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒', 'observation': 'XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。', 'method': '原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值'}, {'artifact': '/work/submission/notes.md', 'locator': '处理方法，最后一条', 'observation': '作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。', 'method': '原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令'}, {'artifact': '/work/case/candidate/input/performance.mp4', 'locator': '视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png', 'observation': 'ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。', 'method': '本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解'}, {'artifact': '/work/results/technical.json + /work/results/technical_run.json', 'locator': 'automatic_score、automatic_max、status、metrics、submission_sha256、exit_code', 'observation': '宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。', 'method': '读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分'}, {'artifact': '/work/results/inspection/inspection_manifest.json', 'locator': 'display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png', 'observation': '已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。', 'method': '离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改'}]"
+    }
+  ],
+  "major_issues": [],
+  "minor_issues": [
+    "automatic: technical.json",
+    "layout_points: [{'artifact': '/work/case/evaluator/REVIEW_PROTOCOL.md', 'locator': 'One independent later reviewer；三个人工项目及 null 规则', 'observation': '完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"', 'method': '全文阅读；保持原定义、部分分政策和自动分不变'}, {'artifact': '/work/submission/score.pdf', 'locator': '全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png', 'observation': '逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。', 'method': '直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查'}, {'artifact': '/work/submission/score.musicxml', 'locator': '全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节', 'observation': '原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。', 'method': '离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml', 'locator': 'PDF 第 1 页第 1 小节；XML 第 1 小节', 'observation': 'XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。', 'method': '原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒', 'observation': 'XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。', 'method': '原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒', 'observation': 'XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。', 'method': '原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值'}, {'artifact': '/work/submission/notes.md', 'locator': '处理方法，最后一条', 'observation': '作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。', 'method': '原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令'}, {'artifact': '/work/case/candidate/input/performance.mp4', 'locator': '视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png', 'observation': 'ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。', 'method': '本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解'}, {'artifact': '/work/results/technical.json + /work/results/technical_run.json', 'locator': 'automatic_score、automatic_max、status、metrics、submission_sha256、exit_code', 'observation': '宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。', 'method': '读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分'}, {'artifact': '/work/results/inspection/inspection_manifest.json', 'locator': 'display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png', 'observation': '已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。', 'method': '离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改'}]",
+    "pdf_xml_fidelity_points: [{'artifact': '/work/case/evaluator/REVIEW_PROTOCOL.md', 'locator': 'One independent later reviewer；三个人工项目及 null 规则', 'observation': '完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"', 'method': '全文阅读；保持原定义、部分分政策和自动分不变'}, {'artifact': '/work/submission/score.pdf', 'locator': '全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png', 'observation': '逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。', 'method': '直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查'}, {'artifact': '/work/submission/score.musicxml', 'locator': '全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节', 'observation': '原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。', 'method': '离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml', 'locator': 'PDF 第 1 页第 1 小节；XML 第 1 小节', 'observation': 'XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。', 'method': '原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒', 'observation': 'XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。', 'method': '原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒', 'observation': 'XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。', 'method': '原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值'}, {'artifact': '/work/submission/notes.md', 'locator': '处理方法，最后一条', 'observation': '作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。', 'method': '原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令'}, {'artifact': '/work/case/candidate/input/performance.mp4', 'locator': '视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png', 'observation': 'ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。', 'method': '本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解'}, {'artifact': '/work/results/technical.json + /work/results/technical_run.json', 'locator': 'automatic_score、automatic_max、status、metrics、submission_sha256、exit_code', 'observation': '宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。', 'method': '读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分'}, {'artifact': '/work/results/inspection/inspection_manifest.json', 'locator': 'display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png', 'observation': '已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。', 'method': '离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改'}]"
+  ],
+  "issue_count_policy": "Major means proven native critical rule; minor lists other observed deductions. Unknown checks are not errors."
+}

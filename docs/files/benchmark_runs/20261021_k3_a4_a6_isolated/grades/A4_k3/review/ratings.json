@@ -1,0 +1,1008 @@
+{
+  "reviewer_id": "single-sol",
+  "reviewer_kind": "model_assisted",
+  "video_watched_in_full": false,
+  "source_annotations_checked": true,
+  "truth_sha256": "b090df0a66014c19212e52f34c061443515d157fb94385c22bcea74327912e74",
+  "submission_sha256": {
+    "zh-CN.srt": "86a118ed30b376f4dadc00c3f8d2a2b1417dda36b9853ec32b4eba5b97488cdd",
+    "en.srt": "4717b0540d1159c67e9a41974c9ad32c2955b87b48fa0bb310922a8180f07b1a",
+    "segments.json": "8af361406dedc5ffd1c2018febb0366efed40474118916192981b2ff64abaca5",
+    "subtitled.mkv": "12bcd409a022736379f21fcbcb365aeba8b26d36041946f7c00f5563f8ec1174"
+  },
+  "units": [
+    {
+      "id": "S01",
+      "zh": [
+        1,
+        0,
+        0,
+        0.5
+      ],
+      "en": [
+        1,
+        0,
+        0,
+        0.5
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_object",
+        "invented_fact"
+      ],
+      "note": "0.00–5.07s，标注相对：addressee保留“你”；time“今天”和negation“没喝酒”全失。字幕“爱吃苹果/like apples”另造对象与喜好，force仅保留问句形式而无确认否定的语气。 中文证据“你爱吃苹果吗？”；英文证据“Do you like apples?”。",
+      "zh_quote": "你爱吃苹果吗？",
+      "en_quote": "Do you like apples?",
+      "confidence": 0.86,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S01 0.51s, 1.52s, 2.53s, 3.55s, 4.56s",
+          "observation": "1.52s双手在胸前，2.53s右手近口，3.55s单手举起。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S01 slots addressee, time, negation, force",
+          "observation": "你今天没喝酒吧。；作者gloss：你/今天/喝酒/没有2/是/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S01",
+          "observation": "中文“你爱吃苹果吗？”；英文“Do you like apples?”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person",
+        "invented_fact"
+      ],
+      "note": "5.57–8.47s，标注相对：group原为“我们”，字幕改“我/I”；action“去吃饭”换成“唱歌/singing”，force共同提议改成个人喜好的事实。 中文证据“我爱唱歌。”；英文证据“I love singing.”。",
+      "zh_quote": "我爱唱歌。",
+      "en_quote": "I love singing.",
+      "confidence": 0.89,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S02 5.86s, 6.44s, 7.02s, 7.60s, 8.18s",
+          "observation": "6.44s右手近口，7.02s右手向前，7.60s手至口前。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S02 slots group, action, force",
+          "observation": "我们去吃饭吧。；作者gloss：我们/去/吃饭/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S02",
+          "observation": "中文“我爱唱歌。”；英文“I love singing.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "8.97–12.87s，标注相对：person“你”、ability“能自己来”和force确认询问均无；“吃/Eating”并非该段作者标注的动作，[无法确认]/[unclear]不补回这些槽。 中文证据“吃[无法确认]。”；英文证据“Eating [unclear].”。",
+      "zh_quote": "吃[无法确认]。",
+      "en_quote": "Eating [unclear].",
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S03 9.36s, 10.14s, 10.92s, 11.70s, 12.48s",
+          "observation": "9.36s双手在胸前，10.92s右手向前，11.70s右手在颈前。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S03 slots person, ability, force",
+          "observation": "你真的能自己来吗？；作者gloss：你/自己/来/真2/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S03",
+          "observation": "中文“吃[无法确认]。”；英文“Eating [unclear].”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "zh": [
+        0,
+        1,
+        0
+      ],
+      "en": [
+        0,
+        1,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "13.37–18.43s，标注相对：person“我/I”保留；time“明年”和event“毕业”均未表达。“想/want to”是原标注没有的意愿，未知内容不能补足毕业。 中文证据“我想[无法确认]。”；英文证据“I want to [unclear].”。",
+      "zh_quote": "我想[无法确认]。",
+      "en_quote": "I want to [unclear].",
+      "confidence": 0.86,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S04 13.87s, 14.89s, 15.90s, 16.91s, 17.93s",
+          "observation": "14.89s右手近头，15.90s双手在胸前，16.91s双手上举。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S04 slots time, person, event",
+          "observation": "明年我就毕业了。；作者gloss：明年/毕业/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S04",
+          "observation": "中文“我想[无法确认]。”；英文“I want to [unclear].”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person",
+        "request_as_fact",
+        "invented_fact"
+      ],
+      "note": "18.93–24.63s，标注相对：plural“你们”改成“我/I”，action“安静一下”缺失；force礼貌请求改为“我十五岁/I am fifteen”这一既定事实。 中文证据“我十五岁。”；英文证据“I am fifteen years old.”。",
+      "zh_quote": "我十五岁。",
+      "en_quote": "I am fifteen years old.",
+      "confidence": 0.88,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S05 19.50s, 20.64s, 21.78s, 22.92s, 24.06s",
+          "observation": "20.64s单掌向上，21.78s双手在胸前，22.92s手放低。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S05 slots plural, action, force",
+          "observation": "你们可以安静一下吗？；作者gloss：你们/安静/可以/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S05",
+          "observation": "中文“我十五岁。”；英文“I am fifteen years old.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_object",
+        "invented_fact"
+      ],
+      "note": "25.13–28.50s，标注相对：owner原为“我有”宠物狗，字幕“我十一岁/I am eleven”没有拥有关系；object狗和quantity一只均缺，十一岁是凭空年龄。 中文证据“我十一岁。”；英文证据“I am eleven years old.”。",
+      "zh_quote": "我十一岁。",
+      "en_quote": "I am eleven years old.",
+      "confidence": 0.87,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S06 25.47s, 26.14s, 26.82s, 27.49s, 28.16s",
+          "observation": "26.14s右手近肩，26.82s双手交叠，27.49s单指上举。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S06 slots owner, object, quantity",
+          "observation": "我有一只宠物狗。；作者gloss：我/有/狗1/一/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S06",
+          "observation": "中文“我十一岁。”；英文“I am eleven years old.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "zh": [
+        0,
+        0.5,
+        0
+      ],
+      "en": [
+        0,
+        0.5,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person",
+        "question_as_fact",
+        "invented_fact"
+      ],
+      "note": "29.00–33.23s，标注相对：event“篮球/basketball”局部保留，但加入“写字/writing”，且没有“去”；group“我们”改“我”，question“什么时候”改为爱好陈述。 中文证据“我爱打篮球和写字。”；英文证据“I love playing basketball and writing.”。",
+      "zh_quote": "我爱打篮球和写字。",
+      "en_quote": "I love playing basketball and writing.",
+      "confidence": 0.89,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S07 29.42s, 30.27s, 31.12s, 31.96s, 32.81s",
+          "observation": "30.27s右手指向侧面，31.12s双手在头顶附近，31.96s食指在另一手前。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S07 slots group, event, question",
+          "observation": "我们什么时候去打篮球？；作者gloss：我们/去/篮球/时间/什么/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S07",
+          "observation": "中文“我爱打篮球和写字。”；英文“I love playing basketball and writing.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "zh": [
+        0.5,
+        0,
+        0
+      ],
+      "en": [
+        1,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "33.73–39.03s，标注相对：person中文“你”弱化“你们”，英语you可兼容复数；question原问“去做什么”而字幕问“爱我吗/love me”，aspect已做过的事也消失。 中文证据“你爱我吗？”；英文证据“Do you love me?”。",
+      "zh_quote": "你爱我吗？",
+      "en_quote": "Do you love me?",
+      "confidence": 0.77,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S08 34.26s, 35.32s, 36.38s, 37.44s, 38.50s",
+          "observation": "35.32s右手向前，36.38s双手在颈胸前，37.44s手放低。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S08 slots person, question, aspect",
+          "observation": "你们去干嘛了？；作者gloss：你们/去/做/什么/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S08",
+          "observation": "中文“你爱我吗？”；英文“Do you love me?”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "zh": [
+        0.5,
+        0,
+        0
+      ],
+      "en": [
+        0.5,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_object",
+        "invented_fact"
+      ],
+      "note": "39.53–43.83s，标注相对：owner仅保留“你/you”的人称线索，未表达“你的”号码；object电话号码与question询问号码均被“能听见我说话/can you hear me”替换。 中文证据“你能听见我说话吗？”；英文证据“Can you hear me?”。",
+      "zh_quote": "你能听见我说话吗？",
+      "en_quote": "Can you hear me?",
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S09 39.96s, 40.82s, 41.68s, 42.54s, 43.40s",
+          "observation": "40.82s手在耳侧，41.68s手在口侧，42.54s手在面前。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S09 slots owner, object, question",
+          "observation": "你的电话号码是多少？；作者gloss：你/电话/号码/多少/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S09",
+          "observation": "中文“你能听见我说话吗？”；英文“Can you hear me?”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person",
+        "invented_fact"
+      ],
+      "note": "44.33–47.87s，标注相对：group“我们”变“我/I”，again“重新开始”全无；force共同提议变为“爱游泳和照相/love swimming and taking photos”这一自述。 中文证据“我爱游泳和照相。”；英文证据“I love swimming and taking photos.”。",
+      "zh_quote": "我爱游泳和照相。",
+      "en_quote": "I love swimming and taking photos.",
+      "confidence": 0.88,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S10 44.69s, 45.39s, 46.10s, 46.81s, 47.51s",
+          "observation": "45.39s右手侧举，46.10s双手在胸前，46.81s双手抬至面侧。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S10 slots group, again, force",
+          "observation": "我们重新开始吧。；作者gloss：我们/再/新/开始/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S10",
+          "observation": "中文“我爱游泳和照相。”；英文“I love swimming and taking photos.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "zh": [
+        0,
+        0.5,
+        0
+      ],
+      "en": [
+        0,
+        0.5,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person",
+        "wrong_object",
+        "question_as_fact"
+      ],
+      "note": "48.37–53.37s，标注相对：food仅“吃/eating”相关，其面包被改饺子/dumplings；person你们改我，force是否要吃的问句变成“我爱吃/I love eating”事实。 中文证据“我爱吃饺子。”；英文证据“I love eating dumplings.”。",
+      "zh_quote": "我爱吃饺子。",
+      "en_quote": "I love eating dumplings.",
+      "confidence": 0.91,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S11 48.87s, 49.87s, 50.87s, 51.87s, 52.87s",
+          "observation": "49.87s右手在胸前，50.87s手指近口，51.87s单掌向上。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S11 slots person, food, force",
+          "observation": "你们吃饭要吃面包吗？；作者gloss：你们/吃饭/面包/要/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S11",
+          "observation": "中文“我爱吃饺子。”；英文“I love eating dumplings.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 0.5,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "53.87–57.90s，标注相对：action“扔掉”和aspect“已经完成”均无；“不客气/You’re welcome”是另一种礼貌回应，underspecified也无法代替原事件。密集帧显示字幕早于动作结束。 中文证据“不客气。”；英文证据“You're welcome.”。",
+      "zh_quote": "不客气。",
+      "en_quote": "You're welcome.",
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S12 54.27s, 55.08s, 55.88s, 56.69s, 57.50s; 另查0.4秒间隔密集帧",
+          "observation": "56.07s右手抬起，56.47s右手向下，56.87s右掌仍向外；字幕56.70s结束。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S12 slots action, aspect, underspecified",
+          "observation": "扔掉了。；作者gloss：扔/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S12",
+          "observation": "中文“不客气。”；英文“You're welcome.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "58.40–64.23s，标注相对：relation“和你一起度过”、time“美好的晚上”和aspect已发生均无；“我爱我的家/I love my home”改写对象和事件。 中文证据“我爱我的家。”；英文证据“I love my home.”。",
+      "zh_quote": "我爱我的家。",
+      "en_quote": "I love my home.",
+      "confidence": 0.83,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S13 58.98s, 60.15s, 61.32s, 62.48s, 63.65s",
+          "observation": "60.15s双手在胸前，61.32s手近面部，62.48s双手展开。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S13 slots relation, time, aspect",
+          "observation": "和你度过了一个美好的晚上。；作者gloss：和/你/过/一/美好/晚/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S13",
+          "observation": "中文“我爱我的家。”；英文“I love my home.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person",
+        "wrong_object",
+        "question_as_fact"
+      ],
+      "note": "64.73–68.67s，标注相对：person“你们”改“我/I”；drink“啤酒”换成水/water，question“喝吗”变成“我爱喝/I love drinking”陈述。 中文证据“我爱喝水。”；英文证据“I love drinking water.”。",
+      "zh_quote": "我爱喝水。",
+      "en_quote": "I love drinking water.",
+      "confidence": 0.91,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S14 65.13s, 65.91s, 66.70s, 67.49s, 68.27s",
+          "observation": "65.91s双手在胸前，66.70s单手近口，67.49s手放低。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S14 slots person, drink, question",
+          "observation": "你们喝啤酒吗？；作者gloss：你们/啤酒/喝/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S14",
+          "observation": "中文“我爱喝水。”；英文“I love drinking water.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "zh": [
+        0.5,
+        0,
+        0
+      ],
+      "en": [
+        0.5,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "69.17–72.90s，标注相对：group“我/I”只保留说话人，遗漏“我们一起”；action“照相”和force“吧”的提议均无。“我爱中国/I love China”是另造的爱国陈述。 中文证据“我爱中国。”；英文证据“I love China.”。",
+      "zh_quote": "我爱中国。",
+      "en_quote": "I love China.",
+      "confidence": 0.87,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S15 69.54s, 70.29s, 71.03s, 71.78s, 72.53s",
+          "observation": "70.29s单掌向前，71.03s双手在胸前，71.78s双手形成框形。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S15 slots group, action, force",
+          "observation": "我们一起照张相吧。；作者gloss：我们/一起/拍照/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S15",
+          "observation": "中文“我爱中国。”；英文“I love China.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "73.40–78.23s，标注相对：context“上课”、duration“还很长”和scope时间范围全无；“我想吃/I want to eat”另造饮食意愿，[无法确认]不等于课程时长。 中文证据“我想吃[无法确认]。”；英文证据“I want to eat [unclear].”。",
+      "zh_quote": "我想吃[无法确认]。",
+      "en_quote": "I want to eat [unclear].",
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S16 73.88s, 74.85s, 75.82s, 76.78s, 77.75s",
+          "observation": "74.85s双手在胸前，75.82s右手近口，76.78s双手抬起。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S16 slots context, duration, scope",
+          "observation": "上课的时间还很长。；作者gloss：上课/时间/还/长/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S16",
+          "observation": "中文“我想吃[无法确认]。”；英文“I want to eat [unclear].”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person",
+        "invented_fact"
+      ],
+      "note": "78.73–83.87s，标注相对：winner原为“你赢了”，字幕用“我爱/I love”换人称且无输赢；scope“这把游戏”和aspect已赢均无，未确认对象也不能补回。 中文证据“我爱[无法确认]。”；英文证据“I love [unclear].”。",
+      "zh_quote": "我爱[无法确认]。",
+      "en_quote": "I love [unclear].",
+      "confidence": 0.86,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S17 79.25s, 80.27s, 81.30s, 82.33s, 83.35s; 另查0.4秒间隔密集帧",
+          "observation": "80.53s双手在胸前，81.73s右臂上举，82.13s双手仍在胸前；字幕80.20–82.20s。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S17 slots winner, scope, aspect",
+          "observation": "这把游戏你赢了。；作者gloss：游戏/你/赢2/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S17",
+          "observation": "中文“我爱[无法确认]。”；英文“I love [unclear].”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_person",
+        "question_as_fact",
+        "invented_fact"
+      ],
+      "note": "84.37–88.43s，标注相对：person原问“你”，字幕变“我”；object所穿鞋子和question鞋种均缺。“想一个人/I want to be alone”是新增意愿且把问句改事实。 中文证据“我想一个人[无法确认]。”；英文证据“I want to be alone [unclear].”。",
+      "zh_quote": "我想一个人[无法确认]。",
+      "en_quote": "I want to be alone [unclear].",
+      "confidence": 0.88,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S18 84.77s, 85.59s, 86.40s, 87.21s, 88.03s",
+          "observation": "85.59s右拳在下颌旁，86.40s食指在面前，87.21s右手在胸前。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S18 slots person, object, question",
+          "observation": "你穿的是什么鞋子？；作者gloss：你/穿/鞋/什么/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S18",
+          "observation": "中文“我想一个人[无法确认]。”；英文“I want to be alone [unclear].”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "zh": [
+        0.5,
+        0,
+        0
+      ],
+      "en": [
+        0.5,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "88.93–93.20s，标注相对：group“我”仅部分包含说话人，缺“我们”；direction“上去”和modality“就好/即可”均无。“爱/love”另造态度，未确认内容不补方向。 中文证据“我爱[无法确认]。”；英文证据“I love [unclear].”。",
+      "zh_quote": "我爱[无法确认]。",
+      "en_quote": "I love [unclear].",
+      "confidence": 0.84,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S19 89.36s, 90.21s, 91.07s, 91.92s, 92.77s",
+          "observation": "90.21s右手指向侧面，91.07s右手上举，91.92s双手在胸前。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S19 slots group, direction, modality",
+          "observation": "我们上去就好了。；作者gloss：我们/上/去/好/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S19",
+          "observation": "中文“我爱[无法确认]。”；英文“I love [unclear].”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_object",
+        "invented_fact"
+      ],
+      "note": "93.70–99.43s，标注相对：pair“你俩”和relation“有缘分”均无；字幕改问“这件衣服多少钱/how much is this piece of clothing”，对象和话题另造。restraint不能靠无关句获得分数。 中文证据“这件衣服多少钱？”；英文证据“How much is this piece of clothing?”。",
+      "zh_quote": "这件衣服多少钱？",
+      "en_quote": "How much is this piece of clothing?",
+      "confidence": 0.88,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S20 94.27s, 95.42s, 96.57s, 97.71s, 98.86s",
+          "observation": "96.57s右手在下颌旁，97.71s右手手指向前，98.86s手放低。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S20 slots pair, relation, restraint",
+          "observation": "你俩真有缘分。；作者gloss：你俩/缘分/有/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S20",
+          "observation": "中文“这件衣服多少钱？”；英文“How much is this piece of clothing?”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "wrong_object",
+        "question_as_fact",
+        "invented_fact"
+      ],
+      "note": "99.93–107.60s，标注相对：politeness请问、place卧室、question在哪里均无；“我在家睡觉/I sleep at home”只出现泛指家，不能当卧室，且把问路改成自述。 中文证据“我在家睡觉，[无法确认]。”；英文证据“I sleep at home; [unclear].”。",
+      "zh_quote": "我在家睡觉，[无法确认]。",
+      "en_quote": "I sleep at home; [unclear].",
+      "confidence": 0.87,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S21 100.70s, 102.23s, 103.77s, 105.30s, 106.83s; 另查0.4秒间隔密集帧",
+          "observation": "102.93s手至面侧，103.73s右手在左掌上，104.93s食指向前；字幕102.40–105.15s。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S21 slots politeness, place, question",
+          "observation": "请问卧室在哪里？；作者gloss：卧室/在/哪/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S21",
+          "observation": "中文“我在家睡觉，[无法确认]。”；英文“I sleep at home; [unclear].”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "zh": [
+        1,
+        0,
+        0
+      ],
+      "en": [
+        1,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "108.10–114.03s，标注相对：person“我/I”保留；memory“回忆起”被“想学/want to learn”替换，time小时候/童年消失，手语/sign language是新增学习对象。 中文证据“我想学手语。”；英文证据“I want to learn sign language.”。",
+      "zh_quote": "我想学手语。",
+      "en_quote": "I want to learn sign language.",
+      "confidence": 0.86,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S22 108.69s, 109.88s, 111.07s, 112.25s, 113.44s",
+          "observation": "111.07s右手在面前，112.25s右手接近左掌，113.44s手放低。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S22 slots person, memory, time",
+          "observation": "我回忆起了小时候。；作者gloss：我/想/小孩/时候/。",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S22",
+          "observation": "中文“我想学手语。”；英文“I want to learn sign language.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "zh": [
+        0,
+        0,
+        0
+      ],
+      "en": [
+        0,
+        0,
+        0
+      ],
+      "bilingual": 1,
+      "alignment": 1,
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "114.53–120.20s，标注相对：activity看书与scarcity没多少时间均无；“祝你生日快乐/Happy birthday”是另一种祝福。force原问号有歧义，零分依据是内容改写，非标点。 中文证据“祝你生日快乐。”；英文证据“Happy birthday to you.”。",
+      "zh_quote": "祝你生日快乐。",
+      "en_quote": "Happy birthday to you.",
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "artifact": "/work/case/candidate/input/source.mp4",
+          "locator": "S23 115.10s, 116.23s, 117.37s, 118.50s, 119.63s",
+          "observation": "116.23s双掌并拢，117.37s手指朝掌，118.50s右手在面侧。仅记录可见动作与时序，不从静帧独立认证手语词义。",
+          "method": "ffmpeg定点抽帧，view_image目视检查"
+        },
+        {
+          "artifact": "/work/case/evaluator/truth.json",
+          "locator": "S23 slots activity, scarcity, force",
+          "observation": "没多少时间看书了？；作者gloss：书/看1/时间/没有/？",
+          "method": "CE-CSL作者标注对照，annotation-relative"
+        },
+        {
+          "artifact": "/work/mapped_quotes.json",
+          "locator": "S23",
+          "observation": "中文“祝你生日快乐。”；英文“Happy birthday to you.”",
+          "method": "可信映射逐字引用，与提交SRT核对"
+        }
+      ]
+    }
+  ],
+  "inspection_limits": [
+    "原视频无音轨；没有直接听音或ASR证据。",
+    "通过ffmpeg抽取全部23段每段5幅有序画面并实际用view_image检查；S12、S17、S21另以0.4秒间隔补帧，未以正常速度连续观看全片。",
+    "非中国手语专家。语义分数相对于CE-CSL作者中文/gloss标注，不能作为独立手语认证；未作专家冲突仲裁。",
+    "对齐是基于可见动作抽帧与SRT时间窗的估计，帧间瞬态动作可能遗漏。"
+  ]
+}

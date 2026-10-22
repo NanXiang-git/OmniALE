@@ -1,0 +1,128 @@
+{
+  "id": "A4_gpt-6-astra",
+  "case": "A4",
+  "model": "gpt-6-astra",
+  "judge": "gpt-6-sol",
+  "case_root": "A4_sign_bilingual",
+  "status": "scored",
+  "final_score": 39,
+  "solver_status": "completed",
+  "judge_status": "completed",
+  "score_type": "single_judge_LLM_final",
+  "reviewers": 1,
+  "effort": "high",
+  "native_aggregate": {
+    "score": 39,
+    "raw_score": 52.976,
+    "passed": false,
+    "components": {
+      "meaning": 23.359,
+      "bilingual": 2.875,
+      "timing": 12.0,
+      "readability": 5.0,
+      "delivery": 5,
+      "calibration": 4.742
+    },
+    "caps": [
+      [
+        39,
+        "critical_semantic_error"
+      ],
+      [
+        39,
+        "semantic_coverage_below_half"
+      ]
+    ],
+    "critical_errors": [
+      {
+        "id": "S03",
+        "errors": [
+          "invented_fact"
+        ],
+        "note": "00:09–00:12 的 person、ability、force 应为‘你能否真的自己来’，字幕却写‘衣服/Clothes’，既未保留询问也加入无据衣物事实；按作者标注判定。"
+      },
+      {
+        "id": "S07",
+        "errors": [
+          "question_as_fact"
+        ],
+        "note": "00:29–00:32 的 group ‘我们/We’与 event 中的去保留，篮球缺失；原 question 是问何时去，字幕‘我们去[无法确认]。’改作陈述。"
+      },
+      {
+        "id": "S10",
+        "errors": [
+          "invented_fact"
+        ],
+        "note": "00:45–00:46 的 group ‘我们/We’保留；again 重新开始及提议 force 均失，字幕却断言‘回家/go home’，添加标注没有的目的地。"
+      },
+      {
+        "id": "S13",
+        "errors": [
+          "wrong_person"
+        ],
+        "note": "00:59–01:03 的 relation 应为‘和你’、time 为美好晚上、aspect 为已度过；‘大家/Everyone…看/see’换了人物并漏时态。"
+      },
+      {
+        "id": "S18",
+        "errors": [
+          "wrong_object"
+        ],
+        "note": "01:25–01:26 的 person 你、object 所穿鞋子、question 什么鞋均未保留；字幕‘衣服/clothes’把核心对象换成衣物。"
+      },
+      {
+        "id": "S20",
+        "errors": [
+          "invented_fact"
+        ],
+        "note": "01:36–01:38 的 pair 你俩被‘你/you’弱化，relation 缘分全失；字幕‘来多久/been here’加入来源没有的停留时长事实，未另猜恋爱。"
+      },
+      {
+        "id": "S23",
+        "errors": [
+          "aspect_flip"
+        ],
+        "note": "01:56–01:58 的 activity 看书保留，scarcity 没多少剩余时间却写成‘看完了/Finished reading’，把时间不足改成阅读完成；force 标点歧义不扣。"
+      }
+    ],
+    "high_confidence_errors": [],
+    "unit_semantic_scores": {
+      "S01": 0.2857142857142857,
+      "S02": 1.0,
+      "S03": 0.0,
+      "S04": 0.0,
+      "S05": 0.4166666666666667,
+      "S06": 0.2,
+      "S07": 0.3333333333333333,
+      "S08": 0.3,
+      "S09": 1.0,
+      "S10": 0.16666666666666666,
+      "S11": 0.5833333333333334,
+      "S12": 0.375,
+      "S13": 0.0,
+      "S14": 0.8,
+      "S15": 0.5,
+      "S16": 0.0,
+      "S17": 0.0,
+      "S18": 0.0,
+      "S19": 0.4,
+      "S20": 0.5714285714285714,
+      "S21": 0.6666666666666666,
+      "S22": 0.16666666666666666,
+      "S23": 0.5
+    }
+  },
+  "components": {
+    "meaning": 23.359,
+    "bilingual": 2.875,
+    "timing": 12.0,
+    "readability": 5.0,
+    "delivery": 5,
+    "calibration": 4.742
+  },
+  "inspection_limits": [
+    "无法直接听音或以正常速度连续观看；本片无音轨，实际使用全片每秒一帧有序时序图及五处每秒三至四帧的补充图，video_watched_in_full 因此为 false。",
+    "不具中国手语专家资格；语义评分依据 CE-CSL 作者中文句子与 gloss，并与实际画面时序核对，属于 annotation-relative 判定。",
+    "画面抽帧不能确定逐手势精确起止；alignment 依据字幕时间窗、镜头边界和观察到的动作时段判断，置信度低于完整连续观看。"
+  ],
+  "submission_unchanged": true
+}

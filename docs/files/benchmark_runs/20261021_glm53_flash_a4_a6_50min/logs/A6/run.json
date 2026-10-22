@@ -1,0 +1,26 @@
+{
+  "case": "A6",
+  "model": "glm-5.3-flash",
+  "reasoning_effort": "high",
+  "harness": "Codex CLI",
+  "budget_seconds": 3000,
+  "start_epoch": 1792585188.6478012,
+  "status": "completed",
+  "pid": 13430,
+  "request_max_retries": 2,
+  "stream_max_retries": 2,
+  "full_solver_restarts": 0,
+  "exit_code": 0,
+  "elapsed_seconds": 1799.662,
+  "wall_elapsed_seconds": 1799.662,
+  "usage_events": [
+    {
+      "input_tokens": 6335176,
+      "cached_input_tokens": 6112832,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 38212,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "candidate_unchanged": true
+}

@@ -1,0 +1,751 @@
+{
+  "case_id": "A4_CSL_BILINGUAL_v1",
+  "basis": "CE-CSL author-provided Chinese sentence/gloss annotations",
+  "english_status": "author-generated, alternatives accepted; not independently certified",
+  "expert_boundary_status": "not annotated; no millisecond sign-onset gold is claimed",
+  "source_sha256": "ea015efd424d5fa5a4bf1639ca84aadc136d12a550edd23b79954ffa8f9a4c51",
+  "duration": 120.199023,
+  "units": [
+    {
+      "id": "S01",
+      "start": 0,
+      "end": 5.066016,
+      "source_id": "dev-00057",
+      "source_file": "sources/video/dev/B/dev-00057.mp4",
+      "source_sha256": "32554f6f06d524108598650c6f2694197b69034da18e7ceebc91ffd0e169ac5a",
+      "signer": "B",
+      "zh_reference": "你今天没喝酒吧。",
+      "source_gloss": "你/今天/喝酒/没有2/是/。",
+      "source_note": "",
+      "en_reference": "You haven't had any alcohol today, have you?",
+      "slots": [
+        {
+          "id": "addressee",
+          "meaning": "对方/你；不能换成我",
+          "weight": 1
+        },
+        {
+          "id": "time",
+          "meaning": "今天",
+          "weight": 1
+        },
+        {
+          "id": "negation",
+          "meaning": "没有喝酒；不能变成喝了/禁止喝",
+          "weight": 3
+        },
+        {
+          "id": "force",
+          "meaning": "确认式询问；不能武断断言或命令",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S02",
+      "start": 5.566016,
+      "end": 8.466016,
+      "source_id": "dev-00214",
+      "source_file": "sources/video/dev/E/dev-00214.mp4",
+      "source_sha256": "de772635f6e50ceb0371beced7e211ab51fbd2bbd3835768be3f639c79cf7179",
+      "signer": "E",
+      "zh_reference": "我们去吃饭吧。",
+      "source_gloss": "我们/去/吃饭/。",
+      "source_note": "",
+      "en_reference": "Let's go and eat.",
+      "slots": [
+        {
+          "id": "group",
+          "meaning": "我们/包含表达者的共同提议",
+          "weight": 1
+        },
+        {
+          "id": "action",
+          "meaning": "去吃饭",
+          "weight": 2
+        },
+        {
+          "id": "force",
+          "meaning": "提议；不能变成已经吃完",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": false
+    },
+    {
+      "id": "S03",
+      "start": 8.966016,
+      "end": 12.866016,
+      "source_id": "dev-00114",
+      "source_file": "sources/video/dev/C/dev-00114.mp4",
+      "source_sha256": "7d07744da2e86923eb2646a133dc54809f501befdfeca749973f8e899378e80e",
+      "signer": "C",
+      "zh_reference": "你真的能自己来吗？",
+      "source_gloss": "你/自己/来/真2/？",
+      "source_note": "",
+      "en_reference": "Can you really come on your own?",
+      "slots": [
+        {
+          "id": "person",
+          "meaning": "你",
+          "weight": 1
+        },
+        {
+          "id": "ability",
+          "meaning": "能否自己/独自来",
+          "weight": 3
+        },
+        {
+          "id": "force",
+          "meaning": "询问并带确认/强调；不是命令或已发生",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S04",
+      "start": 13.366016,
+      "end": 18.432683,
+      "source_id": "dev-00374",
+      "source_file": "sources/video/dev/I/dev-00374.mp4",
+      "source_sha256": "00f3069bb3b3cfa9355bd750d7c6a1f9d7dd9a443a94ba3300bf2d5db8b3c4a9",
+      "signer": "I",
+      "zh_reference": "明年我就毕业了。",
+      "source_gloss": "明年/毕业/。",
+      "source_note": "明年",
+      "en_reference": "I'll graduate next year.",
+      "slots": [
+        {
+          "id": "time",
+          "meaning": "明年；不是今年/去年",
+          "weight": 3
+        },
+        {
+          "id": "person",
+          "meaning": "我",
+          "weight": 1
+        },
+        {
+          "id": "event",
+          "meaning": "毕业",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S05",
+      "start": 18.932683,
+      "end": 24.632683,
+      "source_id": "dev-00060",
+      "source_file": "sources/video/dev/B/dev-00060.mp4",
+      "source_sha256": "d74bed66ac75cb643ea49cd00cce49414b55253506346b47f48a8355b207d6db",
+      "signer": "B",
+      "zh_reference": "你们可以安静一下吗？",
+      "source_gloss": "你们/安静/可以/？",
+      "source_note": "",
+      "en_reference": "Could you all be quiet for a moment?",
+      "slots": [
+        {
+          "id": "plural",
+          "meaning": "你们；英语you不强制加all",
+          "weight": 1
+        },
+        {
+          "id": "action",
+          "meaning": "安静一下",
+          "weight": 2
+        },
+        {
+          "id": "force",
+          "meaning": "礼貌请求；不是对能力的陈述",
+          "weight": 3
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S06",
+      "start": 25.132683,
+      "end": 28.49935,
+      "source_id": "dev-00313",
+      "source_file": "sources/video/dev/G/dev-00313.mp4",
+      "source_sha256": "114ff6a26f72c6b312efb5c17b06c5e5fdfc1acf93599165b1442dcbe9ad056c",
+      "signer": "G",
+      "zh_reference": "我有一只宠物狗。",
+      "source_gloss": "我/有/狗1/一/。",
+      "source_note": "",
+      "en_reference": "I have a pet dog.",
+      "slots": [
+        {
+          "id": "owner",
+          "meaning": "我拥有",
+          "weight": 2
+        },
+        {
+          "id": "object",
+          "meaning": "宠物狗；不能换成猫",
+          "weight": 2
+        },
+        {
+          "id": "quantity",
+          "meaning": "一只；a dog可接受",
+          "weight": 1
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": false
+    },
+    {
+      "id": "S07",
+      "start": 28.99935,
+      "end": 33.232683,
+      "source_id": "dev-00211",
+      "source_file": "sources/video/dev/E/dev-00211.mp4",
+      "source_sha256": "c985033545a8b4f995a408423b40d11cecf17af34bd62a02df2d6f5f464a4c12",
+      "signer": "E",
+      "zh_reference": "我们什么时候去打篮球？",
+      "source_gloss": "我们/去/篮球/时间/什么/？",
+      "source_note": "",
+      "en_reference": "When are we going to play basketball?",
+      "slots": [
+        {
+          "id": "group",
+          "meaning": "我们",
+          "weight": 1
+        },
+        {
+          "id": "event",
+          "meaning": "去打篮球；不是足球",
+          "weight": 2
+        },
+        {
+          "id": "question",
+          "meaning": "询问时间；不能凭空补出时间",
+          "weight": 3
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S08",
+      "start": 33.732683,
+      "end": 39.032683,
+      "source_id": "dev-00059",
+      "source_file": "sources/video/dev/B/dev-00059.mp4",
+      "source_sha256": "68e9ab59fafb866c07d8f5df9195eebd6c502912d5e3242f918b7b44ff1bc0d6",
+      "signer": "B",
+      "zh_reference": "你们去干嘛了？",
+      "source_gloss": "你们/去/做/什么/？",
+      "source_note": "",
+      "en_reference": "What did you go and do?",
+      "slots": [
+        {
+          "id": "person",
+          "meaning": "你们；英语you可接受",
+          "weight": 1
+        },
+        {
+          "id": "question",
+          "meaning": "询问去做什么",
+          "weight": 2
+        },
+        {
+          "id": "aspect",
+          "meaning": "已去做过的事；非未来计划",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": false
+    },
+    {
+      "id": "S09",
+      "start": 39.532683,
+      "end": 43.832683,
+      "source_id": "dev-00110",
+      "source_file": "sources/video/dev/C/dev-00110.mp4",
+      "source_sha256": "fc1fa012f7dc1863de13a10aede4195c2c30c7840abd1cbbbfbe8d21a28147a6",
+      "signer": "C",
+      "zh_reference": "你的电话号码是多少？",
+      "source_gloss": "你/电话/号码/多少/？",
+      "source_note": "",
+      "en_reference": "What's your phone number?",
+      "slots": [
+        {
+          "id": "owner",
+          "meaning": "你的",
+          "weight": 1
+        },
+        {
+          "id": "object",
+          "meaning": "电话号码",
+          "weight": 2
+        },
+        {
+          "id": "question",
+          "meaning": "询问号码；不能给出虚构数字",
+          "weight": 3
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S10",
+      "start": 44.332683,
+      "end": 47.866016,
+      "source_id": "dev-00212",
+      "source_file": "sources/video/dev/E/dev-00212.mp4",
+      "source_sha256": "6f15e17517ece1dd63546aa38e50076865063121e7a40a0c7a4e1bcb4e65aceb",
+      "signer": "E",
+      "zh_reference": "我们重新开始吧。",
+      "source_gloss": "我们/再/新/开始/。",
+      "source_note": "",
+      "en_reference": "Let's start again.",
+      "slots": [
+        {
+          "id": "group",
+          "meaning": "我们/共同提议",
+          "weight": 1
+        },
+        {
+          "id": "again",
+          "meaning": "重新/再开始；不能丢掉重新",
+          "weight": 3
+        },
+        {
+          "id": "force",
+          "meaning": "提议；非已经开始",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S11",
+      "start": 48.366016,
+      "end": 53.366016,
+      "source_id": "dev-00061",
+      "source_file": "sources/video/dev/B/dev-00061.mp4",
+      "source_sha256": "4e4a6337f70ad6e33d0010d1221a7fb7c7c55dfe64d893b6924534e0bafdc833",
+      "signer": "B",
+      "zh_reference": "你们吃饭要吃面包吗？",
+      "source_gloss": "你们/吃饭/面包/要/？",
+      "source_note": "",
+      "en_reference": "Would you like bread with your meal?",
+      "slots": [
+        {
+          "id": "person",
+          "meaning": "你们/对方；英语you可接受",
+          "weight": 1
+        },
+        {
+          "id": "food",
+          "meaning": "吃饭与面包；不能换米饭或饮料",
+          "weight": 2
+        },
+        {
+          "id": "force",
+          "meaning": "询问是否要吃；不是要求必须吃",
+          "weight": 3
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S12",
+      "start": 53.866016,
+      "end": 57.899349,
+      "source_id": "dev-00369",
+      "source_file": "sources/video/dev/H/dev-00369.mp4",
+      "source_sha256": "79fdad1197ae049b04cccb9d7990576459dc35c908016146577da3e5dafbd2c6",
+      "signer": "H",
+      "zh_reference": "扔掉了。",
+      "source_gloss": "扔/。",
+      "source_note": "",
+      "en_reference": "It was thrown away.",
+      "slots": [
+        {
+          "id": "action",
+          "meaning": "扔掉",
+          "weight": 2
+        },
+        {
+          "id": "aspect",
+          "meaning": "已经/完成；不是叫人扔",
+          "weight": 3
+        },
+        {
+          "id": "underspecified",
+          "meaning": "未明确的人物、物品保持不特定；被扔掉了/扔了均可",
+          "weight": 3
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S13",
+      "start": 58.399349,
+      "end": 64.232682,
+      "source_id": "dev-00164",
+      "source_file": "sources/video/dev/D/dev-00164.mp4",
+      "source_sha256": "bd2bcbe35bf5e33f13d6b4f55684daf78849171abc0bce034bf5d3ec4206ad4e",
+      "signer": "D",
+      "zh_reference": "和你度过了一个美好的晚上。",
+      "source_gloss": "和/你/过/一/美好/晚/。",
+      "source_note": "",
+      "en_reference": "I spent a lovely evening with you.",
+      "slots": [
+        {
+          "id": "relation",
+          "meaning": "与你一起度过",
+          "weight": 2
+        },
+        {
+          "id": "time",
+          "meaning": "美好的晚上；不是明早",
+          "weight": 2
+        },
+        {
+          "id": "aspect",
+          "meaning": "已发生；不是邀请",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": false
+    },
+    {
+      "id": "S14",
+      "start": 64.732682,
+      "end": 68.666015,
+      "source_id": "dev-00062",
+      "source_file": "sources/video/dev/B/dev-00062.mp4",
+      "source_sha256": "2bba3d4c11f6496ba03e9950e70cb711f07f214a5cb85fc725dfab476327958b",
+      "signer": "B",
+      "zh_reference": "你们喝啤酒吗？",
+      "source_gloss": "你们/啤酒/喝/？",
+      "source_note": "",
+      "en_reference": "Do you drink beer?",
+      "slots": [
+        {
+          "id": "person",
+          "meaning": "你们/对方；英语you可接受",
+          "weight": 1
+        },
+        {
+          "id": "drink",
+          "meaning": "啤酒；不能只剩泛化饮料",
+          "weight": 2
+        },
+        {
+          "id": "question",
+          "meaning": "问句而非断言；Do you/Would you like均可由画面仲裁",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": false
+    },
+    {
+      "id": "S15",
+      "start": 69.166015,
+      "end": 72.899348,
+      "source_id": "dev-00209",
+      "source_file": "sources/video/dev/E/dev-00209.mp4",
+      "source_sha256": "90979754a30dacf42ab51ce6ea0f47863377b7622c7ce981a44054ac18396ece",
+      "signer": "E",
+      "zh_reference": "我们一起照张相吧。",
+      "source_gloss": "我们/一起/拍照/。",
+      "source_note": "",
+      "en_reference": "Let's take a photo together.",
+      "slots": [
+        {
+          "id": "group",
+          "meaning": "我们一起",
+          "weight": 2
+        },
+        {
+          "id": "action",
+          "meaning": "照相/拍照",
+          "weight": 2
+        },
+        {
+          "id": "force",
+          "meaning": "提议；非过去已拍",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": false
+    },
+    {
+      "id": "S16",
+      "start": 73.399348,
+      "end": 78.232681,
+      "source_id": "dev-00005",
+      "source_file": "sources/video/dev/A/dev-00005.mp4",
+      "source_sha256": "6e7660f6ab5755c662484d739b9f81aa5eaf572649b65cf162a6627556420bb4",
+      "signer": "A",
+      "zh_reference": "上课的时间还很长。",
+      "source_gloss": "上课/时间/还/长/。",
+      "source_note": "",
+      "en_reference": "There's still a long time left in class.",
+      "slots": [
+        {
+          "id": "context",
+          "meaning": "上课/课程的时间",
+          "weight": 2
+        },
+        {
+          "id": "duration",
+          "meaning": "还很长/还有很长时间",
+          "weight": 2
+        },
+        {
+          "id": "scope",
+          "meaning": "不是过去上了很久；课时剩余或距上课解释争议须仲裁",
+          "weight": 1
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": false
+    },
+    {
+      "id": "S17",
+      "start": 78.732681,
+      "end": 83.866014,
+      "source_id": "dev-00475",
+      "source_file": "sources/video/dev/L/dev-00475.mp4",
+      "source_sha256": "743fcc0af1b9beba22e831fa0dec3f2e6037dec09580dd217b2a3a4fd8f0e8cb",
+      "signer": "L",
+      "zh_reference": "这把游戏你赢了。",
+      "source_gloss": "游戏/你/赢2/。",
+      "source_note": "",
+      "en_reference": "You won this round.",
+      "slots": [
+        {
+          "id": "winner",
+          "meaning": "你赢；不是我赢/你输",
+          "weight": 3
+        },
+        {
+          "id": "scope",
+          "meaning": "这把/这一局游戏",
+          "weight": 2
+        },
+        {
+          "id": "aspect",
+          "meaning": "已经赢；非祝愿或预测",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S18",
+      "start": 84.366014,
+      "end": 88.432681,
+      "source_id": "dev-00115",
+      "source_file": "sources/video/dev/C/dev-00115.mp4",
+      "source_sha256": "7dd0443ae64f5fc0581790d7ba55cd122058ffd25701e2eb73cbcd2e7ab442a7",
+      "signer": "C",
+      "zh_reference": "你穿的是什么鞋子？",
+      "source_gloss": "你/穿/鞋/什么/？",
+      "source_note": "",
+      "en_reference": "What kind of shoes are you wearing?",
+      "slots": [
+        {
+          "id": "person",
+          "meaning": "你",
+          "weight": 1
+        },
+        {
+          "id": "object",
+          "meaning": "正在穿的鞋",
+          "weight": 2
+        },
+        {
+          "id": "question",
+          "meaning": "询问哪种/什么鞋；不能补品牌颜色",
+          "weight": 3
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S19",
+      "start": 88.932681,
+      "end": 93.199348,
+      "source_id": "dev-00210",
+      "source_file": "sources/video/dev/E/dev-00210.mp4",
+      "source_sha256": "a15e3781a3771862beb3dc484995bd153908f9f752a527f1a91c4d5e9eceb971",
+      "signer": "E",
+      "zh_reference": "我们上去就好了。",
+      "source_gloss": "我们/上/去/好/。",
+      "source_note": "",
+      "en_reference": "We just need to go up.",
+      "slots": [
+        {
+          "id": "group",
+          "meaning": "我们",
+          "weight": 1
+        },
+        {
+          "id": "direction",
+          "meaning": "上去/向上去",
+          "weight": 2
+        },
+        {
+          "id": "modality",
+          "meaning": "上去就好/即可；不硬判反事实或过去时",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": false
+    },
+    {
+      "id": "S20",
+      "start": 93.699348,
+      "end": 99.432356,
+      "source_id": "dev-00058",
+      "source_file": "sources/video/dev/B/dev-00058.mp4",
+      "source_sha256": "291ff9a49a79598b642d70cc3e0a72ea6798c7fe4301b16fe439cee427dcc311",
+      "signer": "B",
+      "zh_reference": "你俩真有缘分。",
+      "source_gloss": "你俩/缘分/有/。",
+      "source_note": "",
+      "en_reference": "You two really have a special connection.",
+      "slots": [
+        {
+          "id": "pair",
+          "meaning": "你俩/你们两个",
+          "weight": 2
+        },
+        {
+          "id": "relation",
+          "meaning": "有缘分/有特殊缘分",
+          "weight": 2
+        },
+        {
+          "id": "restraint",
+          "meaning": "不能断定结婚、恋爱或血缘关系",
+          "weight": 3
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S21",
+      "start": 99.932356,
+      "end": 107.599023,
+      "source_id": "dev-00422",
+      "source_file": "sources/video/dev/K/dev-00422.mp4",
+      "source_sha256": "2a0182d69a92f7b2a8eaadf7c3558d9918fb1d76181d6608b219e8dff81c1ec3",
+      "signer": "K",
+      "zh_reference": "请问卧室在哪里？",
+      "source_gloss": "卧室/在/哪/？",
+      "source_note": "",
+      "en_reference": "Excuse me, where is the bedroom?",
+      "slots": [
+        {
+          "id": "politeness",
+          "meaning": "请问/礼貌询问",
+          "weight": 1
+        },
+        {
+          "id": "place",
+          "meaning": "卧室；非洗手间",
+          "weight": 3
+        },
+        {
+          "id": "question",
+          "meaning": "问在哪里；不能补指路方向",
+          "weight": 2
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S22",
+      "start": 108.099023,
+      "end": 114.032356,
+      "source_id": "dev-00263",
+      "source_file": "sources/video/dev/F/dev-00263.mp4",
+      "source_sha256": "ca4f1405345fa245367c771b0eff7da39d8e9099ada811bfbea2cbd66288eb9d",
+      "signer": "F",
+      "zh_reference": "我回忆起了小时候。",
+      "source_gloss": "我/想/小孩/时候/。",
+      "source_note": "",
+      "en_reference": "I was reminded of my childhood.",
+      "slots": [
+        {
+          "id": "person",
+          "meaning": "我",
+          "weight": 1
+        },
+        {
+          "id": "memory",
+          "meaning": "回忆起/想起",
+          "weight": 2
+        },
+        {
+          "id": "time",
+          "meaning": "小时候/童年；不是回家花了几小时",
+          "weight": 3
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    },
+    {
+      "id": "S23",
+      "start": 114.532356,
+      "end": 120.199023,
+      "source_id": "dev-00385",
+      "source_file": "sources/video/dev/J/dev-00385.mp4",
+      "source_sha256": "f85db532d0903b4a13682fab818ccad7dfca8c27b06efb8dfb0325a402f19494",
+      "signer": "J",
+      "zh_reference": "没多少时间看书了？",
+      "source_gloss": "书/看1/时间/没有/？",
+      "source_note": "",
+      "en_reference": "There's not much time left to read.",
+      "slots": [
+        {
+          "id": "activity",
+          "meaning": "看书/阅读",
+          "weight": 2
+        },
+        {
+          "id": "scarcity",
+          "meaning": "没多少时间/剩余很少；不是完全没时间或很多时间",
+          "weight": 3
+        },
+        {
+          "id": "force",
+          "meaning": "原标注问号有歧义；疑问或感叹/陈述不单独扣分",
+          "weight": 1
+        }
+      ],
+      "timing_basis": "whole source clip boundary; not an expert sign onset/offset",
+      "critical": true
+    }
+  ]
+}
