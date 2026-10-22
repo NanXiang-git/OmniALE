@@ -1,0 +1,79 @@
+{
+  "components": {
+    "pitch_global_f1": 3.564843269821758,
+    "pitch_time_macro_f1": 1.3212206087591538,
+    "pitch_register_macro_f1": 1.2230462570136482,
+    "rhythm_strict_f1": 2.5076828518746157,
+    "midi_xml_consistency": 10.0,
+    "layout": 0,
+    "notation": 3.75,
+    "fidelity": 0
+  },
+  "raw_score": 22.366792987469175,
+  "delivery_level": "unusable_or_inconsistent",
+  "delivery_label": "不可用或实质不一致",
+  "delivery_factor": 0.25,
+  "after_delivery_factor": 5.591698246867294,
+  "acceptance_checks": {
+    "delivery_ready": false,
+    "pitch_precision": false,
+    "pitch_recall": false,
+    "strict_f1": false,
+    "time_coverage": false,
+    "register_coverage": false,
+    "midi_consistency": true,
+    "visual_minimum": false
+  },
+  "acceptance_cap_applied": false,
+  "accepted": false,
+  "final_score": 5.591698,
+  "unrounded_final_score": 5.591698246867294,
+  "pitch_precision": 0.2767175572519084,
+  "pitch_recall": 0.1314596554850408,
+  "id": "A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min",
+  "case": "A6",
+  "model": "glm-5.3-flash",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": 18.57040220112151,
+  "old_scorepath": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A6/score.json",
+  "submission": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6",
+  "submission_sha256": {
+    "alignment.json": "031a9d3f8005ca91bae6fa5106b8cbd9385bb457e0ba9d504ba4ffcd696fbd50",
+    "notes.md": "950b28b6c07527ba890d86889b91f394b3431af7762c7fd9535a51472159ee2a",
+    "score.mid": "5bdc73e759ebb6cbac5be41a277c9bd02420cf8de1169f976a139652382814db",
+    "score.musicxml": "453263689347b84a27eb2169faf8ce608cfbd2675f688be839d33e83d0124e7a",
+    "score.pdf": "e6093cf526b8c14bb1dba14ecc4ea3d014bb50e6b4567c214543ab38e243ddc9"
+  },
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/technical.json",
+  "review": {
+    "layout": 0,
+    "notation": 0.25,
+    "fidelity": 0,
+    "delivery_level": "unusable_or_inconsistent",
+    "reasons": [
+      "PDF全部3页右侧谱表之外仍有音符，页首与右边界裁切；第1页第3–4小节、第2页密集段及第3页末段严重叠压，无法可靠读谱。",
+      "XML有声部和休止可供重建，但PDF普遍使用空心圆、单斜旗，未表达源XML的十六/三十二分时值和休止结构；仅给予可恢复结构0.25。",
+      "第1小节和第29、41小节的时值、休止、双梁在PDF中系统性改变，忠实度0；×0.25。"
+    ],
+    "prior_review": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A6/score.json",
+    "confidence": {
+      "layout": "high",
+      "notation": "medium",
+      "fidelity": "high"
+    }
+  },
+  "evidence_pages": [
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-1.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-2.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-3.png"
+  ],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": []
+}

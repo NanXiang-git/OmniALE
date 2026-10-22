@@ -1,0 +1,27 @@
+{
+  "final_score": null,
+  "delivery_label": "未评分",
+  "accepted": false,
+  "id": "A6_k3_missing8",
+  "case": "A6",
+  "model": "k3",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": null,
+  "old_scorepath": "benchmark_runs/20261021_missing8_high40/grades/A6_k3/score.json",
+  "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_k3",
+  "submission_sha256": {},
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_missing8/technical.json",
+  "review": {
+    "reason": "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
+  },
+  "evidence_pages": [],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": []
+}

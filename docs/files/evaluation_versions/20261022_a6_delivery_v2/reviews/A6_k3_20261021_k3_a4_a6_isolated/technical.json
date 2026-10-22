@@ -1,0 +1,111 @@
+{
+  "rubric_version": "1.0",
+  "status": "automatic_complete_missing_pdf",
+  "automatic_score": 0.0,
+  "automatic_max": 90,
+  "pending_points": 0,
+  "final_score": 0.0,
+  "points": {
+    "pitch_global_f1": 0.0,
+    "pitch_time_macro_f1": 0.0,
+    "pitch_register_macro_f1": 0.0,
+    "rhythm_strict_f1": 0.0,
+    "xml_valid_nonempty": 0.0,
+    "midi_xml_consistency": 0.0,
+    "notes_present": 0.0,
+    "notation_review": 0
+  },
+  "errors": [
+    "MusicXML: missing or oversized: score.musicxml",
+    "MIDI: missing or oversized: score.mid",
+    "Alignment: No valid alignment.json or MIDI tempo map"
+  ],
+  "mapping_method": null,
+  "consistency_f1": 0.0,
+  "xml_note_count": 0,
+  "midi_note_count": 0,
+  "metrics": {
+    "values": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "points": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "note_points": 0.0,
+    "predicted_count": 0,
+    "reference_count": 1103,
+    "coarse_tp": 0,
+    "strict_tp": 0,
+    "false_positive": 0,
+    "false_negative": 1103,
+    "time_bins": [
+      {
+        "bin": 0,
+        "predicted": 0,
+        "reference": 147,
+        "f1": 0.0
+      },
+      {
+        "bin": 1,
+        "predicted": 0,
+        "reference": 131,
+        "f1": 0.0
+      },
+      {
+        "bin": 2,
+        "predicted": 0,
+        "reference": 216,
+        "f1": 0.0
+      },
+      {
+        "bin": 3,
+        "predicted": 0,
+        "reference": 240,
+        "f1": 0.0
+      },
+      {
+        "bin": 4,
+        "predicted": 0,
+        "reference": 170,
+        "f1": 0.0
+      },
+      {
+        "bin": 5,
+        "predicted": 0,
+        "reference": 199,
+        "f1": 0.0
+      }
+    ],
+    "register_bins": [
+      {
+        "bin": 0,
+        "predicted": 0,
+        "reference": 305,
+        "f1": 0.0
+      },
+      {
+        "bin": 1,
+        "predicted": 0,
+        "reference": 388,
+        "f1": 0.0
+      },
+      {
+        "bin": 2,
+        "predicted": 0,
+        "reference": 410,
+        "f1": 0.0
+      }
+    ],
+    "matched_pairs": []
+  },
+  "predicted_events": [],
+  "submission_sha256": {},
+  "truth_sha256": "066fd1fa180e6f444992754dfc6955a1e6dc54aff85afbeba6ba570e0bec8a1d",
+  "rubric_sha256": "10b11ed8f27bb62f82c2ca6df895c3572594f26fc97f8ab9ed8274454c94e565"
+}

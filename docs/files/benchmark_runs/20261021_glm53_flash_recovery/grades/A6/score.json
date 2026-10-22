@@ -1,0 +1,88 @@
+{
+  "id": "A6",
+  "case": "A6",
+  "model": "glm-5.3-flash",
+  "review_model": null,
+  "reasoning_effort": "high",
+  "formal_total": 0.0,
+  "solver_status": "budget_timeout",
+  "review_status": "skipped_empty_submission",
+  "score_type": "formal_native_missing_delivery",
+  "confirmed_proxy_points": 0.0,
+  "pending_weight": 0,
+  "uncapped_proxy_interval": [
+    0.0,
+    0.0
+  ],
+  "units": [
+    {
+      "id": "automatic",
+      "weight": 90,
+      "points": 0.0,
+      "evidence": "technical.json"
+    },
+    {
+      "id": "layout_points",
+      "weight": 4,
+      "points": 0,
+      "evidence": []
+    },
+    {
+      "id": "notation_usability_points",
+      "weight": 3,
+      "points": 0,
+      "evidence": []
+    },
+    {
+      "id": "pdf_xml_fidelity_points",
+      "weight": 3,
+      "points": 0,
+      "evidence": []
+    }
+  ],
+  "cap_candidates": [],
+  "caps_applied": [],
+  "errors": [
+    "Review not completed; any draft ratings excluded."
+  ],
+  "inspection_limits": [],
+  "limitations": [
+    "Proxy interval is unknown-item bookkeeping, not a formal score or confidence interval.",
+    "Original formal prerequisites and caps preserved; unverified caps are not silently cleared.",
+    "No direct listening or continuous video certification.",
+    "答题会话未提交任何文件；仅按原生硬约束记录交付失败，没有调用LLM judge，未把该情况自动归为API故障。"
+  ],
+  "submission_unchanged": true,
+  "delivery_failed": true,
+  "conservative_total": 0.0,
+  "checklist": [
+    {
+      "id": "automatic",
+      "weight": 90,
+      "points": 0.0,
+      "evidence": "technical.json"
+    },
+    {
+      "id": "layout_points",
+      "weight": 4,
+      "points": 0,
+      "evidence": []
+    },
+    {
+      "id": "notation_usability_points",
+      "weight": 3,
+      "points": 0,
+      "evidence": []
+    },
+    {
+      "id": "pdf_xml_fidelity_points",
+      "weight": 3,
+      "points": 0,
+      "evidence": []
+    }
+  ],
+  "minor_issues": [
+    "40分钟预算耗尽，未提交乐谱、MIDI、PDF及说明。"
+  ],
+  "major_issues": []
+}

@@ -1,0 +1,86 @@
+{
+  "components": {
+    "pitch_global_f1": 2.0107719928186714,
+    "pitch_time_macro_f1": 0.7628914043148654,
+    "pitch_register_macro_f1": 0.7281652137816522,
+    "rhythm_strict_f1": 1.0233393177737882,
+    "midi_xml_consistency": 0.48888888888888893,
+    "layout": 3.75,
+    "notation": 0,
+    "fidelity": 0
+  },
+  "raw_score": 8.764056817577867,
+  "delivery_level": "unusable_or_inconsistent",
+  "delivery_label": "不可用或实质不一致",
+  "delivery_factor": 0.25,
+  "after_delivery_factor": 2.1910142043944667,
+  "acceptance_checks": {
+    "delivery_ready": false,
+    "pitch_precision": false,
+    "pitch_recall": false,
+    "strict_f1": false,
+    "time_coverage": false,
+    "register_coverage": false,
+    "midi_consistency": false,
+    "visual_minimum": false
+  },
+  "acceptance_cap_applied": false,
+  "accepted": false,
+  "final_score": 2.191014,
+  "unrounded_final_score": 2.1910142043944667,
+  "pitch_precision": 0.09955555555555555,
+  "pitch_recall": 0.10154125113327289,
+  "id": "A6_gpt-6-luna_missing8",
+  "case": "A6",
+  "model": "gpt-6-luna",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": 11.424112,
+  "old_scorepath": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-luna/score.json",
+  "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna",
+  "submission_sha256": {
+    "alignment.json": "ef97bd6eaacb589fcd26f09ac1b82fca401c9a2508d2755e22f78a3f85ba4f05",
+    "notes.md": "923aae4f537d26abfaa2bd28426504a39fbb5db672140c4a46d8d7de56524d86",
+    "score.mid": "ec416fb0e175d49c71522fa53aef4f4c28caa1b3106eb51a825dd7fd915cea11",
+    "score.musicxml": "6394d1d0817d814f30c1e0fd4cc23cceb7118499cdb42b27a789fc1a670be166",
+    "score.pdf": "73d3433c5b374497e9a8c5e5d0d2ff624cf1d005c13fbba1e25de5176ee27e14"
+  },
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/technical.json",
+  "review": {
+    "layout": 0.25,
+    "notation": 0,
+    "fidelity": 0,
+    "delivery_level": "unusable_or_inconsistent",
+    "reasons": [
+      "PDF 第1–10页仅以G/F字母标示谱表，没有标准谱号、拍号与应有变音记号；第8–9页音群明显堆叠，只有部分位置可辨。",
+      "XML含1125个音符、无显式休止符；PDF用音符散点和空白间隔代替可辨拍位，不能形成连贯可演奏结构。",
+      "源XML中有升降音高，但PDF系统性未呈现变音，属于关键音乐语义丢失，忠实度0；MIDI/XML一致性仅约4.89%，亦触发×0.25档。"
+    ],
+    "prior_review": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-luna/score.json",
+    "confidence": {
+      "layout": "high",
+      "notation": "high",
+      "fidelity": "high"
+    }
+  },
+  "evidence_pages": [
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-01.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-02.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-03.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-04.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-05.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-06.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-07.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-08.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-09.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-10.png"
+  ],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": []
+}

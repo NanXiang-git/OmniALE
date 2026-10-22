@@ -1,0 +1,20 @@
+{
+  "case": "A6",
+  "formal_total": null,
+  "conservative_total": null,
+  "pending_weight": 100,
+  "score_type": "infrastructure_failure_no_submission",
+  "review_status": "not_invoked",
+  "limitations": [
+    "API/process failure with empty submission; not an ability-zero score.",
+    "代理并发/排队时间计入40分钟；失败和超时不能单独用于推断模型能力或题目难度。",
+    "无交付物可供内容判断，未调用付费judge。具体服务错误见infrastructure_evidence.json。"
+  ],
+  "model": "glm-5.3-flash",
+  "solver_status": "process_failed",
+  "units": [],
+  "checklist": [],
+  "major_issues": [],
+  "minor_issues": [],
+  "infrastructure_evidence": "infrastructure_evidence.json"
+}

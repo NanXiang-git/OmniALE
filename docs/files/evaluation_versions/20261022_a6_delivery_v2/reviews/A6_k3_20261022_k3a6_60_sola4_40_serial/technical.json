@@ -1,0 +1,113 @@
+{
+  "rubric_version": "1.0",
+  "status": "automatic_complete_missing_pdf",
+  "automatic_score": 4.0,
+  "automatic_max": 90,
+  "pending_points": 0,
+  "final_score": 4.0,
+  "points": {
+    "pitch_global_f1": 0.0,
+    "pitch_time_macro_f1": 0.0,
+    "pitch_register_macro_f1": 0.0,
+    "rhythm_strict_f1": 0.0,
+    "xml_valid_nonempty": 1.0,
+    "midi_xml_consistency": 3.0,
+    "notes_present": 0.0,
+    "notation_review": 0
+  },
+  "errors": [
+    "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+  ],
+  "mapping_method": null,
+  "consistency_f1": 1.0,
+  "xml_note_count": 733,
+  "midi_note_count": 733,
+  "metrics": {
+    "values": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "points": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "note_points": 0.0,
+    "predicted_count": 0,
+    "reference_count": 1103,
+    "coarse_tp": 0,
+    "strict_tp": 0,
+    "false_positive": 0,
+    "false_negative": 1103,
+    "time_bins": [
+      {
+        "bin": 0,
+        "predicted": 0,
+        "reference": 147,
+        "f1": 0.0
+      },
+      {
+        "bin": 1,
+        "predicted": 0,
+        "reference": 131,
+        "f1": 0.0
+      },
+      {
+        "bin": 2,
+        "predicted": 0,
+        "reference": 216,
+        "f1": 0.0
+      },
+      {
+        "bin": 3,
+        "predicted": 0,
+        "reference": 240,
+        "f1": 0.0
+      },
+      {
+        "bin": 4,
+        "predicted": 0,
+        "reference": 170,
+        "f1": 0.0
+      },
+      {
+        "bin": 5,
+        "predicted": 0,
+        "reference": 199,
+        "f1": 0.0
+      }
+    ],
+    "register_bins": [
+      {
+        "bin": 0,
+        "predicted": 0,
+        "reference": 305,
+        "f1": 0.0
+      },
+      {
+        "bin": 1,
+        "predicted": 0,
+        "reference": 388,
+        "f1": 0.0
+      },
+      {
+        "bin": 2,
+        "predicted": 0,
+        "reference": 410,
+        "f1": 0.0
+      }
+    ],
+    "matched_pairs": []
+  },
+  "predicted_events": [],
+  "submission_sha256": {
+    "alignment.json": "18bcc3b394edeb07c24685d589f63d0aeddc06c0271bf3160b3edd9d28de34ca",
+    "score.mid": "5ddfad6b8ce319dba6dc8276ab5561d908d66a387e3c149517d625729a1e8fdd",
+    "score.musicxml": "c1700b5d4af1f776923562f52538273d8a459f0b2d2ad54110bdc79a6b826acf"
+  },
+  "truth_sha256": "066fd1fa180e6f444992754dfc6955a1e6dc54aff85afbeba6ba570e0bec8a1d",
+  "rubric_sha256": "10b11ed8f27bb62f82c2ca6df895c3572594f26fc97f8ab9ed8274454c94e565"
+}

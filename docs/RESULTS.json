@@ -2009,173 +2009,97 @@
     "elapsed_seconds": 1800.58,
     "reasoning_effort": "medium",
     "runpath": "benchmark_runs/20261020_a6_piano_sol/logs/solver/run.json",
-    "scorepath": "benchmark_runs/20261020_a6_piano_sol/SCORE.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/score.json",
     "submission": "benchmark_runs/20261020_a6_piano_sol/submission",
-    "score": 48.40855272829024,
+    "score": 12.822038,
     "score_detail": {
+      "components": {
+        "pitch_global_f1": 10.157694399129962,
+        "pitch_time_macro_f1": 3.8913535663297383,
+        "pitch_register_macro_f1": 3.703896152899665,
+        "rhythm_strict_f1": 4.78520935290919,
+        "midi_xml_consistency": 10.0,
+        "layout": 11.25,
+        "notation": 3.75,
+        "fidelity": 3.75
+      },
+      "raw_score": 51.28815347126856,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 12.82203836781714,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 12.822038,
+      "unrounded_final_score": 12.82203836781714,
+      "pitch_precision": 0.6345108695652174,
+      "pitch_recall": 0.42339075249320035,
+      "id": "A6_gpt-6-sol_historical",
       "case": "A6",
       "model": "gpt-6-sol",
-      "provider": "nju",
-      "assessment": "frozen_objective_note_metrics_plus_single_model_notation_review",
-      "automatic_score": 41.40855272829024,
-      "automatic_max": 90,
-      "review_score": 7.0,
-      "review_max": 10,
-      "final_score": 48.40855272829024,
-      "points": {
-        "pitch_global_f1": 15.236541598694943,
-        "pitch_time_macro_f1": 7.782707132659477,
-        "pitch_register_macro_f1": 7.40779230579933,
-        "rhythm_strict_f1": 5.981511691136488,
-        "xml_valid_nonempty": 1.0,
-        "midi_xml_consistency": 3.0,
-        "notes_present": 1.0,
-        "notation_review": 7.0,
-        "layout_points": 3.5,
-        "notation_usability_points": 1.0,
-        "pdf_xml_fidelity_points": 2.5
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 48.40855272829024,
+      "old_scorepath": "benchmark_runs/20261020_a6_piano_sol/SCORE.json",
+      "submission": "benchmark_runs/20261020_a6_piano_sol/submission",
+      "submission_sha256": {
+        "notes.md": "6e8bd2f5a41892aa5728bdb8ac6fb4ef50accedf7cb1d623a02d22e6b45a6e5d",
+        "score.mid": "889460a5a46fc277252041bc1932f88f376f17f34c4d1b1a25bcbe873b268c08",
+        "score.musicxml": "391328f9f35877d57cb09bd889ef44164058d4ccddae13e1691ac8f1c82b89e7",
+        "score.pdf": "2bc06f44ad8751782f54337a4229905f8b82fcd564da0014a9a9cb03a9a541bb"
       },
-      "solver_run": {
-        "model": "gpt-6-sol",
-        "provider": "nju",
-        "reasoning_effort": "medium",
-        "status": "budget_timeout",
-        "budget_seconds": 1800,
-        "start_utc": "2026-10-20T10:07:46.206262+00:00",
-        "deadline_epoch": 1792492666.2062585,
-        "observed_clock_gaps": [],
-        "automatic_retries": 0,
-        "pid": 47996,
-        "exit_code": 1,
-        "elapsed_seconds": 1800.58,
-        "end_utc": "2026-10-20T10:37:46.781442+00:00",
-        "usage_events": []
-      },
-      "review_run": {
-        "model": "gpt-6-astra",
-        "provider": "nju",
-        "reasoning_effort": "medium",
-        "status": "completed",
-        "budget_seconds": 600,
-        "start_utc": "2026-10-20T10:37:58.009259+00:00",
-        "deadline_epoch": 1792493278.0092597,
-        "observed_clock_gaps": [],
-        "automatic_retries": 0,
-        "pid": 54996,
-        "exit_code": 0,
-        "elapsed_seconds": 588.37,
-        "end_utc": "2026-10-20T10:47:46.379959+00:00",
-        "usage_events": [
-          {
-            "input_tokens": 647986,
-            "cached_input_tokens": 578304,
-            "cache_write_input_tokens": 0,
-            "output_tokens": 6426,
-            "reasoning_output_tokens": 640
-          }
-        ]
-      },
-      "review_errors": [],
-      "note_metrics": {
-        "reference_count": 1103,
-        "predicted_count": 736,
-        "coarse_tp": 467,
-        "strict_tp": 220,
-        "false_positive": 269,
-        "false_negative": 636,
-        "values": {
-          "pitch_global_f1": 0.5078847199564981,
-          "pitch_time_macro_f1": 0.5188471421772984,
-          "pitch_register_macro_f1": 0.493852820386622,
-          "rhythm_strict_f1": 0.2392604676454595
-        },
-        "time_bins": [
-          {
-            "bin": 0,
-            "predicted": 96,
-            "reference": 147,
-            "f1": 0.6172839506172839
-          },
-          {
-            "bin": 1,
-            "predicted": 99,
-            "reference": 131,
-            "f1": 0.6217391304347826
-          },
-          {
-            "bin": 2,
-            "predicted": 135,
-            "reference": 216,
-            "f1": 0.4928774928774929
-          },
-          {
-            "bin": 3,
-            "predicted": 123,
-            "reference": 240,
-            "f1": 0.4820936639118457
-          },
-          {
-            "bin": 4,
-            "predicted": 164,
-            "reference": 170,
-            "f1": 0.4431137724550898
-          },
-          {
-            "bin": 5,
-            "predicted": 119,
-            "reference": 199,
-            "f1": 0.4559748427672956
-          }
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/technical.json",
+      "review": {
+        "layout": 0.75,
+        "notation": 0.25,
+        "fidelity": 0.75,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF全部3页主要符号可见，密集段需放大，速度节拍单位有缺字，排版0.75。",
+          "原XML全部131个休止均设置print-object=no；第1小节及第8–10小节等只能看到空白，不能读出准确等待时值。新规则把系统性隐藏关键休止归为不可直接演奏，记谱0.25、×0.25。",
+          "源XML本身隐藏休止，PDF沿用了这些指令，不把同一缺陷再当作PDF/XML不同；按旧独立逐系统证据与本次XML核对，主要内容对应，仅速度单位等局部丢失，忠实度0.75。"
         ],
-        "register_bins": [
-          {
-            "bin": 0,
-            "predicted": 165,
-            "reference": 305,
-            "f1": 0.39574468085106385
-          },
-          {
-            "bin": 1,
-            "predicted": 359,
-            "reference": 388,
-            "f1": 0.5809906291834003
-          },
-          {
-            "bin": 2,
-            "predicted": 212,
-            "reference": 410,
-            "f1": 0.5048231511254019
-          }
-        ]
+        "prior_review": "benchmark_runs/20261020_a6_piano_sol/review/review.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "high",
+          "fidelity": "medium"
+        }
       },
-      "limitations": [
-        "Public source; pretraining memorization cannot be excluded",
-        "One API gpt-6-sol attempt, 30-minute budget, offline generic tools without pretrained transcription weights",
-        "Notation reviewed once by API gpt-6-astra; same model authored rubric in a separate session",
-        "No expert musician certification; pitch/onset score is not complete musical equivalence"
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-2.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-3.png"
       ],
-      "automatic_metrics": {
-        "predicted_count": 736,
-        "reference_count": 1103,
-        "coarse_tp": 467,
-        "strict_tp": 220,
-        "false_positive": 269,
-        "false_negative": 636,
-        "precision_200ms": 0.6345108695652174,
-        "recall_200ms": 0.42339075249320035
-      }
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
     },
     "reasons": [
-      "答题达到该次预算上限，按截止时保存的交付评分；预算超时与内容得分分别记录，不能仅凭超时断言模型能力。",
-      "原自动评分41.408553/90，谱面评审7/10。",
-      "谱面存在隐藏休止、碎拍和速度文字显示问题；音符起音准确性是主要失分来源。",
-      "200ms同音高起音匹配：467/736个预测、1103个参考；未匹配预测269，未匹配参考636。不将全部未匹配一概解释为漏音。"
+      "v2最终分 12.822038；旧v1分数 48.40855272829024 仅作历史对照。",
+      "PDF全部3页主要符号可见，密集段需放大，速度节拍单位有缺字，排版0.75。",
+      "原XML全部131个休止均设置print-object=no；第1小节及第8–10小节等只能看到空白，不能读出准确等待时值。新规则把系统性隐藏关键休止归为不可直接演奏，记谱0.25、×0.25。",
+      "源XML本身隐藏休止，PDF沿用了这些指令，不把同一缺陷再当作PDF/XML不同；按旧独立逐系统证据与本次XML核对，主要内容对应，仅速度单位等局部丢失，忠实度0.75。"
     ],
     "limits": [
-      "Public source; pretraining memorization cannot be excluded",
-      "One API gpt-6-sol attempt, 30-minute budget, offline generic tools without pretrained transcription weights",
-      "Notation reviewed once by API gpt-6-astra; same model authored rubric in a separate session",
-      "No expert musician certification; pitch/onset score is not complete musical equivalence"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [],
     "files": [
@@ -2599,7 +2523,10 @@
         "type": "image",
         "path": "previews/A6_gpt-6-sol_historical/page-3.png"
       }
-    ]
+    ],
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "A6 v2 可用交付复评（事后规则）"
   },
   {
     "id": "A4_gpt-6-luna_missing8",
@@ -3262,199 +3189,101 @@
     "elapsed_seconds": 1127.222623685,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_missing8_high40/logs/A6_gpt-6-astra/run.json",
-    "scorepath": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-astra/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/score.json",
     "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra",
-    "score": 66.258221,
+    "score": 14.01854,
     "score_detail": {
-      "id": "A6_gpt-6-astra",
+      "components": {
+        "pitch_global_f1": 14.234150856085146,
+        "pitch_time_macro_f1": 5.314509435465083,
+        "pitch_register_macro_f1": 5.3281362161541335,
+        "rhythm_strict_f1": 13.697362332253586,
+        "midi_xml_consistency": 10.0,
+        "layout": 0,
+        "notation": 7.5,
+        "fidelity": 0
+      },
+      "raw_score": 56.074158839957946,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 14.018539709989486,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": true,
+        "register_coverage": true,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 14.01854,
+      "unrounded_final_score": 14.018539709989486,
+      "pitch_precision": 0.7268431001890359,
+      "pitch_recall": 0.6971894832275612,
+      "id": "A6_gpt-6-astra_missing8",
       "case": "A6",
       "model": "gpt-6-astra",
-      "version": "original",
-      "judge_model": "gpt-6-sol",
-      "base_points": 64.75822050268313,
-      "existing_cap": 100,
-      "status": "scored",
-      "final_score": 66.258221,
-      "score_type": "single_judge_LLM_final",
-      "original_formal_total": null,
-      "attempts": [
-        {
-          "model": "gpt-6-sol",
-          "reasoning_effort": "high",
-          "provider": "nju",
-          "status": "completed",
-          "budget_seconds": 1800,
-          "start_epoch": 1792570304.1533246,
-          "automatic_retries": 0,
-          "pid": 26525,
-          "exit_code": 0,
-          "elapsed_seconds": 390.780128463,
-          "wall_elapsed_seconds": 407.7771167755127,
-          "clock_divergence_seconds": 16.996988312512713,
-          "clock_anomaly": true,
-          "end_epoch": 1792570711.9304485,
-          "usage_events": [
-            {
-              "input_tokens": 2724391,
-              "cached_input_tokens": 2616704,
-              "cache_write_input_tokens": 0,
-              "output_tokens": 12491,
-              "reasoning_output_tokens": 4568
-            }
-          ]
-        }
-      ],
-      "validation_error": null,
-      "submission_unchanged": true,
-      "reviewer_count": 1,
-      "reasoning_effort": "high",
-      "budget_seconds": 1800,
-      "pending_awarded": 1.5,
-      "uncapped_total": 66.25822050268313,
-      "applied_cap": 100,
-      "judgment": {
-        "items": [
-          {
-            "id": "layout_points",
-            "earned_points": 0,
-            "rationale": "逐页实际查看提交PDF六页。第1页第1至3小节、第3页第19至23小节和第6页第35至38小节均大面积缺失谱号、音符头及变音记号，音高无法从PDF辨认；第1页标题另有裁切。该问题贯穿全谱，达到原规则所述根本不可读的0分档。此项只评价PDF可读性，不重复扣自动音高分。",
-            "confidence": "high",
-            "evidence": [
-              {
-                "artifact": "/work/submission/score.pdf",
-                "locator": "第1至6页；第1页小节1至11，第2页12至18，第3页19至23，第4页24至30，第5页31至34，第6页35至38",
-                "observation": "六页都有谱线、符干和符杠，但谱号、音符头和变音记号普遍不可见；第一页标题左端被截断。",
-                "method": "pdftoppm逐页渲染为PNG，再用view_image实际查看全部六页"
-              },
-              {
-                "artifact": "/work/submission/score.musicxml",
-                "locator": "第1、19、36小节及两谱表；独立渲染SVG第1、3、6页",
-                "observation": "独立渲染可见PDF所缺的谱号、音符头和变音记号，确认不是原XML没有这些符号。",
-                "method": "Verovio独立渲染MusicXML为SVG，librsvg栅格化后用view_image查看"
-              }
-            ],
-            "detail": [
-              {
-                "pages": "1-2",
-                "measures": "1-18",
-                "finding": "双谱表及节奏线条可见，主要记谱字形缺失；第一页标题裁切。"
-              },
-              {
-                "pages": "3-4",
-                "measures": "19-30",
-                "finding": "双谱表继续存在，但音符头和变音记号仍缺失，无法辨认密集段音高。"
-              },
-              {
-                "pages": "5-6",
-                "measures": "31-38",
-                "finding": "末段同样缺失主要字形；末页虽有终止小节线，仍不可按PDF演奏。"
-              }
-            ]
-          },
-          {
-            "id": "notation_usability_points",
-            "earned_points": 1.5,
-            "rationale": "以独立渲染的MusicXML检查记谱语义：双谱表、4/4拍、休止、连音线和两声部持续关系均存在，首中尾都有连续小节，结构可恢复。第15至18、25至34小节的高密度短时值、频繁变音及部分跨音区分配使钢琴演奏阅读需要大量编辑，符合原规则1.5分档。PDF字形丢失已在排版和忠实度项处理，此项不因音高自动评分中的错音再扣分。",
-            "confidence": "medium",
-            "evidence": [
-              {
-                "artifact": "/work/submission/score.musicxml",
-                "locator": "第1、15-18、19-23、25-34、36-38小节；上下两个谱表",
-                "observation": "独立SVG渲染显示拍号、各声部休止和连音线；中后段存在连续的密集细分节奏及大量临时变音，谱面结构仍可追踪。",
-                "method": "Verovio独立渲染六页SVG，librsvg转PNG后用view_image查看首、中、尾及上下谱表"
-              },
-              {
-                "artifact": "/work/submission/notes.md",
-                "locator": "节拍与时值说明",
-                "observation": "提交者说明采用4/4、四分音符约120及编辑性声部长度；这是记谱取舍说明，不替代谱面观察。",
-                "method": "直接阅读提交说明"
-              }
-            ],
-            "detail": [
-              {
-                "aspect": "结构",
-                "finding": "XML中的两谱表、拍号、休止、连音线和小节顺序可辨。"
-              },
-              {
-                "aspect": "演奏阅读",
-                "finding": "密集的短音群、临时变音及部分大跳造成大量后期编辑需求；未据此重扣音高错误。"
-              }
-            ]
-          },
-          {
-            "id": "pdf_xml_fidelity_points",
-            "earned_points": 0,
-            "rationale": "独立渲染的XML在第1、19、36至38小节均有完整音符头、谱号和变音记号，提交PDF对应小节却普遍漏掉这些决定音高与记谱含义的字形。虽然小节顺序、谱线、符干和符杠大体对应，缺失遍及上下谱表及全部六页，属于原规则的实质性不同谱面，按0分档。独立渲染与提交PDF的第35小节分页不同只是排版差异，不作为扣分原因。",
-            "confidence": "high",
-            "evidence": [
-              {
-                "artifact": "/work/submission/score.pdf",
-                "locator": "第1页小节1-3、第3页小节19-23、第6页小节35-38；上下谱表",
-                "observation": "对应XML音符位置保留了符干与符杠，却缺失音符头、谱号和变音记号；全六页均有同样现象。",
-                "method": "pdftoppm渲染并逐页用view_image核对"
-              },
-              {
-                "artifact": "/work/submission/score.musicxml",
-                "locator": "独立SVG第1、3、5、6页；小节1-3、19-23、35-38；两谱表",
-                "observation": "Verovio独立SVG及其栅格图包含PDF中缺失的主要记谱字形；第35小节跨页位置差异仅为分页。",
-                "method": "独立Verovio渲染MusicXML，并用librsvg转PNG后实际查看、与提交PDF比较"
-              }
-            ],
-            "detail": [
-              {
-                "location": "开头",
-                "finding": "小节1-3的XML双谱表有谱号、音符头和变音记号，PDF对应位置缺失。"
-              },
-              {
-                "location": "中段",
-                "finding": "小节19-23的上下谱表在PDF继续大面积缺失同类字形。"
-              },
-              {
-                "location": "结尾",
-                "finding": "小节36-38的XML谱面完整，PDF仅可见部分线条与终止小节线。"
-              }
-            ]
-          }
-        ],
-        "cap": {
-          "maximum_total": 100,
-          "rationale": "原rubric.json的missing_files条款明确写明“No score caps”；本题只有既定100分权重，没有适用的额外总分封顶。PDF问题按其对应人工分项判定，不另设封顶。",
-          "evidence": [
-            {
-              "artifact": "/work/case/evaluator/rubric.json",
-              "locator": "missing_files、automatic_points、manual_points字段",
-              "observation": "规则规定自动90分、人工10分，且明确无总分封顶。",
-              "method": "直接读取原评分JSON"
-            }
-          ]
-        },
-        "inspection_limits": [
-          "本轮没有原生连续听音；没有声称直接听过音频。A6判分依据提交PDF、MusicXML独立渲染及记谱说明的可视内容。",
-          "独立Verovio渲染与提交PDF在后段分页略有差异；按小节及双谱表内容比较，不把分页差异本身计为错误。",
-          "仅处理packet.json中的三个pending_units；原自动64.75822050268313/90分未重算或更改。本结果是单评LLM总评，非原版真人核验。"
-        ]
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 66.258221,
+      "old_scorepath": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-astra/score.json",
+      "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra",
+      "submission_sha256": {
+        "alignment.json": "2626de523cb45145f90d4466578cd900f9f13c38d96dbf4066492dbcccf9dd86",
+        "notes.md": "9ab675505a1f6558e7fb66c064055f4b1ee66a413708798995d2208a298af048",
+        "score.mid": "adaa2cf63d13c61d4e4f47844ee5a780b1800fd717e32392c2aeab61961f5cfb",
+        "score.musicxml": "fb9f59baffc46bb687c26388b55f01c0318804111fd3342a9d85c57d6f7a0d0b",
+        "score.pdf": "e87467326e86832c8e285181ebec4456f0e2a1c64285ef415d540e014d441206"
       },
-      "automatic_metrics": {
-        "predicted_count": 1058,
-        "reference_count": 1103,
-        "coarse_tp": 769,
-        "strict_tp": 740,
-        "false_positive": 289,
-        "false_negative": 334,
-        "precision_200ms": 0.7268431001890359,
-        "recall_200ms": 0.6971894832275612
-      }
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0.5,
+        "fidelity": 0,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF 第1–6页均只有谱线、符干、符梁等，音头、谱号和变音字形普遍缺失；不能从实际PDF可靠读出音高。",
+          "可编辑谱的双谱表、4/4、休止与连结关系可恢复，但第15–18及25–34小节细分密集，需重排；记谱结构给0.5，不意味着PDF可用。",
+          "PDF与源谱的小节顺序大体相同，但关键记谱字形系统性丢失，忠实度为0；按不可用档×0.25。"
+        ],
+        "prior_review": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-astra/score.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "high"
+        }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-2.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-3.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-4.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-5.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-6.png"
+      ],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
     },
     "reasons": [
-      "layout_points：逐页实际查看提交PDF六页。第1页第1至3小节、第3页第19至23小节和第6页第35至38小节均大面积缺失谱号、音符头及变音记号，音高无法从PDF辨认；第1页标题另有裁切。该问题贯穿全谱，达到原规则所述根本不可读的0分档。此项只评价PDF可读性，不重复扣自动音高分。",
-      "notation_usability_points：以独立渲染的MusicXML检查记谱语义：双谱表、4/4拍、休止、连音线和两声部持续关系均存在，首中尾都有连续小节，结构可恢复。第15至18、25至34小节的高密度短时值、频繁变音及部分跨音区分配使钢琴演奏阅读需要大量编辑，符合原规则1.5分档。PDF字形丢失已在排版和忠实度项处理，此项不因音高自动评分中的错音再扣分。",
-      "pdf_xml_fidelity_points：独立渲染的XML在第1、19、36至38小节均有完整音符头、谱号和变音记号，提交PDF对应小节却普遍漏掉这些决定音高与记谱含义的字形。虽然小节顺序、谱线、符干和符杠大体对应，缺失遍及上下谱表及全部六页，属于原规则的实质性不同谱面，按0分档。独立渲染与提交PDF的第35小节分页不同只是排版差异，不作为扣分原因。",
-      "200ms同音高起音匹配：769/1058个预测、1103个参考；未匹配预测289，未匹配参考334。不将全部未匹配一概解释为漏音。"
+      "v2最终分 14.01854；旧v1分数 66.258221 仅作历史对照。",
+      "PDF 第1–6页均只有谱线、符干、符梁等，音头、谱号和变音字形普遍缺失；不能从实际PDF可靠读出音高。",
+      "可编辑谱的双谱表、4/4、休止与连结关系可恢复，但第15–18及25–34小节细分密集，需重排；记谱结构给0.5，不意味着PDF可用。",
+      "PDF与源谱的小节顺序大体相同，但关键记谱字形系统性丢失，忠实度为0；按不可用档×0.25。"
     ],
     "limits": [
-      "本轮没有原生连续听音；没有声称直接听过音频。A6判分依据提交PDF、MusicXML独立渲染及记谱说明的可视内容。",
-      "独立Verovio渲染与提交PDF在后段分页略有差异；按小节及双谱表内容比较，不把分页差异本身计为错误。",
-      "仅处理packet.json中的三个pending_units；原自动64.75822050268313/90分未重算或更改。本结果是单评LLM总评，非原版真人核验。"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [
       "stream disconnected before completion: Concurrency limit exceeded for user, please retry later",
@@ -3754,7 +3583,10 @@
         "type": "image",
         "path": "previews/A6_gpt-6-astra_missing8/page-6.png"
       }
-    ]
+    ],
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "A6 v2 可用交付复评（事后规则）"
   },
   {
     "id": "A6_gpt-6-luna_missing8",
@@ -3767,171 +3599,105 @@
     "elapsed_seconds": 353.0016422670001,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_missing8_high40/logs/A6_gpt-6-luna/run.json",
-    "scorepath": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-luna/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/score.json",
     "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna",
-    "score": 11.424112,
+    "score": 2.191014,
     "score_detail": {
-      "id": "A6_gpt-6-luna",
+      "components": {
+        "pitch_global_f1": 2.0107719928186714,
+        "pitch_time_macro_f1": 0.7628914043148654,
+        "pitch_register_macro_f1": 0.7281652137816522,
+        "rhythm_strict_f1": 1.0233393177737882,
+        "midi_xml_consistency": 0.48888888888888893,
+        "layout": 3.75,
+        "notation": 0,
+        "fidelity": 0
+      },
+      "raw_score": 8.764056817577867,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 2.1910142043944667,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": false,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 2.191014,
+      "unrounded_final_score": 2.1910142043944667,
+      "pitch_precision": 0.09955555555555555,
+      "pitch_recall": 0.10154125113327289,
+      "id": "A6_gpt-6-luna_missing8",
       "case": "A6",
       "model": "gpt-6-luna",
-      "version": "original",
-      "judge_model": "gpt-6-sol",
-      "base_points": 9.424112039304944,
-      "existing_cap": 100,
-      "status": "scored",
-      "final_score": 11.424112,
-      "score_type": "single_judge_LLM_final",
-      "original_formal_total": null,
-      "attempts": [
-        {
-          "model": "gpt-6-sol",
-          "reasoning_effort": "high",
-          "provider": "nju",
-          "status": "completed",
-          "budget_seconds": 1800,
-          "start_epoch": 1792573697.7455654,
-          "automatic_retries": 0,
-          "pid": 119246,
-          "exit_code": 0,
-          "elapsed_seconds": 409.90907213800074,
-          "wall_elapsed_seconds": 426.85387921333313,
-          "clock_divergence_seconds": 16.944807075332392,
-          "clock_anomaly": true,
-          "end_epoch": 1792574124.5994782,
-          "usage_events": [
-            {
-              "input_tokens": 2191554,
-              "cached_input_tokens": 2096384,
-              "cache_write_input_tokens": 0,
-              "output_tokens": 11685,
-              "reasoning_output_tokens": 3786
-            }
-          ]
-        }
-      ],
-      "validation_error": null,
-      "submission_unchanged": true,
-      "reviewer_count": 1,
-      "reasoning_effort": "high",
-      "budget_seconds": 1800,
-      "pending_awarded": 2.0,
-      "uncapped_total": 11.424112039304944,
-      "applied_cap": 100,
-      "judgment": {
-        "items": [
-          {
-            "id": "layout_points",
-            "earned_points": 0.5,
-            "rationale": "10页均能看到五线谱和音头，稀疏页尚可辨认部分位置，故给最低限度排版分。全篇没有实际谱号、拍号和临时升降记号，只有G/F字母；第8页第29至32小节及第9页第33小节多层音头和符尾拥挤重叠，高低音区的加线过多，不能作为可直接阅读的完整钢琴谱。未按音高转写错误再次扣分。",
-            "confidence": "high",
-            "evidence": [
-              {
-                "artifact": "/work/submission/score.pdf",
-                "locator": "第1至10页，特别是第1、3、8、9、10页",
-                "observation": "逐页渲染并查看：全部非空；仅用G/F字母标示谱表，无标准谱号、拍号或临时升降记号；第8、9页密集处严重堆叠，第3页大片空白。",
-                "method": "pdftoppm 110 dpi渲染全部10页，view_image逐页目视"
-              },
-              {
-                "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-                "locator": "One independent later reviewer，第1项",
-                "observation": "排版项0至4分，半分步长；可读性涵盖谱号、临时记号和间距。",
-                "method": "读取原评分协议"
-              }
-            ],
-            "detail": []
-          },
-          {
-            "id": "notation_usability_points",
-            "earned_points": 0,
-            "rationale": "乐谱结构属于机械散点：XML有1125个音符、888个forward跳位、最多15个声部编号，但没有一个显式休止符、连音线、连结线或连桁。第21、29至33小节尤为密集，连续独立符尾和无休止的跳位无法让钢琴演奏者辨认连贯拍位、声部与时值；PDF又不显示拍号、谱号和变音。此项仅评记谱语义与演奏可用性，不重评自动音高准确率。",
-            "confidence": "high",
-            "evidence": [
-              {
-                "artifact": "/work/submission/score.musicxml",
-                "locator": "P1/P2第1、21、29至33、37小节；全文件note/forward/voice字段",
-                "observation": "两声部均设4/4及谱号，但大量forward跳位代替休止；1125个note、888个forward，voice值1至15；无rest、tie、beam、chord元素。末尾第38小节两声部均无音符。",
-                "method": "lxml结构解析，verovio 6.3独立排版后查看首、中、尾和左右手"
-              },
-              {
-                "artifact": "/work/submission/score.pdf",
-                "locator": "第6页第21小节、第8页第29至32小节、第9页第33小节",
-                "observation": "密集和弦周围出现大量独立短符尾且音头彼此重叠，未标休止，拍位与声部走向不可可靠跟读。",
-                "method": "PDF逐页目视，与MusicXML独立渲染对照"
-              },
-              {
-                "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-                "locator": "One independent later reviewer，第2项",
-                "observation": "机械散点或语义不可用的记谱对应0分；不要求精确还原原拍号或离键时长。",
-                "method": "读取原评分协议"
-              }
-            ],
-            "detail": []
-          },
-          {
-            "id": "pdf_xml_fidelity_points",
-            "earned_points": 1.5,
-            "rationale": "PDF十页覆盖第1至37小节，两行谱表和首、中、尾音群大体对应XML的左右手；XML第38小节为空白，故PDF止于37不构成有声内容遗漏。但XML内的高低音谱号、4/4拍号及476处alter音高变化在PDF中没有相应的标准记号，音符位置虽在，PDF不能完整传达XML的可读谱面内容。属于有限但重要的内容不一致，给1.5分。",
-            "confidence": "medium",
-            "evidence": [
-              {
-                "artifact": "/work/submission/score.pdf",
-                "locator": "第1页第1至4小节、第5页第17至20小节、第8至9页第29至36小节、第10页第37小节",
-                "observation": "首、中、尾均有左右手音头，页眉连续覆盖至第37小节；第10页末没有有声内容截断。缺少实际谱号、拍号及临时升降记号。",
-                "method": "pdftoppm渲染全10页并目视，与XML独立排版逐段对照"
-              },
-              {
-                "artifact": "/work/submission/score.musicxml",
-                "locator": "P1/P2第1、17至20、29至33、37至38小节；attributes、pitch/alter",
-                "observation": "两part均有38个小节，P1共627音、P2共498音；第38小节双手均0音。文件明示G/F谱号与4/4拍号，476个pitch/alter字段；独立渲染可见首中尾双手音群。",
-                "method": "lxml解析并由verovio 6.3独立渲染，查看其4页排版图"
-              },
-              {
-                "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-                "locator": "One independent later reviewer，第3项",
-                "observation": "PDF/XML一致性0至3分，有限遗漏或不符的中间档为1.5分。",
-                "method": "读取原评分协议"
-              }
-            ],
-            "detail": []
-          }
-        ],
-        "cap": {
-          "maximum_total": 100,
-          "rationale": "原rubric.json的missing_files规则明示No score caps；本答卷PDF存在且可检查，没有适用的额外总分封顶。",
-          "evidence": [
-            {
-              "artifact": "/work/case/evaluator/rubric.json",
-              "locator": "missing_files、manual_review字段",
-              "observation": "规则写明No score caps；人工复核为10分独立项目。",
-              "method": "读取原评分规则"
-            }
-          ]
-        },
-        "inspection_limits": [
-          "未直接听取原始音频；本轮仅评待定的A6谱面10分，未据音频重判自动90分。",
-          "PDF与MusicXML通过逐页、首中尾及双手视觉比对和结构解析核对，未对1125个音符做逐个图形一一计数；PDF/XML一致性置信度因此为medium。"
-        ]
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 11.424112,
+      "old_scorepath": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-luna/score.json",
+      "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna",
+      "submission_sha256": {
+        "alignment.json": "ef97bd6eaacb589fcd26f09ac1b82fca401c9a2508d2755e22f78a3f85ba4f05",
+        "notes.md": "923aae4f537d26abfaa2bd28426504a39fbb5db672140c4a46d8d7de56524d86",
+        "score.mid": "ec416fb0e175d49c71522fa53aef4f4c28caa1b3106eb51a825dd7fd915cea11",
+        "score.musicxml": "6394d1d0817d814f30c1e0fd4cc23cceb7118499cdb42b27a789fc1a670be166",
+        "score.pdf": "73d3433c5b374497e9a8c5e5d0d2ff624cf1d005c13fbba1e25de5176ee27e14"
       },
-      "automatic_metrics": {
-        "predicted_count": 1125,
-        "reference_count": 1103,
-        "coarse_tp": 112,
-        "strict_tp": 57,
-        "false_positive": 1013,
-        "false_negative": 991,
-        "precision_200ms": 0.09955555555555555,
-        "recall_200ms": 0.10154125113327289
-      }
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/technical.json",
+      "review": {
+        "layout": 0.25,
+        "notation": 0,
+        "fidelity": 0,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF 第1–10页仅以G/F字母标示谱表，没有标准谱号、拍号与应有变音记号；第8–9页音群明显堆叠，只有部分位置可辨。",
+          "XML含1125个音符、无显式休止符；PDF用音符散点和空白间隔代替可辨拍位，不能形成连贯可演奏结构。",
+          "源XML中有升降音高，但PDF系统性未呈现变音，属于关键音乐语义丢失，忠实度0；MIDI/XML一致性仅约4.89%，亦触发×0.25档。"
+        ],
+        "prior_review": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-luna/score.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "high",
+          "fidelity": "high"
+        }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-01.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-02.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-03.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-04.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-05.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-06.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-07.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-08.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-09.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-10.png"
+      ],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
     },
     "reasons": [
-      "layout_points：10页均能看到五线谱和音头，稀疏页尚可辨认部分位置，故给最低限度排版分。全篇没有实际谱号、拍号和临时升降记号，只有G/F字母；第8页第29至32小节及第9页第33小节多层音头和符尾拥挤重叠，高低音区的加线过多，不能作为可直接阅读的完整钢琴谱。未按音高转写错误再次扣分。",
-      "notation_usability_points：乐谱结构属于机械散点：XML有1125个音符、888个forward跳位、最多15个声部编号，但没有一个显式休止符、连音线、连结线或连桁。第21、29至33小节尤为密集，连续独立符尾和无休止的跳位无法让钢琴演奏者辨认连贯拍位、声部与时值；PDF又不显示拍号、谱号和变音。此项仅评记谱语义与演奏可用性，不重评自动音高准确率。",
-      "pdf_xml_fidelity_points：PDF十页覆盖第1至37小节，两行谱表和首、中、尾音群大体对应XML的左右手；XML第38小节为空白，故PDF止于37不构成有声内容遗漏。但XML内的高低音谱号、4/4拍号及476处alter音高变化在PDF中没有相应的标准记号，音符位置虽在，PDF不能完整传达XML的可读谱面内容。属于有限但重要的内容不一致，给1.5分。",
-      "200ms同音高起音匹配：112/1125个预测、1103个参考；未匹配预测1013，未匹配参考991。不将全部未匹配一概解释为漏音。"
+      "v2最终分 2.191014；旧v1分数 11.424112 仅作历史对照。",
+      "PDF 第1–10页仅以G/F字母标示谱表，没有标准谱号、拍号与应有变音记号；第8–9页音群明显堆叠，只有部分位置可辨。",
+      "XML含1125个音符、无显式休止符；PDF用音符散点和空白间隔代替可辨拍位，不能形成连贯可演奏结构。",
+      "源XML中有升降音高，但PDF系统性未呈现变音，属于关键音乐语义丢失，忠实度0；MIDI/XML一致性仅约4.89%，亦触发×0.25档。"
     ],
     "limits": [
-      "未直接听取原始音频；本轮仅评待定的A6谱面10分，未据音频重判自动90分。",
-      "PDF与MusicXML通过逐页、首中尾及双手视觉比对和结构解析核对，未对1125个音符做逐个图形一一计数；PDF/XML一致性置信度因此为medium。"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [],
     "files": [
@@ -4230,7 +3996,10 @@
         "type": "image",
         "path": "previews/A6_gpt-6-luna_missing8/page-10.png"
       }
-    ]
+    ],
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "A6 v2 可用交付复评（事后规则）"
   },
   {
     "id": "A6_k3_missing8",
@@ -4243,34 +4012,45 @@
     "elapsed_seconds": null,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_missing8_high40/logs/A6_k3/run.json",
-    "scorepath": "benchmark_runs/20261021_missing8_high40/grades/A6_k3/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_missing8/score.json",
     "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_k3",
     "score": null,
     "score_detail": {
-      "id": "A6_k3",
+      "final_score": null,
+      "delivery_label": "未评分",
+      "accepted": false,
+      "id": "A6_k3_missing8",
       "case": "A6",
       "model": "k3",
-      "formal_total": null,
-      "solver_status": "infrastructure_blocked",
-      "review_status": "not_invoked",
-      "score_type": "infrastructure_blocked_no_attempt",
-      "uncapped_proxy_interval": null,
-      "confirmed_proxy_points": null,
-      "pending_weight": 100,
-      "reason": "API preflight 503; solver attempt never started. No automatic retry, no ability-zero score.",
-      "solver_run": {
-        "model": "k3",
-        "status": "infrastructure_blocked",
-        "reason": "API preflight HTTP 503; no solver attempt started; no automatic retry",
-        "reasoning_effort": "high",
-        "budget_seconds": 2400,
-        "solver_attempt_started": false
-      }
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": null,
+      "old_scorepath": "benchmark_runs/20261021_missing8_high40/grades/A6_k3/score.json",
+      "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_k3",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_missing8/technical.json",
+      "review": {
+        "reason": "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
     },
     "reasons": [
-      "API preflight 503; solver attempt never started. No automatic retry, no ability-zero score."
+      "v2最终分 None；旧v1分数 None 仅作历史对照。",
+      "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
     ],
-    "limits": [],
+    "limits": [
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+    ],
     "errors": [],
     "files": [],
     "trajectory": [],
@@ -4278,7 +4058,10 @@
     "previews": [],
     "superseded_by": "20261022_k3_a6_60_clean",
     "historical_only": true,
-    "display_note": "历史K3记录；当前成绩见本次隔离复测"
+    "display_note": "历史K3记录；当前成绩见本次隔离复测",
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "A6 v2 可用交付复评（事后规则）"
   },
   {
     "id": "A4_k3_historical",
@@ -5085,37 +4868,48 @@
     "elapsed_seconds": 503.062,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_glm53_flash_a1_a7/logs/A6/run.json",
-    "scorepath": "benchmark_runs/20261021_glm53_flash_a1_a7/grades/A6/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a1_a7/score.json",
     "submission": "benchmark_runs/20261021_glm53_flash_a1_a7/submissions/A6",
     "score": null,
     "score_detail": {
+      "final_score": null,
+      "delivery_label": "未评分",
+      "accepted": false,
+      "id": "A6_glm-5.3-flash_20261021_glm53_flash_a1_a7",
       "case": "A6",
-      "formal_total": null,
-      "conservative_total": null,
-      "pending_weight": 100,
-      "score_type": "infrastructure_failure_no_submission",
-      "review_status": "not_invoked",
-      "limitations": [
-        "API/process failure with empty submission; not an ability-zero score.",
-        "代理并发/排队时间计入40分钟；失败和超时不能单独用于推断模型能力或题目难度。",
-        "无交付物可供内容判断，未调用付费judge。具体服务错误见infrastructure_evidence.json。"
-      ],
       "model": "glm-5.3-flash",
-      "solver_status": "process_failed",
-      "units": [],
-      "checklist": [],
-      "major_issues": [],
-      "minor_issues": [],
-      "infrastructure_evidence": "infrastructure_evidence.json"
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": null,
+      "old_scorepath": "benchmark_runs/20261021_glm53_flash_a1_a7/grades/A6/score.json",
+      "submission": "benchmark_runs/20261021_glm53_flash_a1_a7/submissions/A6",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a1_a7/technical.json",
+      "review": {
+        "reason": "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "MusicXML: missing or oversized: score.musicxml",
+        "MIDI: missing or oversized: score.mid",
+        "Alignment: No valid alignment.json or MIDI tempo map"
+      ]
     },
     "reasons": [
-      "request timed out",
-      "{'message': 'request timed out'}"
+      "v2最终分 None；旧v1分数 None 仅作历史对照。",
+      "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
     ],
     "limits": [
-      "API/process failure with empty submission; not an ability-zero score.",
-      "代理并发/排队时间计入40分钟；失败和超时不能单独用于推断模型能力或题目难度。",
-      "无交付物可供内容判断，未调用付费judge。具体服务错误见infrastructure_evidence.json。"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [
       "request timed out",
@@ -5163,7 +4957,10 @@
     "previews": [],
     "superseded_by": "20261021_glm53_flash_a4_a6_50min",
     "historical_only": true,
-    "display_note": "旧轮次归档，不是当前GLM成绩"
+    "display_note": "旧轮次归档，不是当前GLM成绩",
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "A6 v2 可用交付复评（事后规则）"
   },
   {
     "id": "A4_glm-5.3-flash_20261021_glm53_flash_two_workers",
@@ -6438,14 +6235,49 @@
     "elapsed_seconds": null,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_glm53_flash_two_workers/logs/A6/run.json",
-    "scorepath": "benchmark_runs/20261021_glm53_flash_two_workers/grades/A6/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_two_workers/score.json",
     "submission": "benchmark_runs/20261021_glm53_flash_two_workers/submissions/A6",
     "score": null,
-    "score_detail": {},
+    "score_detail": {
+      "final_score": null,
+      "delivery_label": "未评分",
+      "accepted": false,
+      "id": "A6_glm-5.3-flash_20261021_glm53_flash_two_workers",
+      "case": "A6",
+      "model": "glm-5.3-flash",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": null,
+      "old_scorepath": "benchmark_runs/20261021_glm53_flash_two_workers/grades/A6/score.json",
+      "submission": "benchmark_runs/20261021_glm53_flash_two_workers/submissions/A6",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_two_workers/technical.json",
+      "review": {
+        "reason": "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "MusicXML: missing or oversized: score.musicxml",
+        "MIDI: missing or oversized: score.mid",
+        "Alignment: No valid alignment.json or MIDI tempo map"
+      ]
+    },
     "reasons": [
-      "未形成可评分的完整交付；具体执行状态见日志。"
+      "v2最终分 None；旧v1分数 None 仅作历史对照。",
+      "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
     ],
-    "limits": [],
+    "limits": [
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+    ],
     "errors": [],
     "files": [],
     "trajectory": [
@@ -6594,7 +6426,10 @@
     "previews": [],
     "superseded_by": "20261021_glm53_flash_a4_a6_50min",
     "historical_only": true,
-    "display_note": "旧轮次归档，不是当前GLM成绩"
+    "display_note": "旧轮次归档，不是当前GLM成绩",
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "A6 v2 可用交付复评（事后规则）"
   },
   {
     "id": "A6_glm-5.3-flash_20261021_glm53_flash_recovery",
@@ -6607,101 +6442,83 @@
     "elapsed_seconds": 2291.781,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_glm53_flash_recovery/logs/A6/run.json",
-    "scorepath": "benchmark_runs/20261021_glm53_flash_recovery/grades/A6/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_recovery/score.json",
     "submission": "benchmark_runs/20261021_glm53_flash_recovery/submissions/A6",
     "score": 0.0,
     "score_detail": {
-      "id": "A6",
+      "components": {
+        "pitch_global_f1": 0.0,
+        "pitch_time_macro_f1": 0.0,
+        "pitch_register_macro_f1": 0.0,
+        "rhythm_strict_f1": 0.0,
+        "midi_xml_consistency": 0.0,
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0
+      },
+      "raw_score": 0.0,
+      "delivery_level": "empty",
+      "delivery_label": "无可评内容",
+      "delivery_factor": 0,
+      "after_delivery_factor": 0.0,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": false,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 0.0,
+      "unrounded_final_score": 0.0,
+      "pitch_precision": 0.0,
+      "pitch_recall": 0.0,
+      "id": "A6_glm-5.3-flash_20261021_glm53_flash_recovery",
       "case": "A6",
       "model": "glm-5.3-flash",
-      "review_model": null,
-      "reasoning_effort": "high",
-      "formal_total": 0.0,
-      "solver_status": "budget_timeout",
-      "review_status": "skipped_empty_submission",
-      "score_type": "formal_native_missing_delivery",
-      "confirmed_proxy_points": 0.0,
-      "pending_weight": 0,
-      "uncapped_proxy_interval": [
-        0.0,
-        0.0
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 0.0,
+      "old_scorepath": "benchmark_runs/20261021_glm53_flash_recovery/grades/A6/score.json",
+      "submission": "benchmark_runs/20261021_glm53_flash_recovery/submissions/A6",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_recovery/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0,
+        "delivery_level": "empty",
+        "reasons": [
+          "实际作答后没有非空可评音乐内容。"
+        ]
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
       ],
-      "units": [
-        {
-          "id": "automatic",
-          "weight": 90,
-          "points": 0.0,
-          "evidence": "technical.json"
-        },
-        {
-          "id": "layout_points",
-          "weight": 4,
-          "points": 0,
-          "evidence": []
-        },
-        {
-          "id": "notation_usability_points",
-          "weight": 3,
-          "points": 0,
-          "evidence": []
-        },
-        {
-          "id": "pdf_xml_fidelity_points",
-          "weight": 3,
-          "points": 0,
-          "evidence": []
-        }
-      ],
-      "cap_candidates": [],
-      "caps_applied": [],
-      "errors": [
-        "Review not completed; any draft ratings excluded."
-      ],
-      "inspection_limits": [],
-      "limitations": [
-        "Proxy interval is unknown-item bookkeeping, not a formal score or confidence interval.",
-        "Original formal prerequisites and caps preserved; unverified caps are not silently cleared.",
-        "No direct listening or continuous video certification.",
-        "答题会话未提交任何文件；仅按原生硬约束记录交付失败，没有调用LLM judge，未把该情况自动归为API故障。"
-      ],
-      "submission_unchanged": true,
-      "delivery_failed": true,
-      "conservative_total": 0.0,
-      "checklist": [
-        {
-          "id": "automatic",
-          "weight": 90,
-          "points": 0.0,
-          "evidence": "technical.json"
-        },
-        {
-          "id": "layout_points",
-          "weight": 4,
-          "points": 0,
-          "evidence": []
-        },
-        {
-          "id": "notation_usability_points",
-          "weight": 3,
-          "points": 0,
-          "evidence": []
-        },
-        {
-          "id": "pdf_xml_fidelity_points",
-          "weight": 3,
-          "points": 0,
-          "evidence": []
-        }
-      ],
-      "minor_issues": [
-        "40分钟预算耗尽，未提交乐谱、MIDI、PDF及说明。"
-      ],
-      "major_issues": []
+      "metric_errors": [
+        "MusicXML: missing or oversized: score.musicxml",
+        "MIDI: missing or oversized: score.mid",
+        "Alignment: No valid alignment.json or MIDI tempo map"
+      ]
     },
     "reasons": [
-      "答题达到该次预算上限，按截止时保存的交付评分；预算超时与内容得分分别记录，不能仅凭超时断言模型能力。"
+      "v2最终分 0.0；旧v1分数 0.0 仅作历史对照。",
+      "实际作答后没有非空可评音乐内容。"
     ],
-    "limits": [],
+    "limits": [
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+    ],
     "errors": [],
     "files": [],
     "trajectory": [
@@ -6990,7 +6807,10 @@
     "previews": [],
     "superseded_by": "20261021_glm53_flash_a4_a6_50min",
     "historical_only": true,
-    "display_note": "旧轮次归档，不是当前GLM成绩"
+    "display_note": "旧轮次归档，不是当前GLM成绩",
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "A6 v2 可用交付复评（事后规则）"
   },
   {
     "id": "A4_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min",
@@ -17156,540 +16976,98 @@
     "elapsed_seconds": 1799.662,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/logs/A6/run.json",
-    "scorepath": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A6/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/score.json",
     "submission": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6",
-    "score": 18.57040220112151,
+    "score": 5.591698,
     "score_detail": {
-      "id": "A6",
+      "components": {
+        "pitch_global_f1": 3.564843269821758,
+        "pitch_time_macro_f1": 1.3212206087591538,
+        "pitch_register_macro_f1": 1.2230462570136482,
+        "rhythm_strict_f1": 2.5076828518746157,
+        "midi_xml_consistency": 10.0,
+        "layout": 0,
+        "notation": 3.75,
+        "fidelity": 0
+      },
+      "raw_score": 22.366792987469175,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 5.591698246867294,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 5.591698,
+      "unrounded_final_score": 5.591698246867294,
+      "pitch_precision": 0.2767175572519084,
+      "pitch_recall": 0.1314596554850408,
+      "id": "A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min",
       "case": "A6",
       "model": "glm-5.3-flash",
-      "review_model": "gpt-6-astra",
-      "reasoning_effort": "high",
-      "formal_total": null,
-      "solver_status": "completed",
-      "review_status": "completed",
-      "score_type": "single_model_evidence_bound_proxy",
-      "confirmed_proxy_points": 18.57040220112151,
-      "pending_weight": 3,
-      "uncapped_proxy_interval": [
-        18.57040220112151,
-        21.57040220112151
-      ],
-      "units": [
-        {
-          "id": "automatic",
-          "weight": 90,
-          "points": 18.57040220112151,
-          "evidence": "technical.json"
-        },
-        {
-          "id": "layout_points",
-          "weight": 4,
-          "points": 0,
-          "evidence": [
-            {
-              "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-              "locator": "One independent later reviewer；三个人工项目及 null 规则",
-              "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
-              "method": "全文阅读；保持原定义、部分分政策和自动分不变"
-            },
-            {
-              "artifact": "/work/submission/score.pdf",
-              "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
-              "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
-              "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
-            },
-            {
-              "artifact": "/work/submission/score.musicxml",
-              "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
-              "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
-              "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
-              "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
-              "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
-              "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
-              "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
-              "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
-              "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
-              "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
-            },
-            {
-              "artifact": "/work/submission/notes.md",
-              "locator": "处理方法，最后一条",
-              "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
-              "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
-            },
-            {
-              "artifact": "/work/case/candidate/input/performance.mp4",
-              "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
-              "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
-              "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
-            },
-            {
-              "artifact": "/work/results/technical.json + /work/results/technical_run.json",
-              "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
-              "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
-              "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
-            },
-            {
-              "artifact": "/work/results/inspection/inspection_manifest.json",
-              "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
-              "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
-              "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
-            }
-          ]
-        },
-        {
-          "id": "notation_usability_points",
-          "weight": 3,
-          "points": null,
-          "evidence": [
-            {
-              "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-              "locator": "One independent later reviewer；三个人工项目及 null 规则",
-              "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
-              "method": "全文阅读；保持原定义、部分分政策和自动分不变"
-            },
-            {
-              "artifact": "/work/submission/score.pdf",
-              "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
-              "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
-              "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
-            },
-            {
-              "artifact": "/work/submission/score.musicxml",
-              "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
-              "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
-              "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
-              "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
-              "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
-              "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
-              "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
-              "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
-              "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
-              "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
-            },
-            {
-              "artifact": "/work/submission/notes.md",
-              "locator": "处理方法，最后一条",
-              "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
-              "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
-            },
-            {
-              "artifact": "/work/case/candidate/input/performance.mp4",
-              "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
-              "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
-              "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
-            },
-            {
-              "artifact": "/work/results/technical.json + /work/results/technical_run.json",
-              "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
-              "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
-              "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
-            },
-            {
-              "artifact": "/work/results/inspection/inspection_manifest.json",
-              "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
-              "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
-              "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
-            }
-          ]
-        },
-        {
-          "id": "pdf_xml_fidelity_points",
-          "weight": 3,
-          "points": 0,
-          "evidence": [
-            {
-              "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-              "locator": "One independent later reviewer；三个人工项目及 null 规则",
-              "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
-              "method": "全文阅读；保持原定义、部分分政策和自动分不变"
-            },
-            {
-              "artifact": "/work/submission/score.pdf",
-              "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
-              "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
-              "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
-            },
-            {
-              "artifact": "/work/submission/score.musicxml",
-              "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
-              "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
-              "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
-              "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
-              "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
-              "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
-              "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
-              "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
-              "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
-              "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
-            },
-            {
-              "artifact": "/work/submission/notes.md",
-              "locator": "处理方法，最后一条",
-              "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
-              "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
-            },
-            {
-              "artifact": "/work/case/candidate/input/performance.mp4",
-              "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
-              "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
-              "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
-            },
-            {
-              "artifact": "/work/results/technical.json + /work/results/technical_run.json",
-              "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
-              "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
-              "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
-            },
-            {
-              "artifact": "/work/results/inspection/inspection_manifest.json",
-              "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
-              "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
-              "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
-            }
-          ]
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 18.57040220112151,
+      "old_scorepath": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A6/score.json",
+      "submission": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6",
+      "submission_sha256": {
+        "alignment.json": "031a9d3f8005ca91bae6fa5106b8cbd9385bb457e0ba9d504ba4ffcd696fbd50",
+        "notes.md": "950b28b6c07527ba890d86889b91f394b3431af7762c7fd9535a51472159ee2a",
+        "score.mid": "5bdc73e759ebb6cbac5be41a277c9bd02420cf8de1169f976a139652382814db",
+        "score.musicxml": "453263689347b84a27eb2169faf8ce608cfbd2675f688be839d33e83d0124e7a",
+        "score.pdf": "e6093cf526b8c14bb1dba14ecc4ea3d014bb50e6b4567c214543ab38e243ddc9"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0.25,
+        "fidelity": 0,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF全部3页右侧谱表之外仍有音符，页首与右边界裁切；第1页第3–4小节、第2页密集段及第3页末段严重叠压，无法可靠读谱。",
+          "XML有声部和休止可供重建，但PDF普遍使用空心圆、单斜旗，未表达源XML的十六/三十二分时值和休止结构；仅给予可恢复结构0.25。",
+          "第1小节和第29、41小节的时值、休止、双梁在PDF中系统性改变，忠实度0；×0.25。"
+        ],
+        "prior_review": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A6/score.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "high"
         }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-2.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-3.png"
       ],
-      "cap_candidates": [
-        {
-          "candidate": "额外总分上限",
-          "status": "not_applicable",
-          "evidence": "rubric.json missing_files 原文：\"No score caps.\" 本次不引入任何总分 cap。"
-        },
-        {
-          "candidate": "缺失或损坏 PDF 导致三项全零",
-          "status": "not_triggered",
-          "evidence": "提交 PDF 存在；宿主 pdfinfo_exit=0、render_exit=0，成功提供 3 页。本次不是以缺失/损坏规则自动归零；layout 与 fidelity 分别按已观察到的缺陷判定。"
-        },
-        {
-          "candidate": "未完成组件时不得生成最终总分",
-          "status": "active",
-          "evidence": "REVIEW_PROTOCOL.md：\"Until then, no final score exists.\" notation_usability_points 因媒体检查不足为 null，因此人工合计和最终总分不生成；这不是分数上限。"
-        }
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
       ],
-      "caps_applied": [],
-      "errors": [],
-      "inspection_limits": [
-        {
-          "status": "unavailable",
-          "component": "notation_usability_points",
-          "evidence": "REVIEW_PROTOCOL.md 要求 \"Listen/view relevant sections when judging notation usability.\" 本次只有 t=1.500、36.500、74.800 秒静帧，没有直接聆听或足够的连续音视频检查；综合节拍、声部与时值是否符合可理解的演奏结构尚未建立。此项保留 null；不以音符自动分或作者说明填补。"
-        },
-        {
-          "status": "completed",
-          "component": "layout_points",
-          "evidence": "宿主三张完整 PDF 页面全部直接查看，并放大第 1、29、41 小节；裁切及大范围叠压为可直接观察的失败，足以判 0，无需听觉推断。"
-        },
-        {
-          "status": "completed_with_limits",
-          "component": "pdf_xml_fidelity_points",
-          "evidence": "原 XML 全 41 小节解析、15 小节详细核对，覆盖三页和低中高音区；不声称对全部 524 音逐一完成视觉配对。开头/中段/末尾反复出现的休止缺失、十六分时值及双梁未保留，足以认定系统性内容失真，判 0；无需判断源演奏的正确音高。"
-        },
-        {
-          "status": "workaround_applied",
-          "component": "review_infrastructure",
-          "evidence": "Verovio voice=0 导入警告、svglib CSS/viewBox 兼容问题和 Rsvg namespace 不可用均属本地评审渲染限制。显示副本只重命名声部标签，原提交散列未变；辅助图的字体/标题问题不扣分。"
-        },
-        {
-          "status": "not_performed",
-          "component": "direct_audio_and_continuous_video",
-          "evidence": "没有实际聆听，没有 ASR，也没有连续观看整段视频。三张帧图不能证明全段声学或动作理解。"
-        },
-        {
-          "status": "preserved",
-          "component": "automatic_grading",
-          "evidence": "技术报告成功退出，自动分 18.57040220112151/90 未改变；技术运行的 matplotlib 可选依赖提示未造成宿主运行失败。不将评审工具失败转作 solver error。"
-        }
-      ],
-      "limitations": [
-        "Proxy interval is unknown-item bookkeeping, not a formal score or confidence interval.",
-        "Original formal prerequisites and caps preserved; unverified caps are not silently cleared.",
-        "No direct listening or continuous video certification.",
-        "本轮仅两个作答会话并行；每题开始执行后计时50分钟，尚未启动的排队题不计时。网络重试和推理等待计入该题预算；超时不单独证明模型能力不足。",
-        "保守分只累计已确认得分，未知项不代表已证实错误；不满足正式评审前提。"
-      ],
-      "submission_unchanged": true,
-      "conservative_total": 18.57040220112151,
-      "checklist": [
-        {
-          "id": "automatic",
-          "weight": 90,
-          "points": 18.57040220112151,
-          "evidence": "technical.json"
-        },
-        {
-          "id": "layout_points",
-          "weight": 4,
-          "points": 0,
-          "evidence": [
-            {
-              "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-              "locator": "One independent later reviewer；三个人工项目及 null 规则",
-              "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
-              "method": "全文阅读；保持原定义、部分分政策和自动分不变"
-            },
-            {
-              "artifact": "/work/submission/score.pdf",
-              "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
-              "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
-              "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
-            },
-            {
-              "artifact": "/work/submission/score.musicxml",
-              "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
-              "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
-              "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
-              "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
-              "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
-              "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
-              "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
-              "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
-              "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
-              "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
-            },
-            {
-              "artifact": "/work/submission/notes.md",
-              "locator": "处理方法，最后一条",
-              "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
-              "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
-            },
-            {
-              "artifact": "/work/case/candidate/input/performance.mp4",
-              "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
-              "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
-              "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
-            },
-            {
-              "artifact": "/work/results/technical.json + /work/results/technical_run.json",
-              "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
-              "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
-              "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
-            },
-            {
-              "artifact": "/work/results/inspection/inspection_manifest.json",
-              "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
-              "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
-              "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
-            }
-          ]
-        },
-        {
-          "id": "notation_usability_points",
-          "weight": 3,
-          "points": null,
-          "evidence": [
-            {
-              "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-              "locator": "One independent later reviewer；三个人工项目及 null 规则",
-              "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
-              "method": "全文阅读；保持原定义、部分分政策和自动分不变"
-            },
-            {
-              "artifact": "/work/submission/score.pdf",
-              "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
-              "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
-              "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
-            },
-            {
-              "artifact": "/work/submission/score.musicxml",
-              "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
-              "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
-              "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
-              "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
-              "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
-              "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
-              "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
-              "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
-              "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
-              "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
-            },
-            {
-              "artifact": "/work/submission/notes.md",
-              "locator": "处理方法，最后一条",
-              "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
-              "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
-            },
-            {
-              "artifact": "/work/case/candidate/input/performance.mp4",
-              "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
-              "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
-              "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
-            },
-            {
-              "artifact": "/work/results/technical.json + /work/results/technical_run.json",
-              "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
-              "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
-              "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
-            },
-            {
-              "artifact": "/work/results/inspection/inspection_manifest.json",
-              "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
-              "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
-              "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
-            }
-          ]
-        },
-        {
-          "id": "pdf_xml_fidelity_points",
-          "weight": 3,
-          "points": 0,
-          "evidence": [
-            {
-              "artifact": "/work/case/evaluator/REVIEW_PROTOCOL.md",
-              "locator": "One independent later reviewer；三个人工项目及 null 规则",
-              "observation": "完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"",
-              "method": "全文阅读；保持原定义、部分分政策和自动分不变"
-            },
-            {
-              "artifact": "/work/submission/score.pdf",
-              "locator": "全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png",
-              "observation": "逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。",
-              "method": "直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查"
-            },
-            {
-              "artifact": "/work/submission/score.musicxml",
-              "locator": "全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节",
-              "observation": "原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。",
-              "method": "离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml",
-              "locator": "PDF 第 1 页第 1 小节；XML 第 1 小节",
-              "observation": "XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。",
-              "method": "原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒",
-              "observation": "XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。",
-              "method": "原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png"
-            },
-            {
-              "artifact": "/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json",
-              "locator": "PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒",
-              "observation": "XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。",
-              "method": "原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值"
-            },
-            {
-              "artifact": "/work/submission/notes.md",
-              "locator": "处理方法，最后一条",
-              "observation": "作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。",
-              "method": "原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令"
-            },
-            {
-              "artifact": "/work/case/candidate/input/performance.mp4",
-              "locator": "视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png",
-              "observation": "ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。",
-              "method": "本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解"
-            },
-            {
-              "artifact": "/work/results/technical.json + /work/results/technical_run.json",
-              "locator": "automatic_score、automatic_max、status、metrics、submission_sha256、exit_code",
-              "observation": "宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。",
-              "method": "读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分"
-            },
-            {
-              "artifact": "/work/results/inspection/inspection_manifest.json",
-              "locator": "display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png",
-              "observation": "已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。",
-              "method": "离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改"
-            }
-          ]
-        }
-      ],
-      "findings": [
-        {
-          "id": "automatic",
-          "lost_points": 71.42959779887849,
-          "reason": "technical.json"
-        },
-        {
-          "id": "layout_points",
-          "lost_points": 4,
-          "reason": "[{'artifact': '/work/case/evaluator/REVIEW_PROTOCOL.md', 'locator': 'One independent later reviewer；三个人工项目及 null 规则', 'observation': '完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"', 'method': '全文阅读；保持原定义、部分分政策和自动分不变'}, {'artifact': '/work/submission/score.pdf', 'locator': '全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png', 'observation': '逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。', 'method': '直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查'}, {'artifact': '/work/submission/score.musicxml', 'locator': '全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节', 'observation': '原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。', 'method': '离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml', 'locator': 'PDF 第 1 页第 1 小节；XML 第 1 小节', 'observation': 'XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。', 'method': '原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒', 'observation': 'XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。', 'method': '原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒', 'observation': 'XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。', 'method': '原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值'}, {'artifact': '/work/submission/notes.md', 'locator': '处理方法，最后一条', 'observation': '作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。', 'method': '原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令'}, {'artifact': '/work/case/candidate/input/performance.mp4', 'locator': '视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png', 'observation': 'ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。', 'method': '本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解'}, {'artifact': '/work/results/technical.json + /work/results/technical_run.json', 'locator': 'automatic_score、automatic_max、status、metrics、submission_sha256、exit_code', 'observation': '宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。', 'method': '读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分'}, {'artifact': '/work/results/inspection/inspection_manifest.json', 'locator': 'display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png', 'observation': '已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。', 'method': '离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改'}]"
-        },
-        {
-          "id": "pdf_xml_fidelity_points",
-          "lost_points": 3,
-          "reason": "[{'artifact': '/work/case/evaluator/REVIEW_PROTOCOL.md', 'locator': 'One independent later reviewer；三个人工项目及 null 规则', 'observation': '完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"', 'method': '全文阅读；保持原定义、部分分政策和自动分不变'}, {'artifact': '/work/submission/score.pdf', 'locator': '全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png', 'observation': '逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。', 'method': '直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查'}, {'artifact': '/work/submission/score.musicxml', 'locator': '全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节', 'observation': '原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。', 'method': '离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml', 'locator': 'PDF 第 1 页第 1 小节；XML 第 1 小节', 'observation': 'XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。', 'method': '原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒', 'observation': 'XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。', 'method': '原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒', 'observation': 'XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。', 'method': '原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值'}, {'artifact': '/work/submission/notes.md', 'locator': '处理方法，最后一条', 'observation': '作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。', 'method': '原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令'}, {'artifact': '/work/case/candidate/input/performance.mp4', 'locator': '视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png', 'observation': 'ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。', 'method': '本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解'}, {'artifact': '/work/results/technical.json + /work/results/technical_run.json', 'locator': 'automatic_score、automatic_max、status、metrics、submission_sha256、exit_code', 'observation': '宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。', 'method': '读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分'}, {'artifact': '/work/results/inspection/inspection_manifest.json', 'locator': 'display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png', 'observation': '已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。', 'method': '离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改'}]"
-        }
-      ],
-      "major_issues": [],
-      "minor_issues": [
-        "automatic: technical.json",
-        "layout_points: [{'artifact': '/work/case/evaluator/REVIEW_PROTOCOL.md', 'locator': 'One independent later reviewer；三个人工项目及 null 规则', 'observation': '完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"', 'method': '全文阅读；保持原定义、部分分政策和自动分不变'}, {'artifact': '/work/submission/score.pdf', 'locator': '全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png', 'observation': '逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。', 'method': '直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查'}, {'artifact': '/work/submission/score.musicxml', 'locator': '全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节', 'observation': '原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。', 'method': '离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml', 'locator': 'PDF 第 1 页第 1 小节；XML 第 1 小节', 'observation': 'XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。', 'method': '原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒', 'observation': 'XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。', 'method': '原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒', 'observation': 'XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。', 'method': '原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值'}, {'artifact': '/work/submission/notes.md', 'locator': '处理方法，最后一条', 'observation': '作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。', 'method': '原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令'}, {'artifact': '/work/case/candidate/input/performance.mp4', 'locator': '视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png', 'observation': 'ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。', 'method': '本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解'}, {'artifact': '/work/results/technical.json + /work/results/technical_run.json', 'locator': 'automatic_score、automatic_max、status、metrics、submission_sha256、exit_code', 'observation': '宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。', 'method': '读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分'}, {'artifact': '/work/results/inspection/inspection_manifest.json', 'locator': 'display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png', 'observation': '已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。', 'method': '离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改'}]",
-        "pdf_xml_fidelity_points: [{'artifact': '/work/case/evaluator/REVIEW_PROTOCOL.md', 'locator': 'One independent later reviewer；三个人工项目及 null 规则', 'observation': '完整读取协议和 rubric.json v1.0。人工权重固定为 4/3/3，采用 0.5 分步长；协议规定：\"If rendering or adequate inspection is blocked, leave the applicable review component null and final_score null.\"', 'method': '全文阅读；保持原定义、部分分政策和自动分不变'}, {'artifact': '/work/submission/score.pdf', 'locator': '全部第 1–3 页；宿主 page-1.png、page-2.png、page-3.png', 'observation': '逐页视觉检查完成。第 1 页标号小节 1–16，第 2 页 17–32，第 3 页 33–41。各页右侧均有音符越出谱表末端并被页面边界截断；页首符号也有裁切。第 1 页第 3–4、11–12、15–16 小节，第 2 页第 19–20、27–28 小节以及第 3 页第 35–36、39–40 小节，符头、临时记号、符干及加线大量叠压。整体达到 layout 的 \"cut-off, or fundamentally unreadable\"，不是仅有局部拥挤。', 'method': '直接查看宿主全部三张完整页面图，并放大局部；未以 PDF 存在或作者描述替代检查'}, {'artifact': '/work/submission/score.musicxml', 'locator': '全部 41 小节；详细抽查 1、2、4、16、17、20、21、28、29、32、33、36、37、40、41 小节', 'observation': '原 XML 共 524 个有音高音符、400 个休止元素；音符类型为 504 个 16th 和 20 个 32nd。第 1 小节明确包含 4/4、G 第二线谱号、quarter=129、声部 0/1、休止及双层连梁。检查覆盖开头、中段、末尾及三个音区；原始元素解析记录在 inspection/xml-events.json。', 'method': '离线 XML 元素解析、游标/backup 还原、原文抽查；与提交 PDF 对应小节及辅助 XML 渲染图对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml', 'locator': 'PDF 第 1 页第 1 小节；XML 第 1 小节', 'observation': 'XML 明确使用 <type>16th</type>，末两个 C#6 音符含 <beam number=\"1\"> 和 <beam number=\"2\">；另有两个声部的休止。PDF 对应位置使用空心圆符头、直符干和单短斜线，没有忠实呈现这组十六分音符双梁及休止结构。此处只比较提交物彼此，不用实际演奏音高再次扣分。', 'method': '原 XML 逐元素读取；宿主页图和 inspection/pdf-p1-m1-2.png 目视对照'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 2 页第 29 小节；XML 第 29 小节；q=112–116 对应提交映射 t=52.093023–53.953488 秒', 'observation': 'XML 第 29 小节两个音符分别为 G#3（小节内 q=1.5）和 B2（q=3.625），均 duration=2520/divisions=10080，即十六分音符；另有四个休止元素，包括声部 0 的附点四分、三附点四分、三十二分休止及声部 1 的全小节休止。PDF 可见两个空心符头及单斜旗，但未表示这些休止或正确时值。两个提交起音映射为 52.790698、53.779070 秒；不是听辨得到的实际击键时间。', 'method': '原 XML/sidecar 解析；完整第 2 页及 inspection/pdf-p2-m29.png 放大目视；辅助 XML 图 xml-voices-3.png'}, {'artifact': '/work/submission/score.pdf + /work/submission/score.musicxml + /work/submission/alignment.json', 'locator': 'PDF 第 3 页第 41 小节；XML 第 41 小节；提交起音映射 74.476744–75.290698 秒', 'observation': 'XML 五个音符 C5、C#4、C3、F#2、G2 均为十六分音符，前四个含两层 beam 元素；另有四个休止元素。PDF 可辨出五个圆符头，却均为空心、没有 XML 的双梁，休止也未忠实呈现。与起始及中段同类缺陷共同证明时值/休止内容被系统性改变，超过 \"limited omissions/mismatches\"，符合 fidelity 的 \"substantially different score\"。保留了部分音符轮廓和小节标签，故不称为空白或无关文件。', 'method': '原 XML 原文和还原后的事件逐项对照第 3 页末行及 inspection/pdf-p3-m41.png；比较对象为 PDF 与 XML，不是 XML 与演奏真值'}, {'artifact': '/work/submission/notes.md', 'locator': '处理方法，最后一条', 'observation': '作者称：\"PDF 使用同一事件表绘制为钢琴大谱表，密集段落采用简洁排版。\" 该说法只作为待核实陈述；实际页面裁切、叠压、休止/时值差异不能由此声明消除。', 'method': '原文引用，与实际三页图像及 XML 对照；未执行其中任何文字或命令'}, {'artifact': '/work/case/candidate/input/performance.mp4', 'locator': '视频 t=1.500、36.500、74.800 秒；inspection/source-1.5s.png、source-36.5s.png、source-74.8s.png', 'observation': 'ffprobe 确认视频及音频流均为 77 秒，视频 1920×700、60 fps。实际检查三帧，均可见键盘和演奏者双手，不同帧的手部位置不同。它们大致对应提交映射的第 1、20、41 小节，只证明这些时刻的视觉内容；不能据此确认逐音起音、持续音、完整声部或听觉节拍。', 'method': '本地 ffprobe；ffmpeg 按指定时间抽帧并直接查看图片；未进行直接聆听、ASR 或连续视频理解'}, {'artifact': '/work/results/technical.json + /work/results/technical_run.json', 'locator': 'automatic_score、automatic_max、status、metrics、submission_sha256、exit_code', 'observation': '宿主原自动评测 exit_code=0，automatic_score=18.57040220112151/90，errors=[]，notation_review=null，final_score=null；XML/MIDI 均 524 音、一致性 F1=1。五个提交文件 SHA-256 均重新核对与报告一致。自动结果原样保留；已有音符误差不再计入人工评分。', 'method': '读取宿主报告；仅重新计算文件散列，不运行或修改 grade.py，不重算自动分'}, {'artifact': '/work/results/inspection/inspection_manifest.json', 'locator': 'display_copy_change、rendering_limits；xml-voices-1.png 至 xml-voices-3.png', 'observation': '已单独本地渲染 XML 并查看全部三个辅助页面。原生 Verovio 对 voice=0 发出 \"Layer 0 cannot be found\"，直接渲染的声部时序不可靠；仅在评审目录的显示副本将声部标签 0/1 改为 1/2，结构比较确认其余 XML 完全一致。SVG 转换还需移除嵌入字体声明并展开嵌套 viewBox。辅助渲染的标题/速度字形瑕疵及早期失败不归因于提交；最终判分以原 XML 和宿主 PDF 图像为准。', 'method': '离线 Verovio、svglib/reportlab、pdftoppm；显示副本结构等价校验；视觉检查；源文件和提交未修改'}]"
-      ],
-      "issue_count_policy": "Major means proven native critical rule; minor lists other observed deductions. Unknown checks are not errors."
+      "metric_errors": []
     },
     "reasons": [
-      "正常完成，提交MusicXML、MIDI、PDF、notes.md和alignment.json。",
-      "自动18.5704022011/90；524个预测音符、1103个参考音符，200ms匹配145个，80ms匹配102个。XML/MIDI一致性通过。",
-      "三页PDF存在裁切和严重叠压，时值、休止及连梁与XML不一致；排版0/4、一致性0/3。记谱可用性3分待核验，正式总分为null。"
+      "v2最终分 5.591698；旧v1分数 18.57040220112151 仅作历史对照。",
+      "PDF全部3页右侧谱表之外仍有音符，页首与右边界裁切；第1页第3–4小节、第2页密集段及第3页末段严重叠压，无法可靠读谱。",
+      "XML有声部和休止可供重建，但PDF普遍使用空心圆、单斜旗，未表达源XML的十六/三十二分时值和休止结构；仅给予可恢复结构0.25。",
+      "第1小节和第29、41小节的时值、休止、双梁在PDF中系统性改变，忠实度0；×0.25。"
     ],
     "limits": [
-      "Proxy interval is unknown-item bookkeeping, not a formal score or confidence interval.",
-      "Original formal prerequisites and caps preserved; unverified caps are not silently cleared.",
-      "No direct listening or continuous video certification.",
-      "本轮仅两个作答会话并行；每题开始执行后计时50分钟，尚未启动的排队题不计时。网络重试和推理等待计入该题预算；超时不单独证明模型能力不足。",
-      "保守分只累计已确认得分，未知项不代表已证实错误；不满足正式评审前提。",
-      "这是50分钟预算的独立复测，不是对旧零分答卷补写文件或重算。未核验项不代表已证实错误。"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [],
     "files": [
@@ -18242,7 +17620,7 @@
     ],
     "events_path": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/logs/A6/events.jsonl",
     "elapsed_clock": "wall",
-    "score_label": "已确认得分；非完整正式总分",
+    "score_label": "A6 v2 可用交付复评（事后规则）",
     "formal_score": null,
     "pending_weight": 3,
     "previews": [
@@ -18258,7 +17636,9 @@
         "type": "image",
         "path": "previews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/page-3.png"
       }
-    ]
+    ],
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true
   },
   {
     "id": "A4_gpt-6-luna_new_20261021",
@@ -18451,130 +17831,98 @@
     "elapsed_seconds": 2390.9392849040005,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_a4luna_a6sol_serial/logs/A6_gpt-6-sol/run.json",
-    "scorepath": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A6_gpt-6-sol/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/score.json",
     "submission": "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol",
-    "score": 49.867777,
+    "score": 33.0109,
     "score_detail": {
-      "id": "A6_gpt-6-sol",
+      "components": {
+        "pitch_global_f1": 10.130311614730878,
+        "pitch_time_macro_f1": 3.857682505177637,
+        "pitch_register_macro_f1": 3.7256394135470963,
+        "rhythm_strict_f1": 4.804532577903683,
+        "midi_xml_consistency": 10.0,
+        "layout": 11.25,
+        "notation": 7.5,
+        "fidelity": 3.75
+      },
+      "raw_score": 55.01816611135929,
+      "delivery_level": "major_revision",
+      "delivery_label": "需大幅修订",
+      "delivery_factor": 0.6,
+      "after_delivery_factor": 33.010899666815575,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 33.0109,
+      "unrounded_final_score": 33.010899666815575,
+      "pitch_precision": 0.675226586102719,
+      "pitch_recall": 0.40525838621940163,
+      "id": "A6_gpt-6-sol_new_20261021",
       "case": "A6",
       "model": "gpt-6-sol",
-      "judge": "gpt-6-astra",
-      "case_root": "A6_piano_transcription",
-      "status": "scored",
-      "final_score": 49.867777,
-      "solver_status": "completed",
-      "judge_status": "completed",
-      "score_type": "single_judge_LLM_final",
-      "reviewers": 1,
-      "effort": "high",
-      "automatic_score": 41.36777698192539,
-      "manual_score": 8.5,
-      "components": {
-        "layout_points": 3.5,
-        "notation_usability_points": 2.0,
-        "pdf_xml_fidelity_points": 3.0,
-        "evidence": [
-          {
-            "artifact": "/work/submission/score.pdf",
-            "locator": "全部2页；第1页第1–21小节，第2页第22–38小节",
-            "observation": "已逐页实际查看。两页均有完整钢琴大谱表，谱号、小节线、临时记号、符干、符梁及连音线总体可辨；未见页面裁掉谱表、空白页或大片重叠。第38小节单独占最后一行，仍完整可读。",
-            "method": "pdfinfo确认2页；pdftoppm以150 dpi渲染所有页；view_image逐页检查。证据图：inspection/pdf-1.png、pdf-2.png。"
-          },
-          {
-            "artifact": "/work/submission/score.pdf",
-            "locator": "第1页，第1小节上方速度标记",
-            "observation": "速度数字120可见，但其左侧/上方的节拍单位显示为缺字方框，并与等号、数字挤叠，不能从该标记清楚辨认四分音符单位。这是局部排印缺陷，未据此判为整份PDF不可读。",
-            "method": "对原提交PDF另作300 dpi渲染并用view_image查看裁图inspection/pdf-tempo.png；XML第1小节metronome明确为quarter=120。"
-          },
-          {
-            "artifact": "/work/submission/score.musicxml；/work/submission/score.pdf",
-            "locator": "第1–38小节；staff 1/voice 1与staff 2/voice 2",
-            "observation": "XML为一个Piano部件、两个谱表，各一个声部；全篇38小节均为4/4，两声部各小节累计时值均为4个四分音符。休止、和弦、连音线能构成可计算、可恢复的节奏结构，故不属于语义无法使用的散乱符号。",
-            "method": "独立XML解析，处理chord与backup并逐小节核算；结果保存在inspection/measure_checks.json；结合PDF与独立渲染目视核对。"
-          },
-          {
-            "artifact": "/work/submission/score.pdf；/work/submission/score.musicxml",
-            "locator": "第1页第11小节低音声部",
-            "observation": "十六分休止后直接写三附点二分音符：小节内q=0.25起，长3.75拍。算术上正确，但把其余全部拍位隐藏在罕见三附点时值内，演奏者需要额外换算；按拍拆分并连结会更易读。此项评的是记谱表达，不要求模拟手指离键或踏板长度。",
-            "method": "view_image查看PDF与独立XML渲染；XML duration=37800、divisions=10080及3个dot核对。"
-          },
-          {
-            "artifact": "/work/submission/score.pdf；/work/submission/score.musicxml",
-            "locator": "第1页第16小节低音、第18小节高音、第20小节低音",
-            "observation": "分别在小节内q=1.25、2.25、0.75写1.75拍的双附点四分音符，跨越拍界且较少用按拍拆分显示拍点。第20小节高音也在q=1.5起跨拍持续到q=3.5。多处同类写法使4/4重拍与两声部对位需反复细数，节奏重排会明显改善使用性。",
-            "method": "实际谱面查看并逐项核对XML声部位置与duration；q在此均为小节内从0起的四分音符坐标。"
-          },
-          {
-            "artifact": "/work/submission/score.pdf；/work/submission/score.musicxml",
-            "locator": "首段：第1页第1–3小节；中段：第1页第18–21小节及第2页第22小节；尾段：第2页第35–38小节",
-            "observation": "独立XML渲染与提交PDF的起始休止、高音和弦、低音整小节休止，中段上下谱表和弦与连音线，以及结尾第38小节高音连音和低音长和弦均对应。全篇两声部与高、中、低音区均纳入检查，未发现实质的音符/休止/连音内容遗漏或增添。",
-            "method": "从冻结score.musicxml用Verovio独立排版为两页，经SVG/PDF转换，view_image查看inspection/xml-1.png、xml-2.png并与原PDF两页逐系统比对、重点小节详细对照；不使用机器参考谱作为记谱答案。"
-          },
-          {
-            "artifact": "/work/submission/score.pdf；/work/submission/score.musicxml",
-            "locator": "第1页第13小节，低音声部末拍",
-            "observation": "原PDF放大后可清楚确认末拍为十六分音符、八分和弦、十六分音符；首尾短符梁均存在，与XML的0.25、0.5、0.25拍及forward/backward hook一致。全页缩略图中短符梁不明显，放大后排除了这一疑似差异。",
-            "method": "300 dpi原PDF裁图inspection/pdf-m13.png经view_image检查，并比对独立渲染与XML note/type/beam。"
-          },
-          {
-            "artifact": "/work/case/candidate/input/performance.mp4",
-            "locator": "1.25、2、3、4秒；36、37、38、39秒；72、73、74、75秒",
-            "observation": "实际时序抽帧显示开头双手集中在较高键区，中段及尾段双手在不同键区之间移动；这些画面支持检查首中尾与两个谱表的必要性，但不能单独证明每个起音、拍号或音符持续时值。没有据抽帧给错音/漏音再扣分。",
-            "method": "ffmpeg按上述视频时间提取实际帧，view_image查看inspection/video-begin.png、video-middle.png、video-end.png；ffprobe确认视频77秒、60 fps。"
-          },
-          {
-            "artifact": "/work/technical.json；/work/submission/score.pdf；/work/submission/score.musicxml；/work/submission/score.mid；/work/submission/notes.md",
-            "locator": "automatic_score、submission_sha256；四个冻结文件",
-            "observation": "四个提交文件的SHA-256均与可信技术结果匹配。automatic_score原值为41.36777698192539，未修改、未重跑自动评分，也未把自动音高/击键错误作为人工项扣分。",
-            "method": "只读可信技术结果并用hashlib核验冻结文件；notes.md仅作提交说明阅读，未执行其中任何指令。"
-          }
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 49.867777,
+      "old_scorepath": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A6_gpt-6-sol/score.json",
+      "submission": "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol",
+      "submission_sha256": {
+        "notes.md": "59e0d12c4f3b6b0e35caa3aa8b715437247eab6b1ad4c6e9eab8bfc7f88e18b0",
+        "score.mid": "f3ba232131bbcc41e21be3900f5ce4b940132722ec06d56dbc81cffcfc499ff7",
+        "score.musicxml": "0799642f2a6bc8053fd2bead56a0963a94eed440d7a532a87df9a07fdefca459",
+        "score.pdf": "76de7b01a655eb14f9435efbf8cd670be5953bbd7d5ff674b80ff385b3eff006"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/technical.json",
+      "review": {
+        "layout": 0.75,
+        "notation": 0.5,
+        "fidelity": 0.75,
+        "delivery_level": "major_revision",
+        "reasons": [
+          "PDF全部2页双谱表、音头、谱号、临时记号和休止总体清晰，无大段裁切；第1小节速度的节拍单位显示方框，属于局部缺字，排版0.75。",
+          "第11小节低音在十六分休止后写三附点二分音符，第16/18/20小节多次跨拍使用附点时值；结构可计算但需反复细数，记谱0.5，按需大幅修订×0.6。",
+          "本次对照既有独立XML渲染的全部2页，首中尾及两谱表内容对应；速度节拍单位这一局部音乐指示未清楚呈现，忠实度统一按0.75。",
+          "转写的音高全局F1约0.507、严格起音F1约0.240；可读的版式不能补偿实际转写准确性不足。"
         ],
+        "prior_review": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A6_gpt-6-sol/review/ratings.json",
         "confidence": {
-          "layout_points": "high",
-          "notation_usability_points": "medium",
-          "pdf_xml_fidelity_points": "high"
-        },
-        "inspection_limits": [
-          "未直接听审音频，未以正常速度连续观看整段视频；视频检查为列明时码的实际抽帧。记谱可用性结论依据谱面、XML时值/声部结构与视频抽帧，不能冒充听觉验证。",
-          "本题为钢琴记谱，未使用或生成ASR。未独立重做逐音转写，自动音高、起音及MIDI一致性沿用可信technical.json。",
-          "PDF全部两页和独立XML渲染全部两页均已实际查看；内容一致性做全篇逐系统检查及首中尾、疑点小节的详细比对，不声称对每个符号做了穷尽的逐一人工证明。",
-          "独立渲染的本地svglib不支持嵌入字体CSS及嵌套SVG视窗，已仅在results中的派生SVG处理这些转换兼容问题后完成渲染，未改动冻结MusicXML。独立渲染的速度字形不作原PDF缺陷的独立佐证；原PDF自身的缺字方框已在原文件300 dpi渲染中确认。"
-        ],
-        "reasons": {
-          "layout_points": "3.5/4：两页完整，谱表间距及大多数音乐符号清楚，密集段也仍能辨读；第1页第1小节上方速度单位缺字并挤叠，扣0.5。第38小节虽单独一行但没有截断，不另扣分。",
-          "notation_usability_points": "2/3：4/4、大谱表、休止与连音线构成可恢复的结构，38小节两个声部均填满4拍；但第11小节三附点长音及第16、18、20小节从弱分拍开始的双附点/跨拍写法，让拍点和两声部协调需要额外换算，需整理节奏表达。扣分针对读谱可用性，不因选择4/4、120 BPM、等音拼写、分手方法或踏板/离键长度本身扣分，也不重复扣自动项错音漏音。",
-          "pdf_xml_fidelity_points": "3/3：原PDF两页完整呈现XML的38小节、两个谱表/声部；首中尾与全部系统核对未发现实质音符、休止、连音线或声部缺失。第13小节疑似短符梁差异经300 dpi放大排除。局部速度字形的排印问题已计入layout，不再在此重复扣分。"
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "high"
         }
       },
-      "inspection_limits": [
-        "未直接听审音频，未以正常速度连续观看整段视频；视频检查为列明时码的实际抽帧。记谱可用性结论依据谱面、XML时值/声部结构与视频抽帧，不能冒充听觉验证。",
-        "本题为钢琴记谱，未使用或生成ASR。未独立重做逐音转写，自动音高、起音及MIDI一致性沿用可信technical.json。",
-        "PDF全部两页和独立XML渲染全部两页均已实际查看；内容一致性做全篇逐系统检查及首中尾、疑点小节的详细比对，不声称对每个符号做了穷尽的逐一人工证明。",
-        "独立渲染的本地svglib不支持嵌入字体CSS及嵌套SVG视窗，已仅在results中的派生SVG处理这些转换兼容问题后完成渲染，未改动冻结MusicXML。独立渲染的速度字形不作原PDF缺陷的独立佐证；原PDF自身的缺字方框已在原文件300 dpi渲染中确认。"
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-2.png"
       ],
-      "submission_unchanged": true,
-      "automatic_metrics": {
-        "predicted_count": 662,
-        "reference_count": 1103,
-        "coarse_tp": 447,
-        "strict_tp": 212,
-        "false_positive": 215,
-        "false_negative": 656,
-        "precision_200ms": 0.675226586102719,
-        "recall_200ms": 0.40525838621940163
-      }
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
     },
     "reasons": [
-      "3.5/4：两页完整，谱表间距及大多数音乐符号清楚，密集段也仍能辨读；第1页第1小节上方速度单位缺字并挤叠，扣0.5。第38小节虽单独一行但没有截断，不另扣分。",
-      "2/3：4/4、大谱表、休止与连音线构成可恢复的结构，38小节两个声部均填满4拍；但第11小节三附点长音及第16、18、20小节从弱分拍开始的双附点/跨拍写法，让拍点和两声部协调需要额外换算，需整理节奏表达。扣分针对读谱可用性，不因选择4/4、120 BPM、等音拼写、分手方法或踏板/离键长度本身扣分，也不重复扣自动项错音漏音。",
-      "3/3：原PDF两页完整呈现XML的38小节、两个谱表/声部；首中尾与全部系统核对未发现实质音符、休止、连音线或声部缺失。第13小节疑似短符梁差异经300 dpi放大排除。局部速度字形的排印问题已计入layout，不再在此重复扣分。",
-      "200ms同音高起音匹配：447/662个预测、1103个参考；未匹配预测215，未匹配参考656。不将全部未匹配一概解释为漏音。"
+      "v2最终分 33.0109；旧v1分数 49.867777 仅作历史对照。",
+      "PDF全部2页双谱表、音头、谱号、临时记号和休止总体清晰，无大段裁切；第1小节速度的节拍单位显示方框，属于局部缺字，排版0.75。",
+      "第11小节低音在十六分休止后写三附点二分音符，第16/18/20小节多次跨拍使用附点时值；结构可计算但需反复细数，记谱0.5，按需大幅修订×0.6。",
+      "本次对照既有独立XML渲染的全部2页，首中尾及两谱表内容对应；速度节拍单位这一局部音乐指示未清楚呈现，忠实度统一按0.75。",
+      "转写的音高全局F1约0.507、严格起音F1约0.240；可读的版式不能补偿实际转写准确性不足。"
     ],
     "limits": [
-      "未直接听审音频，未以正常速度连续观看整段视频；视频检查为列明时码的实际抽帧。记谱可用性结论依据谱面、XML时值/声部结构与视频抽帧，不能冒充听觉验证。",
-      "本题为钢琴记谱，未使用或生成ASR。未独立重做逐音转写，自动音高、起音及MIDI一致性沿用可信technical.json。",
-      "PDF全部两页和独立XML渲染全部两页均已实际查看；内容一致性做全篇逐系统检查及首中尾、疑点小节的详细比对，不声称对每个符号做了穷尽的逐一人工证明。",
-      "独立渲染的本地svglib不支持嵌入字体CSS及嵌套SVG视窗，已仅在results中的派生SVG处理这些转换兼容问题后完成渲染，未改动冻结MusicXML。独立渲染的速度字形不作原PDF缺陷的独立佐证；原PDF自身的缺字方框已在原文件300 dpi渲染中确认。"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [],
     "files": [
@@ -19085,7 +18433,10 @@
         "type": "image",
         "path": "previews/A6_gpt-6-sol_new_20261021/page-2.png"
       }
-    ]
+    ],
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "A6 v2 可用交付复评（事后规则）"
   },
   {
     "id": "A4_gpt-6-astra_high40_rerun",
@@ -19811,49 +19162,82 @@
     "elapsed_seconds": 1800.2055549621582,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261021_k3_a4_a6_isolated/logs/A6_k3/run.json",
-    "scorepath": "benchmark_runs/20261021_k3_a4_a6_isolated/grades/A6_k3/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/score.json",
     "submission": "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A6_k3",
     "score": 0.0,
     "score_detail": {
-      "id": "A6_k3",
-      "case": "A6",
-      "model": "k3",
-      "case_root": "A6_piano_transcription",
-      "judge": null,
-      "status": "scored",
-      "final_score": 0.0,
-      "formal_total": 0.0,
-      "automatic_score": 0.0,
-      "manual_score": 0.0,
-      "solver_status": "budget_timeout",
-      "judge_status": "not_needed_empty_delivery",
-      "score_type": "native_empty_delivery_final",
-      "reviewers": 0,
-      "effort": "high",
       "components": {
         "pitch_global_f1": 0.0,
         "pitch_time_macro_f1": 0.0,
         "pitch_register_macro_f1": 0.0,
         "rhythm_strict_f1": 0.0,
-        "xml_valid_nonempty": 0.0,
         "midi_xml_consistency": 0.0,
-        "notes_present": 0.0,
-        "notation_review": 0
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0
       },
-      "submission_unchanged": true,
-      "inspection_limits": [
-        "本次0分表示30分钟截止时没有交付文件；不是接口调用失败，也不证明模型在其他预算或尝试下必然无法完成。"
+      "raw_score": 0.0,
+      "delivery_level": "empty",
+      "delivery_label": "无可评内容",
+      "delivery_factor": 0,
+      "after_delivery_factor": 0.0,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": false,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 0.0,
+      "unrounded_final_score": 0.0,
+      "pitch_precision": 0.0,
+      "pitch_recall": 0.0,
+      "id": "A6_k3_20261021_k3_a4_a6_isolated",
+      "case": "A6",
+      "model": "k3",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 0.0,
+      "old_scorepath": "benchmark_runs/20261021_k3_a4_a6_isolated/grades/A6_k3/score.json",
+      "submission": "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A6_k3",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0,
+        "delivery_level": "empty",
+        "reasons": [
+          "实际作答后没有非空可评音乐内容。"
+        ]
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
       ],
-      "reason": "实际K3会话执行后超时，冻结结果目录为空。原生A6评分器确定所有项目0分、pending_points=0，无谱面可评，因此未发起LLM评审。"
+      "metric_errors": [
+        "MusicXML: missing or oversized: score.musicxml",
+        "MIDI: missing or oversized: score.mid",
+        "Alignment: No valid alignment.json or MIDI tempo map"
+      ]
     },
     "reasons": [
-      "本次K3复测：Codex CLI / high / 30分钟；用户后续授权两路并发，A4评审与A6答题重叠。",
-      "答题达到该次预算上限，按截止时保存的交付评分；预算超时与内容得分分别记录，不能仅凭超时断言模型能力。",
-      "实际K3会话执行后超时，冻结结果目录为空。原生A6评分器确定所有项目0分、pending_points=0，无谱面可评，因此未发起LLM评审。"
+      "v2最终分 0.0；旧v1分数 0.0 仅作历史对照。",
+      "实际作答后没有非空可评音乐内容。"
     ],
     "limits": [
-      "本次0分表示30分钟截止时没有交付文件；不是接口调用失败，也不证明模型在其他预算或尝试下必然无法完成。",
-      "墙钟 1800.206 秒；单调时钟 1788.786 秒；差异 11.419 秒。按先到的30分钟截止线停止。"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [],
     "files": [],
@@ -20150,10 +19534,11 @@
     "exact_score_display": true,
     "elapsed_clock": "wall",
     "monotonic_elapsed_seconds": 1788.786471066,
-    "score_label": "原生评分器：超时空交付",
+    "score_label": "A6 v2 可用交付复评（事后规则）",
     "previews": [],
     "superseded_by": "20261022_k3_a6_60_clean",
-    "historical_only": true
+    "historical_only": true,
+    "rubric_version": "A6-delivery-v2.0"
   },
   {
     "id": "A6_k3_20261022_k3a6_60_sola4_40_serial",
@@ -20166,132 +19551,84 @@
     "elapsed_seconds": 8766.947665691376,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/logs/A6_k3/run.json",
-    "scorepath": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/grades/A6_k3/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/score.json",
     "submission": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A6_k3",
-    "score": 4.0,
+    "score": 1.0,
     "score_detail": {
-      "id": "A6_k3",
-      "case": "A6",
-      "model": "k3",
-      "judge": "gpt-6-sol",
-      "case_root": "A6_piano_transcription",
-      "budget_seconds": 3600,
-      "status": "scored",
-      "final_score": 4.0,
-      "formal_total": 4.0,
-      "automatic_score": 4.0,
-      "manual_score": 0,
-      "solver_status": "budget_timeout",
-      "judge_status": "cancelled_before_api_native_final",
-      "score_type": "native_missing_pdf_final",
-      "reviewers": 0,
-      "effort": "high",
       "components": {
         "pitch_global_f1": 0.0,
         "pitch_time_macro_f1": 0.0,
         "pitch_register_macro_f1": 0.0,
         "rhythm_strict_f1": 0.0,
-        "xml_valid_nonempty": 1.0,
-        "midi_xml_consistency": 3.0,
-        "notes_present": 0.0,
-        "notation_review": 0
+        "midi_xml_consistency": 10.0,
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0
       },
-      "submission_unchanged": true,
-      "inspection_limits": [
-        "主机/WSL时钟严重分歧：墙钟8766.948秒，单调1642.441秒；恢复后按过期截止线停止。本次不代表正常完整60分钟等时实验。"
+      "raw_score": 10.0,
+      "delivery_level": "missing_core",
+      "delivery_label": "缺关键交付",
+      "delivery_factor": 0.1,
+      "after_delivery_factor": 1.0,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 1.0,
+      "unrounded_final_score": 1.0,
+      "pitch_precision": 0.0,
+      "pitch_recall": 0.0,
+      "id": "A6_k3_20261022_k3a6_60_sola4_40_serial",
+      "case": "A6",
+      "model": "k3",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 4.0,
+      "old_scorepath": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/grades/A6_k3/score.json",
+      "submission": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A6_k3",
+      "submission_sha256": {
+        "alignment.json": "18bcc3b394edeb07c24685d589f63d0aeddc06c0271bf3160b3edd9d28de34ca",
+        "score.mid": "5ddfad6b8ce319dba6dc8276ab5561d908d66a387e3c149517d625729a1e8fdd",
+        "score.musicxml": "c1700b5d4af1f776923562f52538273d8a459f0b2d2ad54110bdc79a6b826acf"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0,
+        "delivery_level": "missing_core",
+        "reasons": [
+          "缺少PDF，已有可解析的音乐数据仅按残缺交付计分；未凭文件存在授予谱面分。"
+        ]
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
       ],
-      "reason": "冻结原生评分器确定4分，pending_points=0：缺少PDF，谱面0分；alignment锚点违反规则，音符项0；XML有效1分、MIDI/XML一致3分。未调用LLM judge。",
-      "automatic_metrics": {
-        "values": {
-          "pitch_global_f1": 0.0,
-          "pitch_time_macro_f1": 0.0,
-          "pitch_register_macro_f1": 0.0,
-          "rhythm_strict_f1": 0.0
-        },
-        "points": {
-          "pitch_global_f1": 0.0,
-          "pitch_time_macro_f1": 0.0,
-          "pitch_register_macro_f1": 0.0,
-          "rhythm_strict_f1": 0.0
-        },
-        "note_points": 0.0,
-        "predicted_count": 0,
-        "reference_count": 1103,
-        "coarse_tp": 0,
-        "strict_tp": 0,
-        "false_positive": 0,
-        "false_negative": 1103,
-        "time_bins": [
-          {
-            "bin": 0,
-            "predicted": 0,
-            "reference": 147,
-            "f1": 0.0
-          },
-          {
-            "bin": 1,
-            "predicted": 0,
-            "reference": 131,
-            "f1": 0.0
-          },
-          {
-            "bin": 2,
-            "predicted": 0,
-            "reference": 216,
-            "f1": 0.0
-          },
-          {
-            "bin": 3,
-            "predicted": 0,
-            "reference": 240,
-            "f1": 0.0
-          },
-          {
-            "bin": 4,
-            "predicted": 0,
-            "reference": 170,
-            "f1": 0.0
-          },
-          {
-            "bin": 5,
-            "predicted": 0,
-            "reference": 199,
-            "f1": 0.0
-          }
-        ],
-        "register_bins": [
-          {
-            "bin": 0,
-            "predicted": 0,
-            "reference": 305,
-            "f1": 0.0
-          },
-          {
-            "bin": 1,
-            "predicted": 0,
-            "reference": 388,
-            "f1": 0.0
-          },
-          {
-            "bin": 2,
-            "predicted": 0,
-            "reference": 410,
-            "f1": 0.0
-          }
-        ],
-        "matched_pairs": [],
-        "precision_200ms": 0,
-        "recall_200ms": 0.0
-      }
+      "metric_errors": [
+        "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+      ]
     },
     "reasons": [
-      "本次复测：Codex CLI / high / 60分钟；串行，独立评审另计30分钟上限。",
-      "答题达到该次预算上限，按截止时保存的交付评分；预算超时与内容得分分别记录，不能仅凭超时断言模型能力。",
-      "冻结原生评分器确定4分，pending_points=0：缺少PDF，谱面0分；alignment锚点违反规则，音符项0；XML有效1分、MIDI/XML一致3分。未调用LLM judge。"
+      "v2最终分 1.0；旧v1分数 4.0 仅作历史对照。",
+      "缺少PDF，已有可解析的音乐数据仅按残缺交付计分；未凭文件存在授予谱面分。"
     ],
     "limits": [
-      "主机/WSL时钟严重分歧：墙钟8766.948秒，单调1642.441秒；恢复后按过期截止线停止。本次不代表正常完整60分钟等时实验。",
-      "墙钟 8766.948 秒；单调时钟 1642.441 秒；差异 7124.506 秒。按先到的截止时间停止。"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [],
     "files": [
@@ -20558,10 +19895,11 @@
     "exact_score_display": true,
     "elapsed_clock": "wall",
     "monotonic_elapsed_seconds": 1642.441334449,
-    "score_label": "原生评分器确定总分，无未决分",
+    "score_label": "A6 v2 可用交付复评（事后规则）",
     "previews": [],
     "superseded_by": "20261022_k3_a6_60_clean",
-    "historical_only": true
+    "historical_only": true,
+    "rubric_version": "A6-delivery-v2.0"
   },
   {
     "id": "A4_gpt-6-sol_20261022_k3a6_60_sola4_40_serial",
@@ -21180,101 +20518,105 @@
     "elapsed_seconds": 3600.0843436717987,
     "reasoning_effort": "high",
     "runpath": "benchmark_runs/20261022_k3_a6_60_clean/logs/A6_k3/run.json",
-    "scorepath": "benchmark_runs/20261022_k3_a6_60_clean/grades/A6_k3/score.json",
+    "scorepath": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/score.json",
     "submission": "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3",
-    "score": 8.5,
+    "score": 6.25,
     "score_detail": {
-      "id": "A6_k3",
+      "components": {
+        "pitch_global_f1": 0.0,
+        "pitch_time_macro_f1": 0.0,
+        "pitch_register_macro_f1": 0.0,
+        "rhythm_strict_f1": 0.0,
+        "midi_xml_consistency": 10.0,
+        "layout": 7.5,
+        "notation": 7.5,
+        "fidelity": 0
+      },
+      "raw_score": 25.0,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 6.25,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 6.25,
+      "unrounded_final_score": 6.25,
+      "pitch_precision": 0.0,
+      "pitch_recall": 0.0,
+      "id": "A6_k3_20261022_k3_a6_60_clean",
       "case": "A6",
       "model": "k3",
-      "judge": "gpt-6-sol",
-      "case_root": "A6_piano_transcription",
-      "budget_seconds": 3600,
-      "status": "scored",
-      "final_score": 8.5,
-      "solver_status": "budget_timeout",
-      "judge_status": "completed",
-      "score_type": "single_judge_LLM_final",
-      "reviewers": 1,
-      "effort": "high",
-      "automatic_score": 5.0,
-      "manual_score": 3.5,
-      "components": {
-        "layout_points": 2.0,
-        "notation_usability_points": 1.5,
-        "pdf_xml_fidelity_points": 0.0,
-        "evidence": [
-          {
-            "artifact": "submission/score.pdf",
-            "locator": "第1-6页，尤其第1页第1-3小节、第3页第17-20小节、第4页第22-25小节、第5页第29-32小节、第6页第33-38小节",
-            "observation": "六页均有连续的钢琴双谱表，未见空白或截断页；但大量32/64分音符、密集临时记号及多条加线挤在单行小节内，局部辨读需明显放大。",
-            "method": "pdftoppm逐页渲染，并用view_image查看全部六页；对第1、3、6页另以220 dpi放大检查。"
-          },
-          {
-            "artifact": "submission/score.pdf + submission/score.musicxml",
-            "locator": "第1页第1小节；MusicXML第1小节attributes",
-            "observation": "PDF上谱表开头无谱号；XML仅给第2谱表标记F谱号，没有第1谱表显式谱号。PDF仍有4/4、双谱表、休止和连音线，但这种缺省增加了读谱歧义。",
-            "method": "放大PDF首行，读取XML结构，并独立用Verovio渲染核对。"
-          },
-          {
-            "artifact": "submission/score.musicxml",
-            "locator": "全38小节；第17、23、30-33小节等密集段",
-            "observation": "XML有38小节、单个Piano part、两谱表；1638个书写音头中755个标为32分、376个标为64分，第33小节有77个书写音头。机械细分与频繁附点使4/4拍的可演奏节奏层次难以辨认。",
-            "method": "解析MusicXML的measure、staff、pitch和type元素；结合PDF页面视觉检查。"
-          },
-          {
-            "artifact": "submission/score.pdf vs submission/score.musicxml",
-            "locator": "PDF第3页第17小节；XML独立渲染第3页第17小节",
-            "observation": "PDF该小节以上谱表单个降B高音的延长为开端，低谱表随即连续运动；XML同号小节从B6、降B6及随后多音高音群开始，两谱表的音群和节奏分布显著不同。",
-            "method": "分别放大提交PDF与从原始MusicXML独立生成的Verovio页面，再读取XML第17小节起始pitch元素。"
-          },
-          {
-            "artifact": "submission/score.pdf vs submission/score.musicxml",
-            "locator": "PDF第6页最后一行第37-38小节；XML独立渲染第7页第37-38小节",
-            "observation": "PDF第38小节上谱表先休止、仅短暂双音后大段休止；XML第38小节上谱表从G4起连续写有多个击键。结尾并非同一组音符。",
-            "method": "放大对照PDF末行与独立XML渲染末页，并核查XML第38小节音符元素。"
-          },
-          {
-            "artifact": "case/candidate/input/performance.mp4",
-            "locator": "视频约00:05、00:36、01:12",
-            "observation": "抽帧显示演奏者双手活动及不同音区跨度；这些静帧不足以验证精确起音或节奏。",
-            "method": "ffmpeg按时码抽帧后用view_image检查。"
-          }
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 8.5,
+      "old_scorepath": "benchmark_runs/20261022_k3_a6_60_clean/grades/A6_k3/score.json",
+      "submission": "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3",
+      "submission_sha256": {
+        "alignment.json": "c0608ab798df42f3fc83eff133f487d0571d06b23196bf3f808e7d2cc43c72f6",
+        "notes.md": "68145940405e21d04263fa04a6288f85bb08c2586a6557de41bdcd6de5e478ea",
+        "score.mid": "8392a3ca4b9e073064ccec64549853057926cf310c4511b0b2aeb7e0c0ed7acf",
+        "score.musicxml": "7bc13cd48705cc1bba47d45915d481505bb9efe35148e1862fd44d67047e1f1f",
+        "score.pdf": "9409389b1c0f35b6250d865340b84216c1eb559c4f499a42f32fa66d865026ff"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/technical.json",
+      "review": {
+        "layout": 0.5,
+        "notation": 0.5,
+        "fidelity": 0,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF共6页，多数符号可辨，但上谱表没有显式谱号，密集32/64分音符、加线及变音需明显放大；排版0.5。",
+          "XML有两谱表、38小节、休止与连结结构，短时值和附点机械细分导致大量编辑需求，记谱0.5。",
+          "本次重查PDF第3页第17小节及第6页尾段：与原XML及既有独立渲染的第17、38小节不是同一组音乐；XML第38小节起始为G#4等连续音符，而PDF为大段休止和短双音。忠实度0，×0.25。",
+          "提交alignment.json的两个锚点相隔76秒，违反原题0.5–8秒间隔；原生映射失败，55分音高/起音项无法获得有效匹配分。这不是认定其全部音符错误，也没有替它修复映射。"
         ],
+        "prior_review": "benchmark_runs/20261022_k3_a6_60_clean/grades/A6_k3/review/ratings.json",
         "confidence": {
-          "layout_points": "high",
-          "notation_usability_points": "medium",
-          "pdf_xml_fidelity_points": "high"
-        },
-        "inspection_limits": [
-          "未直接听审音频，也未以正常速度连续观看完整视频；只查看约00:05、00:36、01:12的静帧。记谱可用性依据谱面、XML时值统计和静帧判断，不将静帧推断当作听审。",
-          "PDF/XML音符内容以首、中、尾及各页双谱表的视觉抽样对照，未对PDF图形做逐音机器逆向识别。独立XML渲染的七页与提交PDF六页采用不同分页。"
-        ],
-        "reasons": {
-          "layout_points": "2.0/4：六页完整且谱线、休止、音头大体可辨，但第1页第1-3小节、第4页第22-25小节及第5页第29-32小节的密集短时值、临时记号和加线造成明显拥挤，符合可用但有显著排版问题的档位。",
-          "notation_usability_points": "1.5/3：4/4、双谱表、休止与连音线提供可恢复的结构；然而上谱表缺显式谱号，多数音符写成32/64分时值，密集段的声部和拍内层次很难供钢琴演奏者直接使用，需大量人工整理。此项不因自动部分已计分的音高错误再次扣分。",
-          "pdf_xml_fidelity_points": "0.0/3：PDF不是当前XML的忠实谱面。第17小节两谱表起始音群及节奏分布明显不同；结尾第38小节PDF上谱表主要为休止和短暂双音，XML却连续写出多个音符。中段与结尾均有显著差异，属实质不同内容，按原0分档。"
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "high"
         }
       },
-      "inspection_limits": [
-        "未直接听审音频，也未以正常速度连续观看完整视频；只查看约00:05、00:36、01:12的静帧。记谱可用性依据谱面、XML时值统计和静帧判断，不将静帧推断当作听审。",
-        "PDF/XML音符内容以首、中、尾及各页双谱表的视觉抽样对照，未对PDF图形做逐音机器逆向识别。独立XML渲染的七页与提交PDF六页采用不同分页。"
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-2.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-3.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-4.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-5.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-6.png"
       ],
-      "submission_unchanged": true
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+      ]
     },
     "reasons": [
-      "本次复测：Codex CLI / high / 60分钟；串行，独立评审另计30分钟上限。",
-      "答题达到该次预算上限，按截止时保存的交付评分；预算超时与内容得分分别记录，不能仅凭超时断言模型能力。",
-      "2.0/4：六页完整且谱线、休止、音头大体可辨，但第1页第1-3小节、第4页第22-25小节及第5页第29-32小节的密集短时值、临时记号和加线造成明显拥挤，符合可用但有显著排版问题的档位。",
-      "1.5/3：4/4、双谱表、休止与连音线提供可恢复的结构；然而上谱表缺显式谱号，多数音符写成32/64分时值，密集段的声部和拍内层次很难供钢琴演奏者直接使用，需大量人工整理。此项不因自动部分已计分的音高错误再次扣分。",
-      "0.0/3：PDF不是当前XML的忠实谱面。第17小节两谱表起始音群及节奏分布明显不同；结尾第38小节PDF上谱表主要为休止和短暂双音，XML却连续写出多个音符。中段与结尾均有显著差异，属实质不同内容，按原0分档。",
-      "原生检查：Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation",
-      "XML含1512个音符；对齐校验失败，未进入有效起音匹配。技术记录中的预测数0不表示空谱，也不能解释为全部音高错误。"
+      "v2最终分 6.25；旧v1分数 8.5 仅作历史对照。",
+      "PDF共6页，多数符号可辨，但上谱表没有显式谱号，密集32/64分音符、加线及变音需明显放大；排版0.5。",
+      "XML有两谱表、38小节、休止与连结结构，短时值和附点机械细分导致大量编辑需求，记谱0.5。",
+      "本次重查PDF第3页第17小节及第6页尾段：与原XML及既有独立渲染的第17、38小节不是同一组音乐；XML第38小节起始为G#4等连续音符，而PDF为大段休止和短双音。忠实度0，×0.25。",
+      "提交alignment.json的两个锚点相隔76秒，违反原题0.5–8秒间隔；原生映射失败，55分音高/起音项无法获得有效匹配分。这不是认定其全部音符错误，也没有替它修复映射。"
     ],
     "limits": [
-      "未直接听审音频，也未以正常速度连续观看完整视频；只查看约00:05、00:36、01:12的静帧。记谱可用性依据谱面、XML时值统计和静帧判断，不将静帧推断当作听审。",
-      "PDF/XML音符内容以首、中、尾及各页双谱表的视觉抽样对照，未对PDF图形做逐音机器逆向识别。独立XML渲染的七页与提交PDF六页采用不同分页。",
-      "墙钟 3600.084 秒；单调时钟 3473.246 秒；差异 126.839 秒。按先到的截止时间停止。"
+      "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+      "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+      "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
     ],
     "errors": [],
     "files": [
@@ -21704,7 +21046,7 @@
     "exact_score_display": true,
     "elapsed_clock": "wall",
     "monotonic_elapsed_seconds": 3473.245622894,
-    "score_label": "冻结公式＋独立gpt-6-sol high单评",
+    "score_label": "A6 v2 可用交付复评（事后规则）",
     "previews": [
       {
         "type": "image",
@@ -21730,6 +21072,7 @@
         "type": "image",
         "path": "previews/A6_k3_20261022_k3_a6_60_clean/page-6.png"
       }
-    ]
+    ],
+    "rubric_version": "A6-delivery-v2.0"
   }
 ]

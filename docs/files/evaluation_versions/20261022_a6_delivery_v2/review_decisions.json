@@ -1,0 +1,38 @@
+{
+  "A6_gpt-6-astra_missing8": {
+    "layout": 0, "notation": 0.5, "fidelity": 0, "delivery_level": "unusable_or_inconsistent",
+    "reasons": ["PDF 第1–6页均只有谱线、符干、符梁等，音头、谱号和变音字形普遍缺失；不能从实际PDF可靠读出音高。", "可编辑谱的双谱表、4/4、休止与连结关系可恢复，但第15–18及25–34小节细分密集，需重排；记谱结构给0.5，不意味着PDF可用。", "PDF与源谱的小节顺序大体相同，但关键记谱字形系统性丢失，忠实度为0；按不可用档×0.25。"],
+    "prior_review": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-astra/score.json",
+    "confidence": {"layout":"high","notation":"medium","fidelity":"high"}
+  },
+  "A6_gpt-6-luna_missing8": {
+    "layout": 0.25, "notation": 0, "fidelity": 0, "delivery_level": "unusable_or_inconsistent",
+    "reasons": ["PDF 第1–10页仅以G/F字母标示谱表，没有标准谱号、拍号与应有变音记号；第8–9页音群明显堆叠，只有部分位置可辨。", "XML含1125个音符、无显式休止符；PDF用音符散点和空白间隔代替可辨拍位，不能形成连贯可演奏结构。", "源XML中有升降音高，但PDF系统性未呈现变音，属于关键音乐语义丢失，忠实度0；MIDI/XML一致性仅约4.89%，亦触发×0.25档。"],
+    "prior_review": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-luna/score.json",
+    "confidence": {"layout":"high","notation":"high","fidelity":"high"}
+  },
+  "A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min": {
+    "layout": 0, "notation": 0.25, "fidelity": 0, "delivery_level": "unusable_or_inconsistent",
+    "reasons": ["PDF全部3页右侧谱表之外仍有音符，页首与右边界裁切；第1页第3–4小节、第2页密集段及第3页末段严重叠压，无法可靠读谱。", "XML有声部和休止可供重建，但PDF普遍使用空心圆、单斜旗，未表达源XML的十六/三十二分时值和休止结构；仅给予可恢复结构0.25。", "第1小节和第29、41小节的时值、休止、双梁在PDF中系统性改变，忠实度0；×0.25。"],
+    "prior_review": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A6/score.json",
+    "confidence": {"layout":"high","notation":"medium","fidelity":"high"}
+  },
+  "A6_gpt-6-sol_new_20261021": {
+    "layout": 0.75, "notation": 0.5, "fidelity": 0.75, "delivery_level": "major_revision",
+    "reasons": ["PDF全部2页双谱表、音头、谱号、临时记号和休止总体清晰，无大段裁切；第1小节速度的节拍单位显示方框，属于局部缺字，排版0.75。", "第11小节低音在十六分休止后写三附点二分音符，第16/18/20小节多次跨拍使用附点时值；结构可计算但需反复细数，记谱0.5，按需大幅修订×0.6。", "本次对照既有独立XML渲染的全部2页，首中尾及两谱表内容对应；速度节拍单位这一局部音乐指示未清楚呈现，忠实度统一按0.75。", "转写的音高全局F1约0.507、严格起音F1约0.240；可读的版式不能补偿实际转写准确性不足。"],
+    "prior_review": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A6_gpt-6-sol/review/ratings.json",
+    "confidence": {"layout":"high","notation":"medium","fidelity":"high"}
+  },
+  "A6_k3_20261022_k3_a6_60_clean": {
+    "layout": 0.5, "notation": 0.5, "fidelity": 0, "delivery_level": "unusable_or_inconsistent",
+    "reasons": ["PDF共6页，多数符号可辨，但上谱表没有显式谱号，密集32/64分音符、加线及变音需明显放大；排版0.5。", "XML有两谱表、38小节、休止与连结结构，短时值和附点机械细分导致大量编辑需求，记谱0.5。", "本次重查PDF第3页第17小节及第6页尾段：与原XML及既有独立渲染的第17、38小节不是同一组音乐；XML第38小节起始为G#4等连续音符，而PDF为大段休止和短双音。忠实度0，×0.25。", "提交alignment.json的两个锚点相隔76秒，违反原题0.5–8秒间隔；原生映射失败，55分音高/起音项无法获得有效匹配分。这不是认定其全部音符错误，也没有替它修复映射。"],
+    "prior_review": "benchmark_runs/20261022_k3_a6_60_clean/grades/A6_k3/review/ratings.json",
+    "confidence": {"layout":"high","notation":"medium","fidelity":"high"}
+  },
+  "A6_gpt-6-sol_historical": {
+    "layout": 0.75, "notation": 0.25, "fidelity": 0.75, "delivery_level": "unusable_or_inconsistent",
+    "reasons": ["PDF全部3页主要符号可见，密集段需放大，速度节拍单位有缺字，排版0.75。", "原XML全部131个休止均设置print-object=no；第1小节及第8–10小节等只能看到空白，不能读出准确等待时值。新规则把系统性隐藏关键休止归为不可直接演奏，记谱0.25、×0.25。", "源XML本身隐藏休止，PDF沿用了这些指令，不把同一缺陷再当作PDF/XML不同；按旧独立逐系统证据与本次XML核对，主要内容对应，仅速度单位等局部丢失，忠实度0.75。"],
+    "prior_review": "benchmark_runs/20261020_a6_piano_sol/review/review.json",
+    "confidence": {"layout":"high","notation":"high","fidelity":"medium"}
+  }
+}

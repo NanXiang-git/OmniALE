@@ -1,0 +1,33 @@
+{
+  "id": "A6_k3",
+  "case": "A6",
+  "model": "k3",
+  "judge": "gpt-6-sol",
+  "case_root": "A6_piano_transcription",
+  "budget_seconds": 3600,
+  "status": "scored",
+  "final_score": 4.0,
+  "formal_total": 4.0,
+  "automatic_score": 4.0,
+  "manual_score": 0,
+  "solver_status": "budget_timeout",
+  "judge_status": "cancelled_before_api_native_final",
+  "score_type": "native_missing_pdf_final",
+  "reviewers": 0,
+  "effort": "high",
+  "components": {
+    "pitch_global_f1": 0.0,
+    "pitch_time_macro_f1": 0.0,
+    "pitch_register_macro_f1": 0.0,
+    "rhythm_strict_f1": 0.0,
+    "xml_valid_nonempty": 1.0,
+    "midi_xml_consistency": 3.0,
+    "notes_present": 0.0,
+    "notation_review": 0
+  },
+  "submission_unchanged": true,
+  "inspection_limits": [
+    "主机/WSL时钟严重分歧：墙钟8766.948秒，单调1642.441秒；恢复后按过期截止线停止。本次不代表正常完整60分钟等时实验。"
+  ],
+  "reason": "冻结原生评分器确定4分，pending_points=0：缺少PDF，谱面0分；alignment锚点违反规则，音符项0；XML有效1分、MIDI/XML一致3分。未调用LLM judge。"
+}

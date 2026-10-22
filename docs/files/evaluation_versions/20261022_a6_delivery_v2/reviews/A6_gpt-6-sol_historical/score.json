@@ -1,0 +1,78 @@
+{
+  "components": {
+    "pitch_global_f1": 10.157694399129962,
+    "pitch_time_macro_f1": 3.8913535663297383,
+    "pitch_register_macro_f1": 3.703896152899665,
+    "rhythm_strict_f1": 4.78520935290919,
+    "midi_xml_consistency": 10.0,
+    "layout": 11.25,
+    "notation": 3.75,
+    "fidelity": 3.75
+  },
+  "raw_score": 51.28815347126856,
+  "delivery_level": "unusable_or_inconsistent",
+  "delivery_label": "不可用或实质不一致",
+  "delivery_factor": 0.25,
+  "after_delivery_factor": 12.82203836781714,
+  "acceptance_checks": {
+    "delivery_ready": false,
+    "pitch_precision": false,
+    "pitch_recall": false,
+    "strict_f1": false,
+    "time_coverage": false,
+    "register_coverage": false,
+    "midi_consistency": true,
+    "visual_minimum": false
+  },
+  "acceptance_cap_applied": false,
+  "accepted": false,
+  "final_score": 12.822038,
+  "unrounded_final_score": 12.82203836781714,
+  "pitch_precision": 0.6345108695652174,
+  "pitch_recall": 0.42339075249320035,
+  "id": "A6_gpt-6-sol_historical",
+  "case": "A6",
+  "model": "gpt-6-sol",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": 48.40855272829024,
+  "old_scorepath": "benchmark_runs/20261020_a6_piano_sol/SCORE.json",
+  "submission": "benchmark_runs/20261020_a6_piano_sol/submission",
+  "submission_sha256": {
+    "notes.md": "6e8bd2f5a41892aa5728bdb8ac6fb4ef50accedf7cb1d623a02d22e6b45a6e5d",
+    "score.mid": "889460a5a46fc277252041bc1932f88f376f17f34c4d1b1a25bcbe873b268c08",
+    "score.musicxml": "391328f9f35877d57cb09bd889ef44164058d4ccddae13e1691ac8f1c82b89e7",
+    "score.pdf": "2bc06f44ad8751782f54337a4229905f8b82fcd564da0014a9a9cb03a9a541bb"
+  },
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/technical.json",
+  "review": {
+    "layout": 0.75,
+    "notation": 0.25,
+    "fidelity": 0.75,
+    "delivery_level": "unusable_or_inconsistent",
+    "reasons": [
+      "PDF全部3页主要符号可见，密集段需放大，速度节拍单位有缺字，排版0.75。",
+      "原XML全部131个休止均设置print-object=no；第1小节及第8–10小节等只能看到空白，不能读出准确等待时值。新规则把系统性隐藏关键休止归为不可直接演奏，记谱0.25、×0.25。",
+      "源XML本身隐藏休止，PDF沿用了这些指令，不把同一缺陷再当作PDF/XML不同；按旧独立逐系统证据与本次XML核对，主要内容对应，仅速度单位等局部丢失，忠实度0.75。"
+    ],
+    "prior_review": "benchmark_runs/20261020_a6_piano_sol/review/review.json",
+    "confidence": {
+      "layout": "high",
+      "notation": "high",
+      "fidelity": "medium"
+    }
+  },
+  "evidence_pages": [
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-1.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-2.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-3.png"
+  ],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": []
+}

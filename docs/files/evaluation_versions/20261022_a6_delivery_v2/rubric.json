@@ -1,0 +1,13 @@
+{
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "frozen_before_solver": false,
+  "scope": "All existing A6 submissions in the deliverables RESULTS manifest; no solver reruns or artifact repairs.",
+  "weights": {"pitch_global_f1": 20, "pitch_time_macro_f1": 7.5, "pitch_register_macro_f1": 7.5, "rhythm_strict_f1": 20, "midi_xml_consistency": 10, "layout": 15, "notation": 15, "fidelity": 5},
+  "visual_levels": [0, 0.25, 0.5, 0.75, 1],
+  "delivery_factors": {"ready": 1, "major_revision": 0.6, "unusable_or_inconsistent": 0.25, "missing_core": 0.1, "empty": 0},
+  "acceptance": {"minimum_total": 60, "pitch_precision": 0.8, "pitch_recall": 0.8, "strict_f1": 0.7, "minimum_time_bin_f1": 0.6, "minimum_register_bin_f1": 0.6, "consistency_f1": 0.95, "minimum_visual_level": 0.75, "failure_cap": 59},
+  "formula": "raw = sum(weight * metric); total = raw * delivery_factor; if acceptance requirements fail, total = min(total,59). Empty delivery = 0; infrastructure no-attempt = null.",
+  "metric_policy": "Use v1 pitch/onset/mapping algorithms unchanged, but recompute from frozen files. 200ms pitch, 80ms strict onset. No fitted offset, repaired alignment or invented expert duration/dynamics ground truth. An invalid submitted alignment yields zero note metrics, not an assertion of zero correct notes.",
+  "unknown_policy": "Unknown required rating => null total; no automatic zero or full credit. A directly established delivery failure may determine its factor, but remaining weighted ratings must still be resolved for a numeric total."
+}

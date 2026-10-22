@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "current_scores": {
+    "gpt-6-astra": 14.01854,
+    "gpt-6-luna": 2.191014,
+    "glm-5.3-flash": 5.591698,
+    "gpt-6-sol": 33.0109,
+    "k3": 6.25
+  },
+  "records_reviewed": 12,
+  "scored_records": 9,
+  "unscored_preserved": 3,
+  "original_submission_hashes_checked": 31,
+  "a4_records_unchanged": true,
+  "local_links_checked": 575,
+  "all_scores_recomputed": true,
+  "no_budget_or_status_table_columns": true,
+  "visual_review": "30 PDF pages re-rendered and inspected in page-labelled contact sheets; existing independent XML renders and review evidence checked; no full listening or musician trial"
+}

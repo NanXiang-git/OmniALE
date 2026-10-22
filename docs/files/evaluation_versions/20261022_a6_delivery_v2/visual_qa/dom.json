@@ -1,0 +1,1 @@
+{"title":"OmniALE · A4 / A6 独立研究报告","table":"模型\tharness / 强度\t展示得分\t交付文件\t证据\nglm-5.3-flash\tCodex CLI\nhigh\t5.591698\t5\t运行 · 评分\ngpt-6-sol\tCodex CLI\nhigh\t33.0109\t4\t运行 · 评分\nk3\tCodex CLI\nhigh\t6.25\t5\t运行 · 评分\ngpt-6-astra\tCodex CLI\nhigh\t14.01854\t5\t运行 · 评分\ngpt-6-luna\tCodex CLI\nhigh\t2.191014\t5\t运行 · 评分","scrollY":9990}

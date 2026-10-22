@@ -1,0 +1,78 @@
+{
+  "components": {
+    "pitch_global_f1": 10.130311614730878,
+    "pitch_time_macro_f1": 3.857682505177637,
+    "pitch_register_macro_f1": 3.7256394135470963,
+    "rhythm_strict_f1": 4.804532577903683,
+    "midi_xml_consistency": 10.0,
+    "layout": 11.25,
+    "notation": 7.5,
+    "fidelity": 3.75
+  },
+  "raw_score": 55.01816611135929,
+  "delivery_level": "major_revision",
+  "delivery_label": "需大幅修订",
+  "delivery_factor": 0.6,
+  "after_delivery_factor": 33.010899666815575,
+  "acceptance_checks": {
+    "delivery_ready": false,
+    "pitch_precision": false,
+    "pitch_recall": false,
+    "strict_f1": false,
+    "time_coverage": false,
+    "register_coverage": false,
+    "midi_consistency": true,
+    "visual_minimum": false
+  },
+  "acceptance_cap_applied": false,
+  "accepted": false,
+  "final_score": 33.0109,
+  "unrounded_final_score": 33.010899666815575,
+  "pitch_precision": 0.675226586102719,
+  "pitch_recall": 0.40525838621940163,
+  "id": "A6_gpt-6-sol_new_20261021",
+  "case": "A6",
+  "model": "gpt-6-sol",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": 49.867777,
+  "old_scorepath": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A6_gpt-6-sol/score.json",
+  "submission": "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol",
+  "submission_sha256": {
+    "notes.md": "59e0d12c4f3b6b0e35caa3aa8b715437247eab6b1ad4c6e9eab8bfc7f88e18b0",
+    "score.mid": "f3ba232131bbcc41e21be3900f5ce4b940132722ec06d56dbc81cffcfc499ff7",
+    "score.musicxml": "0799642f2a6bc8053fd2bead56a0963a94eed440d7a532a87df9a07fdefca459",
+    "score.pdf": "76de7b01a655eb14f9435efbf8cd670be5953bbd7d5ff674b80ff385b3eff006"
+  },
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/technical.json",
+  "review": {
+    "layout": 0.75,
+    "notation": 0.5,
+    "fidelity": 0.75,
+    "delivery_level": "major_revision",
+    "reasons": [
+      "PDF全部2页双谱表、音头、谱号、临时记号和休止总体清晰，无大段裁切；第1小节速度的节拍单位显示方框，属于局部缺字，排版0.75。",
+      "第11小节低音在十六分休止后写三附点二分音符，第16/18/20小节多次跨拍使用附点时值；结构可计算但需反复细数，记谱0.5，按需大幅修订×0.6。",
+      "本次对照既有独立XML渲染的全部2页，首中尾及两谱表内容对应；速度节拍单位这一局部音乐指示未清楚呈现，忠实度统一按0.75。",
+      "转写的音高全局F1约0.507、严格起音F1约0.240；可读的版式不能补偿实际转写准确性不足。"
+    ],
+    "prior_review": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A6_gpt-6-sol/review/ratings.json",
+    "confidence": {
+      "layout": "high",
+      "notation": "medium",
+      "fidelity": "high"
+    }
+  },
+  "evidence_pages": [
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-1.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-2.png"
+  ],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": []
+}

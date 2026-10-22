@@ -1,0 +1,82 @@
+{
+  "components": {
+    "pitch_global_f1": 14.234150856085146,
+    "pitch_time_macro_f1": 5.314509435465083,
+    "pitch_register_macro_f1": 5.3281362161541335,
+    "rhythm_strict_f1": 13.697362332253586,
+    "midi_xml_consistency": 10.0,
+    "layout": 0,
+    "notation": 7.5,
+    "fidelity": 0
+  },
+  "raw_score": 56.074158839957946,
+  "delivery_level": "unusable_or_inconsistent",
+  "delivery_label": "不可用或实质不一致",
+  "delivery_factor": 0.25,
+  "after_delivery_factor": 14.018539709989486,
+  "acceptance_checks": {
+    "delivery_ready": false,
+    "pitch_precision": false,
+    "pitch_recall": false,
+    "strict_f1": false,
+    "time_coverage": true,
+    "register_coverage": true,
+    "midi_consistency": true,
+    "visual_minimum": false
+  },
+  "acceptance_cap_applied": false,
+  "accepted": false,
+  "final_score": 14.01854,
+  "unrounded_final_score": 14.018539709989486,
+  "pitch_precision": 0.7268431001890359,
+  "pitch_recall": 0.6971894832275612,
+  "id": "A6_gpt-6-astra_missing8",
+  "case": "A6",
+  "model": "gpt-6-astra",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": 66.258221,
+  "old_scorepath": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-astra/score.json",
+  "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra",
+  "submission_sha256": {
+    "alignment.json": "2626de523cb45145f90d4466578cd900f9f13c38d96dbf4066492dbcccf9dd86",
+    "notes.md": "9ab675505a1f6558e7fb66c064055f4b1ee66a413708798995d2208a298af048",
+    "score.mid": "adaa2cf63d13c61d4e4f47844ee5a780b1800fd717e32392c2aeab61961f5cfb",
+    "score.musicxml": "fb9f59baffc46bb687c26388b55f01c0318804111fd3342a9d85c57d6f7a0d0b",
+    "score.pdf": "e87467326e86832c8e285181ebec4456f0e2a1c64285ef415d540e014d441206"
+  },
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/technical.json",
+  "review": {
+    "layout": 0,
+    "notation": 0.5,
+    "fidelity": 0,
+    "delivery_level": "unusable_or_inconsistent",
+    "reasons": [
+      "PDF 第1–6页均只有谱线、符干、符梁等，音头、谱号和变音字形普遍缺失；不能从实际PDF可靠读出音高。",
+      "可编辑谱的双谱表、4/4、休止与连结关系可恢复，但第15–18及25–34小节细分密集，需重排；记谱结构给0.5，不意味着PDF可用。",
+      "PDF与源谱的小节顺序大体相同，但关键记谱字形系统性丢失，忠实度为0；按不可用档×0.25。"
+    ],
+    "prior_review": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-astra/score.json",
+    "confidence": {
+      "layout": "high",
+      "notation": "medium",
+      "fidelity": "high"
+    }
+  },
+  "evidence_pages": [
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-1.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-2.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-3.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-4.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-5.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-6.png"
+  ],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": []
+}

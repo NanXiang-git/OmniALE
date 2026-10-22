@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "method": "Chrome headless CDP screenshot; 1440x1500; actual A6 section viewed",
+  "image": "a6-report.png",
+  "dom": "dom.json",
+  "checks": [
+    "v2 weights and retrospective label readable",
+    "all five scores match RESULTS.json",
+    "no budget/time or execution status columns in result table",
+    "original video visible"
+  ],
+  "limitations": [
+    "desktop layout checked; no musician performance test"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "components": {
+    "pitch_global_f1": 0.0,
+    "pitch_time_macro_f1": 0.0,
+    "pitch_register_macro_f1": 0.0,
+    "rhythm_strict_f1": 0.0,
+    "midi_xml_consistency": 10.0,
+    "layout": 7.5,
+    "notation": 7.5,
+    "fidelity": 0
+  },
+  "raw_score": 25.0,
+  "delivery_level": "unusable_or_inconsistent",
+  "delivery_label": "不可用或实质不一致",
+  "delivery_factor": 0.25,
+  "after_delivery_factor": 6.25,
+  "acceptance_checks": {
+    "delivery_ready": false,
+    "pitch_precision": false,
+    "pitch_recall": false,
+    "strict_f1": false,
+    "time_coverage": false,
+    "register_coverage": false,
+    "midi_consistency": true,
+    "visual_minimum": false
+  },
+  "acceptance_cap_applied": false,
+  "accepted": false,
+  "final_score": 6.25,
+  "unrounded_final_score": 6.25,
+  "pitch_precision": 0.0,
+  "pitch_recall": 0.0,
+  "id": "A6_k3_20261022_k3_a6_60_clean",
+  "case": "A6",
+  "model": "k3",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": 8.5,
+  "old_scorepath": "benchmark_runs/20261022_k3_a6_60_clean/grades/A6_k3/score.json",
+  "submission": "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3",
+  "submission_sha256": {
+    "alignment.json": "c0608ab798df42f3fc83eff133f487d0571d06b23196bf3f808e7d2cc43c72f6",
+    "notes.md": "68145940405e21d04263fa04a6288f85bb08c2586a6557de41bdcd6de5e478ea",
+    "score.mid": "8392a3ca4b9e073064ccec64549853057926cf310c4511b0b2aeb7e0c0ed7acf",
+    "score.musicxml": "7bc13cd48705cc1bba47d45915d481505bb9efe35148e1862fd44d67047e1f1f",
+    "score.pdf": "9409389b1c0f35b6250d865340b84216c1eb559c4f499a42f32fa66d865026ff"
+  },
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/technical.json",
+  "review": {
+    "layout": 0.5,
+    "notation": 0.5,
+    "fidelity": 0,
+    "delivery_level": "unusable_or_inconsistent",
+    "reasons": [
+      "PDF共6页，多数符号可辨，但上谱表没有显式谱号，密集32/64分音符、加线及变音需明显放大；排版0.5。",
+      "XML有两谱表、38小节、休止与连结结构，短时值和附点机械细分导致大量编辑需求，记谱0.5。",
+      "本次重查PDF第3页第17小节及第6页尾段：与原XML及既有独立渲染的第17、38小节不是同一组音乐；XML第38小节起始为G#4等连续音符，而PDF为大段休止和短双音。忠实度0，×0.25。",
+      "提交alignment.json的两个锚点相隔76秒，违反原题0.5–8秒间隔；原生映射失败，55分音高/起音项无法获得有效匹配分。这不是认定其全部音符错误，也没有替它修复映射。"
+    ],
+    "prior_review": "benchmark_runs/20261022_k3_a6_60_clean/grades/A6_k3/review/ratings.json",
+    "confidence": {
+      "layout": "high",
+      "notation": "medium",
+      "fidelity": "high"
+    }
+  },
+  "evidence_pages": [
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-1.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-2.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-3.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-4.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-5.png",
+    "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-6.png"
+  ],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": [
+    "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+  ]
+}

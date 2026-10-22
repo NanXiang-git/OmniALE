@@ -1,0 +1,780 @@
+{
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "records": [
+    {
+      "components": {
+        "pitch_global_f1": 10.157694399129962,
+        "pitch_time_macro_f1": 3.8913535663297383,
+        "pitch_register_macro_f1": 3.703896152899665,
+        "rhythm_strict_f1": 4.78520935290919,
+        "midi_xml_consistency": 10.0,
+        "layout": 11.25,
+        "notation": 3.75,
+        "fidelity": 3.75
+      },
+      "raw_score": 51.28815347126856,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 12.82203836781714,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 12.822038,
+      "unrounded_final_score": 12.82203836781714,
+      "pitch_precision": 0.6345108695652174,
+      "pitch_recall": 0.42339075249320035,
+      "id": "A6_gpt-6-sol_historical",
+      "case": "A6",
+      "model": "gpt-6-sol",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 48.40855272829024,
+      "old_scorepath": "benchmark_runs/20261020_a6_piano_sol/SCORE.json",
+      "submission": "benchmark_runs/20261020_a6_piano_sol/submission",
+      "submission_sha256": {
+        "notes.md": "6e8bd2f5a41892aa5728bdb8ac6fb4ef50accedf7cb1d623a02d22e6b45a6e5d",
+        "score.mid": "889460a5a46fc277252041bc1932f88f376f17f34c4d1b1a25bcbe873b268c08",
+        "score.musicxml": "391328f9f35877d57cb09bd889ef44164058d4ccddae13e1691ac8f1c82b89e7",
+        "score.pdf": "2bc06f44ad8751782f54337a4229905f8b82fcd564da0014a9a9cb03a9a541bb"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/technical.json",
+      "review": {
+        "layout": 0.75,
+        "notation": 0.25,
+        "fidelity": 0.75,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF全部3页主要符号可见，密集段需放大，速度节拍单位有缺字，排版0.75。",
+          "原XML全部131个休止均设置print-object=no；第1小节及第8–10小节等只能看到空白，不能读出准确等待时值。新规则把系统性隐藏关键休止归为不可直接演奏，记谱0.25、×0.25。",
+          "源XML本身隐藏休止，PDF沿用了这些指令，不把同一缺陷再当作PDF/XML不同；按旧独立逐系统证据与本次XML核对，主要内容对应，仅速度单位等局部丢失，忠实度0.75。"
+        ],
+        "prior_review": "benchmark_runs/20261020_a6_piano_sol/review/review.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "high",
+          "fidelity": "medium"
+        }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-2.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-3.png"
+      ],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
+    },
+    {
+      "components": {
+        "pitch_global_f1": 14.234150856085146,
+        "pitch_time_macro_f1": 5.314509435465083,
+        "pitch_register_macro_f1": 5.3281362161541335,
+        "rhythm_strict_f1": 13.697362332253586,
+        "midi_xml_consistency": 10.0,
+        "layout": 0,
+        "notation": 7.5,
+        "fidelity": 0
+      },
+      "raw_score": 56.074158839957946,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 14.018539709989486,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": true,
+        "register_coverage": true,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 14.01854,
+      "unrounded_final_score": 14.018539709989486,
+      "pitch_precision": 0.7268431001890359,
+      "pitch_recall": 0.6971894832275612,
+      "id": "A6_gpt-6-astra_missing8",
+      "case": "A6",
+      "model": "gpt-6-astra",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 66.258221,
+      "old_scorepath": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-astra/score.json",
+      "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra",
+      "submission_sha256": {
+        "alignment.json": "2626de523cb45145f90d4466578cd900f9f13c38d96dbf4066492dbcccf9dd86",
+        "notes.md": "9ab675505a1f6558e7fb66c064055f4b1ee66a413708798995d2208a298af048",
+        "score.mid": "adaa2cf63d13c61d4e4f47844ee5a780b1800fd717e32392c2aeab61961f5cfb",
+        "score.musicxml": "fb9f59baffc46bb687c26388b55f01c0318804111fd3342a9d85c57d6f7a0d0b",
+        "score.pdf": "e87467326e86832c8e285181ebec4456f0e2a1c64285ef415d540e014d441206"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0.5,
+        "fidelity": 0,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF 第1–6页均只有谱线、符干、符梁等，音头、谱号和变音字形普遍缺失；不能从实际PDF可靠读出音高。",
+          "可编辑谱的双谱表、4/4、休止与连结关系可恢复，但第15–18及25–34小节细分密集，需重排；记谱结构给0.5，不意味着PDF可用。",
+          "PDF与源谱的小节顺序大体相同，但关键记谱字形系统性丢失，忠实度为0；按不可用档×0.25。"
+        ],
+        "prior_review": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-astra/score.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "high"
+        }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-2.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-3.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-4.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-5.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-6.png"
+      ],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
+    },
+    {
+      "components": {
+        "pitch_global_f1": 2.0107719928186714,
+        "pitch_time_macro_f1": 0.7628914043148654,
+        "pitch_register_macro_f1": 0.7281652137816522,
+        "rhythm_strict_f1": 1.0233393177737882,
+        "midi_xml_consistency": 0.48888888888888893,
+        "layout": 3.75,
+        "notation": 0,
+        "fidelity": 0
+      },
+      "raw_score": 8.764056817577867,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 2.1910142043944667,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": false,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 2.191014,
+      "unrounded_final_score": 2.1910142043944667,
+      "pitch_precision": 0.09955555555555555,
+      "pitch_recall": 0.10154125113327289,
+      "id": "A6_gpt-6-luna_missing8",
+      "case": "A6",
+      "model": "gpt-6-luna",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 11.424112,
+      "old_scorepath": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-luna/score.json",
+      "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna",
+      "submission_sha256": {
+        "alignment.json": "ef97bd6eaacb589fcd26f09ac1b82fca401c9a2508d2755e22f78a3f85ba4f05",
+        "notes.md": "923aae4f537d26abfaa2bd28426504a39fbb5db672140c4a46d8d7de56524d86",
+        "score.mid": "ec416fb0e175d49c71522fa53aef4f4c28caa1b3106eb51a825dd7fd915cea11",
+        "score.musicxml": "6394d1d0817d814f30c1e0fd4cc23cceb7118499cdb42b27a789fc1a670be166",
+        "score.pdf": "73d3433c5b374497e9a8c5e5d0d2ff624cf1d005c13fbba1e25de5176ee27e14"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/technical.json",
+      "review": {
+        "layout": 0.25,
+        "notation": 0,
+        "fidelity": 0,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF 第1–10页仅以G/F字母标示谱表，没有标准谱号、拍号与应有变音记号；第8–9页音群明显堆叠，只有部分位置可辨。",
+          "XML含1125个音符、无显式休止符；PDF用音符散点和空白间隔代替可辨拍位，不能形成连贯可演奏结构。",
+          "源XML中有升降音高，但PDF系统性未呈现变音，属于关键音乐语义丢失，忠实度0；MIDI/XML一致性仅约4.89%，亦触发×0.25档。"
+        ],
+        "prior_review": "benchmark_runs/20261021_single_judge_final/grades/A6_gpt-6-luna/score.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "high",
+          "fidelity": "high"
+        }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-01.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-02.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-03.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-04.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-05.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-06.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-07.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-08.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-09.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-10.png"
+      ],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
+    },
+    {
+      "final_score": null,
+      "delivery_label": "未评分",
+      "accepted": false,
+      "id": "A6_k3_missing8",
+      "case": "A6",
+      "model": "k3",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": null,
+      "old_scorepath": "benchmark_runs/20261021_missing8_high40/grades/A6_k3/score.json",
+      "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_k3",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_missing8/technical.json",
+      "review": {
+        "reason": "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
+    },
+    {
+      "final_score": null,
+      "delivery_label": "未评分",
+      "accepted": false,
+      "id": "A6_glm-5.3-flash_20261021_glm53_flash_a1_a7",
+      "case": "A6",
+      "model": "glm-5.3-flash",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": null,
+      "old_scorepath": "benchmark_runs/20261021_glm53_flash_a1_a7/grades/A6/score.json",
+      "submission": "benchmark_runs/20261021_glm53_flash_a1_a7/submissions/A6",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a1_a7/technical.json",
+      "review": {
+        "reason": "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "MusicXML: missing or oversized: score.musicxml",
+        "MIDI: missing or oversized: score.mid",
+        "Alignment: No valid alignment.json or MIDI tempo map"
+      ]
+    },
+    {
+      "final_score": null,
+      "delivery_label": "未评分",
+      "accepted": false,
+      "id": "A6_glm-5.3-flash_20261021_glm53_flash_two_workers",
+      "case": "A6",
+      "model": "glm-5.3-flash",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": null,
+      "old_scorepath": "benchmark_runs/20261021_glm53_flash_two_workers/grades/A6/score.json",
+      "submission": "benchmark_runs/20261021_glm53_flash_two_workers/submissions/A6",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_two_workers/technical.json",
+      "review": {
+        "reason": "历史基础设施/进程失败且无可评音乐交付，保持未评分，不把它记成能力零分。"
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "MusicXML: missing or oversized: score.musicxml",
+        "MIDI: missing or oversized: score.mid",
+        "Alignment: No valid alignment.json or MIDI tempo map"
+      ]
+    },
+    {
+      "components": {
+        "pitch_global_f1": 0.0,
+        "pitch_time_macro_f1": 0.0,
+        "pitch_register_macro_f1": 0.0,
+        "rhythm_strict_f1": 0.0,
+        "midi_xml_consistency": 0.0,
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0
+      },
+      "raw_score": 0.0,
+      "delivery_level": "empty",
+      "delivery_label": "无可评内容",
+      "delivery_factor": 0,
+      "after_delivery_factor": 0.0,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": false,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 0.0,
+      "unrounded_final_score": 0.0,
+      "pitch_precision": 0.0,
+      "pitch_recall": 0.0,
+      "id": "A6_glm-5.3-flash_20261021_glm53_flash_recovery",
+      "case": "A6",
+      "model": "glm-5.3-flash",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 0.0,
+      "old_scorepath": "benchmark_runs/20261021_glm53_flash_recovery/grades/A6/score.json",
+      "submission": "benchmark_runs/20261021_glm53_flash_recovery/submissions/A6",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_recovery/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0,
+        "delivery_level": "empty",
+        "reasons": [
+          "实际作答后没有非空可评音乐内容。"
+        ]
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "MusicXML: missing or oversized: score.musicxml",
+        "MIDI: missing or oversized: score.mid",
+        "Alignment: No valid alignment.json or MIDI tempo map"
+      ]
+    },
+    {
+      "components": {
+        "pitch_global_f1": 3.564843269821758,
+        "pitch_time_macro_f1": 1.3212206087591538,
+        "pitch_register_macro_f1": 1.2230462570136482,
+        "rhythm_strict_f1": 2.5076828518746157,
+        "midi_xml_consistency": 10.0,
+        "layout": 0,
+        "notation": 3.75,
+        "fidelity": 0
+      },
+      "raw_score": 22.366792987469175,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 5.591698246867294,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 5.591698,
+      "unrounded_final_score": 5.591698246867294,
+      "pitch_precision": 0.2767175572519084,
+      "pitch_recall": 0.1314596554850408,
+      "id": "A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min",
+      "case": "A6",
+      "model": "glm-5.3-flash",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 18.57040220112151,
+      "old_scorepath": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A6/score.json",
+      "submission": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6",
+      "submission_sha256": {
+        "alignment.json": "031a9d3f8005ca91bae6fa5106b8cbd9385bb457e0ba9d504ba4ffcd696fbd50",
+        "notes.md": "950b28b6c07527ba890d86889b91f394b3431af7762c7fd9535a51472159ee2a",
+        "score.mid": "5bdc73e759ebb6cbac5be41a277c9bd02420cf8de1169f976a139652382814db",
+        "score.musicxml": "453263689347b84a27eb2169faf8ce608cfbd2675f688be839d33e83d0124e7a",
+        "score.pdf": "e6093cf526b8c14bb1dba14ecc4ea3d014bb50e6b4567c214543ab38e243ddc9"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0.25,
+        "fidelity": 0,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF全部3页右侧谱表之外仍有音符，页首与右边界裁切；第1页第3–4小节、第2页密集段及第3页末段严重叠压，无法可靠读谱。",
+          "XML有声部和休止可供重建，但PDF普遍使用空心圆、单斜旗，未表达源XML的十六/三十二分时值和休止结构；仅给予可恢复结构0.25。",
+          "第1小节和第29、41小节的时值、休止、双梁在PDF中系统性改变，忠实度0；×0.25。"
+        ],
+        "prior_review": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/grades/A6/score.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "high"
+        }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-2.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-3.png"
+      ],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
+    },
+    {
+      "components": {
+        "pitch_global_f1": 10.130311614730878,
+        "pitch_time_macro_f1": 3.857682505177637,
+        "pitch_register_macro_f1": 3.7256394135470963,
+        "rhythm_strict_f1": 4.804532577903683,
+        "midi_xml_consistency": 10.0,
+        "layout": 11.25,
+        "notation": 7.5,
+        "fidelity": 3.75
+      },
+      "raw_score": 55.01816611135929,
+      "delivery_level": "major_revision",
+      "delivery_label": "需大幅修订",
+      "delivery_factor": 0.6,
+      "after_delivery_factor": 33.010899666815575,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 33.0109,
+      "unrounded_final_score": 33.010899666815575,
+      "pitch_precision": 0.675226586102719,
+      "pitch_recall": 0.40525838621940163,
+      "id": "A6_gpt-6-sol_new_20261021",
+      "case": "A6",
+      "model": "gpt-6-sol",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 49.867777,
+      "old_scorepath": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A6_gpt-6-sol/score.json",
+      "submission": "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol",
+      "submission_sha256": {
+        "notes.md": "59e0d12c4f3b6b0e35caa3aa8b715437247eab6b1ad4c6e9eab8bfc7f88e18b0",
+        "score.mid": "f3ba232131bbcc41e21be3900f5ce4b940132722ec06d56dbc81cffcfc499ff7",
+        "score.musicxml": "0799642f2a6bc8053fd2bead56a0963a94eed440d7a532a87df9a07fdefca459",
+        "score.pdf": "76de7b01a655eb14f9435efbf8cd670be5953bbd7d5ff674b80ff385b3eff006"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/technical.json",
+      "review": {
+        "layout": 0.75,
+        "notation": 0.5,
+        "fidelity": 0.75,
+        "delivery_level": "major_revision",
+        "reasons": [
+          "PDF全部2页双谱表、音头、谱号、临时记号和休止总体清晰，无大段裁切；第1小节速度的节拍单位显示方框，属于局部缺字，排版0.75。",
+          "第11小节低音在十六分休止后写三附点二分音符，第16/18/20小节多次跨拍使用附点时值；结构可计算但需反复细数，记谱0.5，按需大幅修订×0.6。",
+          "本次对照既有独立XML渲染的全部2页，首中尾及两谱表内容对应；速度节拍单位这一局部音乐指示未清楚呈现，忠实度统一按0.75。",
+          "转写的音高全局F1约0.507、严格起音F1约0.240；可读的版式不能补偿实际转写准确性不足。"
+        ],
+        "prior_review": "benchmark_runs/20261021_a4luna_a6sol_serial/grades/A6_gpt-6-sol/review/ratings.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "high"
+        }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-2.png"
+      ],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": []
+    },
+    {
+      "components": {
+        "pitch_global_f1": 0.0,
+        "pitch_time_macro_f1": 0.0,
+        "pitch_register_macro_f1": 0.0,
+        "rhythm_strict_f1": 0.0,
+        "midi_xml_consistency": 0.0,
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0
+      },
+      "raw_score": 0.0,
+      "delivery_level": "empty",
+      "delivery_label": "无可评内容",
+      "delivery_factor": 0,
+      "after_delivery_factor": 0.0,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": false,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 0.0,
+      "unrounded_final_score": 0.0,
+      "pitch_precision": 0.0,
+      "pitch_recall": 0.0,
+      "id": "A6_k3_20261021_k3_a4_a6_isolated",
+      "case": "A6",
+      "model": "k3",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 0.0,
+      "old_scorepath": "benchmark_runs/20261021_k3_a4_a6_isolated/grades/A6_k3/score.json",
+      "submission": "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A6_k3",
+      "submission_sha256": {},
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0,
+        "delivery_level": "empty",
+        "reasons": [
+          "实际作答后没有非空可评音乐内容。"
+        ]
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "MusicXML: missing or oversized: score.musicxml",
+        "MIDI: missing or oversized: score.mid",
+        "Alignment: No valid alignment.json or MIDI tempo map"
+      ]
+    },
+    {
+      "components": {
+        "pitch_global_f1": 0.0,
+        "pitch_time_macro_f1": 0.0,
+        "pitch_register_macro_f1": 0.0,
+        "rhythm_strict_f1": 0.0,
+        "midi_xml_consistency": 10.0,
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0
+      },
+      "raw_score": 10.0,
+      "delivery_level": "missing_core",
+      "delivery_label": "缺关键交付",
+      "delivery_factor": 0.1,
+      "after_delivery_factor": 1.0,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 1.0,
+      "unrounded_final_score": 1.0,
+      "pitch_precision": 0.0,
+      "pitch_recall": 0.0,
+      "id": "A6_k3_20261022_k3a6_60_sola4_40_serial",
+      "case": "A6",
+      "model": "k3",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 4.0,
+      "old_scorepath": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/grades/A6_k3/score.json",
+      "submission": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A6_k3",
+      "submission_sha256": {
+        "alignment.json": "18bcc3b394edeb07c24685d589f63d0aeddc06c0271bf3160b3edd9d28de34ca",
+        "score.mid": "5ddfad6b8ce319dba6dc8276ab5561d908d66a387e3c149517d625729a1e8fdd",
+        "score.musicxml": "c1700b5d4af1f776923562f52538273d8a459f0b2d2ad54110bdc79a6b826acf"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/technical.json",
+      "review": {
+        "layout": 0,
+        "notation": 0,
+        "fidelity": 0,
+        "delivery_level": "missing_core",
+        "reasons": [
+          "缺少PDF，已有可解析的音乐数据仅按残缺交付计分；未凭文件存在授予谱面分。"
+        ]
+      },
+      "evidence_pages": [],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+      ]
+    },
+    {
+      "components": {
+        "pitch_global_f1": 0.0,
+        "pitch_time_macro_f1": 0.0,
+        "pitch_register_macro_f1": 0.0,
+        "rhythm_strict_f1": 0.0,
+        "midi_xml_consistency": 10.0,
+        "layout": 7.5,
+        "notation": 7.5,
+        "fidelity": 0
+      },
+      "raw_score": 25.0,
+      "delivery_level": "unusable_or_inconsistent",
+      "delivery_label": "不可用或实质不一致",
+      "delivery_factor": 0.25,
+      "after_delivery_factor": 6.25,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": false,
+        "time_coverage": false,
+        "register_coverage": false,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "final_score": 6.25,
+      "unrounded_final_score": 6.25,
+      "pitch_precision": 0.0,
+      "pitch_recall": 0.0,
+      "id": "A6_k3_20261022_k3_a6_60_clean",
+      "case": "A6",
+      "model": "k3",
+      "version": "A6-delivery-v2.0",
+      "retrospective": true,
+      "old_score": 8.5,
+      "old_scorepath": "benchmark_runs/20261022_k3_a6_60_clean/grades/A6_k3/score.json",
+      "submission": "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3",
+      "submission_sha256": {
+        "alignment.json": "c0608ab798df42f3fc83eff133f487d0571d06b23196bf3f808e7d2cc43c72f6",
+        "notes.md": "68145940405e21d04263fa04a6288f85bb08c2586a6557de41bdcd6de5e478ea",
+        "score.mid": "8392a3ca4b9e073064ccec64549853057926cf310c4511b0b2aeb7e0c0ed7acf",
+        "score.musicxml": "7bc13cd48705cc1bba47d45915d481505bb9efe35148e1862fd44d67047e1f1f",
+        "score.pdf": "9409389b1c0f35b6250d865340b84216c1eb559c4f499a42f32fa66d865026ff"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/technical.json",
+      "review": {
+        "layout": 0.5,
+        "notation": 0.5,
+        "fidelity": 0,
+        "delivery_level": "unusable_or_inconsistent",
+        "reasons": [
+          "PDF共6页，多数符号可辨，但上谱表没有显式谱号，密集32/64分音符、加线及变音需明显放大；排版0.5。",
+          "XML有两谱表、38小节、休止与连结结构，短时值和附点机械细分导致大量编辑需求，记谱0.5。",
+          "本次重查PDF第3页第17小节及第6页尾段：与原XML及既有独立渲染的第17、38小节不是同一组音乐；XML第38小节起始为G#4等连续音符，而PDF为大段休止和短双音。忠实度0，×0.25。",
+          "提交alignment.json的两个锚点相隔76秒，违反原题0.5–8秒间隔；原生映射失败，55分音高/起音项无法获得有效匹配分。这不是认定其全部音符错误，也没有替它修复映射。"
+        ],
+        "prior_review": "benchmark_runs/20261022_k3_a6_60_clean/grades/A6_k3/review/ratings.json",
+        "confidence": {
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "high"
+        }
+      },
+      "evidence_pages": [
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-1.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-2.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-3.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-4.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-5.png",
+        "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-6.png"
+      ],
+      "limits": [
+        "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+        "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+        "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+      ],
+      "metric_errors": [
+        "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+      ]
+    }
+  ]
+}

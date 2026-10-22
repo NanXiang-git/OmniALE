@@ -1,13 +1,25 @@
 {
   "passed": true,
-  "source": "deliverables/A4_A6_research_20261021",
-  "current_k3_a6_score": 8.5,
-  "evidence_files_identical": true,
-  "local_links_checked": 279,
-  "missing_links": [],
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "current_scores": {
+    "gpt-6-astra": 14.01854,
+    "gpt-6-luna": 2.191014,
+    "glm-5.3-flash": 5.591698,
+    "gpt-6-sol": 33.0109,
+    "k3": 6.25
+  },
+  "records_reviewed": 12,
+  "scored_records": 9,
+  "unscored_preserved": 3,
+  "original_submission_hashes_checked": 31,
+  "a4_records_unchanged": true,
+  "local_links_checked": 575,
+  "all_scores_recomputed": true,
+  "no_budget_or_status_table_columns": true,
+  "visual_review": "30 PDF pages re-rendered and inspected in page-labelled contact sheets; existing independent XML renders and review evidence checked; no full listening or musician trial",
+  "online_local_links_checked": 458,
   "credential_scan_passed": true,
-  "javascript_syntax_passed": true,
-  "full_archive_url": "https://github.com/NanXiang-git/OmniALE/releases/download/a4-a6-20261022/A4_A6_research_20261021.zip",
-  "site_bytes": 419574025,
-  "source_archive_sha256": "899a917730a91273dad197c3ac65602ec4261ccd20bdee4eec6d28c474ea5701"
+  "evidence_files_identical": true,
+  "release": "https://github.com/NanXiang-git/OmniALE/releases/tag/a6-delivery-v2-20261022"
 }

@@ -1,0 +1,66 @@
+{
+  "reviewer_id": "a6-astra-single",
+  "rubric_version": "1.0",
+  "submission_sha256": {
+    "notes.md": "6e8bd2f5a41892aa5728bdb8ac6fb4ef50accedf7cb1d623a02d22e6b45a6e5d",
+    "score.mid": "889460a5a46fc277252041bc1932f88f376f17f34c4d1b1a25bcbe873b268c08",
+    "score.musicxml": "391328f9f35877d57cb09bd889ef44164058d4ccddae13e1691ac8f1c82b89e7",
+    "score.pdf": "2bc06f44ad8751782f54337a4229905f8b82fcd564da0014a9a9cb03a9a541bb"
+  },
+  "layout_points": 3.5,
+  "notation_usability_points": 1.0,
+  "pdf_xml_fidelity_points": 2.5,
+  "evidence": [
+    {
+      "criterion": "layout",
+      "page_or_measure": "PDF pp.1–3; mm.1–38",
+      "finding": "All three actual PDF pages inspected individually and in a contact sheet. Both staves, clefs, barlines, accidentals, noteheads and final double bar are visible, with no missing or cropped music systems. Page coverage is 1–15, 16–29, 30–38; six/six/four systems respectively."
+    },
+    {
+      "criterion": "layout",
+      "page_or_measure": "PDF p.1 mm.13–15; p.2 mm.28–29; p.3 mm.32–33",
+      "finding": "Dense accidentals, chord stacks, short flags and ties are locally cramped at the relatively small printed staff size (about 5.4 mm staff height). They remain distinguishable in enlarged crops. Large unused right/bottom margins could accommodate larger music; pages have no visible page numbers. These are minor usability-of-layout deficiencies, not fundamental unreadability; 3.5/4."
+    },
+    {
+      "criterion": "notation_usability",
+      "page_or_measure": "PDF p.1 m.1, mm.8–10; p.2 m.19; p.3 m.38; XML both parts",
+      "finding": "All 131 XML rests (35 upper, 96 lower) have print-object=\"no\". In m.1 upper staff the first chord starts at offset 29/8 quarters after four invisible rests; lower staff starts at 43/16. Lower mm.8–10 appear as empty staves without whole-bar rests. Lower m.19 has an invisible 3/2-quarter rest; m.38 lower waits 39/16 quarters without a visible rest. Blank spacing cannot communicate these exact durations. This is a missing notation cue, not a deduction for missing performed pitches."
+    },
+    {
+      "criterion": "notation_usability",
+      "page_or_measure": "PDF pp.1–3, especially m.8 and mm.19–22; rhythm_audit.json",
+      "finding": "4/4 is explicitly present in both parts. Each part has one sequential stream (no explicit voice elements), with chords. Measures 1–37 each total four quarters including hidden rests; the last measure totals 55/16 in both parts, acceptable for the excerpt boundary. All 389 tie starts match contiguous same-pitch stops, with no open terminal ties. Thus basic structure is recoverable."
+    },
+    {
+      "criterion": "notation_usability",
+      "page_or_measure": "PDF p.1 m.8; p.2 mm.19–22; xml_analysis.json",
+      "finding": "The notation repeatedly combines 64th fragments, multi-dotted values and ties across awkward subdivisions. Upper m.8 ends with an eighth + sixteenth + sixty-fourth tied chain beginning at 51/16 quarters; m.19 includes a triple-dotted eighth and a tied 64th at 63/16. XML contains 196 64th note/rest elements and 77 elements with three or four dots (counts include chord members). Combined with hidden rests, substantial rhythmic/voice editing is needed before practical reading. Award 1/3, while crediting consistent bar arithmetic and valid ties; no demand for a particular original meter or pedal-release duration."
+    },
+    {
+      "criterion": "pdf_xml_fidelity",
+      "page_or_measure": "PDF pp.1–3 vs independently rendered XML pp.1–3; mm.1–2,19–23,37–38, both staves",
+      "finding": "Parsed actual XML has two parts of 38 measures. Independently loaded and rendered with Verovio; all three rendered pages visually compared with submitted PDF. Same system/measure coverage and matching visible chord contours, clef change, rests-as-hidden, ties and final bar. Beginning upper E6/F#6/A#6 chord and lower Bb4/Eb5 dyad, middle m.19 bass Bb2 and subsequent B2-containing chord, and final upper E4/G#4/B4 then Bb4 with lower B2 agree. No missing page, part or ending was found; rendering style/beam differences are not penalized."
+    },
+    {
+      "criterion": "pdf_xml_fidelity",
+      "page_or_measure": "PDF p.1 m.1 both staves; XML metronome directions",
+      "finding": "XML explicitly specifies quarter note = 120 in both parts. Actual PDF visually shows a black square/overprinted fragment instead of a readable tempo indication (pdf_crop_start.png); text extraction contains the numeric marking but it is not visually usable. This is a limited loss of an XML musical instruction, supporting 2.5/3 rather than full fidelity. Hidden rests are encoded identically in XML and PDF and are not charged again as a fidelity mismatch."
+    }
+  ],
+  "inspection_methods": [
+    "Read candidate TASK.md, SOURCE_CREDIT.md, evaluator REVIEW_PROTOCOL.md and rubric.json; parsed frozen automatic_score.json without altering or rerunning grading.",
+    "Initialized review.json with null component values before visual inspection; verified SHA-256 of all four submitted files against the frozen report.",
+    "Rendered actual score.pdf with pypdfium2 at scale 2; inspected contact sheet and every individual page with image tools, plus beginning/middle/ending enlargements.",
+    "Parsed actual MusicXML with Python ElementTree; audited measure lengths, hidden rests, duration types, voice elements and contiguous same-pitch tie endpoints. Saved xml_analysis.json and rhythm_audit.json.",
+    "Independently loaded actual MusicXML with Verovio and rendered all three pages via SVG, svglib/reportlab and pypdfium2. Inspected all three XML render images and compared start/middle/end and both staves with actual PDF.",
+    "Viewed extracted input video frames at 38.0 and 74.1 seconds for two-hand/register context only; no exact attack or duration truth inferred from still frames. Automatic score-derived event evidence supplies context only and was not rescored.",
+    "No network, other model calls or sub-agents. No submission code executed; notes.md read solely as untrusted descriptive data."
+  ],
+  "limitations": [
+    "The source is public PianoVAM material; pretraining contamination cannot be ruled out. As disclosed by the task, this reviewer model authored the rubric in a separate session. This limits independence; no points were modified to compensate or to target a score.",
+    "This is one model review, not expert musician certification. No full audio listening was performed or claimed; still-frame inspection is not listening or an attack-level performance validation.",
+    "Fidelity uses full page/part coverage checks and detailed beginning/middle/end samples, not a machine proof of every PDF glyph. No technical reference engraving was used as a musician-certified score.",
+    "The independent SVG-to-PDF conversion also showed text-rendering artifacts; only the submitted PDF determines layout points. XML text directions were checked directly.",
+    "PDF skill instructions were located under a policy-denied directory and were not accessed; inspection used the user-specified pypdfium2 workflow directly."
+  ]
+}

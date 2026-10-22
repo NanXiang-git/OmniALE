@@ -1,0 +1,259 @@
+[
+  {
+    "id": "A6_gpt-6-sol_historical",
+    "model": "gpt-6-sol",
+    "old_score": 48.40855272829024,
+    "submission": "benchmark_runs/20261020_a6_piano_sol/submission",
+    "pages": 3,
+    "files": {
+      "notes.md": "6e8bd2f5a41892aa5728bdb8ac6fb4ef50accedf7cb1d623a02d22e6b45a6e5d",
+      "score.mid": "889460a5a46fc277252041bc1932f88f376f17f34c4d1b1a25bcbe873b268c08",
+      "score.musicxml": "391328f9f35877d57cb09bd889ef44164058d4ccddae13e1691ac8f1c82b89e7",
+      "score.pdf": "2bc06f44ad8751782f54337a4229905f8b82fcd564da0014a9a9cb03a9a541bb"
+    },
+    "metrics": {
+      "pitch_global_f1": 0.5078847199564981,
+      "pitch_time_macro_f1": 0.5188471421772984,
+      "pitch_register_macro_f1": 0.493852820386622,
+      "rhythm_strict_f1": 0.2392604676454595
+    },
+    "consistency": 1.0,
+    "errors": [],
+    "status": "budget_timeout"
+  },
+  {
+    "id": "A6_gpt-6-astra_missing8",
+    "model": "gpt-6-astra",
+    "old_score": 66.258221,
+    "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-astra",
+    "pages": 6,
+    "files": {
+      "alignment.json": "2626de523cb45145f90d4466578cd900f9f13c38d96dbf4066492dbcccf9dd86",
+      "notes.md": "9ab675505a1f6558e7fb66c064055f4b1ee66a413708798995d2208a298af048",
+      "score.mid": "adaa2cf63d13c61d4e4f47844ee5a780b1800fd717e32392c2aeab61961f5cfb",
+      "score.musicxml": "fb9f59baffc46bb687c26388b55f01c0318804111fd3342a9d85c57d6f7a0d0b",
+      "score.pdf": "e87467326e86832c8e285181ebec4456f0e2a1c64285ef415d540e014d441206"
+    },
+    "metrics": {
+      "pitch_global_f1": 0.7117075428042573,
+      "pitch_time_macro_f1": 0.708601258062011,
+      "pitch_register_macro_f1": 0.7104181621538844,
+      "rhythm_strict_f1": 0.6848681166126793
+    },
+    "consistency": 1.0,
+    "errors": [],
+    "status": "process_failed"
+  },
+  {
+    "id": "A6_gpt-6-luna_missing8",
+    "model": "gpt-6-luna",
+    "old_score": 11.424112,
+    "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_gpt-6-luna",
+    "pages": 10,
+    "files": {
+      "alignment.json": "ef97bd6eaacb589fcd26f09ac1b82fca401c9a2508d2755e22f78a3f85ba4f05",
+      "notes.md": "923aae4f537d26abfaa2bd28426504a39fbb5db672140c4a46d8d7de56524d86",
+      "score.mid": "ec416fb0e175d49c71522fa53aef4f4c28caa1b3106eb51a825dd7fd915cea11",
+      "score.musicxml": "6394d1d0817d814f30c1e0fd4cc23cceb7118499cdb42b27a789fc1a670be166",
+      "score.pdf": "73d3433c5b374497e9a8c5e5d0d2ff624cf1d005c13fbba1e25de5176ee27e14"
+    },
+    "metrics": {
+      "pitch_global_f1": 0.10053859964093358,
+      "pitch_time_macro_f1": 0.10171885390864871,
+      "pitch_register_macro_f1": 0.09708869517088696,
+      "rhythm_strict_f1": 0.05116696588868941
+    },
+    "consistency": 0.04888888888888889,
+    "errors": [],
+    "status": "completed"
+  },
+  {
+    "id": "A6_k3_missing8",
+    "model": "k3",
+    "old_score": null,
+    "submission": "benchmark_runs/20261021_missing8_high40/submissions/A6_k3",
+    "pages": 0,
+    "files": {},
+    "metrics": null,
+    "consistency": null,
+    "errors": [],
+    "status": "infrastructure_blocked"
+  },
+  {
+    "id": "A6_glm-5.3-flash_20261021_glm53_flash_a1_a7",
+    "model": "glm-5.3-flash",
+    "old_score": null,
+    "submission": "benchmark_runs/20261021_glm53_flash_a1_a7/submissions/A6",
+    "pages": 0,
+    "files": {},
+    "metrics": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "consistency": 0.0,
+    "errors": [
+      "MusicXML: missing or oversized: score.musicxml",
+      "MIDI: missing or oversized: score.mid",
+      "Alignment: No valid alignment.json or MIDI tempo map"
+    ],
+    "status": "process_failed"
+  },
+  {
+    "id": "A6_glm-5.3-flash_20261021_glm53_flash_two_workers",
+    "model": "glm-5.3-flash",
+    "old_score": null,
+    "submission": "benchmark_runs/20261021_glm53_flash_two_workers/submissions/A6",
+    "pages": 0,
+    "files": {},
+    "metrics": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "consistency": 0.0,
+    "errors": [
+      "MusicXML: missing or oversized: score.musicxml",
+      "MIDI: missing or oversized: score.mid",
+      "Alignment: No valid alignment.json or MIDI tempo map"
+    ],
+    "status": "process_failed"
+  },
+  {
+    "id": "A6_glm-5.3-flash_20261021_glm53_flash_recovery",
+    "model": "glm-5.3-flash",
+    "old_score": 0.0,
+    "submission": "benchmark_runs/20261021_glm53_flash_recovery/submissions/A6",
+    "pages": 0,
+    "files": {},
+    "metrics": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "consistency": 0.0,
+    "errors": [
+      "MusicXML: missing or oversized: score.musicxml",
+      "MIDI: missing or oversized: score.mid",
+      "Alignment: No valid alignment.json or MIDI tempo map"
+    ],
+    "status": "budget_timeout"
+  },
+  {
+    "id": "A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min",
+    "model": "glm-5.3-flash",
+    "old_score": 18.57040220112151,
+    "submission": "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A6",
+    "pages": 3,
+    "files": {
+      "alignment.json": "031a9d3f8005ca91bae6fa5106b8cbd9385bb457e0ba9d504ba4ffcd696fbd50",
+      "notes.md": "950b28b6c07527ba890d86889b91f394b3431af7762c7fd9535a51472159ee2a",
+      "score.mid": "5bdc73e759ebb6cbac5be41a277c9bd02420cf8de1169f976a139652382814db",
+      "score.musicxml": "453263689347b84a27eb2169faf8ce608cfbd2675f688be839d33e83d0124e7a",
+      "score.pdf": "e6093cf526b8c14bb1dba14ecc4ea3d014bb50e6b4567c214543ab38e243ddc9"
+    },
+    "metrics": {
+      "pitch_global_f1": 0.1782421634910879,
+      "pitch_time_macro_f1": 0.17616274783455385,
+      "pitch_register_macro_f1": 0.16307283426848643,
+      "rhythm_strict_f1": 0.1253841425937308
+    },
+    "consistency": 1.0,
+    "errors": [],
+    "status": "completed"
+  },
+  {
+    "id": "A6_gpt-6-sol_new_20261021",
+    "model": "gpt-6-sol",
+    "old_score": 49.867777,
+    "submission": "benchmark_runs/20261021_a4luna_a6sol_serial/submissions/A6_gpt-6-sol",
+    "pages": 2,
+    "files": {
+      "notes.md": "59e0d12c4f3b6b0e35caa3aa8b715437247eab6b1ad4c6e9eab8bfc7f88e18b0",
+      "score.mid": "f3ba232131bbcc41e21be3900f5ce4b940132722ec06d56dbc81cffcfc499ff7",
+      "score.musicxml": "0799642f2a6bc8053fd2bead56a0963a94eed440d7a532a87df9a07fdefca459",
+      "score.pdf": "76de7b01a655eb14f9435efbf8cd670be5953bbd7d5ff674b80ff385b3eff006"
+    },
+    "metrics": {
+      "pitch_global_f1": 0.5065155807365439,
+      "pitch_time_macro_f1": 0.5143576673570183,
+      "pitch_register_macro_f1": 0.49675192180627953,
+      "rhythm_strict_f1": 0.24022662889518415
+    },
+    "consistency": 1.0,
+    "errors": [],
+    "status": "completed"
+  },
+  {
+    "id": "A6_k3_20261021_k3_a4_a6_isolated",
+    "model": "k3",
+    "old_score": 0.0,
+    "submission": "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A6_k3",
+    "pages": 0,
+    "files": {},
+    "metrics": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "consistency": 0.0,
+    "errors": [
+      "MusicXML: missing or oversized: score.musicxml",
+      "MIDI: missing or oversized: score.mid",
+      "Alignment: No valid alignment.json or MIDI tempo map"
+    ],
+    "status": "budget_timeout"
+  },
+  {
+    "id": "A6_k3_20261022_k3a6_60_sola4_40_serial",
+    "model": "k3",
+    "old_score": 4.0,
+    "submission": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A6_k3",
+    "pages": 0,
+    "files": {
+      "alignment.json": "18bcc3b394edeb07c24685d589f63d0aeddc06c0271bf3160b3edd9d28de34ca",
+      "score.mid": "5ddfad6b8ce319dba6dc8276ab5561d908d66a387e3c149517d625729a1e8fdd",
+      "score.musicxml": "c1700b5d4af1f776923562f52538273d8a459f0b2d2ad54110bdc79a6b826acf"
+    },
+    "metrics": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "consistency": 1.0,
+    "errors": [
+      "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+    ],
+    "status": "budget_timeout"
+  },
+  {
+    "id": "A6_k3_20261022_k3_a6_60_clean",
+    "model": "k3",
+    "old_score": 8.5,
+    "submission": "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3",
+    "pages": 6,
+    "files": {
+      "alignment.json": "c0608ab798df42f3fc83eff133f487d0571d06b23196bf3f808e7d2cc43c72f6",
+      "notes.md": "68145940405e21d04263fa04a6288f85bb08c2586a6557de41bdcd6de5e478ea",
+      "score.mid": "8392a3ca4b9e073064ccec64549853057926cf310c4511b0b2aeb7e0c0ed7acf",
+      "score.musicxml": "7bc13cd48705cc1bba47d45915d481505bb9efe35148e1862fd44d67047e1f1f",
+      "score.pdf": "9409389b1c0f35b6250d865340b84216c1eb559c4f499a42f32fa66d865026ff"
+    },
+    "metrics": {
+      "pitch_global_f1": 0.0,
+      "pitch_time_macro_f1": 0.0,
+      "pitch_register_macro_f1": 0.0,
+      "rhythm_strict_f1": 0.0
+    },
+    "consistency": 1.0,
+    "errors": [
+      "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+    ],
+    "status": "budget_timeout"
+  }
+]

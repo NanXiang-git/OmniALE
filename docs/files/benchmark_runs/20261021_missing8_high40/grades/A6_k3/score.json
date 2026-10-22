@@ -1,0 +1,21 @@
+{
+  "id": "A6_k3",
+  "case": "A6",
+  "model": "k3",
+  "formal_total": null,
+  "solver_status": "infrastructure_blocked",
+  "review_status": "not_invoked",
+  "score_type": "infrastructure_blocked_no_attempt",
+  "uncapped_proxy_interval": null,
+  "confirmed_proxy_points": null,
+  "pending_weight": 100,
+  "reason": "API preflight 503; solver attempt never started. No automatic retry, no ability-zero score.",
+  "solver_run": {
+    "model": "k3",
+    "status": "infrastructure_blocked",
+    "reason": "API preflight HTTP 503; no solver attempt started; no automatic retry",
+    "reasoning_effort": "high",
+    "budget_seconds": 2400,
+    "solver_attempt_started": false
+  }
+}

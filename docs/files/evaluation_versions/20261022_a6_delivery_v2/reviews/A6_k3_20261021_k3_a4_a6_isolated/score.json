@@ -1,0 +1,65 @@
+{
+  "components": {
+    "pitch_global_f1": 0.0,
+    "pitch_time_macro_f1": 0.0,
+    "pitch_register_macro_f1": 0.0,
+    "rhythm_strict_f1": 0.0,
+    "midi_xml_consistency": 0.0,
+    "layout": 0,
+    "notation": 0,
+    "fidelity": 0
+  },
+  "raw_score": 0.0,
+  "delivery_level": "empty",
+  "delivery_label": "无可评内容",
+  "delivery_factor": 0,
+  "after_delivery_factor": 0.0,
+  "acceptance_checks": {
+    "delivery_ready": false,
+    "pitch_precision": false,
+    "pitch_recall": false,
+    "strict_f1": false,
+    "time_coverage": false,
+    "register_coverage": false,
+    "midi_consistency": false,
+    "visual_minimum": false
+  },
+  "acceptance_cap_applied": false,
+  "accepted": false,
+  "final_score": 0.0,
+  "unrounded_final_score": 0.0,
+  "pitch_precision": 0.0,
+  "pitch_recall": 0.0,
+  "id": "A6_k3_20261021_k3_a4_a6_isolated",
+  "case": "A6",
+  "model": "k3",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": 0.0,
+  "old_scorepath": "benchmark_runs/20261021_k3_a4_a6_isolated/grades/A6_k3/score.json",
+  "submission": "benchmark_runs/20261021_k3_a4_a6_isolated/submissions/A6_k3",
+  "submission_sha256": {},
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/technical.json",
+  "review": {
+    "layout": 0,
+    "notation": 0,
+    "fidelity": 0,
+    "delivery_level": "empty",
+    "reasons": [
+      "实际作答后没有非空可评音乐内容。"
+    ]
+  },
+  "evidence_pages": [],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": [
+    "MusicXML: missing or oversized: score.musicxml",
+    "MIDI: missing or oversized: score.mid",
+    "Alignment: No valid alignment.json or MIDI tempo map"
+  ]
+}

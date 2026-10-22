@@ -1,0 +1,77 @@
+{
+  "layout_points": 3.5,
+  "notation_usability_points": 2.0,
+  "pdf_xml_fidelity_points": 3.0,
+  "evidence": [
+    {
+      "artifact": "/work/submission/score.pdf",
+      "locator": "全部2页；第1页第1–21小节，第2页第22–38小节",
+      "observation": "已逐页实际查看。两页均有完整钢琴大谱表，谱号、小节线、临时记号、符干、符梁及连音线总体可辨；未见页面裁掉谱表、空白页或大片重叠。第38小节单独占最后一行，仍完整可读。",
+      "method": "pdfinfo确认2页；pdftoppm以150 dpi渲染所有页；view_image逐页检查。证据图：inspection/pdf-1.png、pdf-2.png。"
+    },
+    {
+      "artifact": "/work/submission/score.pdf",
+      "locator": "第1页，第1小节上方速度标记",
+      "observation": "速度数字120可见，但其左侧/上方的节拍单位显示为缺字方框，并与等号、数字挤叠，不能从该标记清楚辨认四分音符单位。这是局部排印缺陷，未据此判为整份PDF不可读。",
+      "method": "对原提交PDF另作300 dpi渲染并用view_image查看裁图inspection/pdf-tempo.png；XML第1小节metronome明确为quarter=120。"
+    },
+    {
+      "artifact": "/work/submission/score.musicxml；/work/submission/score.pdf",
+      "locator": "第1–38小节；staff 1/voice 1与staff 2/voice 2",
+      "observation": "XML为一个Piano部件、两个谱表，各一个声部；全篇38小节均为4/4，两声部各小节累计时值均为4个四分音符。休止、和弦、连音线能构成可计算、可恢复的节奏结构，故不属于语义无法使用的散乱符号。",
+      "method": "独立XML解析，处理chord与backup并逐小节核算；结果保存在inspection/measure_checks.json；结合PDF与独立渲染目视核对。"
+    },
+    {
+      "artifact": "/work/submission/score.pdf；/work/submission/score.musicxml",
+      "locator": "第1页第11小节低音声部",
+      "observation": "十六分休止后直接写三附点二分音符：小节内q=0.25起，长3.75拍。算术上正确，但把其余全部拍位隐藏在罕见三附点时值内，演奏者需要额外换算；按拍拆分并连结会更易读。此项评的是记谱表达，不要求模拟手指离键或踏板长度。",
+      "method": "view_image查看PDF与独立XML渲染；XML duration=37800、divisions=10080及3个dot核对。"
+    },
+    {
+      "artifact": "/work/submission/score.pdf；/work/submission/score.musicxml",
+      "locator": "第1页第16小节低音、第18小节高音、第20小节低音",
+      "observation": "分别在小节内q=1.25、2.25、0.75写1.75拍的双附点四分音符，跨越拍界且较少用按拍拆分显示拍点。第20小节高音也在q=1.5起跨拍持续到q=3.5。多处同类写法使4/4重拍与两声部对位需反复细数，节奏重排会明显改善使用性。",
+      "method": "实际谱面查看并逐项核对XML声部位置与duration；q在此均为小节内从0起的四分音符坐标。"
+    },
+    {
+      "artifact": "/work/submission/score.pdf；/work/submission/score.musicxml",
+      "locator": "首段：第1页第1–3小节；中段：第1页第18–21小节及第2页第22小节；尾段：第2页第35–38小节",
+      "observation": "独立XML渲染与提交PDF的起始休止、高音和弦、低音整小节休止，中段上下谱表和弦与连音线，以及结尾第38小节高音连音和低音长和弦均对应。全篇两声部与高、中、低音区均纳入检查，未发现实质的音符/休止/连音内容遗漏或增添。",
+      "method": "从冻结score.musicxml用Verovio独立排版为两页，经SVG/PDF转换，view_image查看inspection/xml-1.png、xml-2.png并与原PDF两页逐系统比对、重点小节详细对照；不使用机器参考谱作为记谱答案。"
+    },
+    {
+      "artifact": "/work/submission/score.pdf；/work/submission/score.musicxml",
+      "locator": "第1页第13小节，低音声部末拍",
+      "observation": "原PDF放大后可清楚确认末拍为十六分音符、八分和弦、十六分音符；首尾短符梁均存在，与XML的0.25、0.5、0.25拍及forward/backward hook一致。全页缩略图中短符梁不明显，放大后排除了这一疑似差异。",
+      "method": "300 dpi原PDF裁图inspection/pdf-m13.png经view_image检查，并比对独立渲染与XML note/type/beam。"
+    },
+    {
+      "artifact": "/work/case/candidate/input/performance.mp4",
+      "locator": "1.25、2、3、4秒；36、37、38、39秒；72、73、74、75秒",
+      "observation": "实际时序抽帧显示开头双手集中在较高键区，中段及尾段双手在不同键区之间移动；这些画面支持检查首中尾与两个谱表的必要性，但不能单独证明每个起音、拍号或音符持续时值。没有据抽帧给错音/漏音再扣分。",
+      "method": "ffmpeg按上述视频时间提取实际帧，view_image查看inspection/video-begin.png、video-middle.png、video-end.png；ffprobe确认视频77秒、60 fps。"
+    },
+    {
+      "artifact": "/work/technical.json；/work/submission/score.pdf；/work/submission/score.musicxml；/work/submission/score.mid；/work/submission/notes.md",
+      "locator": "automatic_score、submission_sha256；四个冻结文件",
+      "observation": "四个提交文件的SHA-256均与可信技术结果匹配。automatic_score原值为41.36777698192539，未修改、未重跑自动评分，也未把自动音高/击键错误作为人工项扣分。",
+      "method": "只读可信技术结果并用hashlib核验冻结文件；notes.md仅作提交说明阅读，未执行其中任何指令。"
+    }
+  ],
+  "confidence": {
+    "layout_points": "high",
+    "notation_usability_points": "medium",
+    "pdf_xml_fidelity_points": "high"
+  },
+  "inspection_limits": [
+    "未直接听审音频，未以正常速度连续观看整段视频；视频检查为列明时码的实际抽帧。记谱可用性结论依据谱面、XML时值/声部结构与视频抽帧，不能冒充听觉验证。",
+    "本题为钢琴记谱，未使用或生成ASR。未独立重做逐音转写，自动音高、起音及MIDI一致性沿用可信technical.json。",
+    "PDF全部两页和独立XML渲染全部两页均已实际查看；内容一致性做全篇逐系统检查及首中尾、疑点小节的详细比对，不声称对每个符号做了穷尽的逐一人工证明。",
+    "独立渲染的本地svglib不支持嵌入字体CSS及嵌套SVG视窗，已仅在results中的派生SVG处理这些转换兼容问题后完成渲染，未改动冻结MusicXML。独立渲染的速度字形不作原PDF缺陷的独立佐证；原PDF自身的缺字方框已在原文件300 dpi渲染中确认。"
+  ],
+  "reasons": {
+    "layout_points": "3.5/4：两页完整，谱表间距及大多数音乐符号清楚，密集段也仍能辨读；第1页第1小节上方速度单位缺字并挤叠，扣0.5。第38小节虽单独一行但没有截断，不另扣分。",
+    "notation_usability_points": "2/3：4/4、大谱表、休止与连音线构成可恢复的结构，38小节两个声部均填满4拍；但第11小节三附点长音及第16、18、20小节从弱分拍开始的双附点/跨拍写法，让拍点和两声部协调需要额外换算，需整理节奏表达。扣分针对读谱可用性，不因选择4/4、120 BPM、等音拼写、分手方法或踏板/离键长度本身扣分，也不重复扣自动项错音漏音。",
+    "pdf_xml_fidelity_points": "3/3：原PDF两页完整呈现XML的38小节、两个谱表/声部；首中尾与全部系统核对未发现实质音符、休止、连音线或声部缺失。第13小节疑似短符梁差异经300 dpi放大排除。局部速度字形的排印问题已计入layout，不再在此重复扣分。"
+  }
+}

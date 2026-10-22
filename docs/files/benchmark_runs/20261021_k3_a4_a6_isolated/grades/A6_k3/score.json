@@ -1,0 +1,32 @@
+{
+  "id": "A6_k3",
+  "case": "A6",
+  "model": "k3",
+  "case_root": "A6_piano_transcription",
+  "judge": null,
+  "status": "scored",
+  "final_score": 0.0,
+  "formal_total": 0.0,
+  "automatic_score": 0.0,
+  "manual_score": 0.0,
+  "solver_status": "budget_timeout",
+  "judge_status": "not_needed_empty_delivery",
+  "score_type": "native_empty_delivery_final",
+  "reviewers": 0,
+  "effort": "high",
+  "components": {
+    "pitch_global_f1": 0.0,
+    "pitch_time_macro_f1": 0.0,
+    "pitch_register_macro_f1": 0.0,
+    "rhythm_strict_f1": 0.0,
+    "xml_valid_nonempty": 0.0,
+    "midi_xml_consistency": 0.0,
+    "notes_present": 0.0,
+    "notation_review": 0
+  },
+  "submission_unchanged": true,
+  "inspection_limits": [
+    "本次0分表示30分钟截止时没有交付文件；不是接口调用失败，也不证明模型在其他预算或尝试下必然无法完成。"
+  ],
+  "reason": "实际K3会话执行后超时，冻结结果目录为空。原生A6评分器确定所有项目0分、pending_points=0，无谱面可评，因此未发起LLM评审。"
+}

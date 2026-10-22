@@ -1,0 +1,143 @@
+{
+  "case": "A6",
+  "model": "gpt-6-sol",
+  "provider": "nju",
+  "assessment": "frozen_objective_note_metrics_plus_single_model_notation_review",
+  "automatic_score": 41.40855272829024,
+  "automatic_max": 90,
+  "review_score": 7.0,
+  "review_max": 10,
+  "final_score": 48.40855272829024,
+  "points": {
+    "pitch_global_f1": 15.236541598694943,
+    "pitch_time_macro_f1": 7.782707132659477,
+    "pitch_register_macro_f1": 7.40779230579933,
+    "rhythm_strict_f1": 5.981511691136488,
+    "xml_valid_nonempty": 1.0,
+    "midi_xml_consistency": 3.0,
+    "notes_present": 1.0,
+    "notation_review": 7.0,
+    "layout_points": 3.5,
+    "notation_usability_points": 1.0,
+    "pdf_xml_fidelity_points": 2.5
+  },
+  "solver_run": {
+    "model": "gpt-6-sol",
+    "provider": "nju",
+    "reasoning_effort": "medium",
+    "status": "budget_timeout",
+    "budget_seconds": 1800,
+    "start_utc": "2026-10-20T10:07:46.206262+00:00",
+    "deadline_epoch": 1792492666.2062585,
+    "observed_clock_gaps": [],
+    "automatic_retries": 0,
+    "pid": 47996,
+    "exit_code": 1,
+    "elapsed_seconds": 1800.58,
+    "end_utc": "2026-10-20T10:37:46.781442+00:00",
+    "usage_events": []
+  },
+  "review_run": {
+    "model": "gpt-6-astra",
+    "provider": "nju",
+    "reasoning_effort": "medium",
+    "status": "completed",
+    "budget_seconds": 600,
+    "start_utc": "2026-10-20T10:37:58.009259+00:00",
+    "deadline_epoch": 1792493278.0092597,
+    "observed_clock_gaps": [],
+    "automatic_retries": 0,
+    "pid": 54996,
+    "exit_code": 0,
+    "elapsed_seconds": 588.37,
+    "end_utc": "2026-10-20T10:47:46.379959+00:00",
+    "usage_events": [
+      {
+        "input_tokens": 647986,
+        "cached_input_tokens": 578304,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6426,
+        "reasoning_output_tokens": 640
+      }
+    ]
+  },
+  "review_errors": [],
+  "note_metrics": {
+    "reference_count": 1103,
+    "predicted_count": 736,
+    "coarse_tp": 467,
+    "strict_tp": 220,
+    "false_positive": 269,
+    "false_negative": 636,
+    "values": {
+      "pitch_global_f1": 0.5078847199564981,
+      "pitch_time_macro_f1": 0.5188471421772984,
+      "pitch_register_macro_f1": 0.493852820386622,
+      "rhythm_strict_f1": 0.2392604676454595
+    },
+    "time_bins": [
+      {
+        "bin": 0,
+        "predicted": 96,
+        "reference": 147,
+        "f1": 0.6172839506172839
+      },
+      {
+        "bin": 1,
+        "predicted": 99,
+        "reference": 131,
+        "f1": 0.6217391304347826
+      },
+      {
+        "bin": 2,
+        "predicted": 135,
+        "reference": 216,
+        "f1": 0.4928774928774929
+      },
+      {
+        "bin": 3,
+        "predicted": 123,
+        "reference": 240,
+        "f1": 0.4820936639118457
+      },
+      {
+        "bin": 4,
+        "predicted": 164,
+        "reference": 170,
+        "f1": 0.4431137724550898
+      },
+      {
+        "bin": 5,
+        "predicted": 119,
+        "reference": 199,
+        "f1": 0.4559748427672956
+      }
+    ],
+    "register_bins": [
+      {
+        "bin": 0,
+        "predicted": 165,
+        "reference": 305,
+        "f1": 0.39574468085106385
+      },
+      {
+        "bin": 1,
+        "predicted": 359,
+        "reference": 388,
+        "f1": 0.5809906291834003
+      },
+      {
+        "bin": 2,
+        "predicted": 212,
+        "reference": 410,
+        "f1": 0.5048231511254019
+      }
+    ]
+  },
+  "limitations": [
+    "Public source; pretraining memorization cannot be excluded",
+    "One API gpt-6-sol attempt, 30-minute budget, offline generic tools without pretrained transcription weights",
+    "Notation reviewed once by API gpt-6-astra; same model authored rubric in a separate session",
+    "No expert musician certification; pitch/onset score is not complete musical equivalence"
+  ]
+}

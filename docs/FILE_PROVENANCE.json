@@ -6876,8 +6876,8 @@
     "changes": []
   },
   "benchmark_runs/20261021_a4luna_a6sol_serial/package_report.py": {
-    "source_sha256": "f8fb02c37e19bcc276eb1107be9d99e5433adf0c051c1826489b3903010cd81b",
-    "packaged_sha256": "f8fb02c37e19bcc276eb1107be9d99e5433adf0c051c1826489b3903010cd81b",
+    "source_sha256": "9602d6a08fabadb530d03ff97bd0502cf4561369aeb96d01e11377b0937f5949",
+    "packaged_sha256": "9602d6a08fabadb530d03ff97bd0502cf4561369aeb96d01e11377b0937f5949",
     "changes": []
   },
   "benchmark_runs/20261021_glm53_flash_a4_a6_50min/submissions/A4/en.srt": {
@@ -10748,8 +10748,8 @@
     "changes": []
   },
   "viewer/build_report.py": {
-    "source_sha256": "e8a978e50eec32d39a9900afdea563a08b75a844f867e29f1d2b29036b242ac6",
-    "packaged_sha256": "e8a978e50eec32d39a9900afdea563a08b75a844f867e29f1d2b29036b242ac6",
+    "source_sha256": "e878f470948b87e39ffd65b0a6b8f6faef100be703b9dacd9ba7bd70abdd5436",
+    "packaged_sha256": "e878f470948b87e39ffd65b0a6b8f6faef100be703b9dacd9ba7bd70abdd5436",
     "changes": []
   },
   "benchmark_runs/20261022_k3_a6_60_clean/submissions/A6_k3/alignment.json": {
@@ -11374,6 +11374,551 @@
   "viewer/k3_a6_clean_overlay.py": {
     "source_sha256": "e33d2225a5461c36e6be84241686ea6c0d2cb9c883648c00280170cc0c5c7a5c",
     "packaged_sha256": "e33d2225a5461c36e6be84241686ea6c0d2cb9c883648c00280170cc0c5c7a5c",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/build.py": {
+    "source_sha256": "7ae99e99693559cc7bc9f93b1acf93da821f9e1df61012a73ad21cc8b6ae8550",
+    "packaged_sha256": "7ae99e99693559cc7bc9f93b1acf93da821f9e1df61012a73ad21cc8b6ae8550",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/FROZEN_RULE.json": {
+    "source_sha256": "504d1206ff637f19cc0f9359f16b0ab75976a311ef1dbca1e2d68797bb24718a",
+    "packaged_sha256": "504d1206ff637f19cc0f9359f16b0ab75976a311ef1dbca1e2d68797bb24718a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/grade.py": {
+    "source_sha256": "2bdbe43ed028fed40e036346d9b5d9efce6d6ebc2181254c611b2715b1e1e4e0",
+    "packaged_sha256": "2bdbe43ed028fed40e036346d9b5d9efce6d6ebc2181254c611b2715b1e1e4e0",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/inspect.py": {
+    "source_sha256": "377d82e80ce3cf9102d70860e7a9315b08be2ffa54f3950d57c2d6db5f553ba3",
+    "packaged_sha256": "377d82e80ce3cf9102d70860e7a9315b08be2ffa54f3950d57c2d6db5f553ba3",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/inventory.json": {
+    "source_sha256": "553a7863f99700337cc9055be2fc92ec62e338631d2484c142a35671189832eb",
+    "packaged_sha256": "553a7863f99700337cc9055be2fc92ec62e338631d2484c142a35671189832eb",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/original_results.json": {
+    "source_sha256": "e01b5738980f6266287511d048fd2668ec7b4cb6c09cb4c9e37292e856c613a3",
+    "packaged_sha256": "e01b5738980f6266287511d048fd2668ec7b4cb6c09cb4c9e37292e856c613a3",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/REPORT.html": {
+    "source_sha256": "d3a963dd31b6a0e3c8d2ae3c3681ce08108bfdb12515ae6e5b56ce442b94ccae",
+    "packaged_sha256": "d3a963dd31b6a0e3c8d2ae3c3681ce08108bfdb12515ae6e5b56ce442b94ccae",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/REVIEWED_RESULTS.json": {
+    "source_sha256": "90d69eec6e6e36d9c22d1a216aa2c03b360d416dac46c9cac3ccd6b69d308a7d",
+    "packaged_sha256": "90d69eec6e6e36d9c22d1a216aa2c03b360d416dac46c9cac3ccd6b69d308a7d",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/review_decisions.json": {
+    "source_sha256": "be27160d888e11ad83626b2574820232b1a1e1d2041d88d81bdd9fcd34d5b1ec",
+    "packaged_sha256": "be27160d888e11ad83626b2574820232b1a1e1d2041d88d81bdd9fcd34d5b1ec",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/rubric.json": {
+    "source_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+    "packaged_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/RUBRIC.md": {
+    "source_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+    "packaged_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/SUMMARY.json": {
+    "source_sha256": "5d18789e8cfd9532764e606269e397804f848705c48d2bd21384ed6d27b19ed4",
+    "packaged_sha256": "5d18789e8cfd9532764e606269e397804f848705c48d2bd21384ed6d27b19ed4",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/test_grade.py": {
+    "source_sha256": "90f3cf279555a47d225e56cfa68a6201443cad2a37eb2c148973f8b313ecdcee",
+    "packaged_sha256": "90f3cf279555a47d225e56cfa68a6201443cad2a37eb2c148973f8b313ecdcee",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a1_a7/input_hashes.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a1_a7/score.json": {
+    "source_sha256": "1fded45de42e14ae533896458778f43c39758a64f50955d441d7441d8e1f6fd1",
+    "packaged_sha256": "1fded45de42e14ae533896458778f43c39758a64f50955d441d7441d8e1f6fd1",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a1_a7/technical.json": {
+    "source_sha256": "ce13aa76c3cbbdab540f781703857a0e319162dd300c88f2cee7ebcfe79d676a",
+    "packaged_sha256": "ce13aa76c3cbbdab540f781703857a0e319162dd300c88f2cee7ebcfe79d676a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a1_a7/xml_audit.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/contact-1.jpg": {
+    "source_sha256": "445965a99aedd3353ee34b73c7afe65038a7d4e7dd14d808aea3e2e5ebcda561",
+    "packaged_sha256": "445965a99aedd3353ee34b73c7afe65038a7d4e7dd14d808aea3e2e5ebcda561",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/input_hashes.json": {
+    "source_sha256": "e8e7b5bc2eb05ac2da647cb2bcc26b22948d5dd12f2171230d8692975f100c63",
+    "packaged_sha256": "e8e7b5bc2eb05ac2da647cb2bcc26b22948d5dd12f2171230d8692975f100c63",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-1.png": {
+    "source_sha256": "75f4905087fb1250149f568eb84979d718a6fd6e27ef6496ce0191b820b00369",
+    "packaged_sha256": "75f4905087fb1250149f568eb84979d718a6fd6e27ef6496ce0191b820b00369",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-2.png": {
+    "source_sha256": "21a3ff2fe7cba87dbe600377c4459754fd064f650fed3f6d9fd8c203fce7405d",
+    "packaged_sha256": "21a3ff2fe7cba87dbe600377c4459754fd064f650fed3f6d9fd8c203fce7405d",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/pdf-3.png": {
+    "source_sha256": "dd3ddd10d8c395ab7ee2408aed02b7eb80861e6f20461464293f966d9cb947d8",
+    "packaged_sha256": "dd3ddd10d8c395ab7ee2408aed02b7eb80861e6f20461464293f966d9cb947d8",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/score.json": {
+    "source_sha256": "b3091184e3f5dc1d7e9852984222a7c7d26f2e453e9600b3324b04f007149c42",
+    "packaged_sha256": "b3091184e3f5dc1d7e9852984222a7c7d26f2e453e9600b3324b04f007149c42",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/technical.json": {
+    "source_sha256": "0ac01453d64dd83aa8a0bf5c6eef5b8a9bf5cb76eeed1a1574fae7ea2a5c17bf",
+    "packaged_sha256": "0ac01453d64dd83aa8a0bf5c6eef5b8a9bf5cb76eeed1a1574fae7ea2a5c17bf",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min/xml_audit.json": {
+    "source_sha256": "c40e72df13ebbc5c58b2e712518ba6b9366e03723458c2ac2d103352120fe5eb",
+    "packaged_sha256": "c40e72df13ebbc5c58b2e712518ba6b9366e03723458c2ac2d103352120fe5eb",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_recovery/input_hashes.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_recovery/score.json": {
+    "source_sha256": "e25d82de4d7abe1c22ade453f04587ae7ecf799b5a4e345c2811de4f2f36c608",
+    "packaged_sha256": "e25d82de4d7abe1c22ade453f04587ae7ecf799b5a4e345c2811de4f2f36c608",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_recovery/technical.json": {
+    "source_sha256": "ce13aa76c3cbbdab540f781703857a0e319162dd300c88f2cee7ebcfe79d676a",
+    "packaged_sha256": "ce13aa76c3cbbdab540f781703857a0e319162dd300c88f2cee7ebcfe79d676a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_recovery/xml_audit.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_two_workers/input_hashes.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_two_workers/score.json": {
+    "source_sha256": "77b240db9a5dbd5ae05e14f28bbfa7929ec6fb8f182193d86782aaa723a07f9a",
+    "packaged_sha256": "77b240db9a5dbd5ae05e14f28bbfa7929ec6fb8f182193d86782aaa723a07f9a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_two_workers/technical.json": {
+    "source_sha256": "ce13aa76c3cbbdab540f781703857a0e319162dd300c88f2cee7ebcfe79d676a",
+    "packaged_sha256": "ce13aa76c3cbbdab540f781703857a0e319162dd300c88f2cee7ebcfe79d676a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_glm-5.3-flash_20261021_glm53_flash_two_workers/xml_audit.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/contact-1.jpg": {
+    "source_sha256": "c25a913582f89b696f736b9ce6dd47075cbf659f1ba0f484dea157ea27e3482c",
+    "packaged_sha256": "c25a913582f89b696f736b9ce6dd47075cbf659f1ba0f484dea157ea27e3482c",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/contact-2.jpg": {
+    "source_sha256": "145fe80c2e610eaccad106ac0e16fb509edc10a23f62d5e5677ea8af19b83663",
+    "packaged_sha256": "145fe80c2e610eaccad106ac0e16fb509edc10a23f62d5e5677ea8af19b83663",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/input_hashes.json": {
+    "source_sha256": "7f0729c52920e8bd28611cfcb054c50021815ccef750d746d6690764f86fdc3b",
+    "packaged_sha256": "7f0729c52920e8bd28611cfcb054c50021815ccef750d746d6690764f86fdc3b",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-1.png": {
+    "source_sha256": "251015c2f14a5a8198b947d42f8da3f2e4a3db15f348b0e62905c5555ebc9721",
+    "packaged_sha256": "251015c2f14a5a8198b947d42f8da3f2e4a3db15f348b0e62905c5555ebc9721",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-2.png": {
+    "source_sha256": "f8f1ede4fcef3ad7099bce95ae8850383ee037f16f85167a6fe17e2a8373aed0",
+    "packaged_sha256": "f8f1ede4fcef3ad7099bce95ae8850383ee037f16f85167a6fe17e2a8373aed0",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-3.png": {
+    "source_sha256": "e2d4f5fba5a8b27f3c6e04857040459c45d4daf0365ed8d0c93c9bdcb7a56686",
+    "packaged_sha256": "e2d4f5fba5a8b27f3c6e04857040459c45d4daf0365ed8d0c93c9bdcb7a56686",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-4.png": {
+    "source_sha256": "176f1c5c54d8a4d75d42251a69c5f3ee91202c9266a2dc18a426ab447003d363",
+    "packaged_sha256": "176f1c5c54d8a4d75d42251a69c5f3ee91202c9266a2dc18a426ab447003d363",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-5.png": {
+    "source_sha256": "00e0ee6a7701ff057430b4ef2d488db4bb1aa72c1844f19b5ecade7ac44796c0",
+    "packaged_sha256": "00e0ee6a7701ff057430b4ef2d488db4bb1aa72c1844f19b5ecade7ac44796c0",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/pdf-6.png": {
+    "source_sha256": "8c69d3b15a094b0019dab8ab1956f22181ee3eb753231dde9ba214a534eab744",
+    "packaged_sha256": "8c69d3b15a094b0019dab8ab1956f22181ee3eb753231dde9ba214a534eab744",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/score.json": {
+    "source_sha256": "c670a3ce2591d019eea950d5f1904fc0ddd846211e1fa25b98db2da9d67c0429",
+    "packaged_sha256": "c670a3ce2591d019eea950d5f1904fc0ddd846211e1fa25b98db2da9d67c0429",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/technical.json": {
+    "source_sha256": "041ac62ea09c410a5de74003b6fbcae0cda949c07c92794b658c6153382db9e7",
+    "packaged_sha256": "041ac62ea09c410a5de74003b6fbcae0cda949c07c92794b658c6153382db9e7",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-astra_missing8/xml_audit.json": {
+    "source_sha256": "dead84a5e5cadb374e9f21ffc4195ed2c1d841d14dba4f76114645861cf8b197",
+    "packaged_sha256": "dead84a5e5cadb374e9f21ffc4195ed2c1d841d14dba4f76114645861cf8b197",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/contact-1.jpg": {
+    "source_sha256": "e829d787c9ab67023e7d103185e9f2bb895e77bc69b50583e1ef37b05d3add06",
+    "packaged_sha256": "e829d787c9ab67023e7d103185e9f2bb895e77bc69b50583e1ef37b05d3add06",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/contact-2.jpg": {
+    "source_sha256": "53c58cae5826a8641e14926d4fb81d04d247c87889d1013aca2c393f82ac02f4",
+    "packaged_sha256": "53c58cae5826a8641e14926d4fb81d04d247c87889d1013aca2c393f82ac02f4",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/contact-3.jpg": {
+    "source_sha256": "26a4bc3018f0dc21b1b6bef52f2484fa6088a5b5867c10f6458b5f7b0facd527",
+    "packaged_sha256": "26a4bc3018f0dc21b1b6bef52f2484fa6088a5b5867c10f6458b5f7b0facd527",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/input_hashes.json": {
+    "source_sha256": "c31006666b2154cd999dae526f864ab739761f7e14a6a7c589dd459bc3c8a1b9",
+    "packaged_sha256": "c31006666b2154cd999dae526f864ab739761f7e14a6a7c589dd459bc3c8a1b9",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-01.png": {
+    "source_sha256": "ce399753694f8d0f6b94b013505b2134d07f755bb0e5bfb84a31ed0eaec26ff5",
+    "packaged_sha256": "ce399753694f8d0f6b94b013505b2134d07f755bb0e5bfb84a31ed0eaec26ff5",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-02.png": {
+    "source_sha256": "856f1cf7682861a813f3d39483dd2adef2fe5fd70c439d85acea172fe2e85009",
+    "packaged_sha256": "856f1cf7682861a813f3d39483dd2adef2fe5fd70c439d85acea172fe2e85009",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-03.png": {
+    "source_sha256": "d5a1eb78eb89b5899d4f69db607b5f6c1d1add153e745651f196075ddda8b526",
+    "packaged_sha256": "d5a1eb78eb89b5899d4f69db607b5f6c1d1add153e745651f196075ddda8b526",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-04.png": {
+    "source_sha256": "758294b80ea01a8706a9a920b7e034158c5cdddabacac10bed9b76b67e177b9c",
+    "packaged_sha256": "758294b80ea01a8706a9a920b7e034158c5cdddabacac10bed9b76b67e177b9c",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-05.png": {
+    "source_sha256": "18b34e161df5ca5f61856fa2a9facd9cad7020da10ef9b5def2f80fc67f18e8c",
+    "packaged_sha256": "18b34e161df5ca5f61856fa2a9facd9cad7020da10ef9b5def2f80fc67f18e8c",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-06.png": {
+    "source_sha256": "cf381c065f91d75764a3ee6fb7c2589613962d1c239d8f87c11d9336190fda68",
+    "packaged_sha256": "cf381c065f91d75764a3ee6fb7c2589613962d1c239d8f87c11d9336190fda68",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-07.png": {
+    "source_sha256": "1713896590442f398a1c583e8b33ac61f348a756d1ee961eb1ed358556d307b0",
+    "packaged_sha256": "1713896590442f398a1c583e8b33ac61f348a756d1ee961eb1ed358556d307b0",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-08.png": {
+    "source_sha256": "8da2cf7ef0ccf913046649b92b297c7e58e8fdd6f620674f9d1072198cd1b5ad",
+    "packaged_sha256": "8da2cf7ef0ccf913046649b92b297c7e58e8fdd6f620674f9d1072198cd1b5ad",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-09.png": {
+    "source_sha256": "8e3171c6ea54c31ef54ead1842f6b20e3bd4324d52e8492905a0c9626f493350",
+    "packaged_sha256": "8e3171c6ea54c31ef54ead1842f6b20e3bd4324d52e8492905a0c9626f493350",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/pdf-10.png": {
+    "source_sha256": "8b4ff5130ed7ccfddc5d38ef64489ef22908daf0d0853bc3f8db210bd3ff775e",
+    "packaged_sha256": "8b4ff5130ed7ccfddc5d38ef64489ef22908daf0d0853bc3f8db210bd3ff775e",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/score.json": {
+    "source_sha256": "754b75559c8011c11a407d62f2850e83926b4072b77e8b4a3d40d53c188d9b7f",
+    "packaged_sha256": "754b75559c8011c11a407d62f2850e83926b4072b77e8b4a3d40d53c188d9b7f",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/technical.json": {
+    "source_sha256": "832a8075b07ff534f6ebc1847a6ad0a1adf37a237b8271b12f0403ffa9db4ae9",
+    "packaged_sha256": "832a8075b07ff534f6ebc1847a6ad0a1adf37a237b8271b12f0403ffa9db4ae9",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-luna_missing8/xml_audit.json": {
+    "source_sha256": "2a5adcf6c9f8bfe9d3cabd43a207d7af22f5c3a8ee6ecc81955f035c930e4e7e",
+    "packaged_sha256": "2a5adcf6c9f8bfe9d3cabd43a207d7af22f5c3a8ee6ecc81955f035c930e4e7e",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/contact-1.jpg": {
+    "source_sha256": "5a66efcd2a75d44bff22f4021d1d7b6884625a0dcbb205e7434d71c3ce45361e",
+    "packaged_sha256": "5a66efcd2a75d44bff22f4021d1d7b6884625a0dcbb205e7434d71c3ce45361e",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/input_hashes.json": {
+    "source_sha256": "021127dd0400ec2d53c34d4639078186eaa9d6a7af637453c85cded2e8dfee8c",
+    "packaged_sha256": "021127dd0400ec2d53c34d4639078186eaa9d6a7af637453c85cded2e8dfee8c",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-1.png": {
+    "source_sha256": "fb5fed52a9e3e3152c7125e9cd5e01e198e0e643b9fecf4ce5b64ca8fc532fb0",
+    "packaged_sha256": "fb5fed52a9e3e3152c7125e9cd5e01e198e0e643b9fecf4ce5b64ca8fc532fb0",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-2.png": {
+    "source_sha256": "6ddf65aeeb03023f4d61a5dc657f759f1681e6a8f04ba26e2e8cfa5982065d16",
+    "packaged_sha256": "6ddf65aeeb03023f4d61a5dc657f759f1681e6a8f04ba26e2e8cfa5982065d16",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/pdf-3.png": {
+    "source_sha256": "c15b174a8a9a01c13f614803700c86d18ea8bf7b872a2b999a439824edb5a695",
+    "packaged_sha256": "c15b174a8a9a01c13f614803700c86d18ea8bf7b872a2b999a439824edb5a695",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/score.json": {
+    "source_sha256": "3d83cf9b5e92b8a022e8b3247de5f67aba0c8babd73ce7bd2a1854681e6580d9",
+    "packaged_sha256": "3d83cf9b5e92b8a022e8b3247de5f67aba0c8babd73ce7bd2a1854681e6580d9",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/technical.json": {
+    "source_sha256": "9cfbabb3a94a998d36bdb3284e0dcc3e6da5d618869f9ec1b3d45ce2a77467db",
+    "packaged_sha256": "9cfbabb3a94a998d36bdb3284e0dcc3e6da5d618869f9ec1b3d45ce2a77467db",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_historical/xml_audit.json": {
+    "source_sha256": "e35633d7981153a9898541643e27b0671563be92c510387ca76124869331fff1",
+    "packaged_sha256": "e35633d7981153a9898541643e27b0671563be92c510387ca76124869331fff1",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/contact-1.jpg": {
+    "source_sha256": "68484c0fe49632107c02c82582e7d32cdd0200ea3f8e9736a93a487dd7258b98",
+    "packaged_sha256": "68484c0fe49632107c02c82582e7d32cdd0200ea3f8e9736a93a487dd7258b98",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/input_hashes.json": {
+    "source_sha256": "f6a709f723708a34a5ccc90a80c9ede4e552b42593c75651270a0745214953cb",
+    "packaged_sha256": "f6a709f723708a34a5ccc90a80c9ede4e552b42593c75651270a0745214953cb",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-1.png": {
+    "source_sha256": "63c357afb5fab82f23a991ef3c821cbc0a7935e88d9dca2188ae0240eb813154",
+    "packaged_sha256": "63c357afb5fab82f23a991ef3c821cbc0a7935e88d9dca2188ae0240eb813154",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/pdf-2.png": {
+    "source_sha256": "9f948618f3b2faafadbb97b34789e9735a826665ca5ecbc720690b9c562c9e52",
+    "packaged_sha256": "9f948618f3b2faafadbb97b34789e9735a826665ca5ecbc720690b9c562c9e52",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/score.json": {
+    "source_sha256": "4d0483aa8de9d1a5bad8579bec36818e0d36598050f9ede8d89be3627e8afddd",
+    "packaged_sha256": "4d0483aa8de9d1a5bad8579bec36818e0d36598050f9ede8d89be3627e8afddd",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/technical.json": {
+    "source_sha256": "67bed5ae743dd5c4ccb24417a7ef5481589ff49ac85a64829d16e89b5c8de247",
+    "packaged_sha256": "67bed5ae743dd5c4ccb24417a7ef5481589ff49ac85a64829d16e89b5c8de247",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_gpt-6-sol_new_20261021/xml_audit.json": {
+    "source_sha256": "2cb9158662278d9fd4589f310ea80b10724196026ffdbf2b72edc79591d31e20",
+    "packaged_sha256": "2cb9158662278d9fd4589f310ea80b10724196026ffdbf2b72edc79591d31e20",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/input_hashes.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/score.json": {
+    "source_sha256": "48d2734ad45e5d4f49430d2d39431d7e6558f76897430bf31bacab724c46859a",
+    "packaged_sha256": "48d2734ad45e5d4f49430d2d39431d7e6558f76897430bf31bacab724c46859a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/technical.json": {
+    "source_sha256": "ce13aa76c3cbbdab540f781703857a0e319162dd300c88f2cee7ebcfe79d676a",
+    "packaged_sha256": "ce13aa76c3cbbdab540f781703857a0e319162dd300c88f2cee7ebcfe79d676a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261021_k3_a4_a6_isolated/xml_audit.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/input_hashes.json": {
+    "source_sha256": "b6ab8800ce6396d6cc150a7e497d3bbb22a7ecd62249e2a80c0b17cd3f8fe915",
+    "packaged_sha256": "b6ab8800ce6396d6cc150a7e497d3bbb22a7ecd62249e2a80c0b17cd3f8fe915",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/score.json": {
+    "source_sha256": "c1f1ea7d8913764e06b14e4274af590c77539baaa87a008120c9c3134726f9dc",
+    "packaged_sha256": "c1f1ea7d8913764e06b14e4274af590c77539baaa87a008120c9c3134726f9dc",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/technical.json": {
+    "source_sha256": "a64570f3811088bbc7a684d242e8850fc145d011d75569fc4497785bb6a27c93",
+    "packaged_sha256": "a64570f3811088bbc7a684d242e8850fc145d011d75569fc4497785bb6a27c93",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/xml_audit.json": {
+    "source_sha256": "c8c39090244974b434a2b1d1663a72bf97679cf188d07401002ebeb2a2b5768e",
+    "packaged_sha256": "c8c39090244974b434a2b1d1663a72bf97679cf188d07401002ebeb2a2b5768e",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/contact-1.jpg": {
+    "source_sha256": "644261e833209dd38521baa507d31f02c5e0c1083bde2440e8ecea0d97114eab",
+    "packaged_sha256": "644261e833209dd38521baa507d31f02c5e0c1083bde2440e8ecea0d97114eab",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/contact-2.jpg": {
+    "source_sha256": "20d82a88ff53016fc8c1f1f1f1db3bd1fe1308610dfc3daca718671ede8a6987",
+    "packaged_sha256": "20d82a88ff53016fc8c1f1f1f1db3bd1fe1308610dfc3daca718671ede8a6987",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/input_hashes.json": {
+    "source_sha256": "b47028b42dc3d34206ae417cb9c8a8c94444d27ddadd184621286e63841c75b4",
+    "packaged_sha256": "b47028b42dc3d34206ae417cb9c8a8c94444d27ddadd184621286e63841c75b4",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-1.png": {
+    "source_sha256": "74adeabfd0c994c9e42a60cd29596311a99c9408a47ab57de0eff7c61b0169f0",
+    "packaged_sha256": "74adeabfd0c994c9e42a60cd29596311a99c9408a47ab57de0eff7c61b0169f0",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-2.png": {
+    "source_sha256": "b4323bb29a898dc0b255ecb67f1ff2e9ba5d2bf566a0b267d436631384603101",
+    "packaged_sha256": "b4323bb29a898dc0b255ecb67f1ff2e9ba5d2bf566a0b267d436631384603101",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-3.png": {
+    "source_sha256": "aec3e04df5694cce8700150d66272bdb687a88f58f7a2da3ddbfb93d6fab0687",
+    "packaged_sha256": "aec3e04df5694cce8700150d66272bdb687a88f58f7a2da3ddbfb93d6fab0687",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-4.png": {
+    "source_sha256": "d82a9e22e5698a4966ef3fafaabcb9452ef6ada5ea109e7840c10c8ad978f832",
+    "packaged_sha256": "d82a9e22e5698a4966ef3fafaabcb9452ef6ada5ea109e7840c10c8ad978f832",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-5.png": {
+    "source_sha256": "80f978f8777eccd841a6d8408fa508ea6e091913a3b183844b2eac54b7271dbf",
+    "packaged_sha256": "80f978f8777eccd841a6d8408fa508ea6e091913a3b183844b2eac54b7271dbf",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/pdf-6.png": {
+    "source_sha256": "cba05b8c98159bffe35c98e6b2ac085f412001d1ef509864d1239fb506cba0af",
+    "packaged_sha256": "cba05b8c98159bffe35c98e6b2ac085f412001d1ef509864d1239fb506cba0af",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/score.json": {
+    "source_sha256": "7015fcd005ceffe2f9e6be16e20b37ea3d5ef5a4bd341a72a12002986b525aaa",
+    "packaged_sha256": "7015fcd005ceffe2f9e6be16e20b37ea3d5ef5a4bd341a72a12002986b525aaa",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/technical.json": {
+    "source_sha256": "295032ac4d2e75e62811e0796f9f03c75c9811b2d836ab53d44292b6e116353f",
+    "packaged_sha256": "295032ac4d2e75e62811e0796f9f03c75c9811b2d836ab53d44292b6e116353f",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3_a6_60_clean/xml_audit.json": {
+    "source_sha256": "600e2104a0596444ebad1fe5b4dfdfa19d2f666b580006c8f6eb2dcc857cf778",
+    "packaged_sha256": "600e2104a0596444ebad1fe5b4dfdfa19d2f666b580006c8f6eb2dcc857cf778",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_missing8/input_hashes.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_missing8/score.json": {
+    "source_sha256": "1a897534ae28ae0f9fa69b4b1fd642a9f41f67f5c2e8f71fd6e7727dee3e6af3",
+    "packaged_sha256": "1a897534ae28ae0f9fa69b4b1fd642a9f41f67f5c2e8f71fd6e7727dee3e6af3",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_missing8/xml_audit.json": {
+    "source_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "packaged_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "changes": []
+  },
+  "viewer/a6_delivery_v2_overlay.py": {
+    "source_sha256": "83953ca3ddf08a5d1b5728a4e71b2c2a6d93288e459d67e37e6076a95cf7f4a0",
+    "packaged_sha256": "83953ca3ddf08a5d1b5728a4e71b2c2a6d93288e459d67e37e6076a95cf7f4a0",
+    "changes": []
+  },
+  "viewer/build_viewer.py": {
+    "source_sha256": "be5ca6fcb790047fc6404d197fa9a678519ab549cc7d745432359da347ab2672",
+    "packaged_sha256": "be5ca6fcb790047fc6404d197fa9a678519ab549cc7d745432359da347ab2672",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/site.py": {
+    "source_sha256": "3bcd7d3a34ccf3977f36d086c8e56ce4bc48d313eab431c4e092e62b68676ccd",
+    "packaged_sha256": "3bcd7d3a34ccf3977f36d086c8e56ce4bc48d313eab431c4e092e62b68676ccd",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/validate.py": {
+    "source_sha256": "640254a41ea4cf78e193856b74f03a52f28e8639a804003be67a86afa2c4b0a6",
+    "packaged_sha256": "640254a41ea4cf78e193856b74f03a52f28e8639a804003be67a86afa2c4b0a6",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/visual_qa/a6-report.png": {
+    "source_sha256": "52dece464477b1b7968cf618f2d8eb7644a1252943cf2f117c8887b55458be67",
+    "packaged_sha256": "52dece464477b1b7968cf618f2d8eb7644a1252943cf2f117c8887b55458be67",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/VALIDATION.json": {
+    "source_sha256": "2e8a0beb888f832f94f4b2e03df3e30e33510c13b476aa256b810559123718e5",
+    "packaged_sha256": "2e8a0beb888f832f94f4b2e03df3e30e33510c13b476aa256b810559123718e5",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/visual_qa/FINAL_VISUAL_VALIDATION.json": {
+    "source_sha256": "2964d1d5771700e1f52445d7be3114974329ebc3c7b92b600a821326bfa7540e",
+    "packaged_sha256": "2964d1d5771700e1f52445d7be3114974329ebc3c7b92b600a821326bfa7540e",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/visual_qa/check.cjs": {
+    "source_sha256": "2eac1005e03a11f8ab5d2286cdcfbcf179fc06117030b46916eb3c41c07a277c",
+    "packaged_sha256": "2eac1005e03a11f8ab5d2286cdcfbcf179fc06117030b46916eb3c41c07a277c",
+    "changes": []
+  },
+  "evaluation_versions/20261022_a6_delivery_v2/visual_qa/dom.json": {
+    "source_sha256": "bf3fa26e629151e32f6ba252e5f7faee5eaed29cfb6d72611c2a284866288761",
+    "packaged_sha256": "bf3fa26e629151e32f6ba252e5f7faee5eaed29cfb6d72611c2a284866288761",
     "changes": []
   }
 }

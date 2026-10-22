@@ -1,0 +1,67 @@
+{
+  "components": {
+    "pitch_global_f1": 0.0,
+    "pitch_time_macro_f1": 0.0,
+    "pitch_register_macro_f1": 0.0,
+    "rhythm_strict_f1": 0.0,
+    "midi_xml_consistency": 10.0,
+    "layout": 0,
+    "notation": 0,
+    "fidelity": 0
+  },
+  "raw_score": 10.0,
+  "delivery_level": "missing_core",
+  "delivery_label": "缺关键交付",
+  "delivery_factor": 0.1,
+  "after_delivery_factor": 1.0,
+  "acceptance_checks": {
+    "delivery_ready": false,
+    "pitch_precision": false,
+    "pitch_recall": false,
+    "strict_f1": false,
+    "time_coverage": false,
+    "register_coverage": false,
+    "midi_consistency": true,
+    "visual_minimum": false
+  },
+  "acceptance_cap_applied": false,
+  "accepted": false,
+  "final_score": 1.0,
+  "unrounded_final_score": 1.0,
+  "pitch_precision": 0.0,
+  "pitch_recall": 0.0,
+  "id": "A6_k3_20261022_k3a6_60_sola4_40_serial",
+  "case": "A6",
+  "model": "k3",
+  "version": "A6-delivery-v2.0",
+  "retrospective": true,
+  "old_score": 4.0,
+  "old_scorepath": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/grades/A6_k3/score.json",
+  "submission": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/submissions/A6_k3",
+  "submission_sha256": {
+    "alignment.json": "18bcc3b394edeb07c24685d589f63d0aeddc06c0271bf3160b3edd9d28de34ca",
+    "score.mid": "5ddfad6b8ce319dba6dc8276ab5561d908d66a387e3c149517d625729a1e8fdd",
+    "score.musicxml": "c1700b5d4af1f776923562f52538273d8a459f0b2d2ad54110bdc79a6b826acf"
+  },
+  "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+  "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+  "technical_path": "evaluation_versions/20261022_a6_delivery_v2/reviews/A6_k3_20261022_k3a6_60_sola4_40_serial/technical.json",
+  "review": {
+    "layout": 0,
+    "notation": 0,
+    "fidelity": 0,
+    "delivery_level": "missing_core",
+    "reasons": [
+      "缺少PDF，已有可解析的音乐数据仅按残缺交付计分；未凭文件存在授予谱面分。"
+    ]
+  },
+  "evidence_pages": [],
+  "limits": [
+    "事后制定的统一v2复评，非答题前冻结规则；未重跑或修复答卷。",
+    "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
+    "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
+  ],
+  "metric_errors": [
+    "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
+  ]
+}
