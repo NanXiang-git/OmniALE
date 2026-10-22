@@ -510,6 +510,85 @@
           "sha256": "bc3f50fbea968b6fcd0d51197f5af02c5af1c460fce3dc0b75b7ec35623f9e70"
         }
       ]
+    },
+    "A6_gpt-6-astra_20261022_a6astra_high40": {
+      "python_packages": [
+        "Pillow",
+        "mido",
+        "music21",
+        "numpy",
+        "reportlab",
+        "scipy",
+        "svglib",
+        "verovio"
+      ],
+      "system_tools": [
+        "FFmpeg（ffmpeg / ffprobe）",
+        "Poppler（pdftoppm）"
+      ],
+      "evidence": [
+        {
+          "name": "numpy",
+          "event": 9,
+          "source_line": 17,
+          "item_id": "item_8",
+          "basis": "executed_command_or_runtime_output"
+        },
+        {
+          "name": "scipy",
+          "event": 9,
+          "source_line": 17,
+          "item_id": "item_8",
+          "basis": "executed_command_or_runtime_output"
+        },
+        {
+          "name": "Pillow",
+          "event": 9,
+          "source_line": 17,
+          "item_id": "item_8",
+          "basis": "executed_command_or_runtime_output"
+        },
+        {
+          "name": "music21",
+          "event": 47,
+          "source_line": 89,
+          "item_id": "item_46",
+          "basis": "executed_command_or_runtime_output"
+        },
+        {
+          "name": "mido",
+          "event": 47,
+          "source_line": 89,
+          "item_id": "item_46",
+          "basis": "executed_command_or_runtime_output"
+        },
+        {
+          "name": "verovio",
+          "event": 31,
+          "source_line": 58,
+          "item_id": "item_30",
+          "basis": "executed_command_or_runtime_output"
+        },
+        {
+          "name": "svglib",
+          "event": 31,
+          "source_line": 58,
+          "item_id": "item_30",
+          "basis": "executed_command_or_runtime_output"
+        },
+        {
+          "name": "reportlab",
+          "event": 31,
+          "source_line": 58,
+          "item_id": "item_30",
+          "basis": "executed_command_or_runtime_output"
+        }
+      ],
+      "notes": [
+        "cv2、matplotlib 和 Rsvg 探索失败，未计入依赖。",
+        "verovio、svglib、reportlab 的实际调用见创建并执行 make_score.py 的命令及其后续成功导出；不把只检查可用性当作实际使用。"
+      ],
+      "source_log_sha256": "d63893866d8905c46bbcd35463dc5d87e227ab05e686f6922822ea104a463a25"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "passed": true,
-  "version": "A2-score-display-20261022",
-  "commit": "2b7638933d8459004f6a0463b342c5475ea29dcc",
+  "version": "A2-analysis-rewrite-20261022",
+  "commit": "e346a1a28fe43ca5501383e753c209548d5fd565",
   "url": "https://nanxiang-git.github.io/OmniALE/",
   "case_urls": {
     "sign": "https://nanxiang-git.github.io/OmniALE/sign/",
@@ -18,11 +18,11 @@
   "online_links_checked": 180,
   "all_http_200": true,
   "desktop_mobile_and_trace_interaction_checks_passed": true,
-  "release": "https://github.com/NanXiang-git/OmniALE/releases/tag/a2-score-display-20261022",
-  "archive_sha256": "791c8ba1fa5bb7b29e5dcb28d7d1e0c9b27edf02d9720ccdd2fd11ecbe58111d",
-  "archive_bytes": 1503767922,
+  "release": "https://github.com/NanXiang-git/OmniALE/releases/tag/a2-analysis-rewrite-20261022",
+  "archive_sha256": "81b2c422c72925e64ff4c7f97219a7b94ad825011295e79938f8cebefbc66a48",
+  "archive_bytes": 1503740134,
   "archive_files": 2477,
   "archive_public_download_verified": true,
   "archive_server_digest_matches": true,
-  "completed_utc": "2026-10-22T08:20:17.717236+00:00"
+  "completed_utc": "2026-10-22T08:43:02.069235+00:00"
 }

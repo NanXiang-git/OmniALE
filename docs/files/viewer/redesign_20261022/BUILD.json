@@ -197,6 +197,98 @@
     ],
     "piano": [
       {
+        "model": "gpt-6-astra",
+        "events": 54,
+        "raw_jsonl_lines": 102,
+        "tools": 45,
+        "reasoning": 0,
+        "kinds": {
+          "error": 1,
+          "agent_message": 8,
+          "command_execution": 45
+        },
+        "dependency_installs": [],
+        "used_dependencies": {
+          "python_packages": [
+            "Pillow",
+            "mido",
+            "music21",
+            "numpy",
+            "reportlab",
+            "scipy",
+            "svglib",
+            "verovio"
+          ],
+          "system_tools": [
+            "FFmpeg（ffmpeg / ffprobe）",
+            "Poppler（pdftoppm）"
+          ],
+          "evidence": [
+            {
+              "name": "numpy",
+              "event": 9,
+              "source_line": 17,
+              "item_id": "item_8",
+              "basis": "executed_command_or_runtime_output"
+            },
+            {
+              "name": "scipy",
+              "event": 9,
+              "source_line": 17,
+              "item_id": "item_8",
+              "basis": "executed_command_or_runtime_output"
+            },
+            {
+              "name": "Pillow",
+              "event": 9,
+              "source_line": 17,
+              "item_id": "item_8",
+              "basis": "executed_command_or_runtime_output"
+            },
+            {
+              "name": "music21",
+              "event": 47,
+              "source_line": 89,
+              "item_id": "item_46",
+              "basis": "executed_command_or_runtime_output"
+            },
+            {
+              "name": "mido",
+              "event": 47,
+              "source_line": 89,
+              "item_id": "item_46",
+              "basis": "executed_command_or_runtime_output"
+            },
+            {
+              "name": "verovio",
+              "event": 31,
+              "source_line": 58,
+              "item_id": "item_30",
+              "basis": "executed_command_or_runtime_output"
+            },
+            {
+              "name": "svglib",
+              "event": 31,
+              "source_line": 58,
+              "item_id": "item_30",
+              "basis": "executed_command_or_runtime_output"
+            },
+            {
+              "name": "reportlab",
+              "event": 31,
+              "source_line": 58,
+              "item_id": "item_30",
+              "basis": "executed_command_or_runtime_output"
+            }
+          ],
+          "notes": [
+            "cv2、matplotlib 和 Rsvg 探索失败，未计入依赖。",
+            "verovio、svglib、reportlab 的实际调用见创建并执行 make_score.py 的命令及其后续成功导出；不把只检查可用性当作实际使用。"
+          ],
+          "source_log_sha256": "d63893866d8905c46bbcd35463dc5d87e227ab05e686f6922822ea104a463a25"
+        }
+      },
+      {
         "model": "gpt-6-sol",
         "events": 83,
         "raw_jsonl_lines": 156,
@@ -287,98 +379,6 @@
             "清单按可核实的直接使用记录整理；不枚举传递依赖，日志缺失部分不推测。"
           ],
           "source_log_sha256": "b70343fbde580038dde632b010dfde3b80b7752286b67b0a0e32c3b32ee54fb6"
-        }
-      },
-      {
-        "model": "gpt-6-astra",
-        "events": 44,
-        "raw_jsonl_lines": 83,
-        "tools": 37,
-        "reasoning": 0,
-        "kinds": {
-          "error": 3,
-          "agent_message": 4,
-          "command_execution": 37
-        },
-        "dependency_installs": [],
-        "used_dependencies": {
-          "python_packages": [
-            "mido",
-            "music21",
-            "numpy",
-            "Pillow",
-            "reportlab",
-            "scipy",
-            "svglib",
-            "verovio"
-          ],
-          "system_tools": [
-            "FFmpeg（ffmpeg / ffprobe）",
-            "Poppler（pdftoppm / pdfinfo）"
-          ],
-          "evidence": [
-            {
-              "name": "numpy",
-              "event": 13,
-              "source_line": 25,
-              "item_id": "item_12",
-              "basis": "executed_command_or_runtime_output"
-            },
-            {
-              "name": "scipy",
-              "event": 17,
-              "source_line": 32,
-              "item_id": "item_15",
-              "basis": "executed_command_or_runtime_output"
-            },
-            {
-              "name": "Pillow",
-              "event": 29,
-              "source_line": 56,
-              "item_id": "item_28",
-              "basis": "executed_command_or_runtime_output"
-            },
-            {
-              "name": "music21",
-              "event": 33,
-              "source_line": 63,
-              "item_id": "item_32",
-              "basis": "executed_command_or_runtime_output"
-            },
-            {
-              "name": "mido",
-              "event": 33,
-              "source_line": 63,
-              "item_id": "item_32",
-              "basis": "executed_command_or_runtime_output"
-            },
-            {
-              "name": "verovio",
-              "event": 42,
-              "source_line": 81,
-              "item_id": "item_41",
-              "basis": "executed_command_or_runtime_output"
-            },
-            {
-              "name": "svglib",
-              "event": 42,
-              "source_line": 81,
-              "item_id": "item_41",
-              "basis": "executed_command_or_runtime_output"
-            },
-            {
-              "name": "reportlab",
-              "event": 42,
-              "source_line": 81,
-              "item_id": "item_41",
-              "basis": "executed_command_or_runtime_output"
-            }
-          ],
-          "notes": [
-            "matplotlib 导入失败，随后改用 Pillow；matplotlib 不计入清单。",
-            "清单按可核实的直接使用记录整理；不枚举传递依赖，日志缺失部分不推测。"
-          ],
-          "source_log_sha256": "4fff5613eddf5bd1cd3a9dca76fd750df503ef5c40d84e04de845e802b78a039"
         }
       },
       {

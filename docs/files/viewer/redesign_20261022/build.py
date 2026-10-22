@@ -15,7 +15,7 @@ DOWNLOAD='https://github.com/NanXiang-git/OmniALE/releases/download/'+TAG+'/A4_A
 ROWS=json.loads((OUT/'RESULTS.json').read_text(encoding='utf-8'))
 SELECTED={
  'sign':['A4_gpt-6-astra_high40_rerun','A4_gpt-6-sol_20261022_k3a6_60_sola4_40_serial','A4_k3_20261021_k3_a4_a6_isolated','A4_gpt-6-luna_new_20261021','A4_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min'],
- 'piano':['A6_gpt-6-sol_new_20261021','A6_gpt-6-astra_missing8','A6_k3_20261022_k3_a6_60_clean','A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min','A6_gpt-6-luna_missing8']}
+ 'piano':['A6_gpt-6-sol_new_20261021','A6_gpt-6-astra_20261022_a6astra_high40','A6_k3_20261022_k3_a6_60_clean','A6_glm-5.3-flash_20261021_glm53_flash_a4_a6_50min','A6_gpt-6-luna_missing8']}
 CASES={slug:sorted([next(r for r in ROWS if r['id']==i) for i in ids],key=lambda r:(r['score'] is None,-(r['score'] or 0))) for slug,ids in SELECTED.items()}
 TITLES={'sign':'中国手语视频 → 中英文字幕','piano':'钢琴演奏视频 → 乐谱与 MIDI'}
 TOOLS={'command_execution','file_change','mcp_tool_call','tool_call','web_search'}
@@ -42,7 +42,7 @@ def header(title,slug=None):
  prefix='../' if slug else ''
  nav=f'<a href="{prefix}index.html">案例首页</a><a href="{prefix}sign/index.html">手语字幕</a><a href="{prefix}piano/index.html">钢琴转谱</a>'
  return '<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+' · OmniALE</title><link rel="stylesheet" href="'+prefix+'assets/style.css"></head><body><main><div class="eyebrow">OMNIALE · A2 本地化与使用方式适配</div><h1>'+esc(title)+'</h1><nav>'+nav+'</nav>'
-def footer():return f'<footer>依据既有实验与冻结答卷整理 · 页面更新：2026-10-22<br><a href="{DOWNLOAD}">完整研究包 ZIP</a> · <a href="{RELEASE}">版本与校验文件</a> · <a href="https://github.com/NanXiang-git/OmniALE">GitHub</a></footer></main></body></html>'
+def footer():return f'<footer>依据既有实验与冻结答卷整理 · 页面更新：2026-10-22<br><a href="{DOWNLOAD}">历史研究包 ZIP（本次 Astra 更新另见逐项评分）</a> · <a href="{RELEASE}">版本与校验文件</a> · <a href="https://github.com/NanXiang-git/OmniALE">GitHub</a></footer></main></body></html>'
 def crop_text(t,limit=16000):
  if len(t)<=limit:return t,False
  return t[:limit//2]+'\n\n[…中间省略，完整输出见可观察日志…]\n\n'+t[-limit//2:],True
@@ -128,27 +128,10 @@ def sign_analysis(rows):
  return out
 
 def piano_analysis(rows):
- by={r['model']:r for r in rows};sol=by['gpt-6-sol']['score_detail'];astra=by['gpt-6-astra']['score_detail']
- out='<section id="analysis"><h2>四、失败分析</h2><p class="lead">这道题要交付可读、可编辑的乐谱，以及与谱面对应的 MIDI。现有答卷的问题集中在四处：音符没转准、PDF 缺少音乐符号、节奏难读，以及几个文件的内容对不上。</p>'
- out+='<h3>1. 漏音、错音和起音偏差较多</h3><p>Sol 的两页谱可以阅读，转写准确性仍有较大缺口。在允许 200 毫秒起音误差的同音高匹配中，精确率为 67.52%，召回率为 40.53%。参考演奏中约六成的击键未能在这个范围内匹配到，涉及漏音、错音或起音时间偏差。把容差收紧到 80 毫秒后，F1 降到 0.240。后续需要对照录音和键盘画面，逐段补音并校正起音。</p>'
- rr=[]
- for r in rows:
-  s=r['score_detail'];c=s['components'];valid=not s.get('metric_errors');rr.append([esc(r['model']),f"{c['pitch_global_f1']/20:.3f}" if valid else '无法评估¹',f"{c['rhythm_strict_f1']/20:.3f}" if valid else '无法评估¹',f"{c['midi_xml_consistency']/10*100:.2f}%",evidence_link(r)])
- out+=table(['模型','音高匹配 F1 · 200ms','严格起音 F1 · 80ms','MIDI/XML 一致性','依据'],rr)
- out+='<p class="muted">指标表说明：F1 综合反映音符匹配的精确率和召回率；MIDI/XML 一致性检查两份输出的音符是否对应。¹ K3 的时间映射未通过规则检查，音符准确性项目按评分规则计 0.00 分。</p>'
- out+='<h3>2. Astra 的 PDF 缺少音头、谱号和升降号</h3><p>Astra 的音高 F1 为 0.712，严格起音 F1 为 0.685，均高于 Sol。它最严重的问题出在 PDF：六页谱普遍缺失音头、谱号和升降号，留下了谱线、符干、符梁等。演奏者拿到这份文件，很难确定该弹哪个音，必须修复导出问题后重新生成。</p>'
- out+='<div class="figures">'
- for model,caption in [('gpt-6-astra', 'Astra 原提交第 1 页局部：音头、谱号等音乐符号缺失。'), ('gpt-6-sol', 'Sol 原提交第 1 页局部：音头和谱号可辨。')]:
-  r=by[model];p=OUT/'assets'/('evidence-'+model+'.png')
-  from PIL import Image
-  src=ROOT/r['score_detail']['evidence_pages'][0];im=Image.open(src);w,h=im.size;im.crop((0,0,w,int(h*.38))).save(p)
-  ASSETS.add(p.relative_to(OUT).as_posix())
-  out+='<figure><a href="'+ensure(r['score_detail']['evidence_pages'][0])+'"><img loading="lazy" src="../assets/'+p.name+'" alt="'+esc(caption)+'"></a><figcaption>'+caption+' 点击查看整页。</figcaption></figure>'
- out+='</div><p>新版评分将这类交付问题计入最终得分。Astra 的加权分为 56.07，因 PDF 不可用，乘以 0.25 后为 14.02；Sol 的加权分为 55.02，因仍需大幅修订，乘以 0.6 后为 33.01。两者的主要差别在于，Sol 已经交出可以阅读和修改的谱面，Astra 还需要先解决 PDF 导出缺字的问题。</p>'
- out+='<h3>3. 节奏符号和排版影响读谱</h3><p>GLM 的三页 PDF 有音符超出谱表、边界裁切和重叠的问题。源文件中的十六分音符、三十二分音符和休止，没有正确显示为相应的符梁、符尾和休止符。Luna 的十页 PDF 用 G/F 字母代替标准谱号，缺少拍号和应有的变音记号，节奏也难以从谱面读清。</p><p>Sol 的谱面较清楚，但部分时值写法很费解：第 11 小节在十六分休止后使用三附点二分音符，第 16、18、20 小节多次出现跨拍的附点时值。演奏者需要反复数拍。这些位置应按拍点重新拆分，并用延音线等常规记法整理。</p>'
- out+='<h3>4. PDF、MIDI 和可编辑谱的内容不一致</h3><p>Luna 的 MIDI/XML 一致性只有 4.89%，播放 MIDI 与阅读可编辑谱时，会遇到大量音符对应不上的情况。</p><p>K3 的 MIDI 与 XML 一致，PDF 第 17、38 小节却与 XML 对不上。XML 末小节有连续音符，PDF 对应位置出现了大段休止和短双音。这几份文件需要统一内容后重新导出。</p><p>K3 的时间映射也不符合要求：它只给出两个锚点，间隔 76 秒，题目要求相邻锚点间隔为 0.5–8 秒。评分器在这一步无法继续评估音高与起音，相关项目因此失分。</p>'
- out+='<h3>后续需要补的工作</h3><p>这批结果距离直接用于演奏还有较多返工：先按原演奏校正音符和起音，再整理节奏、声部及排版，最后从同一份乐谱导出 PDF 和 MIDI，逐页检查符号，并核对文件内容。Sol 得分最高，为 33.01，主要工作仍是补正音符和调整记谱；Astra 则需要先修复 PDF 的音乐符号显示。</p><p>以上分析依据原提交文件的逐页检查、音符匹配和文件一致性检查。当前分数采用交付导向 v2 标准，对已有答卷统一复评。</p>'+link('evaluation_versions/20261022_a6_delivery_v2/REPORT.html','完整复评证据')+'</section>'
- return out
+ from piano_current_analysis import render
+ import sys
+ return render(sys.modules[__name__],rows)
+
 
 def assets_section(slug,rows):
  out='<section id="submissions"><h2>五、查看模型交付</h2><p>按上表顺序查看原始交付。预览用于阅读；下载链接保留模型提交的文件。</p>'
@@ -228,7 +211,7 @@ def main():
  # Keep links sent before the redesign working, including model anchors.
  landing+='<script>(()=>{const h=decodeURIComponent(location.hash.slice(1));const p=h.startsWith("A4")?"sign":h.startsWith("A6")?"piano":null;if(p)location.replace(p+"/index.html"+(h.length>2?"#"+encodeURIComponent(h):""));})();</script>'+footer()
  (OUT/'index.html').write_text(landing,encoding='utf-8');ASSETS.add('index.html')
- readme='# OmniALE · A2 本地化与使用方式适配\n\n[案例首页](https://nanxiang-git.github.io/OmniALE/) · [手语字幕](https://nanxiang-git.github.io/OmniALE/sign/) · [钢琴转谱](https://nanxiang-git.github.io/OmniALE/piano/)\n\n两题已拆为独立案例页，运行轨迹各自放在 traces.html。当前成绩按得分倒序排列，展示分数四舍五入保留两位小数，原始评分数据保留完整精度。分类依据项目原始 A1/A2/A3 定义，两题均属于 A2；归档文件中的旧编号保留。\n\n页面与失败分析更新，不重新运行模型或改分。手语 GLM 为已确认小计，12 分时间对齐待核验；钢琴使用交付导向 v2 事后复评。\n\n轨迹事件合并开始与结束，推理事件只计数，不发布内部推理正文。依赖按本轮实际使用统计，包括预装包；Python 包与系统媒体工具分别列出。\n\n离线使用：在本目录运行 `python -m http.server 8000`，打开 http://localhost:8000/ 。\n\n[完整研究包]('+DOWNLOAD+') · [发布记录]('+RELEASE+')\n'
+ readme='# OmniALE · A2 本地化与使用方式适配\n\n[案例首页](https://nanxiang-git.github.io/OmniALE/) · [手语字幕](https://nanxiang-git.github.io/OmniALE/sign/) · [钢琴转谱](https://nanxiang-git.github.io/OmniALE/piano/)\n\n两题已拆为独立案例页，运行轨迹各自放在 traces.html。当前成绩按得分倒序排列，展示分数四舍五入保留两位小数，原始评分数据保留完整精度。分类依据项目原始 A1/A2/A3 定义，两题均属于 A2；归档文件中的旧编号保留。\n\n本次仅补评已完成的 Astra A6 答卷，替换此前当前记录；其他模型分数保持不变。手语 GLM 为已确认小计，12 分时间对齐待核验；钢琴使用交付导向 v2 事后复评。\n\n轨迹事件合并开始与结束，推理事件只计数，不发布内部推理正文。依赖按本轮实际使用统计，包括预装包；Python 包与系统媒体工具分别列出。\n\n离线使用：在本目录运行 `python -m http.server 8000`，打开 http://localhost:8000/ 。\n\n[历史研究包（不含本次 Astra 更新）]('+DOWNLOAD+') · [发布记录]('+RELEASE+')\n'
  (OUT/'README.md').write_text(readme,encoding='utf-8')
  for name in ('benchmark_report.html','benchmark_viewer.html'):
   target='deliverables/A4_A6_research_20261021/index.html';(ROOT/name).write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OmniALE · 案例首页</title><p><a href="'+target+'">打开 A2 案例首页</a></p><script>location.replace('+json.dumps(target)+'+location.hash);</script></html>',encoding='utf-8')

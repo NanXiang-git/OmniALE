@@ -160,7 +160,9 @@
         "本会话LLM视觉判读与既有独立评审证据结合，非新增独立评委；无完整听审或钢琴家试奏。",
         "PDF逐页检查；XML一致性为逐系统与关键小节核对，不声称每个图形逐音穷尽验证。"
       ],
-      "metric_errors": []
+      "metric_errors": [],
+      "historical_only": true,
+      "superseded_by": "A6_gpt-6-astra_20261022_a6astra_high40"
     },
     {
       "components": {
@@ -775,6 +777,190 @@
       "metric_errors": [
         "Alignment: anchors require >=0.5 quarter and 0.5..8 seconds separation"
       ]
+    },
+    {
+      "id": "A6_gpt-6-astra_20261022_a6astra_high40",
+      "case": "A6",
+      "model": "gpt-6-astra",
+      "judge": "Codex current conversation",
+      "case_root": "A6_piano_transcription",
+      "status": "scored",
+      "final_score": 44.668813,
+      "solver_status": "completed",
+      "judge_status": "completed_by_current_session",
+      "score_type": "current_session_LLM_final",
+      "reviewers": 1,
+      "effort": "current_session",
+      "submission_unchanged": true,
+      "components": {
+        "pitch_global_f1": 14.984069185252618,
+        "pitch_time_macro_f1": 5.678824409733191,
+        "pitch_register_macro_f1": 5.579052329051222,
+        "rhythm_strict_f1": 14.456076467910787,
+        "midi_xml_consistency": 10.0,
+        "layout": 11.25,
+        "notation": 7.5,
+        "fidelity": 5
+      },
+      "raw_score": 74.44802239194782,
+      "delivery_level": "major_revision",
+      "delivery_label": "需大幅修订",
+      "delivery_factor": 0.6,
+      "after_delivery_factor": 44.66881343516869,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": true,
+        "time_coverage": true,
+        "register_coverage": true,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "unrounded_final_score": 44.66881343516869,
+      "pitch_precision": 0.7522851919561243,
+      "pitch_recall": 0.7461468721668177,
+      "planned_judge": "gpt-6-sol",
+      "version": "A6-delivery-v2.0",
+      "automatic_score_v1": 68.06195284033623,
+      "review": {
+        "reviewer_id": "codex_current_session",
+        "reviewer_kind": "model_assisted",
+        "review_method": "Current Codex conversation, explicitly authorized by user after configured API judge failures",
+        "external_judge_api_used": false,
+        "layout": 0.75,
+        "notation": 0.5,
+        "fidelity": 1,
+        "delivery_level": "major_revision",
+        "reasons": [
+          "PDF可读性0.75：实际逐页查看5页原PDF，音头、标准谱号、变音、休止及符梁均能辨认，无历史答卷的系统性缺字；第1页第4小节换谱号处及第2页17–19小节、第4页30–31小节谱面密集、加线较多，尚有局部间距与读谱负担。",
+          "记谱可演奏性0.5：双谱表、4/4、休止和延音关系可恢复；但第1小节含二分休止后双附点八分休止，第17、19、21小节反复出现十六分/三十二分混合细分与长符梁，第30–31小节多处双附点和跨拍连接。结构可以追踪，需反复细数与按拍重排，不属于仅少量生硬写法。",
+          "PDF/XML忠实完整性1：独立渲染MusicXML全部5页，按小节序号而非页码对照原PDF的所有系统与双谱表，重点核对第1、4、13、17、19、21、25、30、31、33、37、38小节；未发现实质漏页、漏声部或音乐内容替换。独立渲染换页不同不扣分，不宣称图形逐音穷尽验证。",
+          "交付等级需大幅修订×0.6：核心文件齐全且可解析，MIDI/XML一致性为1，PDF可读；但记谱需要实质整理，notation=0.5未达到完整可用档的0.75门槛。未证实不可用档所要求的系统性缺符号或实质跨格式不一致。"
+        ],
+        "evidence": [
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-1.png",
+            "locator": "PDF第1页，第1–12小节，含第4小节换谱号",
+            "observation": "两谱表音乐字形可辨；第1小节的复杂休止、换谱号和密集细分增加计拍负担。",
+            "method": "actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-2.png",
+            "locator": "PDF第2页，第13–19小节，尤其17、19小节",
+            "observation": "高音区大量加线、细分与变音，音符仍可识别；长符梁和不规则时值需要重排。",
+            "method": "actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-3.png",
+            "locator": "PDF第3页，第20–24小节",
+            "observation": "21小节等处两谱表均存在，未见系统性缺符号；与独立XML渲染相应小节对应。",
+            "method": "actual view_image plus independent render comparison"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-4.png",
+            "locator": "PDF第4页，第25–32小节；30–31小节",
+            "observation": "两谱表可追踪但密集时值、双附点与跨拍连接增加读谱成本。",
+            "method": "actual view_image and XML structural audit"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-5.png",
+            "locator": "PDF第5页，第33–38小节，含终止线",
+            "observation": "末段两谱表和终止线均在；与独立XML渲染第4–5页相应小节无实质替换。",
+            "method": "actual view_image plus independent render comparison"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml_audit.json",
+            "locator": "第1、4、13、17、19、21、25、30、31、33、37、38小节",
+            "observation": "抽查小节均有voice 1/2与staff 1/2；31小节有8个带双附点的note元素，支持需要按拍重排的判定。",
+            "method": "XML parsing and structure audit"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-1.png",
+            "locator": "独立MusicXML渲染第1页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-2.png",
+            "locator": "独立MusicXML渲染第2页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-3.png",
+            "locator": "独立MusicXML渲染第3页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-4.png",
+            "locator": "独立MusicXML渲染第4页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-5.png",
+            "locator": "独立MusicXML渲染第5页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          }
+        ],
+        "confidence": {
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "medium-high"
+        },
+        "inspection_limits": [
+          "由当前Codex会话直接单评；未使用配置API的GPT-6-Sol成功评审，不标注为Sol独立评分。",
+          "实际逐页查看5页原PDF及5页独立XML渲染；按全部系统与重点小节核对，未做图形逐音穷尽验证。",
+          "未完整听审原演奏，未由钢琴家试奏；音高和起音准确性使用冻结原生评分器。",
+          "视觉分是冻结离散锚点下的模型辅助判断，不能据单次实验推断稳定模型排名。"
+        ]
+      },
+      "rules_frozen_before_run": true,
+      "inspection_limits": [
+        "由当前Codex会话直接单评；未使用配置API的GPT-6-Sol成功评审，不标注为Sol独立评分。",
+        "实际逐页查看5页原PDF及5页独立XML渲染；按全部系统与重点小节核对，未做图形逐音穷尽验证。",
+        "未完整听审原演奏，未由钢琴家试奏；音高和起音准确性使用冻结原生评分器。",
+        "视觉分是冻结离散锚点下的模型辅助判断，不能据单次实验推断稳定模型排名。"
+      ],
+      "external_judge_api_used": false,
+      "retrospective": false,
+      "old_score": null,
+      "old_scorepath": "benchmark_runs/20261022_a6astra_high40/recovery_archive/failed_initial_review/grades/score.json",
+      "submission": "benchmark_runs/20261022_a6astra_high40/submissions/A6_gpt-6-astra",
+      "submission_sha256": {
+        "alignment.json": "7db9cf8ac77e13539ae95b9e77545c0316d4735232a943d978ccdbc0c7150ff2",
+        "notes.md": "f68fc559215030d3c7c804f823c99f42ea7fa0d099702c68eddb9a22b31d140c",
+        "score.mid": "d1ad64dc7fd1a16dbeeab4e7151fe8f9cd10a9af10fdc9d26f2d66153fa147a1",
+        "score.musicxml": "573287466b7ca50613e48d8d01cca81c92b17d6935a4967c3b44823c4cae9468",
+        "score.pdf": "e6e7f993dea3c1c7e9cdaf9697fd233cd09f51afaf8f9f2c0eae33859a7ef91c"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/technical.json",
+      "evidence_pages": [
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-1.png",
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-2.png",
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-3.png",
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-4.png",
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-5.png"
+      ],
+      "limits": [
+        "由当前Codex会话直接单评；未使用配置API的GPT-6-Sol成功评审，不标注为Sol独立评分。",
+        "实际逐页查看5页原PDF及5页独立XML渲染；按全部系统与重点小节核对，未做图形逐音穷尽验证。",
+        "未完整听审原演奏，未由钢琴家试奏；音高和起音准确性使用冻结原生评分器。",
+        "视觉分是冻结离散锚点下的模型辅助判断，不能据单次实验推断稳定模型排名。",
+        "A6-delivery-v2.0 对本次答题前已冻结；历史模型记录使用同一版本的事后复评。",
+        "配置API的评审尝试失败，日志保留；按用户要求改为当前Codex会话直接单评。",
+        "谱面检查与机器匹配，不等同于完整听审或音乐专家试奏。"
+      ],
+      "metric_errors": [],
+      "supersedes_record": "A6_gpt-6-astra_missing8",
+      "supersedes_score": 14.01854
     }
   ]
 }

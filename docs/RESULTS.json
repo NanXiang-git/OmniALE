@@ -3586,7 +3586,9 @@
     ],
     "rubric_version": "A6-delivery-v2.0",
     "exact_score_display": true,
-    "score_label": "A6 v2 可用交付复评（事后规则）"
+    "score_label": "A6 v2 可用交付复评（事后规则）",
+    "historical_only": true,
+    "superseded_by": "A6_gpt-6-astra_20261022_a6astra_high40"
   },
   {
     "id": "A6_gpt-6-luna_missing8",
@@ -21074,5 +21076,515 @@
       }
     ],
     "rubric_version": "A6-delivery-v2.0"
+  },
+  {
+    "id": "A6_gpt-6-astra_20261022_a6astra_high40",
+    "case": "A6",
+    "model": "gpt-6-astra",
+    "attempt": "20261022_a6astra_high40",
+    "new": true,
+    "status": "completed",
+    "budget_seconds": 2400,
+    "elapsed_seconds": 2295.1561534404755,
+    "reasoning_effort": "high",
+    "runpath": "benchmark_runs/20261022_a6astra_high40/logs/A6_gpt-6-astra/run.json",
+    "scorepath": "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/score.json",
+    "submission": "benchmark_runs/20261022_a6astra_high40/submissions/A6_gpt-6-astra",
+    "score": 44.668813,
+    "score_detail": {
+      "id": "A6_gpt-6-astra_20261022_a6astra_high40",
+      "case": "A6",
+      "model": "gpt-6-astra",
+      "judge": "Codex current conversation",
+      "case_root": "A6_piano_transcription",
+      "status": "scored",
+      "final_score": 44.668813,
+      "solver_status": "completed",
+      "judge_status": "completed_by_current_session",
+      "score_type": "current_session_LLM_final",
+      "reviewers": 1,
+      "effort": "current_session",
+      "submission_unchanged": true,
+      "components": {
+        "pitch_global_f1": 14.984069185252618,
+        "pitch_time_macro_f1": 5.678824409733191,
+        "pitch_register_macro_f1": 5.579052329051222,
+        "rhythm_strict_f1": 14.456076467910787,
+        "midi_xml_consistency": 10.0,
+        "layout": 11.25,
+        "notation": 7.5,
+        "fidelity": 5
+      },
+      "raw_score": 74.44802239194782,
+      "delivery_level": "major_revision",
+      "delivery_label": "需大幅修订",
+      "delivery_factor": 0.6,
+      "after_delivery_factor": 44.66881343516869,
+      "acceptance_checks": {
+        "delivery_ready": false,
+        "pitch_precision": false,
+        "pitch_recall": false,
+        "strict_f1": true,
+        "time_coverage": true,
+        "register_coverage": true,
+        "midi_consistency": true,
+        "visual_minimum": false
+      },
+      "acceptance_cap_applied": false,
+      "accepted": false,
+      "unrounded_final_score": 44.66881343516869,
+      "pitch_precision": 0.7522851919561243,
+      "pitch_recall": 0.7461468721668177,
+      "planned_judge": "gpt-6-sol",
+      "version": "A6-delivery-v2.0",
+      "automatic_score_v1": 68.06195284033623,
+      "review": {
+        "reviewer_id": "codex_current_session",
+        "reviewer_kind": "model_assisted",
+        "review_method": "Current Codex conversation, explicitly authorized by user after configured API judge failures",
+        "external_judge_api_used": false,
+        "layout": 0.75,
+        "notation": 0.5,
+        "fidelity": 1,
+        "delivery_level": "major_revision",
+        "reasons": [
+          "PDF可读性0.75：实际逐页查看5页原PDF，音头、标准谱号、变音、休止及符梁均能辨认，无历史答卷的系统性缺字；第1页第4小节换谱号处及第2页17–19小节、第4页30–31小节谱面密集、加线较多，尚有局部间距与读谱负担。",
+          "记谱可演奏性0.5：双谱表、4/4、休止和延音关系可恢复；但第1小节含二分休止后双附点八分休止，第17、19、21小节反复出现十六分/三十二分混合细分与长符梁，第30–31小节多处双附点和跨拍连接。结构可以追踪，需反复细数与按拍重排，不属于仅少量生硬写法。",
+          "PDF/XML忠实完整性1：独立渲染MusicXML全部5页，按小节序号而非页码对照原PDF的所有系统与双谱表，重点核对第1、4、13、17、19、21、25、30、31、33、37、38小节；未发现实质漏页、漏声部或音乐内容替换。独立渲染换页不同不扣分，不宣称图形逐音穷尽验证。",
+          "交付等级需大幅修订×0.6：核心文件齐全且可解析，MIDI/XML一致性为1，PDF可读；但记谱需要实质整理，notation=0.5未达到完整可用档的0.75门槛。未证实不可用档所要求的系统性缺符号或实质跨格式不一致。"
+        ],
+        "evidence": [
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-1.png",
+            "locator": "PDF第1页，第1–12小节，含第4小节换谱号",
+            "observation": "两谱表音乐字形可辨；第1小节的复杂休止、换谱号和密集细分增加计拍负担。",
+            "method": "actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-2.png",
+            "locator": "PDF第2页，第13–19小节，尤其17、19小节",
+            "observation": "高音区大量加线、细分与变音，音符仍可识别；长符梁和不规则时值需要重排。",
+            "method": "actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-3.png",
+            "locator": "PDF第3页，第20–24小节",
+            "observation": "21小节等处两谱表均存在，未见系统性缺符号；与独立XML渲染相应小节对应。",
+            "method": "actual view_image plus independent render comparison"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-4.png",
+            "locator": "PDF第4页，第25–32小节；30–31小节",
+            "observation": "两谱表可追踪但密集时值、双附点与跨拍连接增加读谱成本。",
+            "method": "actual view_image and XML structural audit"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/pdf_render/page-5.png",
+            "locator": "PDF第5页，第33–38小节，含终止线",
+            "observation": "末段两谱表和终止线均在；与独立XML渲染第4–5页相应小节无实质替换。",
+            "method": "actual view_image plus independent render comparison"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml_audit.json",
+            "locator": "第1、4、13、17、19、21、25、30、31、33、37、38小节",
+            "observation": "抽查小节均有voice 1/2与staff 1/2；31小节有8个带双附点的note元素，支持需要按拍重排的判定。",
+            "method": "XML parsing and structure audit"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-1.png",
+            "locator": "独立MusicXML渲染第1页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-2.png",
+            "locator": "独立MusicXML渲染第2页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-3.png",
+            "locator": "独立MusicXML渲染第3页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-4.png",
+            "locator": "独立MusicXML渲染第4页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          },
+          {
+            "artifact": "grades/A6_gpt-6-astra/direct_review/xml-5.png",
+            "locator": "独立MusicXML渲染第5页",
+            "observation": "实际查看该页全部系统和两个谱表；按小节与原PDF对照。",
+            "method": "fresh Verovio render, rasterized in Chrome, actual view_image inspection"
+          }
+        ],
+        "confidence": {
+          "layout": "high",
+          "notation": "medium",
+          "fidelity": "medium-high"
+        },
+        "inspection_limits": [
+          "由当前Codex会话直接单评；未使用配置API的GPT-6-Sol成功评审，不标注为Sol独立评分。",
+          "实际逐页查看5页原PDF及5页独立XML渲染；按全部系统与重点小节核对，未做图形逐音穷尽验证。",
+          "未完整听审原演奏，未由钢琴家试奏；音高和起音准确性使用冻结原生评分器。",
+          "视觉分是冻结离散锚点下的模型辅助判断，不能据单次实验推断稳定模型排名。"
+        ]
+      },
+      "rules_frozen_before_run": true,
+      "inspection_limits": [
+        "由当前Codex会话直接单评；未使用配置API的GPT-6-Sol成功评审，不标注为Sol独立评分。",
+        "实际逐页查看5页原PDF及5页独立XML渲染；按全部系统与重点小节核对，未做图形逐音穷尽验证。",
+        "未完整听审原演奏，未由钢琴家试奏；音高和起音准确性使用冻结原生评分器。",
+        "视觉分是冻结离散锚点下的模型辅助判断，不能据单次实验推断稳定模型排名。"
+      ],
+      "external_judge_api_used": false,
+      "retrospective": false,
+      "old_score": null,
+      "old_scorepath": "benchmark_runs/20261022_a6astra_high40/recovery_archive/failed_initial_review/grades/score.json",
+      "submission": "benchmark_runs/20261022_a6astra_high40/submissions/A6_gpt-6-astra",
+      "submission_sha256": {
+        "alignment.json": "7db9cf8ac77e13539ae95b9e77545c0316d4735232a943d978ccdbc0c7150ff2",
+        "notes.md": "f68fc559215030d3c7c804f823c99f42ea7fa0d099702c68eddb9a22b31d140c",
+        "score.mid": "d1ad64dc7fd1a16dbeeab4e7151fe8f9cd10a9af10fdc9d26f2d66153fa147a1",
+        "score.musicxml": "573287466b7ca50613e48d8d01cca81c92b17d6935a4967c3b44823c4cae9468",
+        "score.pdf": "e6e7f993dea3c1c7e9cdaf9697fd233cd09f51afaf8f9f2c0eae33859a7ef91c"
+      },
+      "rubric_sha256": "6976b72fe484719ba524a0e41841c794ca226d9da3c6c231a33c0d10ca4565dd",
+      "protocol_sha256": "d7474bbb470d45545ac5b50608167ff929aaa85bd87cb5c562972d0ca1d4da37",
+      "technical_path": "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/technical.json",
+      "evidence_pages": [
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-1.png",
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-2.png",
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-3.png",
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-4.png",
+        "benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-5.png"
+      ],
+      "limits": [
+        "由当前Codex会话直接单评；未使用配置API的GPT-6-Sol成功评审，不标注为Sol独立评分。",
+        "实际逐页查看5页原PDF及5页独立XML渲染；按全部系统与重点小节核对，未做图形逐音穷尽验证。",
+        "未完整听审原演奏，未由钢琴家试奏；音高和起音准确性使用冻结原生评分器。",
+        "视觉分是冻结离散锚点下的模型辅助判断，不能据单次实验推断稳定模型排名。",
+        "A6-delivery-v2.0 对本次答题前已冻结；历史模型记录使用同一版本的事后复评。",
+        "配置API的评审尝试失败，日志保留；按用户要求改为当前Codex会话直接单评。",
+        "谱面检查与机器匹配，不等同于完整听审或音乐专家试奏。"
+      ],
+      "metric_errors": [],
+      "supersedes_record": "A6_gpt-6-astra_missing8",
+      "supersedes_score": 14.01854
+    },
+    "reasons": [
+      "PDF可读性0.75：实际逐页查看5页原PDF，音头、标准谱号、变音、休止及符梁均能辨认，无历史答卷的系统性缺字；第1页第4小节换谱号处及第2页17–19小节、第4页30–31小节谱面密集、加线较多，尚有局部间距与读谱负担。",
+      "记谱可演奏性0.5：双谱表、4/4、休止和延音关系可恢复；但第1小节含二分休止后双附点八分休止，第17、19、21小节反复出现十六分/三十二分混合细分与长符梁，第30–31小节多处双附点和跨拍连接。结构可以追踪，需反复细数与按拍重排，不属于仅少量生硬写法。",
+      "PDF/XML忠实完整性1：独立渲染MusicXML全部5页，按小节序号而非页码对照原PDF的所有系统与双谱表，重点核对第1、4、13、17、19、21、25、30、31、33、37、38小节；未发现实质漏页、漏声部或音乐内容替换。独立渲染换页不同不扣分，不宣称图形逐音穷尽验证。",
+      "交付等级需大幅修订×0.6：核心文件齐全且可解析，MIDI/XML一致性为1，PDF可读；但记谱需要实质整理，notation=0.5未达到完整可用档的0.75门槛。未证实不可用档所要求的系统性缺符号或实质跨格式不一致。"
+    ],
+    "limits": [
+      "由当前Codex会话直接单评；未使用配置API的GPT-6-Sol成功评审，不标注为Sol独立评分。",
+      "实际逐页查看5页原PDF及5页独立XML渲染；按全部系统与重点小节核对，未做图形逐音穷尽验证。",
+      "未完整听审原演奏，未由钢琴家试奏；音高和起音准确性使用冻结原生评分器。",
+      "视觉分是冻结离散锚点下的模型辅助判断，不能据单次实验推断稳定模型排名。",
+      "A6-delivery-v2.0 对本次答题前已冻结；历史模型记录使用同一版本的事后复评。",
+      "配置API的评审尝试失败，日志保留；按用户要求改为当前Codex会话直接单评。",
+      "谱面检查与机器匹配，不等同于完整听审或音乐专家试奏。"
+    ],
+    "errors": [],
+    "files": [
+      "benchmark_runs/20261022_a6astra_high40/submissions/A6_gpt-6-astra/alignment.json",
+      "benchmark_runs/20261022_a6astra_high40/submissions/A6_gpt-6-astra/notes.md",
+      "benchmark_runs/20261022_a6astra_high40/submissions/A6_gpt-6-astra/score.mid",
+      "benchmark_runs/20261022_a6astra_high40/submissions/A6_gpt-6-astra/score.musicxml",
+      "benchmark_runs/20261022_a6astra_high40/submissions/A6_gpt-6-astra/score.pdf"
+    ],
+    "trajectory": [
+      {
+        "step": 1,
+        "type": "读取材料",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'cat /work/TASK.md'"
+      },
+      {
+        "step": 2,
+        "type": "媒体检查",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'ls -la /work && cat /work/SOURCE_CREDIT.md && ffprobe -v error -show_streams -show_format /work/input/performance.mp4'"
+      },
+      {
+        "step": 3,
+        "type": "媒体处理／抽帧",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'mkdir -p /work/analysis /work/results\nffmpeg -v error -i /work/input/performance.mp4 -ac 1 -ar 22050 /work/analysis/audio.wav\nffmpeg -v error -ss 3 -i /work/input/performance.mp4 -frames:v 1 /work/analysis/frame3.jpg'"
+      },
+      {
+        "step": 4,
+        "type": "媒体处理／抽帧",
+        "status": "failed",
+        "exit_code": 1,
+        "command": "/bin/bash -lc \"cat > /work/analysis/inspect.py <<'PY'\nimport numpy as np\nfrom scipy.io import wavfile\nfrom scipy.signal import stft,find_peaks\nfrom PIL import Image,ImageDraw\nimport subprocess\nsr,y=wavfile.read('/work/analysis/audio.wav');y=y.astype(float)/32768\nf,t,z=stft(y,sr,nperseg=4096,noverlap=4096-220); v=abs(z)\nnp.savez('/work/analysis/spec.npz',f=f,t=t,v=v)\nfor ts in [1.3,2,3,10,20,30,40,50,60,70]:\n s=v[:,np.argmin(abs(t-ts))]; ix=find_peaks(s,height=s.max()*.08,distance=3)[0];ix=sorted(ix,key=lambda i:-s[i])[:22]\n print(ts,[(round(f[i],1),round(69+12*np.log2(f[i]/440),1),round(s[i],4)) for i in ix])\ncanvas=Image.new('RGB',(960,350*4))\nfor k,ts in enumerate([1.3,10,20,30,40,50,60,70]):\n p=f'/work/analysis/f{ts}.jpg';subprocess.run(['ffmpeg','-v','error','-ss',str(ts),'-i','/work/input/performance.mp4','-frames:v','1','-y',p]);im=Image.open(p).resize((960,350));im=im.crop((0,0,960,175)); ImageDraw.Draw(im).text((15,15),str(ts),fill='red');canvas.paste(im,(0,k*175))\ncanvas.save('/work/analysis/montage.jpg')\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/inspect.py\""
+      },
+      {
+        "step": 5,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'mv /work/analysis/inspect.py /work/analysis/explore.py\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/explore.py'"
+      },
+      {
+        "step": 6,
+        "type": "本地脚本",
+        "status": "failed",
+        "exit_code": 1,
+        "command": "/bin/bash -lc \"cat > /work/analysis/transcribe.py <<'PY'\nimport numpy as np,time\nfrom scipy.io import wavfile\nfrom scipy.signal import stft,find_peaks\nfrom scipy.ndimage import gaussian_filter1d,median_filter\nimport matplotlib\nmatplotlib.use('Agg')\nimport matplotlib.pyplot as plt\nz=np.load('/work/analysis/spec.npz');f=z['f'];t=z['t'];V=z['v'].astype('float32');sel=f<9000;f=f[sel];V=V[sel]\npitches=np.arange(28,101);W=np.zeros((len(f),len(pitches)));mask=W.copy()\nfor j,p in enumerate(pitches):\n f0=440*2**((p-69)/12)*2**(.08/12)\n B=.00009*2**((p-60)/24)\n for h in range(1, min(35,int(9000/f0))+1):\n  fh=f0*h*np.sqrt(1+B*h*h); width=4.3+fh*.0006\n  g=np.exp(-.5*((f-fh)/width)**2)\n  w=h**(-.8)*np.exp(-h*f0/7000)*(1-np.exp(-(fh/100)**2))\n  W[:,j]+=w*g;mask[:,j]+=np.exp(-.5*((f-fh)/(width*1.8))**4)\nmask=np.minimum(mask,1); mask[mask<.001]=0\nweight=1/np.maximum(V.mean(axis=1),.000015)**.65\nW=(W*weight[:,None]).astype('float32');W/=np.sqrt((W*W).sum(axis=0));mask=mask.astype('float32');v=(V*weight[:,None]).astype('float32')\nH=np.maximum(W.T@v,.000001)\nfor it in range(180):\n H*= (W.T@v)/(W.T@W@H+.008+1e-9)\n if it>=30 and it%2==0 and it<150:\n  W*= (v@H.T)/(W@(H@H.T)+1e-9)\n  W*=mask\n  norms=np.sqrt((W*W).sum(axis=0));W/=norms;H*=norms[:,None]\n if it%30==0:print(it,float(np.linalg.norm(v-W@H)),flush=True)\nnp.savez('/work/analysis/nmf.npz',W=W,H=H,t=t,pitches=pitches,f=f,weight=weight)\nfor start in range(0,77,10):\n fig,ax=plt.subplots(figsize=(20,8));ax.imshow(np.log1p(H*30),origin='lower',aspect='auto',extent=[t[0],t[-1],pitches[0]-.5,pitches[-1]+.5],cmap='magma');ax.set_xlim(start,min(start+10,77));ax.set_ylim(28,96);ax.set_yticks(np.arange(28,97,2));ax.set_xticks(np.arange(start,start+10,.25),minor=True);ax.grid(which='both',alpha=.2);fig.savefig(f'/work/analysis/roll{start}.png',dpi=120);plt.close(fig)\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/transcribe.py\""
+      },
+      {
+        "step": 7,
+        "type": "乐谱分析／渲染",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cat /work/TOOLS.md\n/opt/a7bench/venv/bin/python - <<'PY'\nimport music21,verovio,svglib,reportlab,mido\nprint('notation imports OK')\nPY\""
+      },
+      {
+        "step": 8,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"python - <<'PY'\np='/work/analysis/transcribe.py'\ns=open(p).read().replace(\\\"import matplotlib\\\\nmatplotlib.use('Agg')\\\\nimport matplotlib.pyplot as plt\\\",'from PIL import Image,ImageDraw')\ns=s[:s.index('for start in range(0,77,10):')]+'''for start in range(0,77,10):\n a=np.log1p(H[:,(t>=start)&(t<start+10)]*30);a=np.clip(a/np.percentile(a,99.5),0,1);a=(255*a[::-1]).astype('uint8')\n im=Image.fromarray(a).convert('RGB').resize((1800,876));canvas=Image.new('RGB',(1900,926),'white');canvas.paste(im,(75,25));d=ImageDraw.Draw(canvas)\n for p in pitches:\n  yy=25+int((pitches[-1]-p+.5)*876/len(pitches));d.text((5,yy-5),str(p),fill='black');d.line((75,yy,1875,yy),fill=(40,55,40),width=1)\n for ts in np.arange(start,start+10,.25):\n  xx=75+int((ts-start)*180);d.line((xx,25,xx,901),fill=(40,55,40));d.text((xx,904),str(round(ts,2)),fill='black')\n canvas.save(f'/work/analysis/roll{start}.png')\n'''\nopen(p,'w').write(s)\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/transcribe.py\""
+      },
+      {
+        "step": 9,
+        "type": "媒体处理／抽帧",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"ffmpeg -v error -ss 1.3 -i /work/input/performance.mp4 -frames:v 1 /work/analysis/key.jpg\n/opt/a7bench/venv/bin/python - <<'PY'\nfrom PIL import Image,ImageDraw\nim=Image.open('/work/analysis/key.jpg').crop((230,60,1660,230));d=ImageDraw.Draw(im)\nfor x in range(250,1651,50):d.line((x-230,150,x-230,170),fill='red');d.text((x-240,135),str(x),fill='red')\nim.save('/work/analysis/key_crop.jpg')\nPY\""
+      },
+      {
+        "step": 10,
+        "type": "媒体处理／抽帧",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cat > /work/analysis/video_mask.py <<'PY'\nimport numpy as np,subprocess\nfrom scipy.ndimage import maximum_filter1d,gaussian_filter1d\nfrom PIL import Image,ImageDraw\np=subprocess.Popen(['ffmpeg','-v','error','-i','/work/input/performance.mp4','-vf','fps=15,scale=960:350','-f','rawvideo','-pix_fmt','rgb24','-'],stdout=subprocess.PIPE)\nprofiles=[]\nwhile True:\n b=p.stdout.read(960*350*3)\n if len(b)<960*350*3:break\n a=np.frombuffer(b,dtype=np.uint8).reshape(350,960,3).astype(float);r,g,bl=a[35:111,120:830].transpose(2,0,1)\n skin=(r>65)&(r-g>12)&(g-bl>5)&(r>1.09*g)&(r>1.18*bl)\n pr=skin.sum(axis=0);pr=maximum_filter1d(pr,11)\n profiles.append(pr)\nprofiles=np.array(profiles);pitches=np.arange(21,109);xs=[]\nwhite=[p for p in pitches if p%12 in [0,2,4,5,7,9,11]]\nfor p in pitches:\n if p in white:x=262+(white.index(p))*26.98\n else:\n  i=white.index(p-1);x=262+(i+.5)*26.98\n xs.append(x/2-120)\nmask=np.array([profiles[:,max(0,round(x)-3):min(710,round(x)+4)].max(axis=1)>4 for x in xs])\nnp.savez('/work/analysis/video_mask.npz',mask=mask,pitches=pitches,t=np.arange(len(profiles))/15,xs=xs,profiles=profiles)\nim=Image.fromarray((np.clip(profiles.T[::-1]/20,0,1)*255).astype('uint8')).resize((1540,710)).convert('RGB');im.save('/work/analysis/hands.png')\nprint(len(profiles));print([(round(i/15,2),pitches[mask[:,i]].tolist()) for i in range(0,80,15)])\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/video_mask.py\""
+      },
+      {
+        "step": 11,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"/opt/a7bench/venv/bin/python - <<'PY'\nimport numpy as np\nz=np.load('/work/analysis/video_mask.npz');print(list(zip(z['pitches'],z['xs'])))\nfrom PIL import Image\nim=np.array(Image.open('/work/analysis/key.jpg').resize((960,350)));r,g,b=im.astype(float).transpose(2,0,1);m=(r>65)&(r-g>12)&(g-b>5)&(r>1.09*g)&(r>1.18*b);im[~m]=0;Image.fromarray(im).save('/work/analysis/skin.jpg')\nPY\""
+      },
+      {
+        "step": 12,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"/opt/a7bench/venv/bin/python - <<'PY'\nimport numpy as np\nz=np.load('/work/analysis/video_mask.npz')\nfor ts in [1.2667,1.3333,3]:\n i=round(ts*15);print(ts,z['pitches'][z['mask'][:,i]])\nPY\""
+      },
+      {
+        "step": 13,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cp /work/analysis/transcribe.py /work/analysis/transcribe_v2.py\npython - <<'PY'\np='/work/analysis/transcribe_v2.py';s=open(p).read();s=s.replace(\\\"H=np.maximum(W.T@v,.000001)\\\",'''vm=np.load('/work/analysis/video_mask.npz');vv=vm['mask'][pitches-21];vt=vm['t']\nfrom scipy.ndimage import maximum_filter1d\nallow=maximum_filter1d(vv.astype(float),size=31,axis=1,origin=12)[:,np.clip(np.round(t*15).astype(int),0,len(vt)-1)]\n# Broad fixed spectra absorb mechanical / ambient noise without creating low notes.\nnoise=[]\nfor center,width in [(0,100),(100,100),(250,150),(500,300),(1000,600),(2000,1000),(4000,2000),(7000,3000)]:\n n=np.exp(-.5*((f-center)/width)**2)*weight;n/=np.linalg.norm(n);noise.append(n)\nnoise=np.array(noise,dtype='float32').T\nW=np.concatenate([W,noise],axis=1);mask=np.concatenate([mask,np.ones_like(noise)],axis=1)\nallow=np.concatenate([allow,np.ones((noise.shape[1],len(t)))],axis=0).astype('float32')\nH=np.maximum(W.T@v,.000001)*allow''');s=s.replace('range(180)','range(210)').replace(\\\"H*= (W.T@v)/(W.T@W@H+.008+1e-9)\\\",\\\"H*= (W.T@v)/(W.T@W@H+.012+1e-9)\\\\n H*=allow\\\")\ns=s.replace('W*=mask','W*=mask\\\\n  W[:,-noise.shape[1]:]=noise');s=s.replace(\\\"np.savez('/work/analysis/nmf.npz'\\\",\\\"H=H[:len(pitches)]\\\\nW=W[:,:len(pitches)]\\\\nnp.savez('/work/analysis/nmf2.npz'\\\");s=s.replace(\\\"roll{start}\\\",\\\"roll2_{start}\\\")\nopen(p,'w').write(s)\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/transcribe_v2.py\""
+      },
+      {
+        "step": 14,
+        "type": "读取材料",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cat > /work/analysis/events.py <<'PY'\nimport numpy as np,json\nfrom scipy.ndimage import gaussian_filter1d,maximum_filter1d,minimum_filter1d\nfrom scipy.signal import find_peaks\nfrom PIL import Image,ImageDraw\nz=np.load('/work/analysis/nmf2.npz');H=z['H'];pitches=z['pitches'];t=z['t'];dt=t[1]-t[0]\nvm=np.load('/work/analysis/video_mask.npz');v=maximum_filter1d(vm['mask'].astype(float),size=7,axis=1)\nev=[]\nfor j,p in enumerate(pitches):\n h=gaussian_filter1d(H[j],1);flux=h-np.r_[np.zeros(4),h[:-4]]\n peak,_=find_peaks(flux,prominence=max(.018,h.max()*.025),height=max(.022,h.max()*.04),distance=9)\n for k in peak:\n  # Find the start of the rising edge, rather than the spectral envelope maximum.\n  a=max(0,k-9);base=h[a:k+1].min();pk=h[k:min(k+9,len(h))].max();rise=pk-base\n  if rise<max(.035,h.max()*.055) or rise<pk*.18:continue\n  aa=k\n  while aa>a and h[aa]>base+rise*.18:aa-=1\n  ts=float(t[aa]);ki=round(ts*15)\n  vis=bool(v[p-21,min(ki,v.shape[1]-1)])\n  if not vis:continue\n  end=k+1\n  while end<len(h)-1 and h[end]>.22*pk:end+=1\n  ev.append(dict(p=int(p),t=round(ts,4),end=round(float(t[end]),4),amp=round(float(pk),4),rise=round(float(rise),4),ratio=round(float(rise/pk),3)))\nev.sort(key=lambda e:(e['t'],e['p']));json.dump(ev,open('/work/analysis/events.json','w'),indent=2)\nprint('events',len(ev),'range',min(e['p'] for e in ev),max(e['p'] for e in ev));print('amps',np.percentile([e['amp'] for e in ev],[0,10,25,50,75,90,100]))\nnames=['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B']\nwith open('/work/analysis/events.txt','w') as out:\n for e in ev:out.write(f\\\"{e['t']:7.3f} {names[e['p']%12]}{e['p']//12-1:1d} {e['p']:3d} amp={e['amp']:.3f} rise={e['rise']:.3f} ratio={e['ratio']:.2f}\\\\n\\\")\nfor start in range(0,77,5):\n end=start+5;a=np.log1p(H[:,(t>=start)&(t<end)]*30);a=np.clip(a/np.percentile(a,99.7),0,1);a=(255*a[::-1]).astype('uint8')\n im=Image.fromarray(a).convert('RGB').resize((1600,876));canvas=Image.new('RGB',(1700,926),'white');canvas.paste(im,(75,25));d=ImageDraw.Draw(canvas)\n for p in pitches:\n  yy=25+int((pitches[-1]-p+.5)*876/len(pitches));d.text((0,yy-5),names[p%12]+str(p//12-1),fill='black');d.line((75,yy,1675,yy),fill=(35,45,35),width=1)\n for ts in np.arange(start,end,.1):\n  xx=75+int((ts-start)*320);d.line((xx,25,xx,901),fill=(35,45,35));\n  if round(ts*10)%5==0:d.text((xx,904),str(round(ts,1)),fill='black')\n for e in ev:\n  if start<=e['t']<end:\n   xx=75+int((e['t']-start)*320);yy=25+int((pitches[-1]-e['p']+.5)*876/len(pitches));d.ellipse((xx-3,yy-3,xx+3,yy+3),fill=(255,70,70))\n canvas.save(f'/work/analysis/events{start}.png')\nPY\""
+      },
+      {
+        "step": 15,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'OPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/events.py\nhead -100 /work/analysis/events.txt'"
+      },
+      {
+        "step": 16,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"/opt/a7bench/venv/bin/python - <<'PY'\nimport json,numpy as np\nes=json.load(open('/work/analysis/events.json'))\nfor i in range(0,77,5):\n e=[e for e in es if i<=e['t']<i+5];print(i,len(e),[(p,sum(a['p']<p for a in e)) for p in [48,60,78]])\nPY\""
+      },
+      {
+        "step": 17,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"/opt/a7bench/venv/bin/python - <<'PY'\nimport numpy as np\nfrom scipy.signal import find_peaks\nz=np.load('/work/analysis/nmf2.npz');f=z['f'];W=z['W']/z['weight'][:,None]\nfor p in [35,40,45,50,55,60,64,67,70,72,76,79,80,84,86,88,90,94]:\n w=W[:,p-28];ii=find_peaks(w,height=w.max()*.04,distance=3)[0];ii=sorted(ii,key=lambda i:-w[i])[:12];print(p,[(round(f[i],1),round(w[i]/w.max(),2)) for i in ii])\nPY\""
+      },
+      {
+        "step": 18,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cat > /work/analysis/refine.py <<'PY'\nimport numpy as np\nfrom scipy.io import wavfile\nfrom scipy.signal import stft,find_peaks\nfrom scipy.optimize import least_squares\nfrom scipy.ndimage import gaussian_filter1d,maximum_filter1d\nsr,y=wavfile.read('/work/analysis/audio.wav');y=y.astype('float32')/32768\nf,t,z=stft(y,sr,nperseg=8192,noverlap=8192-220);V=abs(z);sel=f<9000;f=f[sel];V=V[sel]\n# tuning from prominent global spectral peaks\nspec=np.quantile(V,.9,axis=1);spec=gaussian_filter1d(spec,.5)\npeaks=find_peaks(spec)[0];pf=[]\nfor i in peaks:\n if i==0 or i==len(f)-1:continue\n s=np.log(spec[i-1:i+2]+1e-12);delta=.5*(s[0]-s[2])/(s[0]-2*s[1]+s[2]);pf.append(f[i]+delta*(f[1]-f[0]))\npf=np.array(pf);pitches=np.arange(28,101);params=[]\nfor p in pitches:\n eq=440*2**((p-69)/12);target=eq*2**(.08/12);B=.00005*2**((p-48)/8)\n # only tune fundamental using nearby peak, avoid guessing octave structure\n idx=np.argmin(abs(pf-target));f0=pf[idx]\n if abs(12*np.log2(f0/eq))>.3:f0=target\n # fit first three partial frequencies if consistent with piano inharmonicity\n fs=[];hs=[]\n for h in range(1,7):\n  pred=f0*h*np.sqrt((1+B*h*h)/(1+B));near=pf[np.argmin(abs(pf-pred))]\n  if abs(near-pred)<max(3,pred*.004):hs.append(h);fs.append(near)\n hs=np.array(hs);fs=np.array(fs)\n if len(hs)>2:\n  fit=least_squares(lambda x: (x[0]*hs*np.sqrt(1+x[1]*hs*hs)-fs)/np.sqrt(hs),[f0,B],bounds=([f0*.99,0],[f0*1.01,.012]))\n  f0,B=fit.x\n params.append((f0,B))\nW=np.zeros((len(f),len(pitches)),dtype='float32');components=[]\nfor j,(p,(f0,B)) in enumerate(zip(pitches,params)):\n comp=[]\n for h in range(1,min(30,int(8800/f0))+1):\n  fh=f0*h*np.sqrt(1+B*h*h);width=1.8+fh*.00025;g=np.exp(-.5*((f-fh)/width)**2)\n  comp.append(g)\n comp=np.array(comp,dtype='float32').T;components.append(comp)\n h=np.arange(1,comp.shape[1]+1);amp=h**(-.8)*np.exp(-h*f0/4500)*(1-np.exp(-(h*f0/120)**2))\n W[:,j]=comp@amp\nweight=1/np.maximum(V.mean(axis=1),.00001)**.55\nW*=weight[:,None];norm=np.linalg.norm(W,axis=0);W/=norm;v=(V*weight[:,None]).astype('float32')\nvm=np.load('/work/analysis/video_mask.npz');vv=vm['mask'][pitches-21];vt=vm['t'];allow=maximum_filter1d(vv.astype(float),size=39,axis=1,origin=15)[:,np.clip(np.round(t*15).astype(int),0,len(vt)-1)]\nnoise=[]\nfor center,width in [(0,60),(80,60),(150,80),(250,150),(500,300),(1000,600),(2000,1000),(4000,2000),(7000,3000)]:\n n=np.exp(-.5*((f-center)/width)**2)*weight;n/=np.linalg.norm(n);noise.append(n)\nnoise=np.array(noise,dtype='float32').T;W=np.concatenate([W,noise],axis=1);allow=np.concatenate([allow,np.ones((noise.shape[1],len(t)))],axis=0).astype('float32');H=np.maximum(W.T@v,.000001)*allow\nfor it in range(180):\n H*=(W.T@v)/(W.T@W@H+.025+1e-9);H*=allow\n if it>35 and it%8==0 and it<150:\n  # update each harmonic amplitude while preserving a narrow acoustic line shape\n  target=W*(v@H.T)/(W@(H@H.T)+1e-9)\n  for j,p in enumerate(pitches):\n   comp=components[j]*weight[:,None];amp=np.maximum((comp*target[:,j,None]).sum(axis=0)/(comp*comp).sum(axis=0),1e-10)\n   # A note must be supported by its first partials; higher modes cannot monopolize it.\n   low=max(amp[:min(3,len(amp))]);hs=np.arange(1,len(amp)+1)\n   amp=np.minimum(amp,low*3/hs**.65)\n   amp[0]=max(amp[0],low*(.1 if p<55 else .35))\n   W[:,j]=comp@amp\n  norms=np.linalg.norm(W,axis=0);W/=norms;H*=norms[:,None]\n if it%30==0:print(it,float(np.linalg.norm(v-W@H)),flush=True)\nnp.savez('/work/analysis/nmf3.npz',W=W[:,:len(pitches)],H=H[:len(pitches)],t=t,pitches=pitches,f=f,weight=weight,params=params)\nprint('params',list(zip(pitches,params)),flush=True)\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/refine.py\""
+      },
+      {
+        "step": 19,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"/opt/a7bench/venv/bin/python - <<'PY'\nimport numpy as np\nz=np.load('/work/analysis/nmf2.npz');H=z['H'];ps=z['pitches'];t=z['t']\nfor p in [28,33,40,45,50,55,60,64,72,84,94]:\n h=H[p-28];print(p,np.percentile(h,[50,90,99,100]))\nPY\""
+      },
+      {
+        "step": 20,
+        "type": "媒体处理／抽帧",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'ffmpeg -v error -ss 55.3 -i /work/input/performance.mp4 -frames:v 1 /work/analysis/frame55.jpg'"
+      },
+      {
+        "step": 21,
+        "type": "本地命令",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"rg 'comp\\\\*comp' /work/analysis/refine.py\""
+      },
+      {
+        "step": 22,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"sed -i \\\"s@/(comp\\\\*comp).sum(axis=0)@/((comp*comp).sum(axis=0)+1e-20)@\\\" /work/analysis/refine.py\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/refine.py > /work/analysis/refine.log\""
+      },
+      {
+        "step": 23,
+        "type": "本地命令",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'tail -5 /work/analysis/refine.log'"
+      },
+      {
+        "step": 24,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"python - <<'PY'\ns=open('/work/analysis/events.py').read().replace(\\\"nmf2.npz\\\",\\\"nmf3.npz\\\").replace(\\\"events.json\\\",\\\"events3.json\\\").replace(\\\"events.txt\\\",\\\"events3.txt\\\").replace(\\\"events{start}\\\",\\\"ev3_{start}\\\");open('/work/analysis/events3.py','w').write(s)\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/events3.py\""
+      },
+      {
+        "step": 25,
+        "type": "媒体处理／抽帧",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"/opt/a7bench/venv/bin/python - <<'PY'\nfrom PIL import Image,ImageDraw\nimport subprocess\nim=Image.new('RGB',(1200,100*10),'white')\nfor k in range(10):\n t=55+k*.15;p=f'/work/analysis/test_{k}.jpg';subprocess.run(['ffmpeg','-v','error','-ss',str(t),'-i','/work/input/performance.mp4','-frames:v','1','-y',p]);a=Image.open(p).crop((230,60,1660,230)).resize((1200,143));a=a.crop((0,0,1200,100));ImageDraw.Draw(a).text((5,5),str(t),fill='red');im.paste(a,(0,k*100))\nim.save('/work/analysis/seq55.jpg')\nPY\""
+      },
+      {
+        "step": 26,
+        "type": "本地命令",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"awk '\"'$1>=55 && $1<56.6'\"' /work/analysis/events3.txt\""
+      },
+      {
+        "step": 27,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cat > /work/analysis/shortfit.py <<'PY'\nimport numpy as np\nfrom scipy.io import wavfile\nfrom scipy.signal import stft\nfrom scipy.ndimage import gaussian_filter1d,maximum_filter1d\nz=np.load('/work/analysis/nmf3.npz');W=z['W']/z['weight'][:,None];f=z['f'];p=z['pitches']\nsr,y=wavfile.read('/work/analysis/audio.wav');y=y.astype('float32')/32768\nfs,t,Z=stft(y,sr,nperseg=2048,noverlap=2048-110);sel=fs<9000;fs=fs[sel];V=abs(Z[sel]);W=gaussian_filter1d(W,2.1,axis=0);W=np.array([np.interp(fs,f,w) for w in W.T],dtype='float32').T\nweight=1/np.maximum(V.mean(axis=1),.00001)**.55;W*=weight[:,None];W/=np.linalg.norm(W,axis=0);v=V*weight[:,None]\nvm=np.load('/work/analysis/video_mask.npz');allow=maximum_filter1d(vm['mask'][p-21].astype(float),size=39,axis=1,origin=15)[:,np.minimum(np.round(t*15).astype(int),1154)]\nnoise=[]\nfor center,width in [(0,60),(80,60),(150,80),(250,150),(500,300),(1000,600),(2000,1000),(4000,2000),(7000,3000)]:\n n=np.exp(-.5*((fs-center)/width)**2)*weight;n/=np.linalg.norm(n);noise.append(n)\nnoise=np.array(noise,dtype='float32').T;W=np.c_[W,noise];allow=np.r_[allow,np.ones((len(noise.T),len(t)))].astype('float32');H=np.maximum(W.T@v,.000001)*allow\nfor i in range(100):H*=(W.T@v)/(W.T@W@H+.015+1e-9)\nnp.savez('/work/analysis/short.npz',H=H[:len(p)],t=t,pitches=p)\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/shortfit.py\""
+      },
+      {
+        "step": 28,
+        "type": "乐谱分析／渲染",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cat > /work/analysis/build_score.py <<'PY'\nimport numpy as np,json,os,math\nfrom collections import defaultdict\nfrom music21 import stream,note,chord,meter,clef,tempo,metadata,instrument,layout,expressions,converter\nimport mido,verovio\nfrom svglib.svglib import svg2rlg\nfrom reportlab.pdfgen import canvas\nfrom reportlab.graphics import renderPDF\nROOT='/work/results';os.makedirs(ROOT,exist_ok=True)\nev=json.load(open('/work/analysis/final_events.json'))\n# A common notated clock; local performance timing is supplied by the shared anchors.\nanchors=json.load(open('/work/analysis/anchors.json'))['anchors'] if os.path.exists('/work/analysis/anchors.json') else [[0,0],[154,77]]\na=np.array(anchors);groups=[defaultdict(list),defaultdict(list)]\nfor e in ev:\n if not 1.230<=e['t']<75.480:continue\n q=float(np.interp(e['t'],a[:,1],a[:,0]));q=round(q*8)/8\n split=82 if e['t']<6.15 else (66 if 15.5<e['t']<51 else (55 if e['t']>=51 else 60))\n hand=0 if e['p']>=split else 1\n if e['p'] not in groups[hand][q]:groups[hand][q].append(e['p'])\ns=stream.Score();s.metadata=metadata.Metadata();s.metadata.title='Performance transcription';s.metadata.composer='From the supplied piano performance'\nparts=[];total=math.ceil(max(max(g) for g in groups)/4)*4\nfor hand,g in enumerate(groups):\n p=stream.PartStaff(id='RH' if hand==0 else 'LH');p.partName='Piano' if hand==0 else '';p.partAbbreviation='Pno.' if hand==0 else '';p.insert(0,instrument.Piano());p.insert(0,meter.TimeSignature('4/4'));p.insert(0,clef.TrebleClef() if hand==0 else clef.TrebleClef());p.insert(0,tempo.MetronomeMark(number=120,text='Con moto, rubato'))\n if hand==1:\n  p.insert(12,clef.BassClef());p.insert(32,clef.TrebleClef());p.insert(52,clef.BassClef())\n qs=sorted(g);cursor=0\n for k,q in enumerate(qs):\n  if cursor<q:p.insert(cursor,note.Rest(quarterLength=q-cursor))\n  end=qs[k+1] if k+1<len(qs) else min(total,q+1)\n  dur=min(end-q,1.0 if hand==0 else 1.5);dur=max(.125,round(dur*8)/8)\n  obj=chord.Chord(sorted(g[q]),quarterLength=dur) if len(g[q])>1 else note.Note(g[q][0],quarterLength=dur)\n  p.insert(q,obj);cursor=q+dur\n if cursor<total:p.insert(cursor,note.Rest(quarterLength=total-cursor))\n p.makeMeasures(inPlace=True);p.makeTies(inPlace=True);p.makeBeams(inPlace=True);parts.append(p);s.insert(0,p)\nsg=layout.StaffGroup(parts,name='Piano',abbreviation='Pno.',symbol='brace',barTogether=True);s.insert(0,sg)\ns.write('musicxml',fp=ROOT+'/score.musicxml')\n# Read the finished notation and export its exact unfolded event positions.\nsc=converter.parse(ROOT+'/score.musicxml');flat_events=[]\nfor part in sc.parts:\n part=part.stripTies();\n for obj in part.flatten().notes:\n  pitches=obj.pitches if isinstance(obj,chord.Chord) else [obj.pitch]\n  for pp in pitches:flat_events.append((int(pp.midi),float(obj.offset),float(obj.quarterLength)))\nmid=mido.MidiFile(type=1,ticks_per_beat=960);tr=mido.MidiTrack();mid.tracks.append(tr);tr.append(mido.MetaMessage('track_name',name='Piano'));tr.append(mido.MetaMessage('set_tempo',tempo=500000));tr.append(mido.Message('program_change',program=0));events=[]\nfor p,q,d in flat_events:events.extend([(round(q*960),1,p),(round((q+d)*960),0,p)])\nlast=0\nfor tick,on,p in sorted(events):tr.append(mido.Message('note_on' if on else 'note_off',note=p,velocity=72 if on else 0,time=tick-last));last=tick\ntr.append(mido.MetaMessage('end_of_track',time=0));mid.save(ROOT+'/score.mid')\njson.dump({'anchors':anchors},open(ROOT+'/alignment.json','w'),indent=2)\nv=verovio.toolkit();v.setOptions({'pageWidth':2100,'pageHeight':2970,'scale':35,'adjustPageHeight':False,'footer':'none','header':'none','spacingStaff':12,'spacingSystem':10,'breaks':'auto','mnumInterval':1});ok=v.loadFile(ROOT+'/score.musicxml');print('verovio',ok,'pages',v.getPageCount(),flush=True)\nc=None\nfor page in range(1,v.getPageCount()+1):\n path=f'/work/analysis/page{page}.svg';open(path,'w').write(v.renderToSVG(page));drawing=svg2rlg(path)\n if c is None:c=canvas.Canvas(ROOT+'/score.pdf',pagesize=(drawing.width,drawing.height))\n c.setPageSize((drawing.width,drawing.height));renderPDF.draw(drawing,c,0,0);c.showPage()\nif c:c.save()\njson.dump(flat_events,open('/work/analysis/notated_events.json','w'))\nprint('notes',len(flat_events),'measures',total/4,'pages',v.getPageCount(),flush=True)\nPY\ncat > /work/analysis/filter_events.py <<'PY'\nimport json,numpy as np\nfrom scipy.ndimage import gaussian_filter1d\nfrom scipy.signal import find_peaks\nes=json.load(open('/work/analysis/events3.json'));z=np.load('/work/analysis/nmf3.npz');H=z['H'];t=z['t'];out=[]\nshort=np.load('/work/analysis/short.npz');sh=gaussian_filter1d(short['H'],1,axis=1);st=short['t']\nfor e in es:\n p=e['p'];i=np.argmin(abs(t-e['t']));local=H[:,max(0,i-10):i+20].max()\n threshold=max(.065,local*.105)\n if p<48:threshold=max(.14,local*.18)\n if e['amp']<threshold or e['rise']<threshold*.55:continue\n # Use the short-window envelope's rising edge for timing after the pitch is selected.\n h=sh[p-28];flux=h-np.r_[np.zeros(4),h[:-4]];ia=np.searchsorted(st,e['t']-.025);ib=np.searchsorted(st,e['t']+.14)\n if ib>ia:\n  k=ia+np.argmax(flux[ia:ib]);start=max(ia,k-6);base=h[start:k+1].min();pk=h[k:min(k+5,len(h))].max();j=k\n  while j>start and h[j]>base+.25*(pk-base):j-=1\n  e['t']=round(float(st[j]),4)\n out.append(e)\n# Merge duplicate candidates for the same physical rising edge.\nout.sort(key=lambda e:(e['t'],e['p']));clean=[]\nfor e in out:\n old=next((o for o in reversed(clean) if o['p']==e['p'] and e['t']-o['t']<.085),None)\n if old is not None:\n  if e['rise']>old['rise']:clean.remove(old);clean.append(e)\n else:clean.append(e)\nclean.sort(key=lambda e:e['t']);json.dump(clean,open('/work/analysis/final_events.json','w'),indent=2);print('selected',len(clean))\nPY\""
+      },
+      {
+        "step": 29,
+        "type": "本地脚本",
+        "status": "failed",
+        "exit_code": 1,
+        "command": "/bin/bash -lc 'OPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/filter_events.py\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/build_score.py > /work/analysis/build.log 2>&1'"
+      },
+      {
+        "step": 30,
+        "type": "读取材料",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cat > /work/results/notes.md <<'EOF'\n# 转写说明\n\n本谱依据所给 performance.mp4 的自然录音与键盘画面制作，未使用出版谱或联网资料。采用钢琴双谱表，所有重复击键均写成实际音符，未使用省略反复或不可解析的颤音代替音符。\n\n谱面以 4/4 和四分音符约 120 为阅读基准，包含开头休止；alignment.json 给出从累计四分音符位置到视频秒数的统一映射。细分音符用于保留演奏中的先后次序。此拍号与小节划分是本次转写的编辑选择，不声称是原作的拍号。\n\n只收录起音位于 [1.230, 75.480) 秒的候选击键。片段开始前已经持续的声音不补写起音；结尾已起音的音符按谱面节奏延续。音符时值整理为可阅读的声部长度，不等同于手指释放或踏板衰减时间。左右谱表按照音区和声部走向分配，交叉手处不作严格指法指定。\n\n分析使用多分辨率短时频谱、由本录音估计的谐波模板、短窗起音包络以及视频手部位置核对。没有使用音频播放听审；频谱检查和画面检查不等同于实际聆听。低音密集段中相邻半音、弱内声部与泛音的区分，以及快速装饰音的微小时序，仍有不确定性。没有按记忆中的作品静默修正音高。\n\nMusicXML 为主文件；MIDI 从重新读取后的同一 MusicXML 音符及连音线时值生成，PDF 也由该 MusicXML 排版。\n\n来源：PianoVAM v1.2，Kim 等（2025）；本片段及本转写保留所附 SOURCE_CREDIT.md 的 CC BY-NC 4.0 非商业使用和署名条件。\nEOF\nls -l /work/results\ncat /work/analysis/build.log\""
+      },
+      {
+        "step": 31,
+        "type": "本地命令",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'head -35 /work/analysis/page1.svg'"
+      },
+      {
+        "step": 32,
+        "type": "本地命令",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"rg -A20 '<style' /work/analysis/page1.svg\""
+      },
+      {
+        "step": 33,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"python - <<'PY'\np='/work/analysis/build_score.py';s=open(p).read().replace('import numpy as np,json,os,math','import numpy as np,json,os,math,re');s=s.replace(\\\"open(path,'w').write(v.renderToSVG(page));drawing=svg2rlg(path)\\\",\\\"open(path,'w').write(re.sub(r'<style[\"'^>]*>@font-face.*?</style>'\"', '', v.renderToSVG(page), flags=re.S));drawing=svg2rlg(path)\\\");open(p,'w').write(s)\nPY\nOPENBLAS_NUM_THREADS=1 /opt/a7bench/venv/bin/python /work/analysis/build_score.py > /work/analysis/build.log 2>&1\""
+      },
+      {
+        "step": 34,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"/opt/a7bench/venv/bin/python - <<'PY'\nimport numpy as np,json\nz=np.load('/work/analysis/nmf3.npz');ps=z['pitches'];params=z['params'];H=z['H'];t=z['t']\nprint([(int(p),tuple(np.round(params[p-28],5))) for p in [40,43,47,48,50,55,60,62,64,67,69,70,72,76,79,84,88]])\nfor ts in [.9,1.3,10,30,55.2,55.65]:\n i=np.argmin(abs(t-ts));ix=np.argsort(H[:,i])[-12:][::-1];print(ts,[(int(ps[j]),round(float(H[j,i]),3)) for j in ix])\njson.dump({'anchors':[[i,float(i)/2] for i in range(0,155,2)]},open('/work/results/alignment.json','w'),indent=2)\nPY\ncat /work/analysis/build.log\nls -lh /work/results\""
+      },
+      {
+        "step": 35,
+        "type": "乐谱分析／渲染",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc 'pdftoppm -scale-to 1500 -png /work/results/score.pdf /work/analysis/pdf > /work/analysis/pdf_render.log 2>&1'"
+      },
+      {
+        "step": 36,
+        "type": "本地脚本",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"/opt/a7bench/venv/bin/python - <<'PY'\nfor m in ['cairosvg','pypdf','fitz']:\n try:__import__(m);print(m,'OK')\n except Exception as e:print(e)\nPY\""
+      },
+      {
+        "step": 37,
+        "type": "乐谱分析／渲染",
+        "status": "completed",
+        "exit_code": 0,
+        "command": "/bin/bash -lc \"cat > /work/analysis/render_pdf.py <<'PY'\nimport re,xml.etree.ElementTree as ET\nimport verovio\nfrom svglib.svglib import svg2rlg\nfrom reportlab.pdfgen import canvas\nfrom reportlab.graphics import renderPDF\nv=verovio.toolkit();v.setOptions({'pageWidth':2100,'pageHeight':2970,'scale':40,'adjustPageHeight':False,'footer':'auto','header':'auto','spacingStaff':12,'spacingSystem':10,'breaks':'auto','mnumInterval':1,'svgTextFont':'none'});v.loadFile('/work/results/score.musicxml')\nc=None\nfor page in range(1,v.getPageCount()+1):\n svg=v.renderToSVG(page);svg=re.sub(r'<style[\"'^>]*>@font-face.*?</style>'\"','',svg,flags=re.S)\n root=ET.fromstring(svg);ns='{http://www.w3.org/2000/svg}'\n for child in root:\n  if child.tag==ns+'svg':\n   root.set('viewBox',child.attrib.pop('viewBox'));child.tag=ns+'g'\n path=f'/work/analysis/print{page}.svg';ET.ElementTree(root).write(path,encoding='unicode');d=svg2rlg(path)\n if c is None:c=canvas.Canvas('/work/results/score.pdf',pagesize=(595.28,841.89))\n c.saveState();c.scale(595.28/d.width,841.89/d.height);renderPDF.draw(d,c,0,0);c.restoreState();c.showPage()\nc.save();print('pages',v.getPageCount())\nPY\n/opt/a7bench/venv/bin/python /work/analysis/render_pdf.py\npdftoppm -scale-to 1500 -png /work/results/score.pdf /work/analysis/print\""
+      }
+    ],
+    "events_path": "benchmark_runs/20261022_a6astra_high40/logs/A6_gpt-6-astra/events.jsonl",
+    "previews": [
+      {
+        "type": "image",
+        "path": "files/benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-1.png"
+      },
+      {
+        "type": "image",
+        "path": "files/benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-2.png"
+      },
+      {
+        "type": "image",
+        "path": "files/benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-3.png"
+      },
+      {
+        "type": "image",
+        "path": "files/benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-4.png"
+      },
+      {
+        "type": "image",
+        "path": "files/benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/pdf_render/page-5.png"
+      }
+    ],
+    "rubric_version": "A6-delivery-v2.0",
+    "exact_score_display": true,
+    "score_label": "冻结 A6 v2 · 当前 Codex 会话直接单评",
+    "review_report_path": "benchmark_runs/20261022_a6astra_high40/REPORT.html"
   }
 ]

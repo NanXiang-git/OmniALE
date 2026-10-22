@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "solver_rerun": false,
+  "failed_judge_attempts_preserved": true,
+  "successful_judge": "current_codex_conversation",
+  "external_judge_api_used": false,
+  "all_pdf_pages_inspected": 5,
+  "all_independent_xml_pages_inspected": 5,
+  "submission_unchanged": true,
+  "scoring_hashes_unchanged": true,
+  "objective_metrics_identical": true,
+  "aggregation_reproduced": true,
+  "visual_scores": {
+    "layout": 0.75,
+    "notation": 0.5,
+    "fidelity": 1
+  },
+  "final_score": 44.668813,
+  "version": "A6-delivery-v2.0"
+}
