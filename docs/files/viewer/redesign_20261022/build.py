@@ -9,7 +9,7 @@ import json, re, shutil, hashlib
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 OUT=ROOT/'deliverables/A4_A6_research_20261021'
-TAG='a2-score-display-20261022'
+TAG='a2-analysis-rewrite-20261022'
 RELEASE='https://github.com/NanXiang-git/OmniALE/releases/tag/'+TAG
 DOWNLOAD='https://github.com/NanXiang-git/OmniALE/releases/download/'+TAG+'/A4_A6_research_20261021.zip'
 ROWS=json.loads((OUT/'RESULTS.json').read_text(encoding='utf-8'))
@@ -109,45 +109,45 @@ def evidence_link(r,label='评分证据'):return link(r['scorepath'],label)
 def sign_analysis(rows):
  metrics={r['model']:sign_metrics(r) for r in rows};quotes={r['model']:srt_quotes(r) for r in rows}
  truth=obj(ROOT/'A4_sign_bilingual/evaluator/truth.json');by={u['id']:u for u in truth['units']}
- out='<section id="analysis"><h2>四、失败分析</h2><p class="lead">五份答卷都交出了四个要求文件，但没有一份达到可交付的翻译质量。主要缺口在字幕说了什么。</p>'
- out+='<h3>1. 字幕能播放，原意却只保留了一小部分</h3><p>五份答卷的可读性和文件交付项都拿到了满分。这只能说明字幕格式与封装合格。占 65 分的语义项，最高只有 23.36 分；按现有逐信息点评审，Astra 只有 2 段达到全部信息点满分，其他四份均为 0 段。部分段落保留了人物或动作，所以仍有部分分，不能把“未满分”都理解为完全没译对。</p>'
+ out='<section id="analysis"><h2>四、失败分析</h2><p class="lead">五份答卷都完成了字幕文件和视频封装，主要问题出在翻译内容：有的只识别出零散词语，有的把整句话译成了另一件事，还有的全篇留空。</p>'
+ out+='<h3>1. 大部分片段没有译全</h3><p>可读性和文件交付两项，五个模型都拿到了满分。语义项满分 65 分，最高只有 23.36 分。按已有信息点标注，23 段中，Astra 有 2 段拿到了全部语义分，其余模型均未出现满分片段。其他片段的得分主要来自识别对的人物、动作等局部内容。</p>'
  rr=[]
  for r in rows:
   c,u=metrics[r['model']];rr.append([esc(r['model']),score_text(c['meaning'])+' / 65',f"{sum(v>=1-1e-9 for v in u.values())} / 23",score_text(c['readability']+c['delivery'])+' / 10',evidence_link(r)])
  out+=table(['模型','语义得分','信息点全部满分的片段','可读性＋文件交付','依据'],rr)
- out+='<h3>2. 流畅的句子，也可能把整句话换掉</h3><p>以第 2 段为例，作者标注的意思是“我们去吃饭吧”。有的答卷保留了这个提议，有的写成唱歌、打电话或道谢。这些差异会直接改变观众对表达者意图的理解，不能当成措辞不同。</p>'
+ out+='<h3>2. 关键动作和整句话的意思被换掉了</h3><p>第 2 段的标注是“我们去吃饭吧”。K3 写成“我爱唱歌”，Sol 写成“给[无法确认]打电话说一声”。吃饭、唱歌、打电话是三件不同的事，观众看到这些字幕，会误解说话者要做什么。</p>'
  out+=table(['模型','第 2 段的实际中文字幕','实际英文字幕'],[[esc(r['model']),esc(quotes[r['model']]['S02']['zh']),esc(quotes[r['model']]['S02']['en'])] for r in rows])
- out+='<p>第 23 段的问题更隐蔽：原意涉及“没有多少时间看书”，Astra 写成“书看完了”，把剩余时间不足变成了阅读完成。两句都提到书，但会让观众得到相反的进度判断。K3 的“祝你生日快乐”和 GLM 的“我会说一点中文”则已经换了话题。</p>'
+ out+='<p>第 23 段的标注涉及“没有多少时间看书”，Astra 却写成“书看完了”，把时间不够译成了已经读完。K3 的“祝你生日快乐”和 GLM 的“我会说一点中文”则与原话完全偏离。</p>'
  out+=table(['片段','作者标注','Astra 字幕','K3 字幕','GLM 字幕'],[['S23',esc(by['S23']['zh_reference']),esc(quotes['gpt-6-astra']['S23']['zh']),esc(quotes['k3']['S23']['zh']),esc(quotes['glm-5.3-flash']['S23']['zh'])]])
- out+='<p class="muted">以上译文直接读取各模型提交的 SRT，并按 segments.json 对应到片段；原意依据 '+link('A4_sign_bilingual/evaluator/truth.json','作者标注与信息点')+'。这是一种按既有标注进行的比较，不是新增手语专家认证。</p>'
- out+='<h3>3. 中英一致，并不能证明翻译正确</h3><p>K3 把第 2 段写成“我爱唱歌 / I love singing”，两种语言彼此一致，却一起偏离了“我们去吃饭吧”。因此，不能用英语是否自然、两套字幕是否相互对应，代替对原手语含义的核对。现有评分已经将双语项与语义质量关联，避免把同一个错误翻译两遍就拿到高分。</p>'
- out+='<h3>4. 标出不确定是必要的，但不能代替完成翻译</h3><p>Luna 的 23 段均为“[无法确认] / [unclear]”。它没有给观众编造内容，但观众也无法靠这份字幕理解任何一句话。其 26.99 分来自时间、可读性、交付和置信度项目，语义与双语内容均为 0.00 分；这个总分不代表译出了约四分之一的内容。</p><p>Sol 则保留了一些词，并用占位符标出缺口。但第 2 段的“给[无法确认]打电话说一声”仍然明确添加了打电话这一动作。只把人物写成不确定，并不能让句子中其余未经确认的内容成立。</p>'
- out+='<h3>这些分数能说明什么</h3><p>本轮能确认：格式制作普遍完成，语言理解仍不足以支持直接交付。Astra 的 39.00 分受到严重语义错误及覆盖不足封顶；GLM 的 21.57 分只是已确认小计，另有 12 分时间对齐尚未核验。其余时间对齐分也来自片段与抽帧检查，不是逐手势连续观看认证。完整语义判读仍需要中国手语专业复核。</p>'
- out+='<details><summary>查看全部 23 段的语义信息点得分比例</summary><p class="muted">100% 表示该片段的全部计分信息点得分；不是翻译正确概率。每格来自已有评分，未重新判分。</p>'
+ out+='<p class="muted">'+link('A4_sign_bilingual/evaluator/truth.json','作者标注与信息点')+'</p>'
+ out+='<h3>3. 英文字幕沿用了中文里的错误</h3><p>K3 把“我爱唱歌”译成了“I love singing”。英文准确对应了它生成的中文，也把前一步对手语的误读一起带了过去。修改这类字幕，需要先回到视频核对原意，再重做中英文两版。</p>'
+ out+='<h3>4. 大量内容留在“无法确认”</h3><p>Luna 的 23 段全部写成“[无法确认] / [unclear]”，没有提供实际译文。它的 26.99 分来自时间对齐、可读性、文件交付和置信度项目，语义与双语内容均为 0.00 分。</p><p>Sol 用占位符标出了一部分缺口，但保留下来的内容也有错误。例如第 2 段虽然没有确定人物，却写出了原话中没有的“打电话”这一动作。这些片段需要整句重新核对。</p>'
+ out+='<h3>后续需要补的工作</h3><p>这批字幕还需要由熟悉中国手语的人逐段核对，补全漏译，纠正动作、对象和句意，再检查英文及字幕时间。文件封装已经完成，主要返工量在翻译本身。</p><p>评审依据为原始字幕、作者标注和已有片段抽帧检查。Astra 的最终得分为 39.00，触发了严重语义错误及覆盖不足的封顶规则。GLM 当前为 21.57 分小计，另有 12 分时间对齐待核验。</p>'
+ out+='<details><summary>查看全部 23 段的语义信息点得分比例</summary><p class="muted">语义明细表说明：每格为该片段已获得的语义信息点分数占比，100% 表示该片段的信息点全部得分。</p>'
  out+=table(['片段']+[esc(r['model']) for r in rows],[[esc(sid)]+[f"{metrics[r['model']][1][sid]*100:.1f}%" for r in rows] for sid in by], 'compact')+'</details></section>'
  return out
 
 def piano_analysis(rows):
  by={r['model']:r for r in rows};sol=by['gpt-6-sol']['score_detail'];astra=by['gpt-6-astra']['score_detail']
- out='<section id="analysis"><h2>四、失败分析</h2><p class="lead">这道题要求交出“能照着弹的谱”和与它对应的 MIDI。五份答卷分别卡在音符转写、节奏写法、谱面导出和文件对应上，当前均未达到交付要求。</p>'
- out+='<h3>1. 漏音和起音偏差，仍是可读乐谱的主要问题</h3><p>Sol 的两页谱总体可以阅读，但按允许 200 毫秒起音误差的同音高匹配，精确率为 67.52%，召回率只有 40.53%。也就是说，参考演奏中约六成的击键没有在这个容差内找到对应，可能来自漏音、错音或起音偏差。把起音容差收紧到 80 毫秒后，F1 只有 0.240。看起来像一份完整的谱，并不意味着它准确记录了这次演奏。</p>'
+ out='<section id="analysis"><h2>四、失败分析</h2><p class="lead">这道题要交付可读、可编辑的乐谱，以及与谱面对应的 MIDI。现有答卷的问题集中在四处：音符没转准、PDF 缺少音乐符号、节奏难读，以及几个文件的内容对不上。</p>'
+ out+='<h3>1. 漏音、错音和起音偏差较多</h3><p>Sol 的两页谱可以阅读，转写准确性仍有较大缺口。在允许 200 毫秒起音误差的同音高匹配中，精确率为 67.52%，召回率为 40.53%。参考演奏中约六成的击键未能在这个范围内匹配到，涉及漏音、错音或起音时间偏差。把容差收紧到 80 毫秒后，F1 降到 0.240。后续需要对照录音和键盘画面，逐段补音并校正起音。</p>'
  rr=[]
  for r in rows:
   s=r['score_detail'];c=s['components'];valid=not s.get('metric_errors');rr.append([esc(r['model']),f"{c['pitch_global_f1']/20:.3f}" if valid else '无法评估¹',f"{c['rhythm_strict_f1']/20:.3f}" if valid else '无法评估¹',f"{c['midi_xml_consistency']/10*100:.2f}%",evidence_link(r)])
  out+=table(['模型','音高匹配 F1 · 200ms','严格起音 F1 · 80ms','MIDI/XML 一致性','依据'],rr)
- out+='<p class="muted">¹ K3 提交的时间映射不符合题目规则，音符准确性项目按规则计 0.00 分，但不能据此认定所有音符都错了。F1 同时考虑漏写和多写；一致性衡量两份输出是否对应，不衡量它们是否忠于原演奏。</p>'
- out+='<h3>2. 音符转写较准，也可能交出无法阅读的 PDF</h3><p>Astra 的音高 F1 为 0.712，严格起音 F1 为 0.685，均好于 Sol。但它的六页 PDF 普遍缺失音头、谱号和升降号，只剩下谱线、符干和符梁等。演奏者无法可靠确定音高；这种交付不能因为可编辑文件里的音符较准而被视为可用。</p>'
+ out+='<p class="muted">指标表说明：F1 综合反映音符匹配的精确率和召回率；MIDI/XML 一致性检查两份输出的音符是否对应。¹ K3 的时间映射未通过规则检查，音符准确性项目按评分规则计 0.00 分。</p>'
+ out+='<h3>2. Astra 的 PDF 缺少音头、谱号和升降号</h3><p>Astra 的音高 F1 为 0.712，严格起音 F1 为 0.685，均高于 Sol。它最严重的问题出在 PDF：六页谱普遍缺失音头、谱号和升降号，留下了谱线、符干、符梁等。演奏者拿到这份文件，很难确定该弹哪个音，必须修复导出问题后重新生成。</p>'
  out+='<div class="figures">'
- for model,caption in [('gpt-6-astra','Astra 原提交第 1 页局部：音头与关键音乐字形缺失。'),('gpt-6-sol','Sol 原提交第 1 页局部：音头与谱号可辨，但这不证明转写准确。')]:
+ for model,caption in [('gpt-6-astra', 'Astra 原提交第 1 页局部：音头、谱号等音乐符号缺失。'), ('gpt-6-sol', 'Sol 原提交第 1 页局部：音头和谱号可辨。')]:
   r=by[model];p=OUT/'assets'/('evidence-'+model+'.png')
   from PIL import Image
   src=ROOT/r['score_detail']['evidence_pages'][0];im=Image.open(src);w,h=im.size;im.crop((0,0,w,int(h*.38))).save(p)
   ASSETS.add(p.relative_to(OUT).as_posix())
   out+='<figure><a href="'+ensure(r['score_detail']['evidence_pages'][0])+'"><img loading="lazy" src="../assets/'+p.name+'" alt="'+esc(caption)+'"></a><figcaption>'+caption+' 点击查看整页。</figcaption></figure>'
- out+='</div><p>新版评分因此把“交付能否使用”单独纳入总分。Astra 的原始加权分为 56.07，因 PDF 不可用乘以 0.25，最终 14.02；Sol 的原始加权分为 55.02，因仍需大幅修订乘以 0.6，最终 33.01。这解释了两者排序：Sol 的谱更接近可修改的交付稿，Astra 的音符转写指标则更好。</p>'
- out+='<h3>3. 把音符画到五线谱上，还不够让人按节奏弹出来</h3><p>GLM 的三页 PDF 存在音符挤到谱表之外、边界裁切与重叠；源文件里的十六分、三十二分音符和休止，也没有被正确画成对应的符梁、符尾和休止符。Luna 的十页 PDF 用 G/F 字母代替标准谱号，缺少拍号和应有的变音记号，空白间隔也不能清楚交代节奏。</p><p>即使是较清楚的 Sol 谱面，也有难以直接读拍的问题：第 11 小节在十六分休止后使用三附点二分音符，第 16、18、20 小节多次跨拍使用附点时值。数字上可以加出时长，读谱时却需要反复数拍，必须重新整理节奏写法。</p>'
- out+='<h3>4. 三份文件都存在，不代表它们是同一首交付稿</h3><p>Luna 的 MIDI/XML 一致性只有 4.89%，听 MIDI 和读可编辑谱无法作为彼此可靠的核对。K3 的 MIDI 与 XML 一致，但 PDF 第 17、38 小节与 XML 对不上：XML 末小节有连续音符，PDF 对应位置却出现大段休止和短双音。使用者拿到的是内容不一致的文件，无法知道应以哪一份为准。</p><p>K3 还只给出两个时间锚点，相隔 76 秒，超过题目允许的相邻 0.5–8 秒范围。评分器因此不能按提交映射评估其音高与起音。这是交付中的对齐文件不合规；本次没有替模型修复，也没有把它描述成“1512 个音符全错”。</p>'
- out+='<h3>距离真正能用，还差哪些工作</h3><p>需要先按演奏补齐并校正音符，再把时值整理成容易读拍的声部；最后从同一份乐谱导出 PDF 与 MIDI，逐页确认符号完整，并核对三份文件内容。现有成绩保留了不同完成程度之间的差异，但最高分仍只有 33.01，不能把排名第一理解为可以直接交给演奏者。</p><p class="muted">以上依据既有逐页谱面检查、音符匹配结果与文件一致性检查。新版是对现有答卷的事后统一复评，未重跑或修复答卷，也没有新增钢琴家试奏。'+link('evaluation_versions/20261022_a6_delivery_v2/REPORT.html','完整复评证据')+'</p></section>'
+ out+='</div><p>新版评分将这类交付问题计入最终得分。Astra 的加权分为 56.07，因 PDF 不可用，乘以 0.25 后为 14.02；Sol 的加权分为 55.02，因仍需大幅修订，乘以 0.6 后为 33.01。两者的主要差别在于，Sol 已经交出可以阅读和修改的谱面，Astra 还需要先解决 PDF 导出缺字的问题。</p>'
+ out+='<h3>3. 节奏符号和排版影响读谱</h3><p>GLM 的三页 PDF 有音符超出谱表、边界裁切和重叠的问题。源文件中的十六分音符、三十二分音符和休止，没有正确显示为相应的符梁、符尾和休止符。Luna 的十页 PDF 用 G/F 字母代替标准谱号，缺少拍号和应有的变音记号，节奏也难以从谱面读清。</p><p>Sol 的谱面较清楚，但部分时值写法很费解：第 11 小节在十六分休止后使用三附点二分音符，第 16、18、20 小节多次出现跨拍的附点时值。演奏者需要反复数拍。这些位置应按拍点重新拆分，并用延音线等常规记法整理。</p>'
+ out+='<h3>4. PDF、MIDI 和可编辑谱的内容不一致</h3><p>Luna 的 MIDI/XML 一致性只有 4.89%，播放 MIDI 与阅读可编辑谱时，会遇到大量音符对应不上的情况。</p><p>K3 的 MIDI 与 XML 一致，PDF 第 17、38 小节却与 XML 对不上。XML 末小节有连续音符，PDF 对应位置出现了大段休止和短双音。这几份文件需要统一内容后重新导出。</p><p>K3 的时间映射也不符合要求：它只给出两个锚点，间隔 76 秒，题目要求相邻锚点间隔为 0.5–8 秒。评分器在这一步无法继续评估音高与起音，相关项目因此失分。</p>'
+ out+='<h3>后续需要补的工作</h3><p>这批结果距离直接用于演奏还有较多返工：先按原演奏校正音符和起音，再整理节奏、声部及排版，最后从同一份乐谱导出 PDF 和 MIDI，逐页检查符号，并核对文件内容。Sol 得分最高，为 33.01，主要工作仍是补正音符和调整记谱；Astra 则需要先修复 PDF 的音乐符号显示。</p><p>以上分析依据原提交文件的逐页检查、音符匹配和文件一致性检查。当前分数采用交付导向 v2 标准，对已有答卷统一复评。</p>'+link('evaluation_versions/20261022_a6_delivery_v2/REPORT.html','完整复评证据')+'</section>'
  return out
 
 def assets_section(slug,rows):
@@ -212,7 +212,7 @@ def main():
  (OUT/'assets').mkdir(exist_ok=True)
  for name in ('style.css','traces.js'):shutil.copy2(HERE/name,OUT/'assets'/name);ASSETS.add('assets/'+name)
  before={r['id']:{p:sha(ROOT/p) for p in r['files']} for rows in CASES.values() for r in rows}
- manifest={'version':'A2-score-display-20261022','classification':{'A1':'音视频内容制作与编排','A2':'本地化与使用方式适配','A3':'素材整理、检索与证据构建'},'cases':{},'source_results_sha256':sha(OUT/'RESULTS.json')}
+ manifest={'version':'A2-analysis-rewrite-20261022','classification':{'A1':'音视频内容制作与编排','A2':'本地化与使用方式适配','A3':'素材整理、检索与证据构建'},'cases':{},'source_results_sha256':sha(OUT/'RESULTS.json')}
  for slug,rows in CASES.items():
   traces=[trace(r) for r in rows];(OUT/slug).mkdir(exist_ok=True)
   body=header(TITLES[slug],slug)+'<p class="lead">'+('把手语表达准确地交给不懂手语的观众。' if slug=='sign' else '把这一次真实演奏变成可以照着弹的乐谱。')+'</p><p class="links"><a href="#task">任务定义</a><a href="#results">运行结果</a><a href="#trajectory">运行轨迹</a><a href="#analysis">失败分析</a><a href="#submissions">模型交付</a></p>'

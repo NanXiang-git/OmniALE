@@ -1,7 +1,7 @@
 {
   "passed": true,
-  "version": "A2-dependencies-20261022",
-  "commit": "829137b4e628749b75093ef3dd78d2c74e94c974",
+  "version": "A2-score-display-20261022",
+  "commit": "2b7638933d8459004f6a0463b342c5475ea29dcc",
   "url": "https://nanxiang-git.github.io/OmniALE/",
   "case_urls": {
     "sign": "https://nanxiang-git.github.io/OmniALE/sign/",
@@ -18,11 +18,11 @@
   "online_links_checked": 180,
   "all_http_200": true,
   "desktop_mobile_and_trace_interaction_checks_passed": true,
-  "release": "https://github.com/NanXiang-git/OmniALE/releases/tag/a2-dependencies-20261022",
-  "archive_sha256": "ead2bc43fc96c2140e848ea21b1075bb38a4a9627bd37a98af8cd65b73333396",
-  "archive_bytes": 1503783129,
+  "release": "https://github.com/NanXiang-git/OmniALE/releases/tag/a2-score-display-20261022",
+  "archive_sha256": "791c8ba1fa5bb7b29e5dcb28d7d1e0c9b27edf02d9720ccdd2fd11ecbe58111d",
+  "archive_bytes": 1503767922,
   "archive_files": 2477,
   "archive_public_download_verified": true,
   "archive_server_digest_matches": true,
-  "completed_utc": "2026-10-22T08:07:05.773310+00:00"
+  "completed_utc": "2026-10-22T08:20:17.717236+00:00"
 }

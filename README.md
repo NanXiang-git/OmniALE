@@ -10,4 +10,4 @@
 
 离线使用：在本目录运行 `python -m http.server 8000`，打开 http://localhost:8000/ 。
 
-[完整研究包](https://github.com/NanXiang-git/OmniALE/releases/download/a2-score-display-20261022/A4_A6_research_20261021.zip) · [发布记录](https://github.com/NanXiang-git/OmniALE/releases/tag/a2-score-display-20261022)
+[完整研究包](https://github.com/NanXiang-git/OmniALE/releases/download/a2-analysis-rewrite-20261022/A4_A6_research_20261021.zip) · [发布记录](https://github.com/NanXiang-git/OmniALE/releases/tag/a2-analysis-rewrite-20261022)
