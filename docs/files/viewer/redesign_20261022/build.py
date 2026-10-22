@@ -2,13 +2,14 @@
 from pathlib import Path
 from collections import Counter
 from html import escape
+from decimal import Decimal, ROUND_HALF_UP
 from urllib.parse import quote
 import json, re, shutil, hashlib
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 OUT=ROOT/'deliverables/A4_A6_research_20261021'
-TAG='a2-dependencies-20261022'
+TAG='a2-score-display-20261022'
 RELEASE='https://github.com/NanXiang-git/OmniALE/releases/tag/'+TAG
 DOWNLOAD='https://github.com/NanXiang-git/OmniALE/releases/download/'+TAG+'/A4_A6_research_20261021.zip'
 ROWS=json.loads((OUT/'RESULTS.json').read_text(encoding='utf-8'))
@@ -24,6 +25,7 @@ DEPENDENCIES=json.loads((HERE/'DEPENDENCIES.json').read_text(encoding='utf-8'))[
 def obj(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def put(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding='utf-8')
 def esc(s):return escape(str(s),quote=True)
+def score_text(value):return format(Decimal(str(value)).quantize(Decimal('0.01'),rounding=ROUND_HALF_UP),'.2f')
 def sha(p):
  with Path(p).open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 def ensure(path):
@@ -108,10 +110,10 @@ def sign_analysis(rows):
  metrics={r['model']:sign_metrics(r) for r in rows};quotes={r['model']:srt_quotes(r) for r in rows}
  truth=obj(ROOT/'A4_sign_bilingual/evaluator/truth.json');by={u['id']:u for u in truth['units']}
  out='<section id="analysis"><h2>四、失败分析</h2><p class="lead">五份答卷都交出了四个要求文件，但没有一份达到可交付的翻译质量。主要缺口在字幕说了什么。</p>'
- out+='<h3>1. 字幕能播放，原意却只保留了一小部分</h3><p>五份答卷的可读性和文件交付项都拿到了满分。这只能说明字幕格式与封装合格。占 65 分的语义项，最高只有 23.359 分；按现有逐信息点评审，Astra 只有 2 段达到全部信息点满分，其他四份均为 0 段。部分段落保留了人物或动作，所以仍有部分分，不能把“未满分”都理解为完全没译对。</p>'
+ out+='<h3>1. 字幕能播放，原意却只保留了一小部分</h3><p>五份答卷的可读性和文件交付项都拿到了满分。这只能说明字幕格式与封装合格。占 65 分的语义项，最高只有 23.36 分；按现有逐信息点评审，Astra 只有 2 段达到全部信息点满分，其他四份均为 0 段。部分段落保留了人物或动作，所以仍有部分分，不能把“未满分”都理解为完全没译对。</p>'
  rr=[]
  for r in rows:
-  c,u=metrics[r['model']];rr.append([esc(r['model']),f"{c['meaning']:.3f} / 65",f"{sum(v>=1-1e-9 for v in u.values())} / 23",f"{c['readability']+c['delivery']:.0f} / 10",evidence_link(r)])
+  c,u=metrics[r['model']];rr.append([esc(r['model']),score_text(c['meaning'])+' / 65',f"{sum(v>=1-1e-9 for v in u.values())} / 23",score_text(c['readability']+c['delivery'])+' / 10',evidence_link(r)])
  out+=table(['模型','语义得分','信息点全部满分的片段','可读性＋文件交付','依据'],rr)
  out+='<h3>2. 流畅的句子，也可能把整句话换掉</h3><p>以第 2 段为例，作者标注的意思是“我们去吃饭吧”。有的答卷保留了这个提议，有的写成唱歌、打电话或道谢。这些差异会直接改变观众对表达者意图的理解，不能当成措辞不同。</p>'
  out+=table(['模型','第 2 段的实际中文字幕','实际英文字幕'],[[esc(r['model']),esc(quotes[r['model']]['S02']['zh']),esc(quotes[r['model']]['S02']['en'])] for r in rows])
@@ -119,8 +121,8 @@ def sign_analysis(rows):
  out+=table(['片段','作者标注','Astra 字幕','K3 字幕','GLM 字幕'],[['S23',esc(by['S23']['zh_reference']),esc(quotes['gpt-6-astra']['S23']['zh']),esc(quotes['k3']['S23']['zh']),esc(quotes['glm-5.3-flash']['S23']['zh'])]])
  out+='<p class="muted">以上译文直接读取各模型提交的 SRT，并按 segments.json 对应到片段；原意依据 '+link('A4_sign_bilingual/evaluator/truth.json','作者标注与信息点')+'。这是一种按既有标注进行的比较，不是新增手语专家认证。</p>'
  out+='<h3>3. 中英一致，并不能证明翻译正确</h3><p>K3 把第 2 段写成“我爱唱歌 / I love singing”，两种语言彼此一致，却一起偏离了“我们去吃饭吧”。因此，不能用英语是否自然、两套字幕是否相互对应，代替对原手语含义的核对。现有评分已经将双语项与语义质量关联，避免把同一个错误翻译两遍就拿到高分。</p>'
- out+='<h3>4. 标出不确定是必要的，但不能代替完成翻译</h3><p>Luna 的 23 段均为“[无法确认] / [unclear]”。它没有给观众编造内容，但观众也无法靠这份字幕理解任何一句话。其 26.988 分来自时间、可读性、交付和置信度项目，语义与双语内容均为 0 分；这个总分不代表译出了约四分之一的内容。</p><p>Sol 则保留了一些词，并用占位符标出缺口。但第 2 段的“给[无法确认]打电话说一声”仍然明确添加了打电话这一动作。只把人物写成不确定，并不能让句子中其余未经确认的内容成立。</p>'
- out+='<h3>这些分数能说明什么</h3><p>本轮能确认：格式制作普遍完成，语言理解仍不足以支持直接交付。Astra 的 39 分受到严重语义错误及覆盖不足封顶；GLM 的 21.566234 分只是已确认小计，另有 12 分时间对齐尚未核验。其余时间对齐分也来自片段与抽帧检查，不是逐手势连续观看认证。完整语义判读仍需要中国手语专业复核。</p>'
+ out+='<h3>4. 标出不确定是必要的，但不能代替完成翻译</h3><p>Luna 的 23 段均为“[无法确认] / [unclear]”。它没有给观众编造内容，但观众也无法靠这份字幕理解任何一句话。其 26.99 分来自时间、可读性、交付和置信度项目，语义与双语内容均为 0.00 分；这个总分不代表译出了约四分之一的内容。</p><p>Sol 则保留了一些词，并用占位符标出缺口。但第 2 段的“给[无法确认]打电话说一声”仍然明确添加了打电话这一动作。只把人物写成不确定，并不能让句子中其余未经确认的内容成立。</p>'
+ out+='<h3>这些分数能说明什么</h3><p>本轮能确认：格式制作普遍完成，语言理解仍不足以支持直接交付。Astra 的 39.00 分受到严重语义错误及覆盖不足封顶；GLM 的 21.57 分只是已确认小计，另有 12 分时间对齐尚未核验。其余时间对齐分也来自片段与抽帧检查，不是逐手势连续观看认证。完整语义判读仍需要中国手语专业复核。</p>'
  out+='<details><summary>查看全部 23 段的语义信息点得分比例</summary><p class="muted">100% 表示该片段的全部计分信息点得分；不是翻译正确概率。每格来自已有评分，未重新判分。</p>'
  out+=table(['片段']+[esc(r['model']) for r in rows],[[esc(sid)]+[f"{metrics[r['model']][1][sid]*100:.1f}%" for r in rows] for sid in by], 'compact')+'</details></section>'
  return out
@@ -133,7 +135,7 @@ def piano_analysis(rows):
  for r in rows:
   s=r['score_detail'];c=s['components'];valid=not s.get('metric_errors');rr.append([esc(r['model']),f"{c['pitch_global_f1']/20:.3f}" if valid else '无法评估¹',f"{c['rhythm_strict_f1']/20:.3f}" if valid else '无法评估¹',f"{c['midi_xml_consistency']/10*100:.2f}%",evidence_link(r)])
  out+=table(['模型','音高匹配 F1 · 200ms','严格起音 F1 · 80ms','MIDI/XML 一致性','依据'],rr)
- out+='<p class="muted">¹ K3 提交的时间映射不符合题目规则，音符准确性项目按规则计 0 分，但不能据此认定所有音符都错了。F1 同时考虑漏写和多写；一致性衡量两份输出是否对应，不衡量它们是否忠于原演奏。</p>'
+ out+='<p class="muted">¹ K3 提交的时间映射不符合题目规则，音符准确性项目按规则计 0.00 分，但不能据此认定所有音符都错了。F1 同时考虑漏写和多写；一致性衡量两份输出是否对应，不衡量它们是否忠于原演奏。</p>'
  out+='<h3>2. 音符转写较准，也可能交出无法阅读的 PDF</h3><p>Astra 的音高 F1 为 0.712，严格起音 F1 为 0.685，均好于 Sol。但它的六页 PDF 普遍缺失音头、谱号和升降号，只剩下谱线、符干和符梁等。演奏者无法可靠确定音高；这种交付不能因为可编辑文件里的音符较准而被视为可用。</p>'
  out+='<div class="figures">'
  for model,caption in [('gpt-6-astra','Astra 原提交第 1 页局部：音头与关键音乐字形缺失。'),('gpt-6-sol','Sol 原提交第 1 页局部：音头与谱号可辨，但这不证明转写准确。')]:
@@ -142,16 +144,16 @@ def piano_analysis(rows):
   src=ROOT/r['score_detail']['evidence_pages'][0];im=Image.open(src);w,h=im.size;im.crop((0,0,w,int(h*.38))).save(p)
   ASSETS.add(p.relative_to(OUT).as_posix())
   out+='<figure><a href="'+ensure(r['score_detail']['evidence_pages'][0])+'"><img loading="lazy" src="../assets/'+p.name+'" alt="'+esc(caption)+'"></a><figcaption>'+caption+' 点击查看整页。</figcaption></figure>'
- out+='</div><p>新版评分因此把“交付能否使用”单独纳入总分。Astra 的原始加权分为 56.074159，因 PDF 不可用乘以 0.25，最终 14.018540；Sol 的原始加权分为 55.018166，因仍需大幅修订乘以 0.6，最终 33.010900。这解释了两者排序：Sol 的谱更接近可修改的交付稿，Astra 的音符转写指标则更好。</p>'
+ out+='</div><p>新版评分因此把“交付能否使用”单独纳入总分。Astra 的原始加权分为 56.07，因 PDF 不可用乘以 0.25，最终 14.02；Sol 的原始加权分为 55.02，因仍需大幅修订乘以 0.6，最终 33.01。这解释了两者排序：Sol 的谱更接近可修改的交付稿，Astra 的音符转写指标则更好。</p>'
  out+='<h3>3. 把音符画到五线谱上，还不够让人按节奏弹出来</h3><p>GLM 的三页 PDF 存在音符挤到谱表之外、边界裁切与重叠；源文件里的十六分、三十二分音符和休止，也没有被正确画成对应的符梁、符尾和休止符。Luna 的十页 PDF 用 G/F 字母代替标准谱号，缺少拍号和应有的变音记号，空白间隔也不能清楚交代节奏。</p><p>即使是较清楚的 Sol 谱面，也有难以直接读拍的问题：第 11 小节在十六分休止后使用三附点二分音符，第 16、18、20 小节多次跨拍使用附点时值。数字上可以加出时长，读谱时却需要反复数拍，必须重新整理节奏写法。</p>'
  out+='<h3>4. 三份文件都存在，不代表它们是同一首交付稿</h3><p>Luna 的 MIDI/XML 一致性只有 4.89%，听 MIDI 和读可编辑谱无法作为彼此可靠的核对。K3 的 MIDI 与 XML 一致，但 PDF 第 17、38 小节与 XML 对不上：XML 末小节有连续音符，PDF 对应位置却出现大段休止和短双音。使用者拿到的是内容不一致的文件，无法知道应以哪一份为准。</p><p>K3 还只给出两个时间锚点，相隔 76 秒，超过题目允许的相邻 0.5–8 秒范围。评分器因此不能按提交映射评估其音高与起音。这是交付中的对齐文件不合规；本次没有替模型修复，也没有把它描述成“1512 个音符全错”。</p>'
- out+='<h3>距离真正能用，还差哪些工作</h3><p>需要先按演奏补齐并校正音符，再把时值整理成容易读拍的声部；最后从同一份乐谱导出 PDF 与 MIDI，逐页确认符号完整，并核对三份文件内容。现有成绩保留了不同完成程度之间的差异，但最高分仍只有 33.010900，不能把排名第一理解为可以直接交给演奏者。</p><p class="muted">以上依据既有逐页谱面检查、音符匹配结果与文件一致性检查。新版是对现有答卷的事后统一复评，未重跑或修复答卷，也没有新增钢琴家试奏。'+link('evaluation_versions/20261022_a6_delivery_v2/REPORT.html','完整复评证据')+'</p></section>'
+ out+='<h3>距离真正能用，还差哪些工作</h3><p>需要先按演奏补齐并校正音符，再把时值整理成容易读拍的声部；最后从同一份乐谱导出 PDF 与 MIDI，逐页确认符号完整，并核对三份文件内容。现有成绩保留了不同完成程度之间的差异，但最高分仍只有 33.01，不能把排名第一理解为可以直接交给演奏者。</p><p class="muted">以上依据既有逐页谱面检查、音符匹配结果与文件一致性检查。新版是对现有答卷的事后统一复评，未重跑或修复答卷，也没有新增钢琴家试奏。'+link('evaluation_versions/20261022_a6_delivery_v2/REPORT.html','完整复评证据')+'</p></section>'
  return out
 
 def assets_section(slug,rows):
  out='<section id="submissions"><h2>五、查看模型交付</h2><p>按上表顺序查看原始交付。预览用于阅读；下载链接保留模型提交的文件。</p>'
  for r in rows:
-  out+='<details id="'+r['id']+'"><summary>'+esc(r['model'])+' · '+f"{r['score']:.6f}"+' 分 · 展开交付文件</summary><div class="links">'
+  out+='<details id="'+r['id']+'"><summary>'+esc(r['model'])+' · '+score_text(r['score'])+' 分 · 展开交付文件</summary><div class="links">'
   for f in r['files']:out+=link(f,Path(f).name)
   out+=evidence_link(r,'逐项评分')+'</div>'
   if slug=='sign':
@@ -182,14 +184,14 @@ def task_section(slug):
 def results_section(slug,rows):
  rr=[]
  for r in rows:
-  score=f"{r['score']:.6f}";suffix=' <span class="badge">已确认小计</span>' if slug=='sign' and r['model']=='glm-5.3-flash' else ''
+  score=score_text(r['score']);suffix=' <span class="badge">已确认小计</span>' if slug=='sign' and r['model']=='glm-5.3-flash' else ''
   rr.append(['<a href="#'+r['id']+'">'+esc(r['model'])+'</a>','Codex CLI',esc(r['reasoning_effort']),'<span class="score">'+score+'</span>'+suffix,'未通过' if not suffix else '尚未形成完整总分',evidence_link(r)+' · <a href="traces.html#model='+r['id']+'">轨迹</a>'])
  out='<section id="results"><h2>二、运行结果</h2><p>按当前展示分数从高到低排列，满分 100。每个模型展示当前采用的一次答卷。</p>'+table(['模型','Harness','推理强度','得分 / 100','交付判断','查看'],rr)
- if slug=='sign':out+='<p class="note">GLM 的 21.566234 是已确认小计，另有 12 分时间对齐待核验，完整总分尚未形成。排序按当前已确认分；它与其他模型的完整判分并非完全同口径。</p>'
+ if slug=='sign':out+='<p class="note">GLM 的 21.57 是已确认小计，另有 12 分时间对齐待核验，完整总分尚未形成。排序按当前已确认分；它与其他模型的完整判分并非完全同口径。</p>'
  out+='<details><summary>历史运行与评分版本</summary><p class="muted">以下仅供追溯，不参与当前排名。没有有效分数的记录标为“未评分”。原始编号保留在归档文件中。</p>'
  historical=[r for r in ROWS if r['case']==('A4' if slug=='sign' else 'A6') and r['id'] not in SELECTED[slug]]
  historical.sort(key=lambda r:(r['score'] is None,-(r['score'] or 0)))
- out+=table(['模型','归档记录','归档分数','证据'],[[esc(r['model']),esc(r['attempt']),f"{r['score']:.6f}" if r['score'] is not None else '未评分',link(r['runpath'],'运行记录')+((' · '+link(r['scorepath'],'评分')) if r.get('scorepath') and (ROOT/r['scorepath']).exists() else '')] for r in historical])+'</details></section>'
+ out+=table(['模型','归档记录','归档分数','证据'],[[esc(r['model']),esc(r['attempt']),score_text(r['score']) if r['score'] is not None else '未评分',link(r['runpath'],'运行记录')+((' · '+link(r['scorepath'],'评分')) if r.get('scorepath') and (ROOT/r['scorepath']).exists() else '')] for r in historical])+'</details></section>'
  return out
 
 def trace_section(traces):
@@ -210,7 +212,7 @@ def main():
  (OUT/'assets').mkdir(exist_ok=True)
  for name in ('style.css','traces.js'):shutil.copy2(HERE/name,OUT/'assets'/name);ASSETS.add('assets/'+name)
  before={r['id']:{p:sha(ROOT/p) for p in r['files']} for rows in CASES.values() for r in rows}
- manifest={'version':'A2-dependencies-20261022','classification':{'A1':'音视频内容制作与编排','A2':'本地化与使用方式适配','A3':'素材整理、检索与证据构建'},'cases':{},'source_results_sha256':sha(OUT/'RESULTS.json')}
+ manifest={'version':'A2-score-display-20261022','classification':{'A1':'音视频内容制作与编排','A2':'本地化与使用方式适配','A3':'素材整理、检索与证据构建'},'cases':{},'source_results_sha256':sha(OUT/'RESULTS.json')}
  for slug,rows in CASES.items():
   traces=[trace(r) for r in rows];(OUT/slug).mkdir(exist_ok=True)
   body=header(TITLES[slug],slug)+'<p class="lead">'+('把手语表达准确地交给不懂手语的观众。' if slug=='sign' else '把这一次真实演奏变成可以照着弹的乐谱。')+'</p><p class="links"><a href="#task">任务定义</a><a href="#results">运行结果</a><a href="#trajectory">运行轨迹</a><a href="#analysis">失败分析</a><a href="#submissions">模型交付</a></p>'
@@ -226,7 +228,7 @@ def main():
  # Keep links sent before the redesign working, including model anchors.
  landing+='<script>(()=>{const h=decodeURIComponent(location.hash.slice(1));const p=h.startsWith("A4")?"sign":h.startsWith("A6")?"piano":null;if(p)location.replace(p+"/index.html"+(h.length>2?"#"+encodeURIComponent(h):""));})();</script>'+footer()
  (OUT/'index.html').write_text(landing,encoding='utf-8');ASSETS.add('index.html')
- readme='# OmniALE · A2 本地化与使用方式适配\n\n[案例首页](https://nanxiang-git.github.io/OmniALE/) · [手语字幕](https://nanxiang-git.github.io/OmniALE/sign/) · [钢琴转谱](https://nanxiang-git.github.io/OmniALE/piano/)\n\n两题已拆为独立案例页，运行轨迹各自放在 traces.html。当前成绩按得分倒序排列。分类依据项目原始 A1/A2/A3 定义，两题均属于 A2；归档文件中的旧编号保留。\n\n页面与失败分析更新，不重新运行模型或改分。手语 GLM 为已确认小计，12 分时间对齐待核验；钢琴使用交付导向 v2 事后复评。\n\n轨迹事件合并开始与结束，推理事件只计数，不发布内部推理正文。依赖按本轮实际使用统计，包括预装包；Python 包与系统媒体工具分别列出。\n\n离线使用：在本目录运行 `python -m http.server 8000`，打开 http://localhost:8000/ 。\n\n[完整研究包]('+DOWNLOAD+') · [发布记录]('+RELEASE+')\n'
+ readme='# OmniALE · A2 本地化与使用方式适配\n\n[案例首页](https://nanxiang-git.github.io/OmniALE/) · [手语字幕](https://nanxiang-git.github.io/OmniALE/sign/) · [钢琴转谱](https://nanxiang-git.github.io/OmniALE/piano/)\n\n两题已拆为独立案例页，运行轨迹各自放在 traces.html。当前成绩按得分倒序排列，展示分数四舍五入保留两位小数，原始评分数据保留完整精度。分类依据项目原始 A1/A2/A3 定义，两题均属于 A2；归档文件中的旧编号保留。\n\n页面与失败分析更新，不重新运行模型或改分。手语 GLM 为已确认小计，12 分时间对齐待核验；钢琴使用交付导向 v2 事后复评。\n\n轨迹事件合并开始与结束，推理事件只计数，不发布内部推理正文。依赖按本轮实际使用统计，包括预装包；Python 包与系统媒体工具分别列出。\n\n离线使用：在本目录运行 `python -m http.server 8000`，打开 http://localhost:8000/ 。\n\n[完整研究包]('+DOWNLOAD+') · [发布记录]('+RELEASE+')\n'
  (OUT/'README.md').write_text(readme,encoding='utf-8')
  for name in ('benchmark_report.html','benchmark_viewer.html'):
   target='deliverables/A4_A6_research_20261021/index.html';(ROOT/name).write_text('<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OmniALE · 案例首页</title><p><a href="'+target+'">打开 A2 案例首页</a></p><script>location.replace('+json.dumps(target)+'+location.hash);</script></html>',encoding='utf-8')

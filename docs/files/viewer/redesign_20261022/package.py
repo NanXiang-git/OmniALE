@@ -29,7 +29,7 @@ def prepare():
  (evidence/'visual_qa').mkdir(exist_ok=True)
  for p in (HERE/'visual_qa').iterdir():
   if p.is_file() and p.suffix in ('.png','.json') and p.name!='results-table.png':shutil.copy2(p,evidence/'visual_qa'/p.name)
- put(SOURCE/'VALIDATION.json',validation|{'visual_checks':visual,'version':'A2-dependencies-20261022'})
+ put(SOURCE/'VALIDATION.json',validation|{'visual_checks':visual,'version':'A2-score-display-20261022'})
  manifest=obj(SOURCE/'SITE_MANIFEST.json');paths=set(manifest['assets'])|{'index.html','README.md','RESULTS.json','SITE_MANIFEST.json','VALIDATION.json'}
  paths.update(p.relative_to(SOURCE).as_posix() for p in evidence.rglob('*') if p.is_file())
  # Follow HTML evidence links without publishing the entire 1.5 GB archive to Pages.
