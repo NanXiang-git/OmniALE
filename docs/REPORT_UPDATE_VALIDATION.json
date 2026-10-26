@@ -1,0 +1,32 @@
+{
+  "version": "A4-A6-report-enrichment-20261026",
+  "pages": [
+    {
+      "route": "index.html",
+      "http_status": 200,
+      "mobile_no_overflow": true
+    },
+    {
+      "route": "sign/index.html",
+      "http_status": 200,
+      "mobile_no_overflow": true
+    },
+    {
+      "route": "piano/index.html",
+      "http_status": 200,
+      "mobile_no_overflow": true
+    }
+  ],
+  "page_errors": [],
+  "missing_local_links": [],
+  "duplicate_ids": [],
+  "checks": {
+    "A4_component_sum": true,
+    "A4_critical_error_count": true,
+    "A6_component_sum": true,
+    "A6_delivery_formula": true,
+    "source_results_unchanged": true,
+    "frozen_evidence_matches_current_repository": true
+  },
+  "passed": true
+}

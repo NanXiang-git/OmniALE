@@ -957,6 +957,19 @@
     "traces/A6_gpt-6-astra_20261022_a6astra_high40.jsonl",
     "traces/A6_gpt-6-luna_missing8.jsonl",
     "traces/A6_gpt-6-sol_new_20261021.jsonl",
-    "traces/A6_k3_20261022_k3_a6_60_clean.jsonl"
-  ]
+    "traces/A6_k3_20261022_k3_a6_60_clean.jsonl",
+    "REPORT_ANALYSIS.json",
+    "files/benchmark_runs/20261021_a4astra_high40/grades/A4_gpt-6-astra/technical.json"
+  ],
+  "report_analysis": {
+    "version": "A4-A6-report-enrichment-20261026",
+    "updated": "2026-10-26",
+    "source": "REPORT_ANALYSIS.json",
+    "pages": [
+      "index.html#report-overview",
+      "sign/index.html#astra-report",
+      "piano/index.html#astra-report"
+    ],
+    "scores_unchanged": true
+  }
 }

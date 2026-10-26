@@ -1,0 +1,219 @@
+{
+  "version": "A4-A6-report-enrichment-20261026",
+  "updated": "2026-10-26",
+  "scope": "Presentation and diagnostic analysis only; original submissions, grades, and rankings unchanged.",
+  "A4": {
+    "model": "gpt-6-astra",
+    "score_source": "files/benchmark_runs/20261021_a4astra_high40/grades/A4_gpt-6-astra/score.json",
+    "raw_score": 52.976,
+    "final_score": 39,
+    "components": {
+      "meaning": 23.359,
+      "bilingual": 2.875,
+      "timing": 12.0,
+      "readability": 5.0,
+      "delivery": 5,
+      "calibration": 4.742
+    },
+    "component_maxima": {
+      "meaning": 65,
+      "bilingual": 8,
+      "timing": 12,
+      "readability": 5,
+      "delivery": 5,
+      "calibration": 5
+    },
+    "caps": [
+      [
+        39,
+        "critical_semantic_error"
+      ],
+      [
+        39,
+        "semantic_coverage_below_half"
+      ]
+    ],
+    "critical_errors": [
+      {
+        "id": "S03",
+        "errors": [
+          "invented_fact"
+        ],
+        "note": "00:09–00:12 的 person、ability、force 应为‘你能否真的自己来’，字幕却写‘衣服/Clothes’，既未保留询问也加入无据衣物事实；按作者标注判定。"
+      },
+      {
+        "id": "S07",
+        "errors": [
+          "question_as_fact"
+        ],
+        "note": "00:29–00:32 的 group ‘我们/We’与 event 中的去保留，篮球缺失；原 question 是问何时去，字幕‘我们去[无法确认]。’改作陈述。"
+      },
+      {
+        "id": "S10",
+        "errors": [
+          "invented_fact"
+        ],
+        "note": "00:45–00:46 的 group ‘我们/We’保留；again 重新开始及提议 force 均失，字幕却断言‘回家/go home’，添加标注没有的目的地。"
+      },
+      {
+        "id": "S13",
+        "errors": [
+          "wrong_person"
+        ],
+        "note": "00:59–01:03 的 relation 应为‘和你’、time 为美好晚上、aspect 为已度过；‘大家/Everyone…看/see’换了人物并漏时态。"
+      },
+      {
+        "id": "S18",
+        "errors": [
+          "wrong_object"
+        ],
+        "note": "01:25–01:26 的 person 你、object 所穿鞋子、question 什么鞋均未保留；字幕‘衣服/clothes’把核心对象换成衣物。"
+      },
+      {
+        "id": "S20",
+        "errors": [
+          "invented_fact"
+        ],
+        "note": "01:36–01:38 的 pair 你俩被‘你/you’弱化，relation 缘分全失；字幕‘来多久/been here’加入来源没有的停留时长事实，未另猜恋爱。"
+      },
+      {
+        "id": "S23",
+        "errors": [
+          "aspect_flip"
+        ],
+        "note": "01:56–01:58 的 activity 看书保留，scarcity 没多少剩余时间却写成‘看完了/Finished reading’，把时间不足改成阅读完成；force 标点歧义不扣。"
+      }
+    ],
+    "zero_semantic_segments": [
+      "S03",
+      "S04",
+      "S13",
+      "S16",
+      "S17",
+      "S18"
+    ],
+    "full_semantic_segments": [
+      "S02",
+      "S09"
+    ],
+    "root_cause_status": "Analysis inferred from existing annotations, output, and observable tool traces; not a new expert review."
+  },
+  "A6": {
+    "model": "gpt-6-astra",
+    "score_source": "files/benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/score.json",
+    "technical_source": "files/benchmark_runs/20261022_a6astra_high40/grades/A6_gpt-6-astra/technical.json",
+    "raw_score": 74.44802239194782,
+    "final_score": 44.668813,
+    "delivery_factor": 0.6,
+    "components": {
+      "pitch_global_f1": 14.984069185252618,
+      "pitch_time_macro_f1": 5.678824409733191,
+      "pitch_register_macro_f1": 5.579052329051222,
+      "rhythm_strict_f1": 14.456076467910787,
+      "midi_xml_consistency": 10.0,
+      "layout": 11.25,
+      "notation": 7.5,
+      "fidelity": 5
+    },
+    "component_maxima": {
+      "pitch_global_f1": 20,
+      "pitch_time_macro_f1": 7.5,
+      "pitch_register_macro_f1": 7.5,
+      "rhythm_strict_f1": 20,
+      "midi_xml_consistency": 10,
+      "layout": 15,
+      "notation": 15,
+      "fidelity": 5
+    },
+    "acceptance_checks": {
+      "delivery_ready": false,
+      "pitch_precision": false,
+      "pitch_recall": false,
+      "strict_f1": true,
+      "time_coverage": true,
+      "register_coverage": true,
+      "midi_consistency": true,
+      "visual_minimum": false
+    },
+    "metrics": {
+      "pitch_global_f1": 0.7492034592626309,
+      "pitch_time_macro_f1": 0.7571765879644254,
+      "pitch_register_macro_f1": 0.7438736438734962,
+      "rhythm_strict_f1": 0.7228038233955394
+    },
+    "note_counts": {
+      "predicted_count": 1094,
+      "reference_count": 1103,
+      "coarse_tp": 823,
+      "strict_tp": 794,
+      "false_positive": 271,
+      "false_negative": 280
+    },
+    "time_bins": [
+      {
+        "bin": 0,
+        "predicted": 122,
+        "reference": 147,
+        "f1": 0.8104089219330854
+      },
+      {
+        "bin": 1,
+        "predicted": 110,
+        "reference": 131,
+        "f1": 0.8381742738589212
+      },
+      {
+        "bin": 2,
+        "predicted": 219,
+        "reference": 216,
+        "f1": 0.735632183908046
+      },
+      {
+        "bin": 3,
+        "predicted": 234,
+        "reference": 240,
+        "f1": 0.759493670886076
+      },
+      {
+        "bin": 4,
+        "predicted": 198,
+        "reference": 170,
+        "f1": 0.6603260869565217
+      },
+      {
+        "bin": 5,
+        "predicted": 211,
+        "reference": 199,
+        "f1": 0.7390243902439024
+      }
+    ],
+    "register_bins": [
+      {
+        "bin": 0,
+        "predicted": 373,
+        "reference": 305,
+        "f1": 0.6342182890855457
+      },
+      {
+        "bin": 1,
+        "predicted": 408,
+        "reference": 388,
+        "f1": 0.8366834170854272
+      },
+      {
+        "bin": 2,
+        "predicted": 313,
+        "reference": 410,
+        "f1": 0.7607192254495159
+      }
+    ],
+    "version_note": {
+      "global_v2_template_retrospective": true,
+      "latest_astra_rules_frozen_before_run": true,
+      "latest_astra_retrospective": false
+    },
+    "root_cause_status": "Analysis inferred from metrics, notes, and previous model-assisted score review; no new audio audition or pianist play-through."
+  },
+  "release_url": "https://github.com/NanXiang-git/OmniALE/releases/tag/a4-a6-report-20261026",
+  "archive_url": "https://github.com/NanXiang-git/OmniALE/releases/download/a4-a6-report-20261026/A4_A6_research_20261021.zip"
+}
