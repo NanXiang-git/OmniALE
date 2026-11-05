@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": {
+    "issues": true,
+    "technical_points": true,
+    "readability_points": true,
+    "localization": true
+  },
+  "technical_points": 5,
+  "readability_points": 5.0
+}

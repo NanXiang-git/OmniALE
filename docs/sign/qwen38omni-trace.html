@@ -1,0 +1,34 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Qwen 手语测试轨迹</title><link rel="stylesheet" href="../assets/style.css"><body><main><h1>Qwen 3.8 Omni · 接口中断</h1><p><a href="index.html#qwen38omni-20261104">返回测试记录</a> · <a href="../results/qwen38omni-20261104/api-audit.json">API 审计</a></p><p>只公开工具动作与故障事件，不公开私有推理正文。未形成答卷及评分。</p><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc &#x27;cat /candidate/TASK.md; echo \&quot;---\&quot;; cat /workspace/DEADLINE.json; echo \&quot;---\&quot;; ls -la /candidate /workspace&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc &#x27;date +%s; cat /candidate/input_manifest.json; echo \&quot;---\&quot;; cat /candidate/segments.template.json; echo \&quot;---\&quot;; ls -la /candidate/input; cat /candidate/SOURCE_NOTICE.md; echo \&quot;---\&quot;; ls /qwen_runtime/&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc &#x27;cd /workspace &amp;&amp; mkdir -p scratch/clips scratch/frames scratch/logs &amp;&amp; ffprobe -v error -show_format -show_streams /candidate/input/source.mp4 | head -60; echo \&quot;=== qwen_video.py ===\&quot;; sed -n 1,120p /qwen_runtime/qwen_video.py&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc \&quot;cd /workspace/scratch &amp;&amp; cat &gt; cut.py &lt;&lt;&#x27;EOF&#x27;\nimport json, subprocess, os\nm=json.load(open(&#x27;/candidate/input_manifest.json&#x27;))\nsegs=m[&#x27;segments&#x27;]\nos.makedirs(&#x27;clips&#x27;,exist_ok=True)\nfor s in segs:\n    dur=s[&#x27;end&#x27;]-s[&#x27;start&#x27;]\n    out=f\\\&quot;clips/{s[&#x27;id&#x27;]}.mp4\\\&quot;\n    cmd=[&#x27;ffmpeg&#x27;,&#x27;-y&#x27;,&#x27;-v&#x27;,&#x27;error&#x27;,&#x27;-ss&#x27;,f\\\&quot;{s[&#x27;start&#x27;]:.3f}\\\&quot;,&#x27;-i&#x27;,&#x27;/candidate/input/source.mp4&#x27;,&#x27;-t&#x27;,f\\\&quot;{dur:.3f}\\\&quot;,\n         &#x27;-c:v&#x27;,&#x27;libx264&#x27;,&#x27;-crf&#x27;,&#x27;20&#x27;,&#x27;-preset&#x27;,&#x27;veryfast&#x27;,&#x27;-an&#x27;,&#x27;-pix_fmt&#x27;,&#x27;yuv420a&#x27; if False else &#x27;yuv420p&#x27;,out]\n    subprocess.run(cmd,check=True)\n    print(s[&#x27;id&#x27;],round(dur,2),os.path.getsize(out)//1024,&#x27;KB&#x27;)\nEOF\npython3 cut.py\&quot;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc \&quot;cd /workspace/scratch &amp;&amp; mkdir -p qw &amp;&amp; cat &gt; prompt.txt &lt;&lt;&#x27;EOF&#x27;\n这是一段中国手语(CSL)独立片段，无音轨、无字幕。请只做视觉分析，按以下结构回答：\n1) 动作序列：按时间顺序逐个描述表达者的手势（手形、起始位置、运动方向、重复次数、左右手）、面部表情（眉毛上扬/紧皱、嘴型、点头/摇头、头歪斜）和身体朝向。\n2) Gloss：给出最可能的手语词序（中文词），不确定的词后面加[?]。\n3) 中文意思：给出最可能的完整自然中文句。注意：疑问句通常由眉毛上扬/身体前倾判断；否定由摇头、摆手、手掌向外推判断；注意人称（我/你/他）、数量、时间词（昨天/明天/将来）、完成态（了/过/已经）。\n4) 备选：给出1-2个其他可能的解释。\n5) 置信度：0-1，并说明哪些部分不确定。\n重要：忽略背景中的商品、招牌、包装文字和装饰，除非表达者明确用手指向它。不要编造画面里没有的信息，宁可标[?]。\nEOF\ncat &gt; run_qw.sh &lt;&lt;&#x27;EOF&#x27;\n#\&quot;&#x27;!/bin/bash\nP=$(cat /workspace/scratch/prompt.txt)\nfor id in \&quot;$@\&quot;; do\n  ( python3 /qwen_runtime/qwen_video.py /workspace/scratch/clips/$id.mp4 --prompt \&quot;$P\&quot; --output /workspace/scratch/qw/$id.json &gt; /workspace/scratch/logs/$id.log 2&gt;&amp;1 ) &amp;\ndone\nwait\nEOF\nchmod +x run_qw.sh &amp;&amp; ./run_qw.sh S01 S02 S03 S04 S05 S06 &amp;&amp; ls -la qw/&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>error</summary><pre>{
+  &quot;type&quot;: &quot;error&quot;,
+  &quot;message&quot;: &quot;unexpected status 502 Bad Gateway: {\&quot;error\&quot;: \&quot;(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;\\u8fdc\\u7a0b\\u4e3b\\u673a\\u5f3a\\u8feb\\u5173\\u95ed\\u4e86\\u4e00\\u4e2a\\u73b0\\u6709\\u7684\\u8fde\\u63a5\\u3002&#x27;, None, 10054, None))\&quot;}, url: http://127.0.0.1:8765/v1/responses&quot;
+}</pre></details><details><summary>turn.failed</summary><pre>{
+  &quot;type&quot;: &quot;turn.failed&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;unexpected status 502 Bad Gateway: {\&quot;error\&quot;: \&quot;(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;\\u8fdc\\u7a0b\\u4e3b\\u673a\\u5f3a\\u8feb\\u5173\\u95ed\\u4e86\\u4e00\\u4e2a\\u73b0\\u6709\\u7684\\u8fde\\u63a5\\u3002&#x27;, None, 10054, None))\&quot;}, url: http://127.0.0.1:8765/v1/responses&quot;
+  }
+}</pre></details></main></body></html>

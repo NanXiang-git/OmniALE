@@ -1,0 +1,17 @@
+{
+  "status": "infrastructure_failed_unscored",
+  "score": null,
+  "model": "qwen3.8-omni-flash",
+  "harness": "Codex CLI 0.163.0",
+  "attempts": 1,
+  "budget_seconds": 3600,
+  "elapsed_seconds": 691.6796588897705,
+  "timed_out": false,
+  "submission_files": 0,
+  "judge_configured": "gpt-6-astra / high / 1800 seconds",
+  "judge_executed": false,
+  "reason": "Remote connection reset (10054); gateway 502; Codex turn.failed before submission. Not a zero score or model capability conclusion.",
+  "responses_completed": 6,
+  "native_video_http_successes": 6,
+  "video_sampling": "provider default; internal frame selection not verified"
+}

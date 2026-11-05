@@ -1,0 +1,27 @@
+[
+  {
+    "path": "input/source.mp4",
+    "bytes": 33190733,
+    "sha256": "ea015efd424d5fa5a4bf1639ca84aadc136d12a550edd23b79954ffa8f9a4c51"
+  },
+  {
+    "path": "input_manifest.json",
+    "bytes": 2240,
+    "sha256": "6df1fe66958e2c3c27ef5e4f5f947a22bcfc2d559aabced20f380c84383171d8"
+  },
+  {
+    "path": "segments.template.json",
+    "bytes": 3797,
+    "sha256": "322eaad1d474fb40577e21d07663573891182dc25eb5ebb8e6d762bf31edc9d7"
+  },
+  {
+    "path": "SOURCE_NOTICE.md",
+    "bytes": 710,
+    "sha256": "ec54e9df39ff6976dc4aa7e789d8ca53cb5be596a143a1b44a762c0dd9957673"
+  },
+  {
+    "path": "TASK.md",
+    "bytes": 4065,
+    "sha256": "3dec0a264245a21bc4357e1c1509d0804793214a2da9624548efbb61184e268a"
+  }
+]

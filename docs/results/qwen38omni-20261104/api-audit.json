@@ -1,0 +1,379 @@
+[
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 1.6068627834320068,
+    "usage": {
+      "input_tokens": 6565,
+      "input_tokens_details": {
+        "cached_tokens": 5376,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 73,
+      "output_tokens_details": {
+        "reasoning_tokens": 16
+      },
+      "total_tokens": 6638,
+      "x_details": [
+        {
+          "input_tokens": 6565,
+          "output_tokens": 73,
+          "total_tokens": 6638,
+          "input_tokens_details": {
+            "text_tokens": 6565
+          },
+          "output_tokens_details": {
+            "text_tokens": 57,
+            "reasoning_tokens": 16
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 5376
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 2.5892562866210938,
+    "usage": {
+      "input_tokens": 8327,
+      "input_tokens_details": {
+        "cached_tokens": 5376,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 127,
+      "output_tokens_details": {
+        "reasoning_tokens": 49
+      },
+      "total_tokens": 8454,
+      "x_details": [
+        {
+          "input_tokens": 8327,
+          "output_tokens": 127,
+          "total_tokens": 8454,
+          "input_tokens_details": {
+            "text_tokens": 8327
+          },
+          "output_tokens_details": {
+            "text_tokens": 78,
+            "reasoning_tokens": 49
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 5376
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 3.952688217163086,
+    "usage": {
+      "input_tokens": 11326,
+      "input_tokens_details": {
+        "cached_tokens": 7168,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "reasoning_tokens": 137
+      },
+      "total_tokens": 11558,
+      "x_details": [
+        {
+          "input_tokens": 11326,
+          "output_tokens": 232,
+          "total_tokens": 11558,
+          "input_tokens_details": {
+            "text_tokens": 11326
+          },
+          "output_tokens_details": {
+            "text_tokens": 95,
+            "reasoning_tokens": 137
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 7168
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 5.263801097869873,
+    "usage": {
+      "input_tokens": 12428,
+      "input_tokens_details": {
+        "cached_tokens": 10752,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 389,
+      "output_tokens_details": {
+        "reasoning_tokens": 143
+      },
+      "total_tokens": 12817,
+      "x_details": [
+        {
+          "input_tokens": 12428,
+          "output_tokens": 389,
+          "total_tokens": 12817,
+          "input_tokens_details": {
+            "text_tokens": 12428
+          },
+          "output_tokens_details": {
+            "text_tokens": 246,
+            "reasoning_tokens": 143
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 10752
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 2.192805290222168,
+    "usage": {
+      "input_tokens": 12875,
+      "input_tokens_details": {
+        "cached_tokens": 10752,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 79,
+      "output_tokens_details": {
+        "reasoning_tokens": 17
+      },
+      "total_tokens": 12954,
+      "x_details": [
+        {
+          "input_tokens": 12875,
+          "output_tokens": 79,
+          "total_tokens": 12954,
+          "input_tokens_details": {
+            "text_tokens": 12875
+          },
+          "output_tokens_details": {
+            "text_tokens": 62,
+            "reasoning_tokens": 17
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 10752
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 13.08168911933899,
+    "usage": {
+      "input_tokens": 13326,
+      "input_tokens_details": {
+        "cached_tokens": 12544,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 739,
+      "output_tokens_details": {
+        "reasoning_tokens": 294
+      },
+      "total_tokens": 14065,
+      "x_details": [
+        {
+          "input_tokens": 13326,
+          "output_tokens": 739,
+          "total_tokens": 14065,
+          "input_tokens_details": {
+            "text_tokens": 13326
+          },
+          "output_tokens_details": {
+            "text_tokens": 445,
+            "reasoning_tokens": 294
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 12544
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 71.02119731903076,
+    "usage": {
+      "prompt_tokens": 3272,
+      "total_tokens": 7940,
+      "completion_tokens": 4668,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 300
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4214,
+        "text_tokens": 454
+      }
+    },
+    "video_sha256": "c5cb5b7678cccf2d2f6eaf17eaf56ffc2e4704798431b381902bf6f997a1af04",
+    "duration": 5.1,
+    "video_bytes": 524433,
+    "filename": "S04.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 59.57281994819641,
+    "usage": {
+      "prompt_tokens": 2678,
+      "total_tokens": 6548,
+      "completion_tokens": 3870,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 300
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3420,
+        "text_tokens": 450
+      }
+    },
+    "video_sha256": "574d514b719b213fb47eaac1cfb0afe4c6859cf44c070d0de55eddd203d58cbb",
+    "duration": 3.9,
+    "video_bytes": 814607,
+    "filename": "S03.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 100.09450697898865,
+    "usage": {
+      "prompt_tokens": 2084,
+      "total_tokens": 9857,
+      "completion_tokens": 7773,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 1784,
+        "text_tokens": 300
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7303,
+        "text_tokens": 470
+      }
+    },
+    "video_sha256": "2abfc02ae51403b43703319b567fbcaccba33b9a138e27b0255d657f566bb8b1",
+    "duration": 3.366667,
+    "video_bytes": 614172,
+    "filename": "S06.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 190.88029837608337,
+    "usage": {
+      "prompt_tokens": 3272,
+      "total_tokens": 16403,
+      "completion_tokens": 13131,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 300
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 12512,
+        "text_tokens": 619
+      }
+    },
+    "video_sha256": "c288fc2318ceac7d2afafcaeb82633741cdab4db4029fb8f28b09321ca1f90a2",
+    "duration": 5.066667,
+    "video_bytes": 674209,
+    "filename": "S01.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 58.47797155380249,
+    "usage": {
+      "prompt_tokens": 2084,
+      "total_tokens": 6980,
+      "completion_tokens": 4896,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 1784,
+        "text_tokens": 300
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4403,
+        "text_tokens": 493
+      }
+    },
+    "video_sha256": "c1fe05f7ef876fb0e1cd30021e8338083b83e9118349681a1e2685b9ee485475",
+    "duration": 2.9,
+    "video_bytes": 534741,
+    "filename": "S02.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 147.94193029403687,
+    "usage": {
+      "prompt_tokens": 3866,
+      "total_tokens": 13179,
+      "completion_tokens": 9313,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 3566,
+        "text_tokens": 300
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8859,
+        "text_tokens": 454
+      }
+    },
+    "video_sha256": "bb84e4670b0e5c33ee1c8afec01f442fd837314e94da822d65eadba9c62ebe30",
+    "duration": 5.666667,
+    "video_bytes": 773996,
+    "filename": "S05.mp4"
+  },
+  {
+    "model_requested": "qwen3.8-omni-flash",
+    "error": "('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))",
+    "elapsed_seconds": 19.21520757675171
+  }
+]

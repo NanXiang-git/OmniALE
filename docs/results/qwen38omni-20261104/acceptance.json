@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": {
+    "smoke_exit": true,
+    "image_and_tools": true,
+    "native_video": true,
+    "video_color_order": true,
+    "isolation": true,
+    "kill": true
+  },
+  "smoke_final": "SMOKE_OK — all three probes passed.\n\n**Results**\n- `python3 -c \"print(7*8)\"` → `56`\n- Visual code in `/candidate/visual.png` → **CBE39C** (white text on dark navy)\n- Video probe via `/qwen_runtime/qwen_video.py` → model `qwen3.8-omni-flash` returned color order **red → blue** (red at 0.0s, switching to blue by 1.0s)\n\n**Artifacts**\n- `/workspace/scratch/video.json` written (761 bytes) with the full response plus usage: 227 prompt tokens (162 video, 65 text), 205 completion tokens (100 reasoning), 432 total.\n\nI only listed `/qwen_runtime/` contents and did not open `inside.py` or `prompt.txt`, so no candidate task content was read."
+}
