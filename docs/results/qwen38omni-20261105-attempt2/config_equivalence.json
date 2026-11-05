@@ -1,0 +1,42 @@
+[
+  {
+    "file": "orchestrator/run_serial.py",
+    "sha256": "3a2fa7718bef1f6eb062b77b76a6c2260da40c62b585f07fb6b1bb2ca5c658e4",
+    "identical_to_attempt1": true
+  },
+  {
+    "file": "orchestrator/linux_launcher.py",
+    "sha256": "c97a44f4603e1371a595066d8b5624bc39ed2d8d6ab0c5e48edf0895f8b973c9",
+    "identical_to_attempt1": true
+  },
+  {
+    "file": "orchestrator/qwen_video_host.py",
+    "sha256": "d87eb8f91728447a338fd05a3f96639af2c2cee9aa9aa511daab73c6bb587ad2",
+    "identical_to_attempt1": true
+  },
+  {
+    "file": "orchestrator/grade_submission.py",
+    "sha256": "10f65a526f30938c1da5fc85104f435dc493abef4aab2b5ac84b5d92e0d876b0",
+    "identical_to_attempt1": true
+  },
+  {
+    "file": "environment/runtime/inside.py",
+    "sha256": "a0277555e8019988ee682cc3d3fba80fc943b84d547551536552b55ab73c15f0",
+    "identical_to_attempt1": true
+  },
+  {
+    "file": "environment/runtime/prompt.txt",
+    "sha256": "74027cf8daf7acf7dc63145cf589218e424aecfff64e1a2b05dc9d639433e6d8",
+    "identical_to_attempt1": true
+  },
+  {
+    "file": "environment/runtime/qwen_video.py",
+    "sha256": "5cb4c8472593cdcce51a7a1b4656581df511e702b20fd28990d60ae823d67dac",
+    "identical_to_attempt1": true
+  },
+  {
+    "file": "case/evaluator/grade.py",
+    "sha256": "aa5b1df25078d181dee6183b9edafa08f6c4ae0dd7e12543214bcd4570552a54",
+    "identical_to_attempt1": true
+  }
+]

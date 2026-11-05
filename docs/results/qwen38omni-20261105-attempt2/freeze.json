@@ -1,0 +1,22 @@
+{
+  "case": "case10",
+  "source_case": "case10",
+  "mode": "official",
+  "host_process_returncode": 1,
+  "host_start_unix": 1793852750.3312688,
+  "host_end_unix": 1793853819.0121734,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "case10",
+    "returncode": 1,
+    "timed_out": false,
+    "utc": 1793853818.6748583,
+    "elapsed_seconds": 1067.959370136261
+  },
+  "submission_manifest": [],
+  "submission_manifest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "elapsed_solver_environment_seconds": 1067.959370136261,
+  "timed_out": false
+}

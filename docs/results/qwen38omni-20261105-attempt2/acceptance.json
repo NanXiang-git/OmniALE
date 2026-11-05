@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": {
+    "smoke_exit": true,
+    "image_and_tools": true,
+    "native_video": true,
+    "video_color_order": true,
+    "isolation": true,
+    "kill": true
+  },
+  "smoke_final": "**SMOKE_OK**\n\nAll three probes succeeded:\n\n- **Arithmetic** — `python3 -c \"print(7*8)\"` returned `56`\n- **Image read** — `view_image` on `/candidate/visual.png` shows the six-character code `CBE39C` (white text on a dark navy background)\n- **Video probe** — `qwen_video.py` exited 0 and wrote `/workspace/scratch/video.json`; model `qwen3.8-omni-flash` reported the color order as **red → blue** (red frame at 0.0s, blue from 1.0s to end), using 391 total tokens\n\nNo subagents were spawned, and no candidate task content was read beyond the requested image."
+}

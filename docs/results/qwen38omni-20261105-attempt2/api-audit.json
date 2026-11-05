@@ -1,0 +1,389 @@
+[
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 2.5774848461151123,
+    "usage": {
+      "input_tokens": 6565,
+      "input_tokens_details": {
+        "cached_tokens": 5376,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 136,
+      "output_tokens_details": {
+        "reasoning_tokens": 11
+      },
+      "total_tokens": 6701,
+      "x_details": [
+        {
+          "input_tokens": 6565,
+          "output_tokens": 136,
+          "total_tokens": 6701,
+          "input_tokens_details": {
+            "text_tokens": 6565
+          },
+          "output_tokens_details": {
+            "text_tokens": 125,
+            "reasoning_tokens": 11
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 5376
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 2.28886342048645,
+    "usage": {
+      "input_tokens": 8882,
+      "input_tokens_details": {
+        "cached_tokens": 5376,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "reasoning_tokens": 19
+      },
+      "total_tokens": 9039,
+      "x_details": [
+        {
+          "input_tokens": 8882,
+          "output_tokens": 157,
+          "total_tokens": 9039,
+          "input_tokens_details": {
+            "text_tokens": 8882
+          },
+          "output_tokens_details": {
+            "text_tokens": 138,
+            "reasoning_tokens": 19
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 5376
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 19.137301683425903,
+    "usage": {
+      "input_tokens": 12885,
+      "input_tokens_details": {
+        "cached_tokens": 7168,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 1315,
+      "output_tokens_details": {
+        "reasoning_tokens": 973
+      },
+      "total_tokens": 14200,
+      "x_details": [
+        {
+          "input_tokens": 12885,
+          "output_tokens": 1315,
+          "total_tokens": 14200,
+          "input_tokens_details": {
+            "text_tokens": 12885
+          },
+          "output_tokens_details": {
+            "text_tokens": 342,
+            "reasoning_tokens": 973
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 7168
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 18.834585189819336,
+    "usage": {
+      "input_tokens": 14697,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 1150,
+      "output_tokens_details": {
+        "reasoning_tokens": 376
+      },
+      "total_tokens": 15847,
+      "x_details": [
+        {
+          "input_tokens": 14697,
+          "output_tokens": 1150,
+          "total_tokens": 15847,
+          "input_tokens_details": {
+            "text_tokens": 14697
+          },
+          "output_tokens_details": {
+            "text_tokens": 774,
+            "reasoning_tokens": 376
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "status": "completed",
+    "error": null,
+    "elapsed_seconds": 5.151002883911133,
+    "usage": {
+      "input_tokens": 16334,
+      "input_tokens_details": {
+        "cached_tokens": 14336,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 334,
+      "output_tokens_details": {
+        "reasoning_tokens": 147
+      },
+      "total_tokens": 16668,
+      "x_details": [
+        {
+          "input_tokens": 16334,
+          "output_tokens": 334,
+          "total_tokens": 16668,
+          "input_tokens_details": {
+            "text_tokens": 16334
+          },
+          "output_tokens_details": {
+            "text_tokens": 187,
+            "reasoning_tokens": 147
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 14336
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 116.83181643486023,
+    "usage": {
+      "prompt_tokens": 2845,
+      "total_tokens": 10682,
+      "completion_tokens": 7837,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2552,
+        "text_tokens": 293
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7276,
+        "text_tokens": 561
+      }
+    },
+    "video_sha256": "1b9520c6b3bb1a16025c75b5e3d60a0d890ed1f8b9f764298ee0aeb56e7e1263",
+    "duration": 5.3,
+    "video_bytes": 364952,
+    "filename": "S08.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 155.40016078948975,
+    "usage": {
+      "prompt_tokens": 2845,
+      "total_tokens": 15074,
+      "completion_tokens": 12229,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2552,
+        "text_tokens": 293
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 11504,
+        "text_tokens": 725
+      }
+    },
+    "video_sha256": "2fab12e26789ef3dd8c3a91db78a845cb6b38d1e6898ba6c13113da49e50daf4",
+    "duration": 5.1,
+    "video_bytes": 214711,
+    "filename": "S04.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 86.49802207946777,
+    "usage": {
+      "prompt_tokens": 1825,
+      "total_tokens": 8334,
+      "completion_tokens": 6509,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 1532,
+        "text_tokens": 293
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5919,
+        "text_tokens": 590
+      }
+    },
+    "video_sha256": "4bb0b49344a87e141327fb3a0a43ef026d2b4469eafbefbe0e45282e5059cddf",
+    "duration": 3.4,
+    "video_bytes": 276953,
+    "filename": "S06.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 136.4378845691681,
+    "usage": {
+      "prompt_tokens": 1825,
+      "total_tokens": 12190,
+      "completion_tokens": 10365,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 1532,
+        "text_tokens": 293
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 9843,
+        "text_tokens": 522
+      }
+    },
+    "video_sha256": "c4ced4956a6d268fa7525019aca5890d2d75cdd725c3eada3d07e234e698beb5",
+    "duration": 2.9,
+    "video_bytes": 277746,
+    "filename": "S02.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 75.06187987327576,
+    "usage": {
+      "prompt_tokens": 2335,
+      "total_tokens": 7791,
+      "completion_tokens": 5456,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2042,
+        "text_tokens": 293
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4720,
+        "text_tokens": 736
+      }
+    },
+    "video_sha256": "91191e92f400a0a8c6efafd963230c37b996cc2d1fda9d67ebb035d20f5b8ff9",
+    "duration": 3.9,
+    "video_bytes": 337650,
+    "filename": "S03.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 119.40783715248108,
+    "usage": {
+      "prompt_tokens": 2845,
+      "total_tokens": 12224,
+      "completion_tokens": 9379,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2552,
+        "text_tokens": 293
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8836,
+        "text_tokens": 543
+      }
+    },
+    "video_sha256": "45f31bf6672e66263ffa6891a9a90a9a1771a64f8e403321e65fba16808a9106",
+    "duration": 5.066667,
+    "video_bytes": 347554,
+    "filename": "S01.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 211.09030771255493,
+    "usage": {
+      "prompt_tokens": 2335,
+      "total_tokens": 19942,
+      "completion_tokens": 17607,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2042,
+        "text_tokens": 293
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 16910,
+        "text_tokens": 697
+      }
+    },
+    "video_sha256": "c75b916e98c512c0f69133a66dd5b429f25a17d3f8e3600d2201ee4803951563",
+    "duration": 4.233333,
+    "video_bytes": 487992,
+    "filename": "S07.mp4"
+  },
+  {
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 83.87553715705872,
+    "usage": {
+      "prompt_tokens": 3355,
+      "total_tokens": 10085,
+      "completion_tokens": 6730,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 3062,
+        "text_tokens": 293
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 6112,
+        "text_tokens": 618
+      }
+    },
+    "video_sha256": "77de50436d9a075928f8bfbcd5e46482b11b9d7f092c0e2eaa16a134069a7466",
+    "duration": 5.7,
+    "video_bytes": 402368,
+    "filename": "S05.mp4"
+  },
+  {
+    "model_requested": "qwen3.8-omni-flash",
+    "error": "('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。'))",
+    "elapsed_seconds": 19.23952007293701
+  }
+]

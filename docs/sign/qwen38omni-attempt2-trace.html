@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Qwen 手语测试轨迹</title><link rel="stylesheet" href="../assets/style.css"><body><main><h1>Qwen 3.8 Omni · 接口中断</h1><p><a href="index.html#qwen38omni-20261105-attempt2">返回测试记录</a> · <a href="../results/qwen38omni-20261105-attempt2/api-audit.json">API 审计</a></p><p>只公开工具动作与故障事件，不公开私有推理正文。未形成答卷及评分。</p><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc &#x27;cat /candidate/TASK.md; echo \&quot;-----\&quot;; cat /workspace/DEADLINE.json; echo \&quot;-----\&quot;; ls -la /candidate /candidate/input 2&gt;/dev/null&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc &#x27;ls -la /workspace; ls -la /qwen_runtime; df -h /workspace | tail -2; nproc; ffmpeg -version | head -2&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc &#x27;cat /candidate/SOURCE_NOTICE.md; echo \&quot;=====\&quot;; cat /candidate/input_manifest.json; echo \&quot;=====\&quot;; cat /candidate/segments.template.json&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc &#x27;cat /qwen_runtime/qwen_video.py; echo \&quot;=====\&quot;; cat /qwen_runtime/prompt.txt; echo \&quot;=====\&quot;; ffprobe -v error -show_format -show_streams /candidate/input/source.mp4 | head -60&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc \&quot;date -u; python3 -c \\\&quot;\nimport json,time\nd=json.load(open(&#x27;/workspace/DEADLINE.json&#x27;))\nnow=time.time()\nprint(&#x27;elapsed_min&#x27;,(now-d[&#x27;start_unix&#x27;])/60)\nprint(&#x27;remaining_min&#x27;,(d[&#x27;deadline_unix&#x27;]-now)/60)\n\\\&quot;\&quot;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc \&quot;mkdir -p /workspace/scratch/clips /workspace/scratch/mont /workspace/scratch/out /workspace/submission &amp;&amp; cat &gt; /workspace/scratch/mkclips.py &lt;&lt;&#x27;EOF&#x27;\nimport json, subprocess, os\nm=json.load(open(&#x27;/candidate/input_manifest.json&#x27;))\nfor s in m[&#x27;segments&#x27;]:\n    st=s[&#x27;start&#x27;]; en=s[&#x27;end&#x27;]; dur=round(en-st,3)\n    out=f\\\&quot;/workspace/scratch/clips/{s[&#x27;id&#x27;]}.mp4\\\&quot;\n    cmd=[&#x27;ffmpeg&#x27;,&#x27;-y&#x27;,&#x27;-loglevel&#x27;,&#x27;error&#x27;,&#x27;-ss&#x27;,str(st),&#x27;-i&#x27;,&#x27;/candidate/input/source.mp4&#x27;,&#x27;-t&#x27;,str(dur),\n         &#x27;-an&#x27;,&#x27;-c:v&#x27;,&#x27;libx264&#x27;,&#x27;-preset&#x27;,&#x27;veryfast&#x27;,&#x27;-crf&#x27;,&#x27;22&#x27;,&#x27;-vf&#x27;,&#x27;scale=960:-2&#x27;,out]\n    subprocess.run(cmd,check=True)\n    print(s[&#x27;id&#x27;],dur,os.path.getsize(out)//1024,&#x27;KB&#x27;)\nEOF\npython3 /workspace/scratch/mkclips.py\&quot;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc \&quot;cat &gt; /workspace/scratch/prompt.txt &lt;&lt;&#x27;EOF&#x27;\n这是一段中国手语(CSL)独立表达片段（无音轨）。请按下列结构只做视觉分析，不要编造情节：\n1) SIGN_SEQUENCE：按时间顺序逐个列出手势词（估计有几个 sign），每个写：手形/手的位置、运动方向与重复次数、同时的面部表情（眉毛、点头/摇头、嘴型）与身体朝向。\n2) ZH：这段手语最可能的自然中文意思（不要照抄手语词序；画面未明确的人物/物品/数字/品牌不要猜补）。\n3) EN：与中文含义一致的自然的英文。\n4) GRAMMAR_EVIDENCE：否定、疑问、请求/提议、时间（过去/现在/将来）、完成体、程度等语法标记分别有什么视觉证据；没有就写\\\&quot;无\\\&quot;。\n5) UNCERTAIN：不确信的部分，用 [无法确认] 标注并说明原因。\n注意：背景中的商品、包装、海报、屏幕文字、装饰都不是手语内容，不得用来推断意思（可以提一句你已排除）。问句要保留为问句。\nEOF\ncat &gt; /workspace/scratch/run_batch.sh &lt;&lt;&#x27;EOF&#x27;\n#\&quot;&#x27;!/bin/bash\nP=\&quot;$(cat /workspace/scratch/prompt.txt)\&quot;\nfor id in \&quot;$@\&quot;; do\n  ( python3 /qwen_runtime/qwen_video.py /workspace/scratch/clips/$id.mp4 --prompt \&quot;$P\&quot; &#x27;\&quot;\\\\\n      --output /workspace/scratch/out/\&quot;&#x27;$id.json &gt; /workspace/scratch/out/$id.log 2&gt;&amp;1 ) &amp;\ndone\nwait\necho \&quot;DONE: $@\&quot;\nEOF\nchmod +x /workspace/scratch/run_batch.sh; echo ok&#x27;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc \&quot;cat &gt; /workspace/scratch/mkmont.py &lt;&lt;&#x27;EOF&#x27;\nimport json, subprocess, os, math\nm=json.load(open(&#x27;/candidate/input_manifest.json&#x27;))\nos.makedirs(&#x27;/workspace/scratch/mont&#x27;,exist_ok=True)\nfor s in m[&#x27;segments&#x27;]:\n    sid=s[&#x27;id&#x27;]; dur=s[&#x27;end&#x27;]-s[&#x27;start&#x27;]\n    n=min(12, max(6, int(round(dur*2))))\n    fps=n/dur\n    clip=f\\\&quot;/workspace/scratch/clips/{sid}.mp4\\\&quot;\n    out=f\\\&quot;/workspace/scratch/mont/{sid}.jpg\\\&quot;\n    vf=(f\\\&quot;fps={fps:.6f},scale=440:-2,drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf:\\\&quot;\n        f\\\&quot;text=&#x27;%{{eif\\\\\\\\:{n}\\\\\\\\:d}}&#x27;:x=5:y=5:fontsize=26:fontcolor=yellow:box=1:boxcolor=black@0.6,\\\&quot;\n        f\\\&quot;tile=4x3:padding=4:color=white\\\&quot;)\n    cmd=[&#x27;ffmpeg&#x27;,&#x27;-y&#x27;,&#x27;-loglevel&#x27;,&#x27;error&#x27;,&#x27;-i&#x27;,clip,&#x27;-vf&#x27;,vf,&#x27;-frames:v&#x27;,&#x27;1&#x27;,out]\n    subprocess.run(cmd,check=True)\n    print(sid, n, round(fps,2),&#x27;fps&#x27;, os.path.getsize(out)//1024,&#x27;KB&#x27;)\nEOF\npython3 /workspace/scratch/mkmont.py\&quot;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>command_execution</summary><pre>{
+  &quot;type&quot;: &quot;command_execution&quot;,
+  &quot;command&quot;: &quot;/usr/bin/bash -lc \&quot;cd /workspace/scratch &amp;&amp; nohup bash -c &#x27;./run_batch.sh S01 S02 S03 S04 S05 S06 S07 S08; ./run_batch.sh S09 S10 S11 S12 S13 S14 S15 S16; ./run_batch.sh S17 S18 S19 S20 S21 S22 S23&#x27; &gt; /workspace/scratch/batch.log 2&gt;&amp;1 &amp;\nsleep 3; echo launched; ls /workspace/scratch/out | head\&quot;&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;exit_code&quot;: 0
+}</pre></details><details><summary>error</summary><pre>{
+  &quot;type&quot;: &quot;error&quot;,
+  &quot;message&quot;: &quot;unexpected status 502 Bad Gateway: {\&quot;error\&quot;: \&quot;(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;\\u8fdc\\u7a0b\\u4e3b\\u673a\\u5f3a\\u8feb\\u5173\\u95ed\\u4e86\\u4e00\\u4e2a\\u73b0\\u6709\\u7684\\u8fde\\u63a5\\u3002&#x27;))\&quot;}, url: http://127.0.0.1:8765/v1/responses&quot;
+}</pre></details><details><summary>turn.failed</summary><pre>{
+  &quot;type&quot;: &quot;turn.failed&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;unexpected status 502 Bad Gateway: {\&quot;error\&quot;: \&quot;(&#x27;Connection aborted.&#x27;, ConnectionResetError(10054, &#x27;\\u8fdc\\u7a0b\\u4e3b\\u673a\\u5f3a\\u8feb\\u5173\\u95ed\\u4e86\\u4e00\\u4e2a\\u73b0\\u6709\\u7684\\u8fde\\u63a5\\u3002&#x27;))\&quot;}, url: http://127.0.0.1:8765/v1/responses&quot;
+  }
+}</pre></details></main></body></html>
