@@ -1,0 +1,188 @@
+{
+  "score": 26.609,
+  "raw_score": 26.609,
+  "passed": false,
+  "components": {
+    "meaning": 3.92,
+    "bilingual": 0.482,
+    "timing": 7.826,
+    "readability": 5.0,
+    "delivery": 5,
+    "calibration": 4.381
+  },
+  "caps": [
+    [
+      39,
+      "critical_semantic_error"
+    ],
+    [
+      39,
+      "semantic_coverage_below_half"
+    ]
+  ],
+  "critical_errors": [
+    {
+      "id": "S02",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频5.566—8.466秒；映射中文字幕“好吃。”，英文“It's delicious.”。annotation-relative判定：group、action、force均为0：“好吃 / delicious”是味道评价，未表达我们共同去吃饭的提议；不能因汉字“吃”相同给动作分。新增“好吃”这一肯定的味觉属性，记invented_fact；没有译成吃完，不记aspect_flip。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧5.825—6.325秒的开头动作先于6.466秒字幕出现，后续口前动作仍被覆盖；局部迟出、整段可定位，alignment=0.5。"
+    },
+    {
+      "id": "S03",
+      "errors": [
+        "wrong_person",
+        "invented_fact",
+        "question_as_fact"
+      ],
+      "note": "视频8.966—12.866秒；映射中文字幕“我喜欢学习。”，英文“I like studying.”。annotation-relative判定：person、ability、force均为0：标注是“你真的能自己来吗”，字幕却以“我 / I”为主体，断言“喜欢学习 / like studying”；主体换位、添加喜好事实，并把确认问句写成事实，分别记wrong_person、invented_fact、question_as_fact。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧9.225—9.725秒已出现成组胸前动作，字幕到9.866秒才出现，开头覆盖不足但主体动作仍在显示窗内，alignment=0.5。"
+    },
+    {
+      "id": "S06",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频25.133—28.499秒；映射中文字幕“两。”，英文“Two.”。annotation-relative判定：owner、object、quantity均为0：“两 / Two”既没有我拥有和狗，也与标注“一只”数量相反；这是明确添加错误数值而非仅漏数量，记invented_fact。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧25.650秒手触胸而26.025秒已转为另一手形，字幕26.033秒才开始，漏掉开头动作；后续数量姿态仍在窗内，alignment=0.5。"
+    },
+    {
+      "id": "S07",
+      "errors": [
+        "invented_fact",
+        "question_as_fact"
+      ],
+      "note": "视频28.999—33.233秒；映射中文字幕“我喜欢在家读书。”，英文“I like reading at home.”。annotation-relative判定：group=0.5：“我 / I”保留包含表达者的一部分人物信息，但遗漏共同参与者；event=0，读书不等于去打篮球；question=0，询问何时被改为喜好陈述。“喜欢在家 / like … at home”新增喜好和地点，记invented_fact、question_as_fact。不把群体成员遗漏再自动升级为wrong_person。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧29.400—29.775秒胸前横移已进行，29.899秒字幕出现接近该动作结束，起始部分迟出；其余动作可覆盖，alignment=0.5。"
+    },
+    {
+      "id": "S08",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频33.733—39.033秒；映射中文字幕“六。”，英文“Six.”。annotation-relative判定：person、question、aspect均为0：“六 / Six”没有对方、去做何事的询问或已发生范围。标注中无数值六，字幕把一段询问替换为明确数值，记invented_fact；不是只因漏问号而贴question_as_fact。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。34.633秒开始比可见起始动作早，38.683秒结束时已处于较长静止尾段；显示包住动作但首尾不够贴合，alignment=0.5。"
+    },
+    {
+      "id": "S09",
+      "errors": [
+        "wrong_person",
+        "invented_fact",
+        "question_as_fact"
+      ],
+      "note": "视频39.533—43.833秒；映射中文字幕“我吃了。”，英文“I ate something.”。annotation-relative判定：owner、object、question均为0：标注问“你的电话号码是多少”，字幕改成“我 / I”“吃了 / ate something”。对方换成自身，询问变成进食事实，新增事件，记wrong_person、question_as_fact、invented_fact；不把不同事件的时态差异另标aspect_flip。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧40.275—40.400秒为向前指点，40.525秒已转向耳旁；字幕40.433秒才开始，开头指点几乎未覆盖，alignment=0.5。"
+    },
+    {
+      "id": "S16",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频73.399—78.233秒；映射中文字幕“我想，我们俩都很好。”，英文“I think both of us are good.”。annotation-relative判定：context、duration、scope均为0：“我想，我们俩都很好 / I think both of us are good”完全没有课程时间、还很长或剩余时间范围，并新增两个人都好的评价，记invented_fact。无论采用课时剩余或距上课解释，字幕都没有该时间意义；不裁定这两种允许的解释孰是孰非。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧73.775—74.275秒脸侧动作在字幕74.299秒出现前已经持续，起始覆盖不足，后续表达仍在窗内，alignment=0.5。"
+    },
+    {
+      "id": "S17",
+      "errors": [
+        "wrong_person",
+        "invented_fact"
+      ],
+      "note": "视频78.733—83.866秒；映射中文字幕“我要去那边。”，英文“I want to go over there.”。annotation-relative判定：winner、scope、aspect均为0：“我要去那边 / I want to go over there”把原标注“你赢了”的主体变成我，并添加前往某处的意愿，记wrong_person、invented_fact；没有游戏和已赢结果。不同事件的意愿不再重复记为原获胜事件的aspect_flip。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。79.633—83.516秒覆盖整组可见表达，起始仅略早于抬手，收势后保留阅读时间且未跨段；按表达单位给alignment=1，边界判断置信度低于文字比较。"
+    },
+    {
+      "id": "S18",
+      "errors": [
+        "wrong_person",
+        "wrong_object",
+        "question_as_fact"
+      ],
+      "note": "视频84.366—88.433秒；映射中文字幕“我穿衣服。”，英文“I put on clothes.”。annotation-relative判定：person=0，原标注你被写成“我 / I”；object=0，目标为正在穿的鞋，字幕明写“衣服 / clothes”，尽管保留穿这一动作，关键对象替换不能算正确鞋类信息；question=0，什么鞋的询问变成穿衣陈述，记wrong_person、wrong_object、question_as_fact。英语put的时态可歧义，不另判完成体翻转。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧84.975—85.475秒同组领口附近动作持续；85.266秒出现时仍处于该起始动作中，后续全部被覆盖至88.083秒。没有证据证明漏掉完整独立动作，alignment=1。"
+    },
+    {
+      "id": "S19",
+      "errors": [
+        "invented_fact"
+      ],
+      "note": "视频88.933—93.199秒；映射中文字幕“天下雨了。”，英文“It's raining.”。annotation-relative判定：group、direction、modality均为0：“天下雨了 / It's raining”添加天气事实，无法表达我们、上去或上去即可，记invented_fact。既不把“就好了”强制解释为过去反事实，也不把向上运动与“下雨”字面上下混淆成polarity_flip。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧89.250—89.750秒胸前动作发生在89.833秒字幕出现之前，后半表达可覆盖，alignment=0.5。"
+    },
+    {
+      "id": "S21",
+      "errors": [
+        "invented_fact",
+        "question_as_fact"
+      ],
+      "note": "视频99.932—107.599秒；映射中文字幕“我听懂了。”，英文“I understood what I heard.”。annotation-relative判定：politeness、place、question均为0：标注礼貌问卧室在哪里，字幕“我听懂了 / I understood what I heard”却断言已经理解听到的内容；无卧室、地点问询或礼貌表达，记invented_fact、question_as_fact。耳侧动作不能仅凭形状等同于听懂。 两语表达同样的内容和语气，bilingual=1（汇总仍受语义上限约束）。补帧100.800—102.425秒持续静止但字幕100.832秒已出现，107.249秒才结束且第2页大部分静止时仍显示；提前和滞留都明显，但仍包住本段表达，alignment=0.5。"
+    }
+  ],
+  "high_confidence_errors": [],
+  "unit_semantic_scores": {
+    "S01": 0.0,
+    "S02": 0.0,
+    "S03": 0.0,
+    "S04": 0.0,
+    "S05": 0.0,
+    "S06": 0.0,
+    "S07": 0.08333333333333333,
+    "S08": 0.0,
+    "S09": 0.0,
+    "S10": 0.0,
+    "S11": 0.16666666666666666,
+    "S12": 0.375,
+    "S13": 0.0,
+    "S14": 0.0,
+    "S15": 0.0,
+    "S16": 0.0,
+    "S17": 0.0,
+    "S18": 0.0,
+    "S19": 0.0,
+    "S20": 0.42857142857142855,
+    "S21": 0.0,
+    "S22": 0.0,
+    "S23": 0.3333333333333333
+  },
+  "status": "scored",
+  "model": "qwen3.8-omni-flash",
+  "judge": "gpt-6-astra",
+  "judge_effort": "high",
+  "reviewers": 1,
+  "review_quality": "single_independent_LLM_annotation_relative_not_expert_certified",
+  "inspection_limits": [
+    "本轮为用户明确授权的单LLM独立评审；未调用其他模型、未联网、未生成第二份伪独立评审。",
+    "仅通过view_image实际查看全部23段24页4fps有序联系表，并补查16页8fps边界联系表；未正常速度连续观看，video_watched_in_full=false。",
+    "语义判断是annotation-relative：以CE-CSL作者中文句/gloss及truth.json各slot为依据，并结合实际画面；不是中国手语专家独立认证，不把手形观察宣称为专家译读。",
+    "原视频没有音轨（ffprobe确认仅视频流）；本题没有可听语音或ASR证据，未声称亲自听审。",
+    "联系表标注时刻均为名义采样网格，不是精确手势边界；alignment依据可见动作序列、静止段和SRT显示窗作离散判定，未把整句参考起止当专家金标。",
+    "没有发现足以证实作者标注错误的画面冲突，但这不等于独立验证了每个手语词；协议允许的S16、S19、S23歧义保留。",
+    "confidence是评审对该段annotation-relative评分的主观把握（0—1），不是答卷提交的confidence_zh/confidence_en，不替换原校准输入。"
+  ],
+  "technical": {
+    "issues": [],
+    "technical_points": 5,
+    "readability_points": 5.0,
+    "localization": {
+      "S01": 1,
+      "S02": 1,
+      "S03": 1,
+      "S04": 1,
+      "S05": 1,
+      "S06": 1,
+      "S07": 1,
+      "S08": 1,
+      "S09": 1,
+      "S10": 1,
+      "S11": 1,
+      "S12": 1,
+      "S13": 1,
+      "S14": 1,
+      "S15": 1,
+      "S16": 1,
+      "S17": 1,
+      "S18": 1,
+      "S19": 1,
+      "S20": 1,
+      "S21": 1,
+      "S22": 1,
+      "S23": 1
+    }
+  },
+  "submission_sha256": {
+    "zh-CN.srt": "ed551a93d93f06bc90c8355a0c7536af0f8471a8e0a9bb2f6230d4244698466f",
+    "en.srt": "7ed77d1c3f500b73d7b390b378484f6cb02233d8c3617c00f20806906446f962",
+    "segments.json": "fbe854b1d64811e79f67ded920234fb49d26382452801994fd88c02e9f9281f1",
+    "subtitled.mkv": "d34202b3bf5bc9f6bbaefd14dac0a6e9d39bf689aa4b1e0b7eca1cb3d5b77087"
+  }
+}

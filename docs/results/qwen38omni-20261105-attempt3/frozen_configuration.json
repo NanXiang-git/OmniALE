@@ -1,0 +1,110 @@
+[
+  {
+    "path": "orchestrator/build_failure_site.py",
+    "sha256": "cf40f02d248075b6f8abeb6121b42ef3e8fbccc90ceb84dc62b98dc22946017d"
+  },
+  {
+    "path": "orchestrator/build_site.py",
+    "sha256": "79dbe0e6aabc9d7efa8b206d68391871bbe381a9d01ae4be1c104be46f2c2a25"
+  },
+  {
+    "path": "orchestrator/grade_submission.py",
+    "sha256": "320b5dd180823e813eba22aa775feafe1e80a62ed995d9f53b54cde183fc1f6b"
+  },
+  {
+    "path": "orchestrator/guard_kill.py",
+    "sha256": "1ee31678c14bfda2d3c3fb381a5d203b64c3365535d36e7233491aeb26146369"
+  },
+  {
+    "path": "orchestrator/linux_launcher.py",
+    "sha256": "c97a44f4603e1371a595066d8b5624bc39ed2d8d6ab0c5e48edf0895f8b973c9"
+  },
+  {
+    "path": "orchestrator/make_judge_sheets.py",
+    "sha256": "edbc109052de1ac80346b149763a87528161e4b7aadd7d7a79cf84f81d0d88a9"
+  },
+  {
+    "path": "orchestrator/publish_site.py",
+    "sha256": "c1566e0e81c5ef4c92e5636fb375992e13d33cea34b5be5c05ba976458d14835"
+  },
+  {
+    "path": "orchestrator/queue_solver.py",
+    "sha256": "30c88ff622ceb6a284a7ed5cb1809e4f2769b90705f991ababbae60be664cb86"
+  },
+  {
+    "path": "orchestrator/qwen_connection.py",
+    "sha256": "99740b21e70d6febaa25410901406dde018b77f0543707ffcf3baa5362680c6a"
+  },
+  {
+    "path": "orchestrator/qwen_video_host.py",
+    "sha256": "d35ccb6b927176127a8d219ba7af80610e6bd0d6e550a1a65207bc0515d876bd"
+  },
+  {
+    "path": "orchestrator/run_serial.py",
+    "sha256": "bbe5c889a4cb0dd5eab54bc7c285f5dc38ad40cb70ce232d9026df6af13598e5"
+  },
+  {
+    "path": "orchestrator/site_io.py",
+    "sha256": "d19fb83f23fa27e0943969b3ef673f868be804b12626f31b0a27e06996735ba2"
+  },
+  {
+    "path": "orchestrator/test_transport.py",
+    "sha256": "581673f64acf9a1b0d5cab3af87321c7bc56f59d3524d107c1f8f6863f3818b4"
+  },
+  {
+    "path": "orchestrator/transport.py",
+    "sha256": "de2543ded5b59b148ff3457b3c4d878d0a03e2d2aed7d0b1e5f060494df50f42"
+  },
+  {
+    "path": "environment/runtime/inside.py",
+    "sha256": "a0277555e8019988ee682cc3d3fba80fc943b84d547551536552b55ab73c15f0"
+  },
+  {
+    "path": "environment/runtime/prompt.txt",
+    "sha256": "74027cf8daf7acf7dc63145cf589218e424aecfff64e1a2b05dc9d639433e6d8"
+  },
+  {
+    "path": "environment/runtime/qwen_video.py",
+    "sha256": "7ec5945536ec38338e59ef2f215a1cebb05e6f0e85b8571a1964ba78fa31cf5f"
+  },
+  {
+    "path": "environment/runtime/video_probe.mp4",
+    "sha256": "0ee66c97d77d60c9a1631c5d0f02af168be49529cff2a97f22037c5c6d9f985e"
+  },
+  {
+    "path": "case/evaluator/grade.py",
+    "sha256": "aa5b1df25078d181dee6183b9edafa08f6c4ae0dd7e12543214bcd4570552a54"
+  },
+  {
+    "path": "case/evaluator/test_grader.py",
+    "sha256": "d05c1add45429eabd706e024f2da2dc393996e344d586d276c2ca2dc12f757de"
+  },
+  {
+    "path": "case/evaluator/build_report.json",
+    "sha256": "7908e25aa818b7bfd5f53175ade282f1257f356e55ad9b15c16910846df963fb"
+  },
+  {
+    "path": "case/evaluator/calibration_report.json",
+    "sha256": "e3c41df8e547610bb408e36275b385812ee3cdedadb3b2828d3654f143503469"
+  },
+  {
+    "path": "case/evaluator/candidate_file_manifest.json",
+    "sha256": "e9f4eced87f6ab4448019abf43e9cb6de96735c63ba6c4b962bcb2af64257a2a"
+  },
+  {
+    "path": "case/evaluator/provenance.json",
+    "sha256": "7f4ce56751e906d3ad01d8bcdc448ed7b704366498def4a3dd06249814f931c6"
+  },
+  {
+    "path": "case/evaluator/review.template.json",
+    "sha256": "8c3ce319f95daf859d31d1403e63f86ee6d3ef43a08aeaea18fa1699c5000725"
+  },
+  {
+    "path": "case/evaluator/rubric.json",
+    "sha256": "9821e725f11e3922dd3e14515f105acb8dee90795b892bdd9e0741fa465fda06"
+  },
+  {
+    "path": "case/evaluator/truth.json",
+    "sha256": "b090df0a66014c19212e52f34c061443515d157fb94385c22bcea74327912e74"
+  }
+]

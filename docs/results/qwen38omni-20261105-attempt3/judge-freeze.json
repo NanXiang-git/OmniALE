@@ -1,0 +1,33 @@
+{
+  "case": "judge",
+  "source_case": "judge",
+  "mode": "official",
+  "host_process_returncode": 0,
+  "host_start_unix": 1793859047.8472397,
+  "host_end_unix": 1793859831.2461631,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "judge",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1793859832.752877,
+    "elapsed_seconds": 786.0797839164734
+  },
+  "submission_manifest": [
+    {
+      "path": "ratings.json",
+      "bytes": 77830,
+      "sha256": "835fecdba0be447b9f37e6cd0613932b702ff5bbe8f1c60d041132750dfd6652"
+    },
+    {
+      "path": "review.md",
+      "bytes": 29402,
+      "sha256": "eff15377f83feb16b95aae992571ce161fc28fdb7a714149e81292d4e6784767"
+    }
+  ],
+  "submission_manifest_sha256": "1da678374f434525810910db759a08fee02ecfdcb028e53fc9c0ecc2d98ebe99",
+  "elapsed_solver_environment_seconds": 786.0797839164734,
+  "timed_out": false
+}

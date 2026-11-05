@@ -1,0 +1,442 @@
+[
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "4f6ba99b-85f3-43a4-98db-7e1b25e63321",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859056.204238,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "4f6ba99b-85f3-43a4-98db-7e1b25e63321",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 3.1661877632141113
+      }
+    ],
+    "elapsed_seconds": 8.125837087631226
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "b1e423bf-9e45-4091-ad83-9e5975df4428",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859065.18073,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "b1e423bf-9e45-4091-ad83-9e5975df4428",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 4.053410053253174
+      }
+    ],
+    "elapsed_seconds": 5.563181161880493
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "de681785-db92-45ea-95d4-66b4738a9772",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859070.969612,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "de681785-db92-45ea-95d4-66b4738a9772",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 6.911539554595947
+      }
+    ],
+    "elapsed_seconds": 10.19520902633667
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "f813ad93-36fe-4366-a69a-374ec43b0e79",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859081.260427,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "f813ad93-36fe-4366-a69a-374ec43b0e79",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 8.23097825050354
+      }
+    ],
+    "elapsed_seconds": 10.60952615737915
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "07958a96-7d20-43db-8a2b-5dccf2b2d7f9",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859092.044866,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "07958a96-7d20-43db-8a2b-5dccf2b2d7f9",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 5.737219333648682
+      }
+    ],
+    "elapsed_seconds": 7.4658684730529785
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "6f6e0026-696f-4f69-8d76-b050b4b8a160",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859099.6392436,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "6f6e0026-696f-4f69-8d76-b050b4b8a160",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 13.436110973358154
+      }
+    ],
+    "elapsed_seconds": 14.426080226898193
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "dc46ca5d-c0e9-419b-8e2c-fe637ac4b60b",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859114.180891,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "dc46ca5d-c0e9-419b-8e2c-fe637ac4b60b",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 6.971585273742676
+      }
+    ],
+    "elapsed_seconds": 8.552007675170898
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "373f8a71-797c-43fa-9549-1475ab41ab59",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859122.8352108,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "373f8a71-797c-43fa-9549-1475ab41ab59",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 16.676231145858765
+      }
+    ],
+    "elapsed_seconds": 21.382227420806885
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "c6fa4840-2c32-4dea-91cf-5e96149392f1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859144.3182254,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "c6fa4840-2c32-4dea-91cf-5e96149392f1",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 16.592670679092407
+      }
+    ],
+    "elapsed_seconds": 17.66680335998535
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "e113caaf-24aa-4e80-8c65-1a52daac7a18",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859162.151406,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "e113caaf-24aa-4e80-8c65-1a52daac7a18",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 10.245652198791504
+      }
+    ],
+    "elapsed_seconds": 11.906615972518921
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "26125400-8f61-4fa5-bb38-e2614e5b2380",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859174.3037543,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "26125400-8f61-4fa5-bb38-e2614e5b2380",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 12.090058088302612
+      }
+    ],
+    "elapsed_seconds": 13.950560808181763
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "97e427af-8109-4c39-a96d-f65f3853a40d",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859188.4007213,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "97e427af-8109-4c39-a96d-f65f3853a40d",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 14.782012939453125
+      }
+    ],
+    "elapsed_seconds": 16.927719354629517
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "030f094e-f290-4cf6-83f9-25b51a7c2342",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859205.7672465,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "030f094e-f290-4cf6-83f9-25b51a7c2342",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 22.165379762649536
+      }
+    ],
+    "elapsed_seconds": 117.19262647628784
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "9bc191ad-3785-4c2b-a77d-70f7495f1ef9",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859324.757355,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "9bc191ad-3785-4c2b-a77d-70f7495f1ef9",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 24.17278265953064
+      }
+    ],
+    "elapsed_seconds": 61.02487897872925
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "613bb378-9a3f-470a-8be6-3386283083de",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859386.0311232,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "613bb378-9a3f-470a-8be6-3386283083de",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 17.813568592071533
+      }
+    ],
+    "elapsed_seconds": 19.063563108444214
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "8b0f692e-a067-44fd-8d2d-f7c371f23481",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859405.2950234,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "8b0f692e-a067-44fd-8d2d-f7c371f23481",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 21.521456956863403
+      }
+    ],
+    "elapsed_seconds": 22.939581632614136
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "b9ee4cb3-a854-4fc3-9d51-9b17a98b39e7",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859428.4568522,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "b9ee4cb3-a854-4fc3-9d51-9b17a98b39e7",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 19.37826132774353
+      }
+    ],
+    "elapsed_seconds": 22.560832023620605
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "ffccfd9d-f4a6-4da6-abb4-8101d1b61d36",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859451.47406,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "ffccfd9d-f4a6-4da6-abb4-8101d1b61d36",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 40.20249629020691
+      }
+    ],
+    "elapsed_seconds": 248.66892385482788
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "a0c744cb-b961-4982-85eb-a4ba842a9b55",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859700.4680705,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "a0c744cb-b961-4982-85eb-a4ba842a9b55",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 32.14870524406433
+      }
+    ],
+    "elapsed_seconds": 64.12850856781006
+  },
+  {
+    "model_requested": "gpt-6-astra",
+    "http_status": 200,
+    "status": "completed",
+    "reasoning_requested": {
+      "effort": "high",
+      "context": "all_turns"
+    },
+    "request_id": "e2b80549-8fec-43bf-aead-750ee7a7927a",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793859766.3473785,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "e2b80549-8fec-43bf-aead-750ee7a7927a",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 32.79979062080383
+      }
+    ],
+    "elapsed_seconds": 55.86022138595581
+  }
+]

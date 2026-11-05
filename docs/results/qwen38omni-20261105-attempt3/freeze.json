@@ -1,0 +1,43 @@
+{
+  "case": "case10",
+  "source_case": "case10",
+  "mode": "official",
+  "host_process_returncode": 0,
+  "host_start_unix": 1793855776.3686423,
+  "host_end_unix": 1793859007.2634745,
+  "grading": "not_run",
+  "termination": {
+    "op": "event",
+    "event": "namespace_exit",
+    "case": "case10",
+    "returncode": 0,
+    "timed_out": false,
+    "utc": 1793859008.5167027,
+    "elapsed_seconds": 3229.9123270511627
+  },
+  "submission_manifest": [
+    {
+      "path": "en.srt",
+      "bytes": 1169,
+      "sha256": "7ed77d1c3f500b73d7b390b378484f6cb02233d8c3617c00f20806906446f962"
+    },
+    {
+      "path": "segments.json",
+      "bytes": 9025,
+      "sha256": "fbe854b1d64811e79f67ded920234fb49d26382452801994fd88c02e9f9281f1"
+    },
+    {
+      "path": "subtitled.mkv",
+      "bytes": 33176538,
+      "sha256": "d34202b3bf5bc9f6bbaefd14dac0a6e9d39bf689aa4b1e0b7eca1cb3d5b77087"
+    },
+    {
+      "path": "zh-CN.srt",
+      "bytes": 1158,
+      "sha256": "ed551a93d93f06bc90c8355a0c7536af0f8471a8e0a9bb2f6230d4244698466f"
+    }
+  ],
+  "submission_manifest_sha256": "70b3d7832ff249f97dfd8119609bbf569eae87097e9cb3a3bbfabac436bfcd93",
+  "elapsed_solver_environment_seconds": 3229.9123270511627,
+  "timed_out": false
+}

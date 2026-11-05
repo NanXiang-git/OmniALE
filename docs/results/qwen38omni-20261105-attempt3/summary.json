@@ -1,0 +1,39 @@
+{
+  "id": "qwen38omni-20261105-attempt3",
+  "model": "qwen3.8-omni-flash",
+  "score": 26.609,
+  "passed": false,
+  "solver_budget_seconds": 3600,
+  "solver_elapsed_seconds": 3229.9123270511627,
+  "timed_out": false,
+  "judge": "gpt-6-astra",
+  "judge_effort": "high",
+  "native_video_calls": 28,
+  "native_video_successes": 28,
+  "input_mode": "native video + Codex image tools",
+  "rubric_unchanged": true,
+  "review_quality": "single_independent_LLM_annotation_relative_not_expert_certified",
+  "components": {
+    "meaning": 3.92,
+    "bilingual": 0.482,
+    "timing": 7.826,
+    "readability": 5.0,
+    "delivery": 5,
+    "calibration": 4.381
+  },
+  "inspection_limits": [
+    "本轮为用户明确授权的单LLM独立评审；未调用其他模型、未联网、未生成第二份伪独立评审。",
+    "仅通过view_image实际查看全部23段24页4fps有序联系表，并补查16页8fps边界联系表；未正常速度连续观看，video_watched_in_full=false。",
+    "语义判断是annotation-relative：以CE-CSL作者中文句/gloss及truth.json各slot为依据，并结合实际画面；不是中国手语专家独立认证，不把手形观察宣称为专家译读。",
+    "原视频没有音轨（ffprobe确认仅视频流）；本题没有可听语音或ASR证据，未声称亲自听审。",
+    "联系表标注时刻均为名义采样网格，不是精确手势边界；alignment依据可见动作序列、静止段和SRT显示窗作离散判定，未把整句参考起止当专家金标。",
+    "没有发现足以证实作者标注错误的画面冲突，但这不等于独立验证了每个手语词；协议允许的S16、S19、S23歧义保留。",
+    "confidence是评审对该段annotation-relative评分的主观把握（0—1），不是答卷提交的confidence_zh/confidence_en，不替换原校准输入。"
+  ],
+  "attempt_number": 3,
+  "judge_elapsed_seconds": 786.0797839164734,
+  "transport_errors": 0,
+  "transport_retries": 0,
+  "root_cause": "stale HTTPS connection reused after long idle; reproduced by controlled test",
+  "transport_fix": "request-scoped connection; bounded preheader retry; deadline-bounded video client wait"
+}

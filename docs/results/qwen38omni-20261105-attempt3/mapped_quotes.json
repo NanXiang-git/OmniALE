@@ -1,0 +1,94 @@
+{
+  "S01": {
+    "zh": "天气。[整句无法确认]",
+    "en": "The weather. [whole utterance unclear]"
+  },
+  "S02": {
+    "zh": "好吃。",
+    "en": "It's delicious."
+  },
+  "S03": {
+    "zh": "我喜欢学习。",
+    "en": "I like studying."
+  },
+  "S04": {
+    "zh": "想……[第二个手势无法确认]",
+    "en": "Think… [second sign unclear]"
+  },
+  "S05": {
+    "zh": "再见。",
+    "en": "Goodbye."
+  },
+  "S06": {
+    "zh": "两。",
+    "en": "Two."
+  },
+  "S07": {
+    "zh": "我喜欢在家读书。",
+    "en": "I like reading at home."
+  },
+  "S08": {
+    "zh": "六。",
+    "en": "Six."
+  },
+  "S09": {
+    "zh": "我吃了。",
+    "en": "I ate something."
+  },
+  "S10": {
+    "zh": "大。",
+    "en": "Big."
+  },
+  "S11": {
+    "zh": "吃……[后续手势无法确认]",
+    "en": "Eat… [following signs unclear]"
+  },
+  "S12": {
+    "zh": "你好。",
+    "en": "Hello."
+  },
+  "S13": {
+    "zh": "你多大了？",
+    "en": "How old are you?"
+  },
+  "S14": {
+    "zh": "吃。",
+    "en": "Eat."
+  },
+  "S15": {
+    "zh": "直角。",
+    "en": "A right angle."
+  },
+  "S16": {
+    "zh": "我想，我们俩都很好。",
+    "en": "I think both of us are good."
+  },
+  "S17": {
+    "zh": "我要去那边。",
+    "en": "I want to go over there."
+  },
+  "S18": {
+    "zh": "我穿衣服。",
+    "en": "I put on clothes."
+  },
+  "S19": {
+    "zh": "天下雨了。",
+    "en": "It's raining."
+  },
+  "S20": {
+    "zh": "这里，那里。",
+    "en": "Here, and over there."
+  },
+  "S21": {
+    "zh": "我听懂了。",
+    "en": "I understood what I heard."
+  },
+  "S22": {
+    "zh": "剪头发。",
+    "en": "Cut hair."
+  },
+  "S23": {
+    "zh": "学习。",
+    "en": "Study."
+  }
+}

@@ -1,0 +1,1838 @@
+[
+  {
+    "request_id": "62b1b63b-e10a-9204-bdd9-d2c66ece04c5",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793855783.5896456,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "62b1b63b-e10a-9204-bdd9-d2c66ece04c5",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.3789849281311035
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 2.8434183597564697,
+    "usage": {
+      "input_tokens": 6565,
+      "input_tokens_details": {
+        "cached_tokens": 5376,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 15
+      },
+      "total_tokens": 6710,
+      "x_details": [
+        {
+          "input_tokens": 6565,
+          "output_tokens": 145,
+          "total_tokens": 6710,
+          "input_tokens_details": {
+            "text_tokens": 6565
+          },
+          "output_tokens_details": {
+            "text_tokens": 130,
+            "reasoning_tokens": 15
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 5376
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "a238e246-c83d-97c2-8af6-b816ce04748c",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793855786.6246192,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "a238e246-c83d-97c2-8af6-b816ce04748c",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.37813806533813477
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 4.546331882476807,
+    "usage": {
+      "input_tokens": 9296,
+      "input_tokens_details": {
+        "cached_tokens": 5376,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 219,
+      "output_tokens_details": {
+        "reasoning_tokens": 35
+      },
+      "total_tokens": 9515,
+      "x_details": [
+        {
+          "input_tokens": 9296,
+          "output_tokens": 219,
+          "total_tokens": 9515,
+          "input_tokens_details": {
+            "text_tokens": 9296
+          },
+          "output_tokens_details": {
+            "text_tokens": 184,
+            "reasoning_tokens": 35
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 5376
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "bfb31f6a-011d-9683-a2b2-a16b88f488ea",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793855791.347069,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "bfb31f6a-011d-9683-a2b2-a16b88f488ea",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.5546355247497559
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 23.526662826538086,
+    "usage": {
+      "input_tokens": 13441,
+      "input_tokens_details": {
+        "cached_tokens": 8960,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 1419,
+      "output_tokens_details": {
+        "reasoning_tokens": 1124
+      },
+      "total_tokens": 14860,
+      "x_details": [
+        {
+          "input_tokens": 13441,
+          "output_tokens": 1419,
+          "total_tokens": 14860,
+          "input_tokens_details": {
+            "text_tokens": 13441
+          },
+          "output_tokens_details": {
+            "text_tokens": 295,
+            "reasoning_tokens": 1124
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 8960
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "d602e805-f452-966c-ae55-d65fc2568ac6",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793855822.24869,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "d602e805-f452-966c-ae55-d65fc2568ac6",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.0163543224334717
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 17.748258590698242,
+    "usage": {
+      "input_tokens": 15237,
+      "input_tokens_details": {
+        "cached_tokens": 12544,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 851,
+      "output_tokens_details": {
+        "reasoning_tokens": 80
+      },
+      "total_tokens": 16088,
+      "x_details": [
+        {
+          "input_tokens": 15237,
+          "output_tokens": 851,
+          "total_tokens": 16088,
+          "input_tokens_details": {
+            "text_tokens": 15237
+          },
+          "output_tokens_details": {
+            "text_tokens": 771,
+            "reasoning_tokens": 80
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 12544
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "17ca8388-8c18-9560-872b-ec10217e4cee",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793855840.6196246,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "17ca8388-8c18-9560-872b-ec10217e4cee",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.3772120475769043
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "770c0e3e0041b524e366e5d317159e7e6d27979da34b1e0a0003815697325c33",
+    "video_bytes": 579575,
+    "duration": 3.9,
+    "filename": "S03.mp4",
+    "elapsed_seconds": 99.12556648254395,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 9683,
+      "completion_tokens": 6898,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 6549,
+        "text_tokens": 349
+      }
+    }
+  },
+  {
+    "request_id": "c757b756-eca4-9d10-bcb4-18612872ef94",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793855939.7593412,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "c757b756-eca4-9d10-bcb4-18612872ef94",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.9795958995819092
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "8f34f7939ccf78608971432a1c0fb5033a3bdd64fa39d7e2612b8a3de8554224",
+    "video_bytes": 377284,
+    "duration": 5.1,
+    "filename": "S04.mp4",
+    "elapsed_seconds": 115.71123385429382,
+    "usage": {
+      "prompt_tokens": 3379,
+      "total_tokens": 11210,
+      "completion_tokens": 7831,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7491,
+        "text_tokens": 340
+      }
+    }
+  },
+  {
+    "request_id": "10d4022f-e26e-9c3e-8b3c-a7a75acc70b2",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856055.483659,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "10d4022f-e26e-9c3e-8b3c-a7a75acc70b2",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.5206735134124756
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "e8fbc29e7e635e80874b3588abcf7a2a68708b42864291beca72f379ab23712d",
+    "video_bytes": 418448,
+    "duration": 2.9,
+    "filename": "S02.mp4",
+    "elapsed_seconds": 78.75134634971619,
+    "usage": {
+      "prompt_tokens": 2191,
+      "total_tokens": 6774,
+      "completion_tokens": 4583,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 1784,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 4307,
+        "text_tokens": 276
+      }
+    }
+  },
+  {
+    "request_id": "771542bf-444f-92b5-8484-7c01c942cabd",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856134.251184,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "771542bf-444f-92b5-8484-7c01c942cabd",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.6901662349700928
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "6b8eb84bf07076138567c99bfd10f1190760faa563b714946eace53bb2530ca6",
+    "video_bytes": 534346,
+    "duration": 5.066667,
+    "filename": "S01.mp4",
+    "elapsed_seconds": 190.20888376235962,
+    "usage": {
+      "prompt_tokens": 3379,
+      "total_tokens": 17695,
+      "completion_tokens": 14316,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 13974,
+        "text_tokens": 342
+      }
+    }
+  },
+  {
+    "request_id": "0e0862ac-2bde-9f7d-8b51-44ebd268845e",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856324.4879315,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "0e0862ac-2bde-9f7d-8b51-44ebd268845e",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 3.526379108428955
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "0f9051f63dd16f70c6c551f7aa2725fc2a85f4676b1aad73d9f40e26bff53a16",
+    "video_bytes": 557437,
+    "duration": 5.3,
+    "filename": "S08.mp4",
+    "elapsed_seconds": 254.8268084526062,
+    "usage": {
+      "prompt_tokens": 3379,
+      "total_tokens": 21835,
+      "completion_tokens": 18456,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 18216,
+        "text_tokens": 240
+      }
+    }
+  },
+  {
+    "request_id": "fbdd8168-2849-9e83-bcc9-d8a0b484e290",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856579.354666,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "fbdd8168-2849-9e83-bcc9-d8a0b484e290",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.8118414878845215
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "777ad0ab1ef5e25643fcd8b3bfa57557f324d42886622a17d2358df1a592814e",
+    "video_bytes": 606895,
+    "duration": 5.7,
+    "filename": "S05.mp4",
+    "elapsed_seconds": 131.44475150108337,
+    "usage": {
+      "prompt_tokens": 3973,
+      "total_tokens": 14617,
+      "completion_tokens": 10644,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 3566,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 10320,
+        "text_tokens": 324
+      }
+    }
+  },
+  {
+    "request_id": "e382a4aa-5354-970c-b23c-513ace853113",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856710.8282757,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "e382a4aa-5354-970c-b23c-513ace853113",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.912907361984253
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "63bf3faaa53806b227f8ab7679ea51636d928d3105070a1d92683f6e29ebeb6f",
+    "video_bytes": 696143,
+    "duration": 4.233333,
+    "filename": "S07.mp4",
+    "elapsed_seconds": 135.05776810646057,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 11925,
+      "completion_tokens": 9140,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8838,
+        "text_tokens": 302
+      }
+    }
+  },
+  {
+    "request_id": "5c3f2544-c970-998c-b04f-9f5ecf31d731",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856845.9283884,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "5c3f2544-c970-998c-b04f-9f5ecf31d731",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.828113317489624
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "43f333ab073088b1ec085a66f87d059ddfed52bc6d12d31881c43e7787e81d88",
+    "video_bytes": 477714,
+    "duration": 3.4,
+    "filename": "S06.mp4",
+    "elapsed_seconds": 32.97968244552612,
+    "usage": {
+      "prompt_tokens": 2191,
+      "total_tokens": 4629,
+      "completion_tokens": 2438,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 1784,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2191,
+        "text_tokens": 247
+      }
+    }
+  },
+  {
+    "request_id": "a3fda86b-04c3-9d16-9c0d-fc6befcd4e4b",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856878.9200985,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "a3fda86b-04c3-9d16-9c0d-fc6befcd4e4b",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.1252849102020264
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 4.968817949295044,
+    "usage": {
+      "input_tokens": 16149,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 123,
+      "output_tokens_details": {
+        "reasoning_tokens": 57
+      },
+      "total_tokens": 16272,
+      "x_details": [
+        {
+          "input_tokens": 16149,
+          "output_tokens": 123,
+          "total_tokens": 16272,
+          "input_tokens_details": {
+            "text_tokens": 16149
+          },
+          "output_tokens_details": {
+            "text_tokens": 66,
+            "reasoning_tokens": 57
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "d7de5676-0070-9e06-9930-e3d03c0c8f4b",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856883.9189005,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "d7de5676-0070-9e06-9930-e3d03c0c8f4b",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.7591192722320557
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "852aa6fafa08ede7c2ffd80e15f9c5d97497abaf2ddd2bc1d3cdce4b8e59a95b",
+    "video_bytes": 586537,
+    "duration": 4.3,
+    "filename": "S09.mp4",
+    "elapsed_seconds": 58.96472930908203,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 6525,
+      "completion_tokens": 3740,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3435,
+        "text_tokens": 305
+      }
+    }
+  },
+  {
+    "request_id": "b85398e1-a2e3-99b8-a3c2-aefe5c885426",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856942.908355,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "b85398e1-a2e3-99b8-a3c2-aefe5c885426",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.9139444828033447
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "881e01282b83df4de93ec5c6bfd04cfcdeaa0d57f57eae9f58f8c9df3e98eef6",
+    "video_bytes": 553059,
+    "duration": 3.533333,
+    "filename": "S10.mp4",
+    "elapsed_seconds": 50.74319124221802,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 6002,
+      "completion_tokens": 3217,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2887,
+        "text_tokens": 330
+      }
+    }
+  },
+  {
+    "request_id": "fc653365-774a-9140-a336-7171925e0d71",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793856993.6983018,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "fc653365-774a-9140-a336-7171925e0d71",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.3666250705718994
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "3e22160497e8db8e05310763d3296e3684d7b850ebc6892ad431120af713a3d3",
+    "video_bytes": 613676,
+    "duration": 5.0,
+    "filename": "S11.mp4",
+    "elapsed_seconds": 128.32990550994873,
+    "usage": {
+      "prompt_tokens": 3379,
+      "total_tokens": 10837,
+      "completion_tokens": 7458,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7099,
+        "text_tokens": 359
+      }
+    }
+  },
+  {
+    "request_id": "7c14cf11-0690-9b14-892e-8ab8d4b765ed",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857122.0998974,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "7c14cf11-0690-9b14-892e-8ab8d4b765ed",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.6690866947174072
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "d47efee09f4df60cd7cbbbe361c17263ccc1bbc361c99ad82cb130c903f7d299",
+    "video_bytes": 565534,
+    "duration": 4.033333,
+    "filename": "S12.mp4",
+    "elapsed_seconds": 42.70356607437134,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 5852,
+      "completion_tokens": 3067,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2802,
+        "text_tokens": 265
+      }
+    }
+  },
+  {
+    "request_id": "077aa478-ea7c-972f-954f-9112ed6a2d53",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857164.8275986,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "077aa478-ea7c-972f-954f-9112ed6a2d53",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 4.757625579833984
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "26a5688b29434c73019fda282615850aa5607dd8069f628abb18e9badb0fc197",
+    "video_bytes": 904013,
+    "duration": 5.833333,
+    "filename": "S13.mp4",
+    "elapsed_seconds": 154.87917804718018,
+    "usage": {
+      "prompt_tokens": 3973,
+      "total_tokens": 15753,
+      "completion_tokens": 11780,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 3566,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 11423,
+        "text_tokens": 357
+      }
+    }
+  },
+  {
+    "request_id": "19ead64c-7847-9247-ba87-cde65661eef1",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857319.7223978,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "19ead64c-7847-9247-ba87-cde65661eef1",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.5370869636535645
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "8568c8dbc2d124a8f9205d5f216b31fcff72fbce628e9429edd55f9aa2be8d15",
+    "video_bytes": 545643,
+    "duration": 3.933333,
+    "filename": "S14.mp4",
+    "elapsed_seconds": 130.60231256484985,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 11870,
+      "completion_tokens": 9085,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8702,
+        "text_tokens": 383
+      }
+    }
+  },
+  {
+    "request_id": "fee40997-093f-9c07-a319-b0531f6f3978",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857450.345063,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "fee40997-093f-9c07-a319-b0531f6f3978",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.790686845779419
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "63bf3faaa53806b227f8ab7679ea51636d928d3105070a1d92683f6e29ebeb6f",
+    "video_bytes": 696143,
+    "duration": 4.233333,
+    "filename": "S07.mp4",
+    "elapsed_seconds": 139.03417086601257,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 13425,
+      "completion_tokens": 10640,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 10320,
+        "text_tokens": 320
+      }
+    }
+  },
+  {
+    "request_id": "43146995-618a-91ad-913a-fd2577257c03",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857589.3914692,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "43146995-618a-91ad-913a-fd2577257c03",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.8228554725646973
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "43f333ab073088b1ec085a66f87d059ddfed52bc6d12d31881c43e7787e81d88",
+    "video_bytes": 477714,
+    "duration": 3.4,
+    "filename": "S06.mp4",
+    "elapsed_seconds": 86.68972730636597,
+    "usage": {
+      "prompt_tokens": 2191,
+      "total_tokens": 8730,
+      "completion_tokens": 6539,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 1784,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 6290,
+        "text_tokens": 249
+      }
+    }
+  },
+  {
+    "request_id": "a71abad8-7e84-9159-8480-d8d1f7dc527c",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857676.0865955,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "a71abad8-7e84-9159-8480-d8d1f7dc527c",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.997492790222168
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 5.134565114974976,
+    "usage": {
+      "input_tokens": 16329,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 132,
+      "output_tokens_details": {
+        "reasoning_tokens": 60
+      },
+      "total_tokens": 16461,
+      "x_details": [
+        {
+          "input_tokens": 16329,
+          "output_tokens": 132,
+          "total_tokens": 16461,
+          "input_tokens_details": {
+            "text_tokens": 16329
+          },
+          "output_tokens_details": {
+            "text_tokens": 72,
+            "reasoning_tokens": 60
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "84fe9121-81f4-92ea-bb29-f2cfe16ea215",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857681.236474,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "84fe9121-81f4-92ea-bb29-f2cfe16ea215",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.4383916854858398
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "1873e70dc32f99380cd9e4814b76170dfca45e4f6811f53ff265e836eadc0424",
+    "video_bytes": 509509,
+    "duration": 3.733333,
+    "filename": "S15.mp4",
+    "elapsed_seconds": 64.55157327651978,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 6572,
+      "completion_tokens": 3787,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3465,
+        "text_tokens": 322
+      }
+    }
+  },
+  {
+    "request_id": "7914a012-80c6-91f4-a4c7-0b6fb1d65a58",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857745.8157468,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "7914a012-80c6-91f4-a4c7-0b6fb1d65a58",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.7094311714172363
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "3e22160497e8db8e05310763d3296e3684d7b850ebc6892ad431120af713a3d3",
+    "video_bytes": 613676,
+    "duration": 5.0,
+    "filename": "S11.mp4",
+    "elapsed_seconds": 121.80364060401917,
+    "usage": {
+      "prompt_tokens": 3379,
+      "total_tokens": 11709,
+      "completion_tokens": 8330,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 7974,
+        "text_tokens": 356
+      }
+    }
+  },
+  {
+    "request_id": "7b4bf4df-afc2-9f5d-bd12-6f2358fe01eb",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857867.6329443,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "7b4bf4df-afc2-9f5d-bd12-6f2358fe01eb",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.324706792831421
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "3ec047bb76e38a098494fd7a7228d09db8d387110293efee84b3882c1267e762",
+    "video_bytes": 544107,
+    "duration": 4.833333,
+    "filename": "S16.mp4",
+    "elapsed_seconds": 79.49632787704468,
+    "usage": {
+      "prompt_tokens": 3379,
+      "total_tokens": 9026,
+      "completion_tokens": 5647,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5225,
+        "text_tokens": 422
+      }
+    }
+  },
+  {
+    "request_id": "e69b33c2-ab1f-9891-bd69-cdd5d2b5a5a7",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793857947.1455436,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "e69b33c2-ab1f-9891-bd69-cdd5d2b5a5a7",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.3252689838409424
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "4f2490bc6dd47cd8fdd08c78b6d1ff89bc56bd68495dead032fc81a26a234b5d",
+    "video_bytes": 612113,
+    "duration": 5.133333,
+    "filename": "S17.mp4",
+    "elapsed_seconds": 97.9011800289154,
+    "usage": {
+      "prompt_tokens": 3379,
+      "total_tokens": 9233,
+      "completion_tokens": 5854,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2972,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5520,
+        "text_tokens": 334
+      }
+    }
+  },
+  {
+    "request_id": "1bf85c75-84ee-9a00-a9f8-3f4368d25695",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858045.0709877,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "1bf85c75-84ee-9a00-a9f8-3f4368d25695",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.3567490577697754
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "48f2779c4e30b24731e3cf3ca2e4c853629fff562e0eba4af8fe74d5636e0a18",
+    "video_bytes": 561701,
+    "duration": 4.1,
+    "filename": "S18.mp4",
+    "elapsed_seconds": 94.49527883529663,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 9043,
+      "completion_tokens": 6258,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5865,
+        "text_tokens": 393
+      }
+    }
+  },
+  {
+    "request_id": "684f1e87-bb9b-9820-a9ca-7ecd1ca60610",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858139.5883794,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "684f1e87-bb9b-9820-a9ca-7ecd1ca60610",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.535670042037964
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "a9b8136e8945c240a11e2a6ee39ebe9c58e6cc160d7fb643b1f2eefd00b84b6d",
+    "video_bytes": 664852,
+    "duration": 4.3,
+    "filename": "S19.mp4",
+    "elapsed_seconds": 80.19794750213623,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 8152,
+      "completion_tokens": 5367,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5056,
+        "text_tokens": 311
+      }
+    }
+  },
+  {
+    "request_id": "26c9369f-4451-9b35-88df-65ed6a3c7992",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858219.803147,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "26c9369f-4451-9b35-88df-65ed6a3c7992",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 3.6929121017456055
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "852aa6fafa08ede7c2ffd80e15f9c5d97497abaf2ddd2bc1d3cdce4b8e59a95b",
+    "video_bytes": 586537,
+    "duration": 4.3,
+    "filename": "S09.mp4",
+    "elapsed_seconds": 141.48496007919312,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 12427,
+      "completion_tokens": 9642,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 9278,
+        "text_tokens": 364
+      }
+    }
+  },
+  {
+    "request_id": "e2f08ebf-9c30-9d94-aba2-4790cd18d836",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858361.3021379,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "e2f08ebf-9c30-9d94-aba2-4790cd18d836",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 3.062425136566162
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "35f55fd51c6329de1bdc973900861d904000872c00a69f1507c5c3c4295e682b",
+    "video_bytes": 736788,
+    "duration": 5.733333,
+    "filename": "S20.mp4",
+    "elapsed_seconds": 92.05844759941101,
+    "usage": {
+      "prompt_tokens": 3973,
+      "total_tokens": 9952,
+      "completion_tokens": 5979,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 3566,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5652,
+        "text_tokens": 327
+      }
+    }
+  },
+  {
+    "request_id": "844b9fa2-8d0b-9f35-90e5-a12afb875f12",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858453.3642774,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "844b9fa2-8d0b-9f35-90e5-a12afb875f12",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.9045183658599854
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 7.014654636383057,
+    "usage": {
+      "input_tokens": 16676,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "reasoning_tokens": 221
+      },
+      "total_tokens": 16981,
+      "x_details": [
+        {
+          "input_tokens": 16676,
+          "output_tokens": 305,
+          "total_tokens": 16981,
+          "input_tokens_details": {
+            "text_tokens": 16676
+          },
+          "output_tokens_details": {
+            "text_tokens": 84,
+            "reasoning_tokens": 221
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "d6e2ed46-2743-9bb4-828c-0d7797a840e4",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858460.3954852,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "d6e2ed46-2743-9bb4-828c-0d7797a840e4",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.5004842281341553
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "a345a8822c68b8aeb3f927c6e2a59bf688a37b08c5a4ac72a26103a62ceac87c",
+    "video_bytes": 576186,
+    "duration": 7.7,
+    "filename": "S21.mp4",
+    "elapsed_seconds": 145.67336249351501,
+    "usage": {
+      "prompt_tokens": 5161,
+      "total_tokens": 15760,
+      "completion_tokens": 10599,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 4754,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 10217,
+        "text_tokens": 382
+      }
+    }
+  },
+  {
+    "request_id": "1df6d246-461e-9b50-80b0-9201e2625dc1",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858606.1221135,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "1df6d246-461e-9b50-80b0-9201e2625dc1",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 11.809897184371948
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "15cdfec6bf42d9b93a469c6f7d510488c3f78a785b6c6c3c4046e7509a2a84f7",
+    "video_bytes": 2442545,
+    "duration": 5.933333,
+    "filename": "S22.mp4",
+    "elapsed_seconds": 93.8037703037262,
+    "usage": {
+      "prompt_tokens": 3973,
+      "total_tokens": 9866,
+      "completion_tokens": 5893,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 3566,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5564,
+        "text_tokens": 329
+      }
+    }
+  },
+  {
+    "request_id": "067fe076-9369-95cf-b89c-9227bd483c3e",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858699.938988,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "067fe076-9369-95cf-b89c-9227bd483c3e",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.9484848976135254
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "852aa6fafa08ede7c2ffd80e15f9c5d97497abaf2ddd2bc1d3cdce4b8e59a95b",
+    "video_bytes": 586537,
+    "duration": 4.3,
+    "filename": "S09.mp4",
+    "elapsed_seconds": 53.69714546203613,
+    "usage": {
+      "prompt_tokens": 2785,
+      "total_tokens": 6253,
+      "completion_tokens": 3468,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 2378,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 3162,
+        "text_tokens": 306
+      }
+    }
+  },
+  {
+    "request_id": "85a79491-dd6c-95f7-884c-9a0685c1371d",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858753.6655953,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "85a79491-dd6c-95f7-884c-9a0685c1371d",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 4.025132894515991
+      }
+    ],
+    "endpoint": "native_video",
+    "model": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "video_sha256": "e0a8efd16939a2ec1825a9434c8c81a6e4f1287246a8f572e12932000a8d5fd2",
+    "video_bytes": 1107487,
+    "duration": 5.666667,
+    "filename": "S23.mp4",
+    "elapsed_seconds": 95.67103385925293,
+    "usage": {
+      "prompt_tokens": 3973,
+      "total_tokens": 10021,
+      "completion_tokens": 6048,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "video_tokens": 3566,
+        "text_tokens": 407
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 5693,
+        "text_tokens": 355
+      }
+    }
+  },
+  {
+    "request_id": "e3b7ee48-48e1-9dcd-b8ba-eb52f9b86377",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858849.3425477,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "e3b7ee48-48e1-9dcd-b8ba-eb52f9b86377",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.1900808811187744
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 6.439782619476318,
+    "usage": {
+      "input_tokens": 17306,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "reasoning_tokens": 105
+      },
+      "total_tokens": 17538,
+      "x_details": [
+        {
+          "input_tokens": 17306,
+          "output_tokens": 232,
+          "total_tokens": 17538,
+          "input_tokens_details": {
+            "text_tokens": 17306
+          },
+          "output_tokens_details": {
+            "text_tokens": 127,
+            "reasoning_tokens": 105
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "97d906ba-333d-901a-b8fb-3ee983926128",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858858.3517847,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "97d906ba-333d-901a-b8fb-3ee983926128",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.5784831047058105
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 7.936543703079224,
+    "usage": {
+      "input_tokens": 20388,
+      "input_tokens_details": {
+        "cached_tokens": 16128,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 477,
+      "output_tokens_details": {
+        "reasoning_tokens": 214
+      },
+      "total_tokens": 20865,
+      "x_details": [
+        {
+          "input_tokens": 20388,
+          "output_tokens": 477,
+          "total_tokens": 20865,
+          "input_tokens_details": {
+            "text_tokens": 20388
+          },
+          "output_tokens_details": {
+            "text_tokens": 263,
+            "reasoning_tokens": 214
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 16128
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "d60067eb-958d-966a-8f4d-fc1ac2309bee",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858866.820335,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "d60067eb-958d-966a-8f4d-fc1ac2309bee",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.5571479797363281
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 6.7510716915130615,
+    "usage": {
+      "input_tokens": 21104,
+      "input_tokens_details": {
+        "cached_tokens": 19712,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 506,
+      "output_tokens_details": {
+        "reasoning_tokens": 127
+      },
+      "total_tokens": 21610,
+      "x_details": [
+        {
+          "input_tokens": 21104,
+          "output_tokens": 506,
+          "total_tokens": 21610,
+          "input_tokens_details": {
+            "text_tokens": 21104
+          },
+          "output_tokens_details": {
+            "text_tokens": 379,
+            "reasoning_tokens": 127
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 19712
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "14d32f94-24cd-920c-95fb-5d3d375c4962",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858874.1314502,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "14d32f94-24cd-920c-95fb-5d3d375c4962",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.5476911067962646
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 8.152946949005127,
+    "usage": {
+      "input_tokens": 24405,
+      "input_tokens_details": {
+        "cached_tokens": 19712,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 388,
+      "output_tokens_details": {
+        "reasoning_tokens": 127
+      },
+      "total_tokens": 24793,
+      "x_details": [
+        {
+          "input_tokens": 24405,
+          "output_tokens": 388,
+          "total_tokens": 24793,
+          "input_tokens_details": {
+            "text_tokens": 24405
+          },
+          "output_tokens_details": {
+            "text_tokens": 261,
+            "reasoning_tokens": 127
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 19712
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "87092121-692e-9371-922f-81d59b832962",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858882.5962484,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "87092121-692e-9371-922f-81d59b832962",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.8748235702514648
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 64.054682970047,
+    "usage": {
+      "input_tokens": 26405,
+      "input_tokens_details": {
+        "cached_tokens": 23296,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 5113,
+      "output_tokens_details": {
+        "reasoning_tokens": 2511
+      },
+      "total_tokens": 31518,
+      "x_details": [
+        {
+          "input_tokens": 26405,
+          "output_tokens": 5113,
+          "total_tokens": 31518,
+          "input_tokens_details": {
+            "text_tokens": 26405
+          },
+          "output_tokens_details": {
+            "text_tokens": 2602,
+            "reasoning_tokens": 2511
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 23296
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "fb24a605-5e2a-9ecc-b3b2-a13c1451a006",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858947.1249135,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "fb24a605-5e2a-9ecc-b3b2-a13c1451a006",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 2.510525703430176
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 12.55979299545288,
+    "usage": {
+      "input_tokens": 31757,
+      "input_tokens_details": {
+        "cached_tokens": 25088,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 650,
+      "output_tokens_details": {
+        "reasoning_tokens": 20
+      },
+      "total_tokens": 32407,
+      "x_details": [
+        {
+          "input_tokens": 31757,
+          "output_tokens": 650,
+          "total_tokens": 32407,
+          "input_tokens_details": {
+            "text_tokens": 31757
+          },
+          "output_tokens_details": {
+            "text_tokens": 630,
+            "reasoning_tokens": 20
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 25088
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "fbb73382-ef67-9cf1-898f-07d478e1e957",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858965.879348,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "fbb73382-ef67-9cf1-898f-07d478e1e957",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.7597684860229492
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 11.215381860733032,
+    "usage": {
+      "input_tokens": 33816,
+      "input_tokens_details": {
+        "cached_tokens": 30464,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 780,
+      "output_tokens_details": {
+        "reasoning_tokens": 87
+      },
+      "total_tokens": 34596,
+      "x_details": [
+        {
+          "input_tokens": 33816,
+          "output_tokens": 780,
+          "total_tokens": 34596,
+          "input_tokens_details": {
+            "text_tokens": 33816
+          },
+          "output_tokens_details": {
+            "text_tokens": 693,
+            "reasoning_tokens": 87
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 30464
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "3844dca7-2267-949b-9ff5-7b7647501dd5",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858977.8841784,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "3844dca7-2267-949b-9ff5-7b7647501dd5",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 0.9063019752502441
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 9.053061246871948,
+    "usage": {
+      "input_tokens": 36332,
+      "input_tokens_details": {
+        "cached_tokens": 32256,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 545,
+      "output_tokens_details": {
+        "reasoning_tokens": 126
+      },
+      "total_tokens": 36877,
+      "x_details": [
+        {
+          "input_tokens": 36332,
+          "output_tokens": 545,
+          "total_tokens": 36877,
+          "input_tokens_details": {
+            "text_tokens": 36332
+          },
+          "output_tokens_details": {
+            "text_tokens": 419,
+            "reasoning_tokens": 126
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 32256
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  },
+  {
+    "request_id": "d26885cc-1643-9321-942f-a526f38f7a2c",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "transport_attempts": [
+      {
+        "attempt": 1,
+        "started": 1793858988.9445658,
+        "new_session": true,
+        "http_status": 200,
+        "request_id": "d26885cc-1643-9321-942f-a526f38f7a2c",
+        "headers_received": true,
+        "elapsed_to_headers_seconds": 1.1611754894256592
+      }
+    ],
+    "model": "qwen3.8-omni-flash",
+    "model_requested": "qwen3.8-omni-flash",
+    "http_status": 200,
+    "elapsed_seconds": 12.654399394989014,
+    "usage": {
+      "input_tokens": 37353,
+      "input_tokens_details": {
+        "cached_tokens": 35840,
+        "cache_write_tokens": 0
+      },
+      "output_tokens": 829,
+      "output_tokens_details": {
+        "reasoning_tokens": 55
+      },
+      "total_tokens": 38182,
+      "x_details": [
+        {
+          "input_tokens": 37353,
+          "output_tokens": 829,
+          "total_tokens": 38182,
+          "input_tokens_details": {
+            "text_tokens": 37353
+          },
+          "output_tokens_details": {
+            "text_tokens": 774,
+            "reasoning_tokens": 55
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 35840
+          },
+          "x_billing_type": "response_api"
+        }
+      ]
+    },
+    "status": "completed"
+  }
+]

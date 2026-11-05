@@ -1,0 +1,7 @@
+{
+  "gap_seconds": 1038.9219892024994,
+  "http": 200,
+  "status": "completed",
+  "transport": "fresh_session_per_http_attempt_v1",
+  "attempt_count": 1
+}

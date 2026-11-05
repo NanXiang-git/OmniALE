@@ -1,0 +1,39 @@
+{
+  "case": "Case10 / original A4 sign bilingual",
+  "solver": "qwen3.8-omni-flash",
+  "solver_effort": "provider_default",
+  "solver_seconds": 3600,
+  "attempts": 1,
+  "judge": "gpt-6-astra",
+  "judge_effort": "high",
+  "judge_seconds": 1800,
+  "judge_provider": "nju",
+  "judge_base_url": "https://api-temporary.nju-link.com/v1",
+  "judge_config_provenance": "benchmark_runs/20261022_k3a6_60_sola4_40_serial/PROTOCOL.json + pipeline.py",
+  "rubric": "unchanged original aggregate; historical single-review authorization retained",
+  "all_new_files_on_D": true,
+  "other_qwen_run_wait": "D:\\omniALE\\runs_case12_qwen38omni_60m\\run_20261104_224120",
+  "state": "awaiting_transport_validation",
+  "video_input": {
+    "endpoint": "chat/completions",
+    "type": "video_url",
+    "encoding": "local MP4 base64",
+    "sampling": "provider default, internal frame selection not independently verified",
+    "limits": {
+      "max_seconds_per_call": 60,
+      "max_bytes_per_call": 20000000
+    },
+    "additional_tools": "ffmpeg dense frame extraction and Codex view_image",
+    "provider_docs": "https://help.aliyun.com/zh/model-studio/qwen-omni"
+  },
+  "attempt_number": 3,
+  "prior_attempt": "D:\\omniALE\\runs_case10_qwen38omni\\run_20261105_122451_attempt2",
+  "transport_fix": {
+    "new_https_session_per_request": true,
+    "pre_header_connection_error_retries": 1,
+    "retry_after_response_started": false,
+    "all_retries_within_original_deadline": true,
+    "local_media_wait": "remaining solver deadline; prevents serial-queue wait consuming fixed600s timeout",
+    "duplicate_billing_possible_on_ambiguous_preheader_failure": true
+  }
+}

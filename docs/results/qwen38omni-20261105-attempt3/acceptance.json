@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": {
+    "smoke_exit": true,
+    "image_and_tools": true,
+    "native_video": true,
+    "video_color_order": true,
+    "isolation": true,
+    "kill": true
+  },
+  "smoke_final": "SMOKE_OK — all three probes passed.\n\n**Results**\n- Arithmetic: `python3 -c \"print(7*8)\"` → `56`\n- Visual code in `/candidate/visual.png`: **CBE39C** (white text on a dark navy background, rendered legibly by `view_image`)\n- Video probe: `qwen_video.py` exited 0 in ~4s, model `qwen3.8-omni-flash`, and described the color order as **red first, then blue** (abrupt cut at ~1.0s, no intermediate shades)\n- Artifact written: `/workspace/scratch/video.json` (771 bytes) with keys `model`, `text`, `usage` — usage reports 227 prompt / 203 completion tokens, of which 162 are video tokens\n\n**Notes**\n- Per instructions, I did not read `/candidate/TASK.md` or anything else under `/candidate/tools`.\n- No subagents were spawned; everything ran inline in this session."
+}

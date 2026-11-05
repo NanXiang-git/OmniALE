@@ -1,0 +1,152 @@
+{
+  "source_sha256": "ea015efd424d5fa5a4bf1639ca84aadc136d12a550edd23b79954ffa8f9a4c51",
+  "fps": 4,
+  "timestamps": "nominal 4fps sampling positions; not exact gesture boundaries",
+  "units": 23,
+  "sheets": [
+    {
+      "segment": "S01",
+      "file": "S01_p01.jpg",
+      "frames": 20,
+      "sha256": "94082db9bd9f47efd082529645448881f668c763307f6245c6e468eaf21e8811"
+    },
+    {
+      "segment": "S02",
+      "file": "S02_p01.jpg",
+      "frames": 12,
+      "sha256": "d99fc1ac51920a2ca34af1854791b8b9ab4bc3a5f8c542643bca757ca29ed4dc"
+    },
+    {
+      "segment": "S03",
+      "file": "S03_p01.jpg",
+      "frames": 16,
+      "sha256": "c3fa6ac0886f23154357c4231cdf313b61e3cd9beb03c456b4c9d183f6c82d88"
+    },
+    {
+      "segment": "S04",
+      "file": "S04_p01.jpg",
+      "frames": 20,
+      "sha256": "5dde8614e4a9e18fc61cee5ba506d11823f3254e7c8c4fc1d099abbf7b25a274"
+    },
+    {
+      "segment": "S05",
+      "file": "S05_p01.jpg",
+      "frames": 23,
+      "sha256": "a0cc79b17a1f5edc89b960aae2386e8953bc0de08e17ee685f3016c22df3d675"
+    },
+    {
+      "segment": "S06",
+      "file": "S06_p01.jpg",
+      "frames": 13,
+      "sha256": "6b930f18f30db66be2f26a1208a2b9b0c213103bbe61b04bb74590ec05580324"
+    },
+    {
+      "segment": "S07",
+      "file": "S07_p01.jpg",
+      "frames": 17,
+      "sha256": "67a190ddfacdf79bf4e99797b5958c397a632c3d5f86f2d785803d9a9719d929"
+    },
+    {
+      "segment": "S08",
+      "file": "S08_p01.jpg",
+      "frames": 21,
+      "sha256": "febbf1109ff1a1c3196c041386c2266f3a31983cb1b849b1c6901b1c0ca4ddb3"
+    },
+    {
+      "segment": "S09",
+      "file": "S09_p01.jpg",
+      "frames": 17,
+      "sha256": "ed4fa6af199fb9bdc7b7401401b7b747775c21d498f5ca3e5070b060e61f1987"
+    },
+    {
+      "segment": "S10",
+      "file": "S10_p01.jpg",
+      "frames": 14,
+      "sha256": "76a4e1ea3c7c6902ce6b21137c03f94bf103e17fa63702cd97b0642c6348535c"
+    },
+    {
+      "segment": "S11",
+      "file": "S11_p01.jpg",
+      "frames": 20,
+      "sha256": "fba067c377a0c171897df2f382a412af207a8cdb0dcaa45baeb9fdf4849e6faf"
+    },
+    {
+      "segment": "S12",
+      "file": "S12_p01.jpg",
+      "frames": 16,
+      "sha256": "c167ec7ecb316a6e2e9b900ea1238708143591a1062e7a24a0e8288c9f8a984d"
+    },
+    {
+      "segment": "S13",
+      "file": "S13_p01.jpg",
+      "frames": 23,
+      "sha256": "12271e7174b32cd002367319590b5940f64959bff59debe98f5a125ba9658687"
+    },
+    {
+      "segment": "S14",
+      "file": "S14_p01.jpg",
+      "frames": 16,
+      "sha256": "ed3b9c40bb44ceda9ef53832eed5998eb702cb8213d73591ec30854d913fed10"
+    },
+    {
+      "segment": "S15",
+      "file": "S15_p01.jpg",
+      "frames": 15,
+      "sha256": "9bc2621485cd7b2aa48f7404e008e55b7d8bd7e792f4f161089e5d15e6eefd6c"
+    },
+    {
+      "segment": "S16",
+      "file": "S16_p01.jpg",
+      "frames": 19,
+      "sha256": "45767ceba07aa12792079c3c0ae6a610cc7f0d98440e2d9f3b3540fffacb82c8"
+    },
+    {
+      "segment": "S17",
+      "file": "S17_p01.jpg",
+      "frames": 21,
+      "sha256": "5c2b1f8515c4558de9c3aae3a307570b74acf7a932931e9059a361837e8e56f2"
+    },
+    {
+      "segment": "S18",
+      "file": "S18_p01.jpg",
+      "frames": 16,
+      "sha256": "b2581cad411bd199506b6cfb9c0ab75106a728220e7ca761ea0966bd241cde27"
+    },
+    {
+      "segment": "S19",
+      "file": "S19_p01.jpg",
+      "frames": 17,
+      "sha256": "ae1f4b32f613a8856faaeee460ca9b4dcda3cfed67c2d5a91aeeee5d6ee7965f"
+    },
+    {
+      "segment": "S20",
+      "file": "S20_p01.jpg",
+      "frames": 23,
+      "sha256": "e2f82105f867d72315030e9baf6344957de548473ea4a6b73bde7dac30147d30"
+    },
+    {
+      "segment": "S21",
+      "file": "S21_p01.jpg",
+      "frames": 24,
+      "sha256": "140a6751210d745daaf2f2e2ab71edd7a133331ada681ab235478dd0edee0d84"
+    },
+    {
+      "segment": "S21",
+      "file": "S21_p02.jpg",
+      "frames": 7,
+      "sha256": "2dad17dbd630e7f3d9928da8f63243ce5fcf2fc6691ed168d2acb78756f2c4d3"
+    },
+    {
+      "segment": "S22",
+      "file": "S22_p01.jpg",
+      "frames": 24,
+      "sha256": "ecf10738d9d67712e474d3591152751c5772a42529cc6a647082c288096bb547"
+    },
+    {
+      "segment": "S23",
+      "file": "S23_p01.jpg",
+      "frames": 23,
+      "sha256": "4cd7181cc19c9372e4a19bac35b3bfc958f454ccd381ba9c1bc79575834f021d"
+    }
+  ]
+}

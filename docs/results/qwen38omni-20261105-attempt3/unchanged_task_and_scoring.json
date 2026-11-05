@@ -1,0 +1,22 @@
+[
+  {
+    "file": "environment/runtime/prompt.txt",
+    "unchanged": true,
+    "sha256": "74027cf8daf7acf7dc63145cf589218e424aecfff64e1a2b05dc9d639433e6d8"
+  },
+  {
+    "file": "environment/runtime/inside.py",
+    "unchanged": true,
+    "sha256": "a0277555e8019988ee682cc3d3fba80fc943b84d547551536552b55ab73c15f0"
+  },
+  {
+    "file": "case/evaluator/grade.py",
+    "unchanged": true,
+    "sha256": "aa5b1df25078d181dee6183b9edafa08f6c4ae0dd7e12543214bcd4570552a54"
+  },
+  {
+    "file": "reports/historical_judge_prompt.txt",
+    "unchanged": true,
+    "sha256": "f5a8a5b74d766fc8502d89250d42bafd1942003fd74e272f665917dad2523fdc"
+  }
+]

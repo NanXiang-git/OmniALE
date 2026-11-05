@@ -1,0 +1,143 @@
+{
+  "repair_validated": true,
+  "finding": "Reusing an HTTPS connection after660s idle reproducibly causes10054 after19.21s; fresh connections immediately succeed twice.",
+  "attribution_limit": "Exact resetting intermediary or server not identified.",
+  "reused": {
+    "label": "reused_after_660s",
+    "start": 1793855674.8449702,
+    "base": "https://llm-vh69tik7vt5q4s3t.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+    "stream": true,
+    "reuse_session": true,
+    "request": "Reply exactly OK.",
+    "error": "ConnectionError(ProtocolError('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)))",
+    "exception_type": "ConnectionError",
+    "elapsed_seconds": 19.21265172958374,
+    "new_connections": []
+  },
+  "fresh": [
+    {
+      "label": "fresh_after_idle",
+      "start": 1793855694.058925,
+      "base": "https://llm-vh69tik7vt5q4s3t.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "stream": true,
+      "reuse_session": false,
+      "request": "Reply exactly OK.",
+      "http_status": 200,
+      "headers": {
+        "date": "Thu, 05 Nov 2026 05:14:56 GMT",
+        "server": "istio-envoy",
+        "x-request-id": "256f5dae-70f9-9ef0-a8d7-035e4543e3b7"
+      },
+      "completed": true,
+      "model": "qwen3.8-omni-flash",
+      "usage": {
+        "input_tokens": 88,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 25,
+        "output_tokens_details": {
+          "reasoning_tokens": 20
+        },
+        "total_tokens": 113,
+        "x_details": [
+          {
+            "input_tokens": 88,
+            "output_tokens": 25,
+            "total_tokens": 113,
+            "input_tokens_details": {
+              "text_tokens": 88
+            },
+            "output_tokens_details": {
+              "text_tokens": 5,
+              "reasoning_tokens": 20
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "x_billing_type": "response_api"
+          }
+        ]
+      },
+      "elapsed_seconds": 1.7926666736602783,
+      "new_connections": [
+        {
+          "utc": 1793855694.059516,
+          "host": "llm-vh69tik7vt5q4s3t.cn-beijing.maas.aliyuncs.com",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "label": "fresh_repeat",
+      "start": 1793855695.855827,
+      "base": "https://llm-vh69tik7vt5q4s3t.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "stream": true,
+      "reuse_session": false,
+      "request": "Reply exactly OK.",
+      "http_status": 200,
+      "headers": {
+        "date": "Thu, 05 Nov 2026 05:14:57 GMT",
+        "server": "istio-envoy",
+        "x-request-id": "8146e284-eb03-968e-9f24-8a5aaae6faff"
+      },
+      "completed": true,
+      "model": "qwen3.8-omni-flash",
+      "usage": {
+        "input_tokens": 88,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 26,
+        "output_tokens_details": {
+          "reasoning_tokens": 21
+        },
+        "total_tokens": 114,
+        "x_details": [
+          {
+            "input_tokens": 88,
+            "output_tokens": 26,
+            "total_tokens": 114,
+            "input_tokens_details": {
+              "text_tokens": 88
+            },
+            "output_tokens_details": {
+              "text_tokens": 5,
+              "reasoning_tokens": 21
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "x_billing_type": "response_api"
+          }
+        ]
+      },
+      "elapsed_seconds": 1.2322702407836914,
+      "new_connections": [
+        {
+          "utc": 1793855695.8565872,
+          "host": "llm-vh69tik7vt5q4s3t.cn-beijing.maas.aliyuncs.com",
+          "ok": true
+        }
+      ]
+    }
+  ],
+  "unit_tests": {
+    "passed": true,
+    "count": 5
+  },
+  "fix": "New Session per request; one bounded pre-header connection-error retry; no midstream replay; local video wait bounded by original solver deadline.",
+  "formal_run_recovery": {
+    "gap_seconds": 1038.9219892024994,
+    "http": 200,
+    "status": "completed",
+    "transport": "fresh_session_per_http_attempt_v1",
+    "attempt_count": 1
+  },
+  "formal_run_finished": {
+    "seconds": 3229.9123270511627,
+    "four_files_delivered": true
+  }
+}

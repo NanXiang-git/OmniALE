@@ -1,0 +1,114 @@
+[
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc 'cat /candidate/TASK.md; echo \"-----\"; cat /workspace/DEADLINE.json 2>/dev/null; echo \"-----\"; ls -la /candidate; echo \"-----\"; ls -la /candidate/input'",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc 'ls -la /workspace; ls -la /qwen_runtime; df -h /workspace; nproc; ffmpeg -version | head -3'",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat /candidate/input_manifest.json; echo \\\"-----\\\"; cat /candidate/segments.template.json; echo \\\"-----\\\"; cat /candidate/SOURCE_NOTICE.md; echo \\\"-----\\\"; date +%s.%N; python3 -c \\\"import json;d=json.load(open('/workspace/DEADLINE.json'));print('remaining sec', d['deadline_unix']-__import__('time').time())\\\"\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc 'cat /qwen_runtime/qwen_video.py; echo \"=====\"; cat /qwen_runtime/prompt.txt; echo \"=====\"; ffprobe -v error -show_format -show_streams /candidate/input/source.mp4 | head -60'",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"mkdir -p /workspace/scratch/seg /workspace/scratch/frames /workspace/scratch/out\npython3 - <<'EOF'\nimport json,subprocess,os\nm=json.load(open('/candidate/input_manifest.json'))\nos.makedirs('/workspace/scratch/seg',exist_ok=True)\njobs=[]\nfor s in m['segments']:\n    st,en=s['start'],s['end']; d=round(en-st,3)\n    out=f\\\"/workspace/scratch/seg/{s['id']}.mp4\\\"\n    cmd=['ffmpeg','-y','-v','error','-ss',str(st),'-i','/candidate/input/source.mp4','-t',str(d),\n         '-an','-c:v','libx264','-preset','veryfast','-crf','22','-pix_fmt','yuv420p',out]\n    jobs.append((s['id'],cmd))\nfrom concurrent.futures import ThreadPoolExecutor\ndef run(j):\n    subprocess.run(j[1],check=True); return j[0],os.path.getsize(f\\\"/workspace/scratch/seg/{j[0]}.mp4\\\")\nwith ThreadPoolExecutor(6) as ex:\n    for r in ex.map(run,jobs): print(r)\nEOF\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/scratch/run.py <<'PYEOF'\nimport json,subprocess,sys,os,time,re\nfrom concurrent.futures import ThreadPoolExecutor\nids=sys.argv[1:]\nPROMPT=\\\"\\\"\\\"这是中国手语(CSL)的一段独立表达片段（无音轨，前后黑场已去除）。请只做视觉分析：不要根据背景商品、招牌、包装文字、装饰来推断内容；不要把画面文字当成手语内容。\n请仔细逐帧观察手部动作、动作方向与次数、以及面部表情/头势/口型，然后输出一个JSON对象（不要多余文字），字段：\n- \\\"gloss\\\": 按时间顺序列出手语词/语素序列（中文或拼音均可），重复表示强调的动作要标注，例如 \\\"我 吃 饭\\\"。\n- \\\"zh\\\": 忠实、自然的现代标准汉语译文。不要增补画面外信息；不确定的词写 [无法确认]；疑问句必须保留疑问语气（吗/呢/？），否定必须保留否定词，人称和数量要写出来。\n- \\\"en\\\": 与中文译文含义一致的自然英文译文，同样不要编造。\n- \\\"sentence_type\\\": 陈述/疑问/否定/礼貌请求/提议/招呼/确认 之一或多个，并简述视觉依据（如眉毛上挑、摇头、前倾、口型）。\n- \\\"person_number\\\": 观察到的人称与数（我/你/他/我们/你们/他们），说明依据（指向性手势、朝向）。\n- \\\"evidence\\\": 关键视觉证据：手形、位置、运动轨迹、重复次数、面部表情、口型。\n- \\\"confidence\\\": 0到1的小数，表示你对该片段译文整体正确的概率。\n- \\\"unclear\\\": 具体不确定的点（哪个词、是否否定、是否疑问等）。\\\"\\\"\\\"\ndef one(i):\n    v=f\\\"/workspace/scratch/seg/{i}.mp4\\\"; o=f\\\"/workspace/scratch/out/{i}.json\\\"\n    for attempt in range(3):\n        try:\n            p=subprocess.run(['python3','/qwen_runtime/qwen_video.py',v,'--prompt',PROMPT,'--output',o],\n                             capture_output=True,text=True,timeout=900)\n            if p.returncode==0 and os.path.exists(o):\n                return i,'ok',len(open(o).read())\n            time.sleep(3+attempt*5)\n        except Exception as e:\n            time.sleep(3)\n    return i,'FAIL',(p.stderr[-300:] if p.stderr else '')\nt0=time.time()\nwith ThreadPoolExecutor(8) as ex:\n    for r in ex.map(one,ids):\n        print(round(time.time()-t0,1),r,flush=True)\nPYEOF\ncd /workspace/scratch && nohup python3 run.py S01 S02 S03 S04 S05 S06 S07 S08 S09 S10 S11 S12 S13 S14 S15 S16 S17 S18 S19 S20 S21 S22 S23 > run.log 2>&1 &\necho started; sleep 45; tail -5 run.log; ls -la /workspace/scratch/out | head\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc 'sleep 40; cd /workspace/scratch; cat run.log; ls -la out/'",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc 'sleep 25; cd /workspace/scratch; cat run.log; echo ---; ls out/ | wc -l'",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"date +%s; python3 -c \\\"import json,time;d=json.load(open('/workspace/DEADLINE.json'));print('remaining',round(d['deadline_unix']-time.time()))\\\"; cd /workspace/scratch; ls out/; echo ---; cat run.log\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc 'cd /workspace/scratch/out; for f in $(ls | sort); do echo \"=== $f\"; python3 -c \"\nimport json,sys,re\nt=open('\"'\"'$f'\"').read()\nd=json.load(open('\"'$f'\"'))\nc=d.get('content') or d.get('text') or str(d)\nprint(c[:1200])\n\\\"; done\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cd /workspace/scratch; nohup python3 run.py S09 > run_s09.log 2>&1 &\npython3 - <<'EOF'\nimport json,glob,re,os\nfor f in sorted(glob.glob('/workspace/scratch/out/*.json')):\n    d=json.load(open(f)); c=(d.get('content') or '')\n    c=re.sub(r'\"'^```(json)?'\"','',c.strip()); c=c.rstrip('\"'`'\"').strip()\n    try: j=json.loads(c)\n    except Exception as e:\n        print(os.path.basename(f),'PARSE_FAIL',c[:300]); continue\n    g=j.get('gloss'); \n    print(f\\\"{os.path.basename(f)[:3]} G={g} | ZH={j.get('zh')} | EN={j.get('en')} | conf={j.get('confidence')} | ST={str(j.get('sentence_type'))[:90]} | P={str(j.get('person_number'))[:60]}\\\")\n    print('   UNC:',str(j.get('unclear'))[:200])\nEOF\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cd /workspace/scratch; python3 - <<'EOF'\nimport json,glob,re,os\ndef extract(t):\n    t=t.strip()\n    i=t.find('{')\n    if i<0: return None\n    depth=0\n    for k in range(i,len(t)):\n        if t[k]=='{': depth+=1\n        elif t[k]=='}':\n            depth-=1\n            if depth==0:\n                try: return json.loads(t[i:k+1])\n                except Exception as e: return {'_err':str(e),'raw':t[i:k+1]}\n    return None\nfor f in sorted(glob.glob('/workspace/scratch/out/*.json')):\n    d=json.load(open(f))\n    if os.path.basename(f)=='S01.json': print('KEYS',list(d.keys()))\n    c=d.get('content') or d.get('text') or ''\n    j=extract(c)\n    if not j: print(os.path.basename(f),'NOJSON',repr(c[:200])); continue\n    if '_err' in j: print(os.path.basename(f),'ERR',j['_err'], repr(c[:200])); continue\n    print(f\\\"{os.path.basename(f)[:3]} G={j.get('gloss')}|ZH={j.get('zh')}|EN={j.get('en')}|cf={j.get('confidence')}|ST={str(j.get('sentence_type'))[:80]}|P={str(j.get('person_number'))[:50]}\\\")\n    print('   U:',str(j.get('unclear'))[:180])\nEOF\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cd /workspace/scratch; python3 - <<'EOF'\nimport json,re\ndef extract(t):\n    i=t.find('{');depth=0\n    for k in range(i,len(t)):\n        if t[k]=='{':depth+=1\n        elif t[k]=='}':\n            depth-=1\n            if depth==0:return json.loads(t[i:k+1])\nfor s in ['S09','S10','S11','S12','S13','S14','S15','S16']:\n    j=extract(json.load(open(f'out/{s}.json'))['text'])\n    print(f\\\"{s} G={j['gloss']}|ZH={j['zh']}|EN={j['en']}|cf={j.get('confidence')}\\\")\n    print('   ST:',str(j.get('sentence_type'))[:120])\n    print('   P:',str(j.get('person_number'))[:90])\n    print('   U:',str(j.get('unclear'))[:230])\nEOF\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cat > /workspace/scratch/build.py <<'PYEOF'\nimport json,os,subprocess,re\nM=json.load(open('/candidate/input_manifest.json'));segs={s['id']:s for s in M['segments']}\n# id: (zh, en, conf_zh, conf_en, uncertainty)\nD={\n'S01':(\\\"天气。[整句无法确认]\\\",\\\"The weather. [whole utterance unclear]\\\",0.25,0.25,\\\"仅两三个手势：食指上举、双手在胸前张开、再举食指并撮唇。可能是‘天气’，也可能是‘想要/吹’等；撮唇是构词口型还是单纯口动不明；无人称、无数词、无疑问或否定标记可确认。\\\"),\n'S02':(\\\"好吃。\\\",\\\"It's delicious.\\\",0.5,0.5,\\\"起始双手合拢是否为独立词（我/饭）不确定；末手势‘吃’与‘喝’难分；无人称标记，译文按光杆评价语处理。\\\"),\n'S03':(\\\"我喜欢学习。\\\",\\\"I like studying.\\\",0.5,0.5,\\\"首手势‘喜欢’或‘好’；第二手势‘学习’与‘写字’相近；‘我’未单独打出，由自指推断，非画面明示。\\\"),\n'S04':(\\\"想……[第二个手势无法确认]\\\",\\\"Think… [second sign unclear]\\\",0.3,0.3,\\\"点太阳穴为‘想/知道/记得’之一；随后双手在胸前弯曲合拢是否为独立词（心/担心/记得）无法确认，故只保留可确认的‘想’。\\\"),\n'S05':(\\\"再见。\\\",\\\"Goodbye.\\\",0.45,0.4,\\\"首动作可作‘再’的拍合或‘欢迎’的双掌相向；末尾挥手既可‘再见’也可‘你好’；挥手次数无法确认。\\\"),\n'S06':(\\\"两。\\\",\\\"Two.\\\",0.35,0.35,\\\"双手各伸一食指，最可能为数词‘两’，也可能为‘一对/相遇/比较’；口型是否‘liang’无法核实；无人称、无上下文。\\\"),\n'S07':(\\\"我喜欢在家读书。\\\",\\\"I like reading at home.\\\",0.35,0.35,\\\"中间头顶屋顶形手势‘家’与‘天/云’存疑；末手势‘读’与‘写’难分；‘书’为‘读’的自然补出，画面未单独打出；主语‘我’为推断。\\\"),\n'S08':(\\\"六。\\\",\\\"Six.\\\",0.3,0.3,\\\"孤立数词手势：‘L’形手向面部，最可能‘六’，也可能为‘一/只/第一’；无人称、无句法环境。\\\"),\n'S09':(\\\"我吃了。\\\",\\\"I ate something.\\\",0.4,0.4,\\\"手指送口一次，可能为‘尝/好吃’而非‘吃’；末尾张掌外移可能是‘完/了’也可能只是收势，故完成体‘了’为较可能而非确证；‘我’由自指推断。\\\"),\n'S10':(\\\"大。\\\",\\\"Big.\\\",0.4,0.4,\\\"双手掌心相对撑开的描摹手势，最可能‘大’，也可能为‘宽/高/粗’；起始单手屈指是否为独立语素无法确认；无人称。\\\"),\n'S11':(\\\"吃……[后续手势无法确认]\\\",\\\"Eat… [following signs unclear]\\\",0.25,0.2,\\\"仅‘吃’（指尖触嘴）较有把握；3秒双手动作与4秒摊掌上抬词义不明；整句是陈述还是征询疑问、主语是我还是你，均无法确认，故不写成问句也不写成完整陈述。\\\"),\n'S12':(\\\"你好。\\\",\\\"Hello.\\\",0.45,0.45,\\\"抬掌向外摆动，最可能招呼‘你好’；摆动次数无法确认；也可能仅为‘你’或‘来’。无疑问/否定标记。\\\"),\n'S13':(\\\"你多大了？\\\",\\\"How old are you?\\\",0.3,0.3,\\\"食指明确指向对方=‘你’（单数）确证；首词手势不清；竖食指可读‘一’也可读疑问词‘多/什么’；眉部上扬不明显，疑问依据偏弱，但按度量+指人的疑问读法处理；也可能为陈述‘你很大’。\\\"),\n'S14':(\\\"吃。\\\",\\\"Eat.\\\",0.4,0.4,\\\"手到嘴部可为‘吃’也可为‘喝’；胸前平伸的手是‘盘/碗’构成‘吃饭’，还是独立语素，无法确认；主语（我/你）未明示，故译为光杆动词。\\\"),\n'S15':(\\\"直角。\\\",\\\"A right angle.\\\",0.4,0.4,\\\"双手成90°接触，最可能‘直角’，也可能为‘角/角落/拐角’；开头张掌相对是独立词（大/宽）还是准备手形不确定。\\\"),\n'S16':(\\\"我想，我们俩都很好。\\\",\\\"I think both of us are good.\\\",0.3,0.3,\\\"起手触太阳穴为‘想’或‘看/我’；两食指相对可读‘你和我/互相/朋友’；双拇指上举为‘好’的强调还是另一词（棒）不确定；末尾落手是否含‘都/全部’存疑。整句亦可能为‘我们是好朋友’。\\\"),\n'S17':(\\\"我要去那边。\\\",\\\"I want to go over there.\\\",0.45,0.45,\\\"‘要’较清楚；没有独立‘去’的行走手指动作，是否被方向指点吸收不确定；侧向拇指指点也可能表示‘那个（东西）’，即整句亦可能为‘我想要那个’；主语‘我’为隐含。\\\"),\n'S18':(\\\"我穿衣服。\\\",\\\"I put on clothes.\\\",0.45,0.4,\\\"动作全部作用于自身躯干（抓领口、过下巴、向下整理），自指‘我’较可靠；未见独立‘衣服’名词手势，‘衣服’为‘穿’的默认宾语；2秒伸食指更像过渡而非数词‘一’；完成体不确定，故不加‘了’。\\\"),\n'S19':(\\\"天下雨了。\\\",\\\"It's raining.\\\",0.4,0.4,\\\"起始食指向上可为‘天’也可为‘明天’（若是‘明天’则整句为‘明天下雨’）；双手下落动作可能为‘下雪’而非‘下雨’；非人称天气句，无人称标记。\\\"),\n'S20':(\\\"这里，那里。\\\",\\\"Here, and over there.\\\",0.25,0.25,\\\"第一个指点可能是‘这里/桌上’，也可能是动作‘放/拿’；第二个侧向指点可能是‘那里’也可能是第三人称‘他/她’；缺主语宾语，是否为完整句子无法确认。\\\"),\n'S21':(\\\"我听懂了。\\\",\\\"I understood what I heard.\\\",0.4,0.4,\\\"手置耳侧为‘听’较清楚；第二手势（食指触掌后上举）是‘懂/知道’还是‘上/一’无法完全确认；完成体‘了’无法从画面确证；主语‘我’为隐含（动作朝向自身）。\\\"),\n'S22':(\\\"剪头发。\\\",\\\"Cut hair.\\\",0.4,0.4,\\\"手贴头侧可为‘头发’也可为‘耳/听’，与后续‘剪’组合后倾向前者；‘剪’为两手接触的横切动作；全段无指向性指点，施事者（我/别人）不确定，故不添加人称；语序按中文自然表达调整为动宾。\\\"),\n'S23':(\\\"学习。\\\",\\\"Study.\\\",0.4,0.4,\\\"手掌→头部的单次动作，最可能‘学/学习’，也可能为‘写字’或‘教’的反向；捏圈手形靠颊的词义不完全确定；无宾语，‘学什么’无法确认；人称未在画面显性编码，故不添加‘我’。\\\"),\n}\norder=[f'S{i:02d}' for i in range(1,24)]\ndef ts(t):\n    h=int(t//3600);m=int(t%3600//60);s=t-3600*h-60*m\n    return f\\\"{h:02d}:{m:02d}:{s:06.3f}\\\".replace('.',',')\nzh=[];en=[];recs=[]\nfor i,sid in enumerate(order,1):\n    st=segs[sid]['start'];en_d=segs[sid]['end']\n    a=st+0.9;b=en_d-0.35\n    if b-a>7.0:b=a+7.0\n    if b-a<0.8:b=min(en_d,a+0.8)\n    z,e,cz,ce,unc=D[sid]\n    zh.append((i,a,b,z));en.append((i,a,b,e));recs.append((sid,[i],[i],cz,ce,unc))\ndef wrap(t,cn,maxw):\n    if cn:\n        n=len(t)\n        if n<=maxw:return [t]\n        k=(n+1)//2;return [t[:k],t[k:]]\n    w=t.split(' ');\n    if len(t)<=maxw:return [t]\n    best=None\n    for i in range(1,len(w)):\n        l=' '.join(w[:i]);r=' '.join(w[i:])\n        if len(l)<=maxw and len(r)<=maxw:\n            if best is None or abs(len(l)-len(r))<abs(len(best[0])-len(best[1])):best=(l,r)\n    if best:return list(best)\n    return [t[:maxw],t[maxw:]]\ndef write(path,cues,cn):\n    maxw=22 if cn else 42\n    L=[]\n    for n,a,b,t in cues:\n        lines=wrap(t,cn,maxw)\n        assert len(lines)<=2,(n,lines)\n        cps=sum(len(x) for x in lines)/ (b-a)\n        lim=9 if cn else 20\n        assert cps<=lim+0.001,(n,t,round(cps,2))\n        assert 0.8<=b-a<=7.0,(n,b-a)\n        L.append(f\\\"{n}\\\\n{ts(a)} --> {ts(b)}\\\\n\\\"+\\\"\\\\n\\\".join(lines)+\\\"\\\\n\\\")\n    open(path,'w',encoding='utf-8').write(\\\"\\\\n\\\".join(L))\nos.makedirs('/workspace/submission',exist_ok=True)\nwrite('/workspace/submission/zh-CN.srt',zh,True)\nwrite('/workspace/submission/en.srt',en,False)\nS={\\\"segments\\\":[]}\nfor sid,zc,ec,cz,ce,unc in recs:\n    S[\\\"segments\\\"].append({\\\"id\\\":sid,\\\"zh_cues\\\":zc,\\\"en_cues\\\":ec,\\\"confidence_zh\\\":cz,\\\"confidence_en\\\":ce,\\\"uncertainty\\\":unc})\njson.dump(S,open('/workspace/submission/segments.json','w',encoding='utf-8'),ensure_ascii=False,indent=2)\nprint(\\\"srt+json written\\\")\nPYEOF\npython3 /workspace/scratch/build.py && head -12 /workspace/submission/zh-CN.srt && echo ... && head -8 /workspace/submission/en.srt\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cd /workspace/submission && ffmpeg -y -v error -i /candidate/input/source.mp4 -i zh-CN.srt -i en.srt \\\\\n -map 0:v:0 -map 1:0 -map 2:0 -c:v copy -c:s subrip \\\\\n -metadata:s:s:0 language=zho -metadata:s:s:0 title=\\\"简体中文 zh-CN\\\" \\\\\n -metadata:s:s:1 language=eng -metadata:s:s:1 title=\\\"English\\\" \\\\\n -f matroska subtitled.mkv && echo MUX_OK\nffprobe -v error -show_entries stream=index,codec_name,codec_type,width,height,pix_fmt -show_entries stream_tags=language,title -of default=nw=1 /workspace/submission/subtitled.mkv\npython3 - <<'EOF'\nimport subprocess,json\nfor i,name in [(0,'zh-CN.srt'),(1,'en.srt')]:\n    subprocess.run(['ffmpeg','-y','-v','error','-i','/workspace/submission/subtitled.mkv','-map',f'0:s:{i}',f'/workspace/scratch/x{i}.srt'],check=True)\n    a=open(f'/workspace/submission/{name}',encoding='utf-8').read().split('\\\\n\\\\n')\n    b=open(f'/workspace/scratch/x{i}.srt',encoding='utf-8').read().split('\\\\n\\\\n')\n    na=[x.strip() for x in a if x.strip()];nb=[x.strip() for x in b if x.strip()]\n    print(name,'cues',len(na),len(nb),'IDENTICAL' if na==nb else 'DIFF', '' if na==nb else [k for k,(p,q) in zip(na,nb) if p\"'!=q][:1])\nv1=json.loads(subprocess.check_output(['\"'ffprobe','-v','json','-show_streams','-select_streams','v:0','/candidate/input/source.mp4']))['streams'][0]\nv2=json.loads(subprocess.check_output(['ffprobe','-v','json','-show_streams','-select_streams','v:0','/workspace/submission/subtitled.mkv']))['streams'][0]\nprint('video same:',all(v1.get(k)==v2.get(k) for k in ['codec_name','width','height','nb_frames','avg_frame_rate','pix_fmt']),v1['duration'],v2['duration'])\nprint('audio streams:',subprocess.check_output(['ffprobe','-v','error','-select_streams','a','-show_entries','stream=index','-of','csv=p=0','/workspace/submission/subtitled.mkv']).decode().strip() or 'none')\nEOF\nls -la /workspace/submission\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cd /workspace; ffprobe -v quiet -print_format json -show_streams -select_streams v:0 /candidate/input/source.mp4 > scratch/a.json; ffprobe -v quiet -print_format json -show_streams -select_streams v:0 submission/subtitled.mkv > scratch/b.json\npython3 - <<'EOF'\nimport json\na=json.load(open('/workspace/scratch/a.json'))['streams'][0];b=json.load(open('/workspace/scratch/b.json'))['streams'][0]\nks=['codec_name','width','height','nb_frames','avg_frame_rate','pix_fmt','sample_aspect_ratio','bit_rate','mds?']\nprint('parity:',[(k,a.get(k),b.get(k),a.get(k)==b.get(k)) for k in ks])\nprint('dur:',a.get('duration'),b.get('duration'))\nEOF\necho \\\"--- audio:\\\"; ffprobe -v error -select_streams a -show_entries stream=index -of csv=p=0 submission/subtitled.mkv; echo \\\"(empty=none)\\\"\npython3 - <<'EOF'\nimport re,json\nfor f in ['submission/zh-CN.srt','submission/en.srt']:\n    t=open(f,encoding='utf-8').read()\n    blocks=[b for b in t.strip().split('\\\\n\\\\n') if b.strip()]\n    prev=-1;ok=True\n    for i,b in enumerate(blocks,1):\n        L=b.split('\\\\n');assert int(L[0])==i,(f,i)\n        m=re.match(r'(\\\\d\\\\d):(\\\\d\\\\d):(\\\\d\\\\d),(\\\\d\\\\d\\\\d) --> (\\\\d\\\\d):(\\\\d\\\\d):(\\\\d\\\\d),(\\\\d\\\\d\\\\d)',L[1]);assert m,L[1]\n        g=list(map(int,m.groups()));s=g[0]*3600+g[1]*60+g[2]+g[3]/1000;e=g[4]*3600+g[5]*60+g[6]+g[7]/1000\n        if not(s>e and s>prev):ok=False;print('ORDER',f,i)\n        prev=e\n        assert 0.8<=e-s<=7.0\n        txt=''.join(L[2:]);assert len(L)-2<=2\n        print(f,i,round(e-s,2),'chars',len(txt),cps:=round(len(txt)/(e-s),2))\n    print(f,'blocks',len(blocks),'ordered_ok',ok)\nS=json.load(open('submission/segments.json',encoding='utf-8'))\nprint('segments',len(S['segments']),'all conf filled',all(isinstance(s['confidence_zh'],float) and isinstance(s['confidence_en'],float) and s['uncertainty'] for s in S['segments']))\nprint('cue sets',sorted(sum([s['zh_cues'] for s in S['segments']],[]))==list(range(1,24)), sorted(sum([s['en_cues'] for s in S['segments']],[]))==list(range(1,24)))\nEOF\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "command_execution",
+    "command": "/usr/bin/bash -lc \"cd /workspace; python3 - <<'EOF'\nimport re,json\nM=json.load(open('/candidate/input_manifest.json'))['segments']\nfor f in ['submission/zh-CN.srt','submission/en.srt']:\n    B=[b for b in open(f,encoding='utf-8').read().strip().split('\\\\n\\\\n') if b.strip()]\n    prev=-1;bad=[]\n    for i,b in enumerate(B):\n        L=b.split('\\\\n');m=re.match(r'(\\\\d\\\\d):(\\\\d\\\\d):(\\\\d\\\\d),(\\\\d\\\\d\\\\d) --> (\\\\d\\\\d):(\\\\d\\\\d):(\\\\d\\\\d),(\\\\d\\\\d\\\\d)',L[1]);g=list(map(int,m.groups()))\n        s=g[0]*3600+g[1]*60+g[2]+g[3]/1000;e=g[4]*3600+g[5]*60+g[6]+g[7]/1000\n        if e<=s or s<prev: bad.append(i+1)\n        prev=e\n        seg=M[i]\n        if not (seg['start']-0.01<=s and e<=seg['end']+0.01): bad.append(('span',i+1))\n        for ln in L[2:]:\n            if len(ln)>(22 if 'zh' in f else 42): bad.append(('width',i+1,ln))\n    print(f,'cues',len(B),'problems',bad)\nprint('utf8 ok', all(open(f,encoding='utf-8',errors='strict').read() for f in ['submission/zh-CN.srt','submission/en.srt']))\nEOF\nls -la /workspace/submission; md5sum /workspace/submission/*\"",
+    "exit_code": 0,
+    "status": "completed"
+  },
+  {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 342559,
+      "cached_input_tokens": 234752,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 12714,
+      "reasoning_output_tokens": 4964
+    }
+  }
+]
